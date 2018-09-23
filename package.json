@@ -26,5 +26,15 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexlee-dev/portfolio.git"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/alexlee-dev/portfolio/issues"
+  },
+  "homepage": "https://github.com/alexlee-dev/portfolio#readme",
+  "main": "index.js",
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Alex Lee <alexlee-dev>",
+  "license": "GPL-3.0"
 }
