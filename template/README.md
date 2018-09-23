@@ -1,2 +1,0 @@
-# portfolio
-My online portfolio.
