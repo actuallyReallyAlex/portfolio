@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.0.4](https://github.com/alexlee-dev/portfolio/tree/v0.0.4) (2018-09-24)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.0.3...v0.0.4)
+
+**Implemented enhancements:**
+
+- Add a Change Log [\#4](https://github.com/alexlee-dev/portfolio/issues/4)
+
 ## [v0.0.3](https://github.com/alexlee-dev/portfolio/tree/v0.0.3) (2018-09-24)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.0.2...v0.0.3)
 
