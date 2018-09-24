@@ -1,0 +1,8 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["standard", "eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "space-before-function-paren": "off",
+    "no-unused-vars": "warn"
+  }
+}
