@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "@alexlee-dev/portfolio",
   "description": "My online portfolio.",
   "version": "0.0.1",
   "dependencies": {
