@@ -10,6 +10,12 @@
     "semantic-ui-css": "^2.4.0",
     "semantic-ui-react": "^0.82.5"
   },
+  "files": [
+    "public",
+    "src",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
