@@ -1,0 +1,142 @@
+body {
+  background: #151515;
+  font-family: 'lora-regular', serif;
+  font-size: 1.7rem;
+  line-height: 3rem;
+  color: #6e6e6e;
+}
+
+#intro {
+  background: #151515 url(./city.jpeg) no-repeat center bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  min-height: 720px;
+  display: table;
+  position: relative;
+  text-align: center;
+}
+
+#segment {
+  background: transparent;
+  color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-header {
+  position: fixed;
+  width: 100%;
+  min-height: 66px;
+  z-index: 600;
+}
+
+.intro-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111111;
+  opacity: 0.85;
+}
+
+.intro-content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-transform: translateY(-2.1rem);
+  -ms-transform: translateY(-2.1rem);
+  transform: translateY(-2.1rem);
+}
+
+#header-name {
+  color: #ffffff;
+  font-family: 'poppins-medium', sans-serif;
+  font-size: 6rem;
+  line-height: 1.071;
+  max-width: 900px;
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#header-hello-world {
+  font-family: 'poppins-bold', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.565;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+#header-position {
+  font-family: 'lora-regular', serif;
+  font-size: 1.3rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  /* color: #FFFFFF; */
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+#header-position::before {
+  content: '|';
+  text-align: center;
+  display: inline-block;
+  padding: 0 14px 0 8px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+#header-position::after {
+  content: '|';
+  text-align: center;
+  display: inline-block;
+  padding: 0 14px 0 8px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+#intro-social {
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 7.2rem;
+  font-size: 3.3rem;
+  margin: 0;
+  padding: 0;
+}
+
+#intro-social button {
+  margin: 0 10px;
+  font-size: 1.25rem
+}
+
+.intro-position {
+  font-family: 'lora-regular', serif;
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  /* color: #ffffff; */
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.intro-header {
+  color: #ffffff;
+  font-family: 'poppins-medium', sans-serif;
+  font-size: 8.4rem;
+  line-height: 1.071;
+  max-width: 900px;
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}

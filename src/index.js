@@ -1,10 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+// import './index.css'
 import 'semantic-ui-css/semantic.min.css'
+import './customStyle.css'
 
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import App from './App'
+import registerServiceWorker from './registerServiceWorker'
+
+ReactDOM.render(<App themeColor="blue" />, document.getElementById('root'))
+registerServiceWorker()
