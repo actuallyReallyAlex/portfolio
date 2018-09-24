@@ -33,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/alexlee-dev/portfolio/issues"
   },
-  "homepage": "https://github.com/alexlee-dev/portfolio#readme",
+  "homepage": "https://sharp-heisenberg-c89fde.netlify.com/",
   "main": "index.js",
   "keywords": [
     "portfolio"
