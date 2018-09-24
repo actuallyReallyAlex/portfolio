@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { Menu } from 'semantic-ui-react'
 import capitalize from 'lodash.capitalize'
 
@@ -11,7 +11,7 @@ const NavMenuItem = props => {
     >
       {capitalize(props.name)}
     </Menu.Item>
-  );
-};
+  )
+}
 
-export default NavMenuItem;
+export default NavMenuItem
