@@ -3,12 +3,11 @@
   "description": "Alex Lee's online portfolio. Built with React.",
   "version": "0.0.4",
   "dependencies": {
+    "grommet": "^1.11.0",
     "lodash.capitalize": "^4.2.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "1.1.5",
-    "semantic-ui-css": "^2.4.0",
-    "semantic-ui-react": "^0.82.5"
+    "react-scripts": "1.1.5"
   },
   "files": [
     "public",
