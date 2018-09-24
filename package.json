@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "description": "My online portfolio.",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "dependencies": {
     "lodash.capitalize": "^4.2.1",
     "react": "^16.5.2",
