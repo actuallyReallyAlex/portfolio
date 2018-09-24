@@ -1,6 +1,6 @@
 {
   "name": "alexlee-dev-portfolio",
-  "description": "My online portfolio.",
+  "description": "Alex Lee's online portfolio. Built with React.",
   "version": "0.0.3",
   "dependencies": {
     "lodash.capitalize": "^4.2.1",
