@@ -1,56 +1,24 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { Segment, Menu } from 'semantic-ui-react'
-import NavMenuItem from './NavMenuItem'
+// import PropTypes from 'prop-types'
+import { Header, Title, Box, Menu, Anchor } from 'grommet'
 
 class NavMenu extends Component {
-  state = {}
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
   render() {
-    const { activeItem } = this.state
-
     return (
-      <Segment inverted id="segment">
-        <Menu inverted pointing secondary className={this.props.className}>
-          <NavMenuItem
-            name="home"
-            handleClick={this.handleItemClick}
-            activeItem={activeItem}
-          />
-          <NavMenuItem
-            name="about"
-            handleClick={this.handleItemClick}
-            activeItem={activeItem}
-          />
-          <NavMenuItem
-            name="resume"
-            handleClick={this.handleItemClick}
-            activeItem={activeItem}
-          />
-          <NavMenuItem
-            name="portfolio"
-            handleClick={this.handleItemClick}
-            activeItem={activeItem}
-          />
-          <NavMenuItem
-            name="services"
-            handleClick={this.handleItemClick}
-            activeItem={activeItem}
-          />
-          <NavMenuItem
-            name="contact"
-            handleClick={this.handleItemClick}
-            activeItem={activeItem}
-          />
-        </Menu>
-      </Segment>
+      <Header>
+        <Title>Alex Lee</Title>
+        <Box flex={true} justify="end" direction="row" responsive={false}>
+          <Menu dropAlign={{ right: 'right' }}>
+            <Anchor href="#" className="active">
+              First
+            </Anchor>
+            <Anchor href="#">Second</Anchor>
+            <Anchor href="#">Third</Anchor>
+          </Menu>
+        </Box>
+      </Header>
     )
   }
-}
-
-NavMenu.propTypes = {
-  className: PropTypes.string
 }
 
 export default NavMenu

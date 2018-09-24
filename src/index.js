@@ -1,12 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 // import './index.css'
-import 'semantic-ui-css/semantic.min.css'
-import './customStyle.css'
+// import './customStyle.css'
 
 
-import App from './App'
+import Portfolio from './Portfolio'
 import registerServiceWorker from './registerServiceWorker'
 
-ReactDOM.render(<App themeColor="blue" />, document.getElementById('root'))
+ReactDOM.render(<Portfolio themeColor="blue" />, document.getElementById('root'))
 registerServiceWorker()
