@@ -1,8 +1,11 @@
 # Change Log
 
-## [Unreleased](https://github.com/alexlee-dev/portfolio/tree/HEAD)
+## [v0.1.2](https://github.com/alexlee-dev/portfolio/tree/v0.1.2) (2018-09-25)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.1.1...v0.1.2)
 
-[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.1.1...HEAD)
+**Implemented enhancements:**
+
+- Update "Files" in package.json [\#13](https://github.com/alexlee-dev/portfolio/issues/13)
 
 **Fixed bugs:**
 
