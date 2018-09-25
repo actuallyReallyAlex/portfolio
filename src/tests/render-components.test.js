@@ -12,7 +12,7 @@ import TimelineContent from '../components/TimelineContent'
 import TimelineHeading from '../components/TimelineHeading'
 import TimelineIcon from '../components/TimelineIcon'
 import TimelineItem from '../components/TimelineItem'
-import WorkExperience from '../components/WorkExperience'
+import Experience from '../components/Experience'
 
 it('Portfolio component renders without crashing.', () => {
   const div = document.createElement('div')
@@ -95,8 +95,8 @@ it('TimelineItem component renders without crashing.', () => {
   ReactDOM.unmountComponentAtNode(div)
 })
 
-it('WorkExperience component renders without crashing.', () => {
+it('Experience component renders without crashing.', () => {
   const div = document.createElement('div')
-  ReactDOM.render(<WorkExperience />, div)
+  ReactDOM.render(<Experience />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
