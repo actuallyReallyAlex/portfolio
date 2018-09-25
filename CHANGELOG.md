@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.2.0](https://github.com/alexlee-dev/portfolio/tree/v0.2.0) (2018-09-25)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.1.2...v0.2.0)
+
+**Implemented enhancements:**
+
+- Add Render Test for Each Component [\#11](https://github.com/alexlee-dev/portfolio/issues/11)
+- Feat/add render tests [\#15](https://github.com/alexlee-dev/portfolio/pull/15) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.1.2](https://github.com/alexlee-dev/portfolio/tree/v0.1.2) (2018-09-25)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.1.1...v0.1.2)
 
