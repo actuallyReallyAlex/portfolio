@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 // import { Intro } from './components/Intro'
 import { App } from 'grommet'
 import NavMenu from './components/NavMenu'
-import Intro from './components/Intro'
+import Intro from './sections/Intro'
+import About from './sections/About'
 
 class Portfolio extends Component {
   render() {
@@ -12,6 +13,7 @@ class Portfolio extends Component {
       <App>
         <NavMenu />
         <Intro />
+        <About />
       </App>
     )
   }
