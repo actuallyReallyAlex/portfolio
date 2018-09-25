@@ -13,7 +13,8 @@
     "public",
     "src",
     "package.json",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "start": "react-scripts start",
