@@ -41,7 +41,7 @@ const About = () => {
           label="Résumé"
           icon={<DocumentDownload />}
           secondary
-          href="../assets/Resume.pdf"
+          href="https://github.com/alexlee-dev/portfolio/raw/master/src/assets/Resume.pdf"
         />
       </Box>
     </Section>
