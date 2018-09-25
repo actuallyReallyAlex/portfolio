@@ -6,6 +6,7 @@ import { App } from 'grommet'
 import NavMenu from './components/NavMenu'
 import Intro from './sections/Intro'
 import About from './sections/About'
+import Resume from './sections/Resume'
 
 class Portfolio extends Component {
   render() {
@@ -14,6 +15,7 @@ class Portfolio extends Component {
         <NavMenu />
         <Intro />
         <About />
+        <Resume />
       </App>
     )
   }
