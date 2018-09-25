@@ -1,5 +1,32 @@
 # Change Log
 
+## [Unreleased](https://github.com/alexlee-dev/portfolio/tree/HEAD)
+
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.1.1...HEAD)
+
+**Fixed bugs:**
+
+- Resume Download Button Does Not Work [\#12](https://github.com/alexlee-dev/portfolio/issues/12)
+
+## [v0.1.1](https://github.com/alexlee-dev/portfolio/tree/v0.1.1) (2018-09-25)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.1.0...v0.1.1)
+
+## [v0.1.0](https://github.com/alexlee-dev/portfolio/tree/v0.1.0) (2018-09-25)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.0.5...v0.1.0)
+
+**Implemented enhancements:**
+
+- Add About Section [\#3](https://github.com/alexlee-dev/portfolio/issues/3)
+- Feat/about section [\#9](https://github.com/alexlee-dev/portfolio/pull/9) ([alexlee-dev](https://github.com/alexlee-dev))
+
+## [v0.0.5](https://github.com/alexlee-dev/portfolio/tree/v0.0.5) (2018-09-24)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.0.4...v0.0.5)
+
+**Implemented enhancements:**
+
+- Switch from Semantic-UI to Grommet [\#5](https://github.com/alexlee-dev/portfolio/issues/5)
+- Feat/grommet [\#6](https://github.com/alexlee-dev/portfolio/pull/6) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.0.4](https://github.com/alexlee-dev/portfolio/tree/v0.0.4) (2018-09-24)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.0.3...v0.0.4)
 
