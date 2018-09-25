@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Heading, Paragraph, Label, Columns } from 'grommet'
+import { Box, Heading, Label } from 'grommet'
 import LoremIpsum from './LoremIpsum'
 import LanguagesLegend from './LanguagesLegend'
 

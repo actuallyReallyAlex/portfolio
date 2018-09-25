@@ -8,6 +8,11 @@ import Profile from '../components/Profile'
 import ProfileStats from '../components/ProfileStats'
 import SectionHeader from '../components/SectionHeader'
 import Skills from '../components/Skills'
+import TimelineContent from '../components/TimelineContent'
+import TimelineHeading from '../components/TimelineHeading'
+import TimelineIcon from '../components/TimelineIcon'
+import TimelineItem from '../components/TimelineItem'
+import WorkExperience from '../components/WorkExperience'
 
 it('Portfolio component renders without crashing.', () => {
   const div = document.createElement('div')
@@ -57,5 +62,41 @@ it('SectionHeader component renders without crashing.', () => {
 it('Skills component renders without crashing.', () => {
   const div = document.createElement('div')
   ReactDOM.render(<Skills />, div)
+  ReactDOM.unmountComponentAtNode(div)
+})
+
+it('TimelineContent component renders without crashing.', () => {
+  const div = document.createElement('div')
+  ReactDOM.render(
+    <TimelineContent subtitle="Test Subtitle" summary="Test Summary" />,
+    div
+  )
+  ReactDOM.unmountComponentAtNode(div)
+})
+
+it('TimelineHeading component renders without crashing.', () => {
+  const div = document.createElement('div')
+  ReactDOM.render(
+    <TimelineHeading startDate="Test StartDate" title="Test Title" />,
+    div
+  )
+  ReactDOM.unmountComponentAtNode(div)
+})
+
+it('TimelineIcon component renders without crashing.', () => {
+  const div = document.createElement('div')
+  ReactDOM.render(<TimelineIcon />, div)
+  ReactDOM.unmountComponentAtNode(div)
+})
+
+it('TimelineItem component renders without crashing.', () => {
+  const div = document.createElement('div')
+  ReactDOM.render(<TimelineItem startDate="Test StartDate" title="Test Title" subtitle="Test Subtitle" summary="Test Summary"/>, div)
+  ReactDOM.unmountComponentAtNode(div)
+})
+
+it('WorkExperience component renders without crashing.', () => {
+  const div = document.createElement('div')
+  ReactDOM.render(<WorkExperience />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
