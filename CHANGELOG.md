@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.3.0](https://github.com/alexlee-dev/portfolio/tree/v0.3.0) (2018-09-25)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.2.0...v0.3.0)
+
+**Implemented enhancements:**
+
+- Add Resume Section [\#16](https://github.com/alexlee-dev/portfolio/issues/16)
+- Feat/resume section [\#17](https://github.com/alexlee-dev/portfolio/pull/17) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.2.0](https://github.com/alexlee-dev/portfolio/tree/v0.2.0) (2018-09-25)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.1.2...v0.2.0)
 
