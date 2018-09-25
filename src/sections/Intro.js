@@ -24,12 +24,6 @@ export const Intro = () => {
           <Heading tag="h5" align="center" uppercase={true}>
             Web Developer
           </Heading>
-          <Button
-            label="More About Me"
-            onClick={() => {
-              alert('clicked!')
-            }}
-          />
         </Box>
       </Box>
       <Box direction="row" justify="center">

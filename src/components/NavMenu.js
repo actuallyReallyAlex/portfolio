@@ -5,7 +5,7 @@ import { Header, Title, Box, Menu, Anchor } from 'grommet'
 class NavMenu extends Component {
   render() {
     return (
-      <Header>
+      <Header fixed={true}>
         <Title>Alex Lee</Title>
         <Box flex={true} justify="end" direction="row" responsive={false}>
           <Menu dropAlign={{ right: 'right' }}>
