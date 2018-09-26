@@ -25,6 +25,17 @@
     You need to enable JavaScript to run this app.
   </noscript>
   <div id="root"></div>
+
+  <!-- Adds Netlify Attribute to Form -->
+  <script>
+    function addAttributetoForm() {
+      let form = document.getElementById('contact-form')
+
+      form.dataset.netlify = 'true'
+    }
+
+    document.addEventListener('DOMContentLoaded', addAttributetoForm)
+  </script>
 </body>
 
 </html>
