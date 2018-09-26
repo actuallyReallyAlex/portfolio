@@ -3,6 +3,7 @@ import { Hero, Image, Box, Heading, Button } from 'grommet'
 import SocialGithub from 'grommet/components/icons/base/SocialGithub'
 import SocialTwitter from 'grommet/components/icons/base/SocialTwitter'
 import SocialLinkedin from 'grommet/components/icons/base/SocialLinkedin'
+import Cube from 'grommet/components/icons/base/Cube'
 import introImgPath from '../darkCity.jpg'
 
 export const Intro = () => {
@@ -29,6 +30,12 @@ export const Intro = () => {
           icon={<SocialGithub />}
           onClick={() =>
             window.open('https://github.com/alexlee-dev/', '_blank')
+          }
+        />
+        <Button
+          icon={<Cube />}
+          onClick={() =>
+            window.open('https://www.npmjs.com/~alexlee-dev', '_blank')
           }
         />
         <Button
