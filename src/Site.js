@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-// import NavMenu from './components/NavMenu'
-// import { Intro } from './components/Intro'
 import { App } from 'grommet'
 import NavMenu from './components/NavMenu'
 import Intro from './sections/Intro'
 import About from './sections/About'
 import Resume from './sections/Resume'
+import Portfolio from './sections/Portfolio'
 
-class Portfolio extends Component {
+class Site extends Component {
   render() {
     return (
       <App>
@@ -16,13 +15,14 @@ class Portfolio extends Component {
         <Intro />
         <About />
         <Resume />
+        <Portfolio />
       </App>
     )
   }
 }
 
-Portfolio.propTypes = {
+Site.propTypes = {
   themeColor: PropTypes.string
 }
 
-export default Portfolio
+export default Site
