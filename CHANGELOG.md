@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.4.0](https://github.com/alexlee-dev/portfolio/tree/v0.4.0) (2018-09-26)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.3.0...v0.4.0)
+
+**Implemented enhancements:**
+
+- Add Portfolio Section [\#18](https://github.com/alexlee-dev/portfolio/issues/18)
+- Feat/portfolio section [\#23](https://github.com/alexlee-dev/portfolio/pull/23) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.3.0](https://github.com/alexlee-dev/portfolio/tree/v0.3.0) (2018-09-25)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.2.0...v0.3.0)
 
