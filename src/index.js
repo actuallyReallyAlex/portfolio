@@ -1,11 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import './index.css'
-// import './customStyle.css'
 
-
-import Portfolio from './Portfolio'
+import Site from './Site'
 import registerServiceWorker from './registerServiceWorker'
 
-ReactDOM.render(<Portfolio themeColor="blue" />, document.getElementById('root'))
+ReactDOM.render(<Site />, document.getElementById('root'))
 registerServiceWorker()
