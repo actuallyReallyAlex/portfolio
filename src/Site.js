@@ -6,6 +6,7 @@ import Intro from './sections/Intro'
 import About from './sections/About'
 import Resume from './sections/Resume'
 import Portfolio from './sections/Portfolio'
+import Contact from './sections/Contact'
 
 class Site extends Component {
   render() {
@@ -16,6 +17,7 @@ class Site extends Component {
         <About />
         <Resume />
         <Portfolio />
+        <Contact />
       </App>
     )
   }
