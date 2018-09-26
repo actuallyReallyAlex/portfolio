@@ -24,6 +24,7 @@ import StaffWebsite from '../components/works/StaffWebsite'
 import FacilitatorWebsite from '../components/works/FacilitatorWebsite'
 import Remembera from '../components/works/Remembera'
 import Pickitt from '../components/works/Pickitt'
+import Contact from '../sections/Contact'
 
 it('Site component renders without crashing.', () => {
   const div = document.createElement('div')
@@ -183,5 +184,11 @@ it('Remembera component renders without crashing.', () => {
 it('Pickitt component renders without crashing.', () => {
   const div = document.createElement('div')
   ReactDOM.render(<Pickitt />, div)
+  ReactDOM.unmountComponentAtNode(div)
+})
+
+it('Contact component renders without crashing.', () => {
+  const div = document.createElement('div')
+  ReactDOM.render(<Contact />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
