@@ -15,12 +15,6 @@ const ProfileStats = () => {
         Alex Lee
       </Paragraph>
       <Label uppercase margin="none">
-        Birth Date:
-      </Label>
-      <Paragraph margin="small" style={paragraphStyle}>
-        November 28, 1994
-      </Paragraph>
-      <Label uppercase margin="none">
         Job:
       </Label>
       <Paragraph margin="small" style={paragraphStyle}>
