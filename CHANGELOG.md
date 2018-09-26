@@ -1,5 +1,26 @@
 # Change Log
 
+## [v0.5.1](https://github.com/alexlee-dev/portfolio/tree/v0.5.1) (2018-09-26)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.5.0...v0.5.1)
+
+**Implemented enhancements:**
+
+- Remove Birthdate [\#26](https://github.com/alexlee-dev/portfolio/issues/26)
+- 🔥 Remove Birthdate [\#31](https://github.com/alexlee-dev/portfolio/pull/31) ([alexlee-dev](https://github.com/alexlee-dev))
+
+## [v0.5.0](https://github.com/alexlee-dev/portfolio/tree/v0.5.0) (2018-09-26)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.4.0...v0.5.0)
+
+**Implemented enhancements:**
+
+- Add Contact Form [\#24](https://github.com/alexlee-dev/portfolio/issues/24)
+- ✨ Changed Contact Component to Class. Added Toast and Textarea. [\#30](https://github.com/alexlee-dev/portfolio/pull/30) ([alexlee-dev](https://github.com/alexlee-dev))
+- Feat/contact form [\#27](https://github.com/alexlee-dev/portfolio/pull/27) ([alexlee-dev](https://github.com/alexlee-dev))
+
+**Fixed bugs:**
+
+- Remove "Clicked" Alert on Contact Form Submit [\#28](https://github.com/alexlee-dev/portfolio/issues/28)
+
 ## [v0.4.0](https://github.com/alexlee-dev/portfolio/tree/v0.4.0) (2018-09-26)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.3.0...v0.4.0)
 
