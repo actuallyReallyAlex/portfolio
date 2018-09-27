@@ -3,6 +3,7 @@
   "description": "Alex Lee's online portfolio. Built with React.",
   "version": "0.5.1",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "grommet": "^1.11.0",
     "lodash.capitalize": "^4.2.1",
     "react": "^16.5.2",
@@ -14,7 +15,8 @@
     "src",
     "package.json",
     "README.md",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    ".env"
   ],
   "scripts": {
     "start": "react-scripts start",
