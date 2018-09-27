@@ -25,6 +25,7 @@ import FacilitatorWebsite from '../components/works/FacilitatorWebsite'
 import Remembera from '../components/works/Remembera'
 import Pickitt from '../components/works/Pickitt'
 import Contact from '../sections/Contact'
+import ContactForm from '../components/ContactForm'
 
 it('Site component renders without crashing.', () => {
   const div = document.createElement('div')
@@ -190,5 +191,20 @@ it('Pickitt component renders without crashing.', () => {
 it('Contact component renders without crashing.', () => {
   const div = document.createElement('div')
   ReactDOM.render(<Contact />, div)
+  ReactDOM.unmountComponentAtNode(div)
+})
+
+it('ContactForm component renders without crashing.', () => {
+  const div = document.createElement('div')
+  const sendEmail = () => {
+    console.log('sendEmail func')
+  }
+  const showToast = () => {
+    console.log('showToast func')
+  }
+  ReactDOM.render(
+    <ContactForm sendEmail={sendEmail} showToast={showToast} />,
+    div
+  )
   ReactDOM.unmountComponentAtNode(div)
 })
