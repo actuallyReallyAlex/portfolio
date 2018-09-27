@@ -9,23 +9,94 @@ const ContactForm = props => {
       id="contact-form"
       onSubmit={e => {
         e.preventDefault()
-        props.sendEmail(process.env.REACT_APP_EMAILJS_TEMPLATEID)
-        e.target.reset()
-        props.showToast()
+        const name = document.getElementById('contact-form-name').value
+        const email = document.getElementById('contact-form-email').value
+        const message = document.getElementById('contact-form-message').value
+
+        const data = { name, email, message }
+
+        props.validate(data)
       }}
     >
-      <FormField label="Name">
-        <TextInput id="contact-form-name" name="name" />
+      <FormField
+        label="Name"
+        error={
+          props.errors.name.isValid === false ? 'Please enter your name.' : null
+        }
+      >
+        <TextInput
+          id="contact-form-name"
+          name="name"
+          onDOMChange={() => {
+            let newErrorsObj = {
+              name: {
+                isValid: null
+              },
+              email: {
+                isValid: props.errors.email.isValid
+              },
+              message: {
+                isValid: props.errors.message.isValid
+              }
+            }
+            props.resetError(newErrorsObj)
+          }}
+        />
       </FormField>
-      <FormField label="Email">
-        <TextInput id="contact-form-email" name="email" />
+      <FormField
+        label="Email"
+        error={
+          props.errors.email.isValid === false
+            ? 'Please enter a valid email address.'
+            : null
+        }
+      >
+        <TextInput
+          id="contact-form-email"
+          name="email"
+          onDOMChange={() => {
+            let newErrorsObj = {
+              name: {
+                isValid: props.errors.name.isValid
+              },
+              email: {
+                isValid: null
+              },
+              message: {
+                isValid: props.errors.message.isValid
+              }
+            }
+            props.resetError(newErrorsObj)
+          }}
+        />
       </FormField>
-      <FormField label="Message">
+      <FormField
+        label="Message"
+        error={
+          props.errors.message.isValid === false
+            ? 'Please enter a message.'
+            : null
+        }
+      >
         <textarea
           rows="5"
           type="text"
           id="contact-form-message"
           name="message"
+          onChange={() => {
+            let newErrorsObj = {
+              name: {
+                isValid: props.errors.name.isValid
+              },
+              email: {
+                isValid: props.errors.email.isValid
+              },
+              message: {
+                isValid: null
+              }
+            }
+            props.resetError(newErrorsObj)
+          }}
         />
       </FormField>
       <Footer primary={false} pad={{ vertical: 'medium' }}>
@@ -36,8 +107,8 @@ const ContactForm = props => {
 }
 
 ContactForm.proptTypes = {
-  sendEmail: PropTypes.func.isRequired,
-  showToast: PropTypes.func.isRequired
+  validate: PropTypes.func.isRequired,
+  errors: PropTypes.object.isRequired
 }
 
 export default ContactForm
