@@ -44,6 +44,7 @@ class Contact extends Component {
           />
           <Box align="center">
             <Form
+              data-netlify="true"
               name="Contact Form"
               id="contact-form"
               onSubmit={e => {
@@ -85,6 +86,7 @@ class Contact extends Component {
           />
           <Box align="center">
             <Form
+              data-netlify="true"
               name="Contact Form"
               id="contact-form"
               onSubmit={e => {
