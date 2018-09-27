@@ -8,7 +8,7 @@
     "lodash.capitalize": "^4.2.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "1.1.5"
+    "react-scripts": "2.0.0"
   },
   "files": [
     "public",
@@ -47,5 +47,11 @@
     "portfolio"
   ],
   "author": "Alex Lee <alexlee-dev>",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
