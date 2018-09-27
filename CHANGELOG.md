@@ -1,5 +1,17 @@
 # Change Log
 
+## [v0.6.0](https://github.com/alexlee-dev/portfolio/tree/v0.6.0) (2018-09-27)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.5.2...v0.6.0)
+
+**Implemented enhancements:**
+
+- Add Form Validation\(s\) for Contact Form [\#33](https://github.com/alexlee-dev/portfolio/issues/33)
+
+**Fixed bugs:**
+
+- 🐛 Feat/contact form validation [\#37](https://github.com/alexlee-dev/portfolio/pull/37) ([alexlee-dev](https://github.com/alexlee-dev))
+- Fix/remove netlify attribute [\#35](https://github.com/alexlee-dev/portfolio/pull/35) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.5.2](https://github.com/alexlee-dev/portfolio/tree/v0.5.2) (2018-09-27)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.5.1...v0.5.2)
 
