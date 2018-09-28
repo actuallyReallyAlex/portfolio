@@ -1,6 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Form, FormField, TextInput, Footer, Button } from 'grommet'
+import {
+  Form,
+  FormField,
+  TextInput,
+  Footer,
+  Button,
+  Paragraph,
+  Anchor
+} from 'grommet'
 
 const ContactForm = props => {
   return (
@@ -99,7 +107,16 @@ const ContactForm = props => {
           }}
         />
       </FormField>
-      <Footer primary={false} pad={{ vertical: 'medium' }}>
+      <Paragraph size="small">
+        Form submissions are sent to my email using{' '}
+        <Anchor
+          target="_blank"
+          label="EmailJS"
+          href="http://www.emailjs.com/"
+        />
+        .
+      </Paragraph>
+      <Footer primary={false} pad={{ vertical: 'none' }}>
         <Button type="submit" label="Send" />
       </Footer>
     </Form>
