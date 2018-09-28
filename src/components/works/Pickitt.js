@@ -2,14 +2,12 @@ import React from 'react'
 import { Tile, Card, Anchor } from 'grommet'
 import LinkNext from 'grommet/components/icons/base/LinkNext'
 
-import screenshot from '../../assets/screenshots/pickitt.png'
-
 const Pickitt = () => {
   return (
     <Tile>
       <Card
         colorIndex="brand"
-        thumbnail={screenshot}
+        thumbnail={'https://res.cloudinary.com/alexlee-dev/image/upload/v1538177964/portfolio/pickitt.png'}
         heading="Pickitt"
         label="Utility"
         description="When you need you need a computer to just pick it, reach for Pickitt!"
