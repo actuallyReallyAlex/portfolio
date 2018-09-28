@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.9.0](https://github.com/alexlee-dev/portfolio/tree/v0.9.0) (2018-09-28)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.8.0...v0.9.0)
+
+**Implemented enhancements:**
+
+- Make Responsive [\#10](https://github.com/alexlee-dev/portfolio/issues/10)
+- 📱 Feat/responsive [\#44](https://github.com/alexlee-dev/portfolio/pull/44) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.8.0](https://github.com/alexlee-dev/portfolio/tree/v0.8.0) (2018-09-28)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.7.0...v0.8.0)
 
