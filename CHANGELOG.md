@@ -1,5 +1,14 @@
 # Change Log
 
+## [v0.7.0](https://github.com/alexlee-dev/portfolio/tree/v0.7.0) (2018-09-28)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.6.1...v0.7.0)
+
+**Implemented enhancements:**
+
+- Add Email Button To Intro [\#39](https://github.com/alexlee-dev/portfolio/issues/39)
+- Add Footer [\#25](https://github.com/alexlee-dev/portfolio/issues/25)
+- ✨ Feat/footer [\#40](https://github.com/alexlee-dev/portfolio/pull/40) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.6.1](https://github.com/alexlee-dev/portfolio/tree/v0.6.1) (2018-09-28)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.6.0...v0.6.1)
 
