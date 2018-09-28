@@ -5,7 +5,7 @@ import SocialGithub from 'grommet/components/icons/base/SocialGithub'
 import SocialTwitter from 'grommet/components/icons/base/SocialTwitter'
 import SocialLinkedin from 'grommet/components/icons/base/SocialLinkedin'
 import Cube from 'grommet/components/icons/base/Cube'
-import introImgPath from '../darkCity.jpg'
+import introImgPath from '../assets/portland-dark.jpg'
 
 export const Intro = () => {
   return (
