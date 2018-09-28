@@ -7,7 +7,7 @@ import DocumentDownload from 'grommet/components/icons/base/DocumentDownload'
 
 const About = () => {
   return (
-    <Section>
+    <Section id="about">
       <SectionHeader title="About" subtitle="Let me introduce myself." />
       <Columns maxCount={2} justify="center">
         <Box align="end" pad="medium">

@@ -176,7 +176,7 @@ class Contact extends Component {
 
   BlankContactSection = props => {
     return (
-      <Section>
+      <Section id="contact">
         {props.toast === 'success' ? <this.SuccessToast /> : null}
         {props.toast === 'fail' ? <this.FailToast /> : null}
         <SectionHeader title="Contact" subtitle="I'd love to hear from you." />

@@ -12,6 +12,7 @@ export const Intro = () => {
     <Hero
       background={<Image src={introImgPath} full={true} fit="cover" />}
       backgroundColorIndex="dark"
+      id="home"
     >
       <Box direction="row" justify="center" align="center">
         <Box pad="medium">
