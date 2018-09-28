@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.6.1](https://github.com/alexlee-dev/portfolio/tree/v0.6.1) (2018-09-28)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.6.0...v0.6.1)
+
+**Implemented enhancements:**
+
+- Add "I agree to ... " to Contact Form [\#32](https://github.com/alexlee-dev/portfolio/issues/32)
+- ✨ Added Text About Using EmailJS [\#38](https://github.com/alexlee-dev/portfolio/pull/38) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.6.0](https://github.com/alexlee-dev/portfolio/tree/v0.6.0) (2018-09-27)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.5.2...v0.6.0)
 
