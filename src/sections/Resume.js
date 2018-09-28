@@ -5,7 +5,7 @@ import Experience from '../components/Experience'
 
 const Resume = () => {
   return (
-    <Section>
+    <Section id="resume">
       <SectionHeader
         title="Résumé"
         subtitle="More of my credentials."

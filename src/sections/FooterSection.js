@@ -8,7 +8,7 @@ import Cube from 'grommet/components/icons/base/Cube'
 
 const FooterSection = () => {
   return (
-    <Footer justify="between" primary={true}>
+    <Footer pad={{ horizontal: 'medium' }} justify="between" primary={true}>
       <Title>
         Alex Lee
       </Title>

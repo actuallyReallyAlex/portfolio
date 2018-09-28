@@ -16,7 +16,7 @@ import Pickitt from '../components/works/Pickitt'
 
 const Portfolio = () => {
   return (
-    <Section>
+    <Section id="portfolio">
       <SectionHeader
         title="Portfolio"
         subtitle="Check out some of my projects."
