@@ -1,5 +1,21 @@
 # Change Log
 
+## [v0.10.0](https://github.com/alexlee-dev/portfolio/tree/v0.10.0) (2018-09-28)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.9.1...v0.10.0)
+
+**Implemented enhancements:**
+
+- Compress Images [\#21](https://github.com/alexlee-dev/portfolio/issues/21)
+- ✨ Feat/cloudinary [\#47](https://github.com/alexlee-dev/portfolio/pull/47) ([alexlee-dev](https://github.com/alexlee-dev))
+
+## [v0.9.1](https://github.com/alexlee-dev/portfolio/tree/v0.9.1) (2018-09-28)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.9.0...v0.9.1)
+
+**Implemented enhancements:**
+
+- Change Hero Image to Portland [\#43](https://github.com/alexlee-dev/portfolio/issues/43)
+- 🍱 Feat/hero img portland [\#45](https://github.com/alexlee-dev/portfolio/pull/45) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.9.0](https://github.com/alexlee-dev/portfolio/tree/v0.9.0) (2018-09-28)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.8.0...v0.9.0)
 
