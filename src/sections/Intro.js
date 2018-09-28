@@ -27,7 +27,7 @@ export const Intro = () => {
           </Heading>
         </Box>
       </Box>
-      <Box direction="row" justify="center">
+      <Box responsive={false} direction="row" justify="center">
         <Button
           icon={<Mail />}
           onClick={() =>
