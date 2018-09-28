@@ -2,14 +2,12 @@ import React from 'react'
 import { Tile, Card, Anchor } from 'grommet'
 import LinkNext from 'grommet/components/icons/base/LinkNext'
 
-import screenshot from '../../assets/screenshots/facilitator-website.png'
-
 const FacilitatorWebsite = () => {
   return (
     <Tile>
       <Card
         colorIndex="brand"
-        thumbnail={screenshot}
+        thumbnail={'https://res.cloudinary.com/alexlee-dev/image/upload/v1538177964/portfolio/facilitator-website.png'}
         heading="SuperCamp Facilitator Page"
         label="Website"
         description="A staff showcase for SuperCamp."

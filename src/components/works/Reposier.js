@@ -2,14 +2,12 @@ import React from 'react'
 import { Tile, Card, Anchor } from 'grommet'
 import LinkNext from 'grommet/components/icons/base/LinkNext'
 
-import screenshot from '../../assets/screenshots/reposier.png'
-
 const Reposier = () => {
   return (
     <Tile>
       <Card
         colorIndex="brand"
-        thumbnail={screenshot}
+        thumbnail={'https://res.cloudinary.com/alexlee-dev/image/upload/v1538177964/portfolio/reposier.png'}
         heading="reposier"
         label="CLI"
         description="Tasty CLI on the outside, simple integration with GitHub's API on the inside."

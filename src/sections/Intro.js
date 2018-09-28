@@ -5,12 +5,11 @@ import SocialGithub from 'grommet/components/icons/base/SocialGithub'
 import SocialTwitter from 'grommet/components/icons/base/SocialTwitter'
 import SocialLinkedin from 'grommet/components/icons/base/SocialLinkedin'
 import Cube from 'grommet/components/icons/base/Cube'
-import introImgPath from '../assets/portland-dark.jpg'
 
 export const Intro = () => {
   return (
     <Hero
-      background={<Image src={introImgPath} full={true} fit="cover" />}
+      background={<Image src={'https://res.cloudinary.com/alexlee-dev/image/upload/v1538177955/portfolio/portland-dark.jpg'} full={true} fit="cover" />}
       backgroundColorIndex="dark"
       id="home"
     >
