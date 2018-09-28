@@ -4,13 +4,20 @@ import { Box, Headline, Paragraph } from 'grommet'
 
 const TimelineHeading = props => {
   return (
-    <Box>
-      <Headline size="small" margin="none">
+    <Box align="center">
+      <Headline align="center" size="small" margin="none">
         {props.title}
       </Headline>
-      <Paragraph margin="small">
-        {props.startDate} - {props.present === true ? 'Present' : props.endDate}
-      </Paragraph>
+      {props.startDate ? (
+        <Paragraph align="center" margin="small">
+          {props.startDate} -{' '}
+          {props.present === true ? 'Present' : props.endDate}
+        </Paragraph>
+      ) : (
+        <Paragraph align="center" margin="small">
+          {props.present === true ? 'Present' : props.endDate}
+        </Paragraph>
+      )}
     </Box>
   )
 }

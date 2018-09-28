@@ -13,10 +13,21 @@ class NavMenu extends Component {
   }
   render() {
     return (
-      <Header pad={{ horizontal: 'medium' }} fixed={true}>
+      <Header
+        pad={{ horizontal: 'medium' }}
+        fixed={true}
+        float={false}
+        size="small"
+        className="sticky"
+        colorIndex="neutral-1"
+      >
         <Title>Alex Lee</Title>
         <Box flex={true} justify="end" direction="row" responsive={false}>
-          <Menu direction="row" size="small" dropAlign={{ right: 'right' }}>
+          <Menu
+            direction="row"
+            size="small"
+            dropAlign={{ right: 'right', top: 'bottom' }}
+          >
             <Anchor
               onClick={() => {
                 this.smoothlyScroll('home')
