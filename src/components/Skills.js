@@ -6,7 +6,7 @@ import LanguagesLegend from './LanguagesLegend'
 const Skills = () => {
   return (
     <Box>
-      <Box direction="row" justify="center">
+      <Box pad="large" direction="row" justify="center">
         <Box pad={{ vertical: 'small' }}>
           <Heading tag="h3">Skills</Heading>
           <LoremIpsum />

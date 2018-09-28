@@ -23,7 +23,7 @@ const TimelineItem = props => {
           />
         )}
       </Box>
-      <Box basis="small" align="center">
+      <Box pad="medium" basis="small" align="center">
         <TimelineIcon icon={props.icon} />
       </Box>
       <Box basis="large">

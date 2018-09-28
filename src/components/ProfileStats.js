@@ -7,7 +7,7 @@ const paragraphStyle = {
 
 const ProfileStats = () => {
   return (
-    <Box direction="column">
+    <Box pad="large" direction="column">
       <Label uppercase margin="none">
         Full Name:
       </Label>

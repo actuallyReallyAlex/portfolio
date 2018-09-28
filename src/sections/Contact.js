@@ -180,7 +180,7 @@ class Contact extends Component {
         {props.toast === 'success' ? <this.SuccessToast /> : null}
         {props.toast === 'fail' ? <this.FailToast /> : null}
         <SectionHeader title="Contact" subtitle="I'd love to hear from you." />
-        <Box align="center">
+        <Box pad="large" align="center">
           <ContactForm
             validate={this.validate}
             errors={this.state.errors}
