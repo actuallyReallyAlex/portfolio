@@ -9,18 +9,37 @@ import Cube from 'grommet/components/icons/base/Cube'
 const FooterSection = () => {
   return (
     <Footer pad={{ horizontal: 'medium' }} justify="between" primary={true}>
-      <Title>
-        Alex Lee
-      </Title>
-      <Box direction="row" align="center" pad={{ between: 'medium' }}>
-        <Menu direction="row" size="small" dropAlign={{ right: 'right' }}>
-          <Anchor icon={<Mail />} href="mailto:alex@alex-lee.site" />
-          <Anchor target="_blank" icon={<SocialGithub />} href="https://github.com/alexlee-dev/" />
-          <Anchor target="_blank" icon={<Cube />} href="https://www.npmjs.com/~alexlee-dev" />
-          <Anchor target="_blank" icon={<SocialTwitter />} href="https://twitter.com/alexlee_dev" />
-          <Anchor target="_blank" icon={<SocialLinkedin />} href="https://www.linkedin.com/in/alexlee-dev" />
-        </Menu>
+      <Title>Alex Lee</Title>
+      <Box
+        responsive={false}
+        direction="row"
+        align="center"
+        pad={{ between: 'medium' }}
+      >
         <Paragraph margin="none">© 2018 Alex Lee</Paragraph>
+        <Menu direction="row" size="small" dropAlign={{ bottom: 'top', right: 'right' }}>
+          <Anchor icon={<Mail />} href="mailto:alex@alex-lee.site" />
+          <Anchor
+            target="_blank"
+            icon={<SocialGithub />}
+            href="https://github.com/alexlee-dev/"
+          />
+          <Anchor
+            target="_blank"
+            icon={<Cube />}
+            href="https://www.npmjs.com/~alexlee-dev"
+          />
+          <Anchor
+            target="_blank"
+            icon={<SocialTwitter />}
+            href="https://twitter.com/alexlee_dev"
+          />
+          <Anchor
+            target="_blank"
+            icon={<SocialLinkedin />}
+            href="https://www.linkedin.com/in/alexlee-dev"
+          />
+        </Menu>
       </Box>
     </Footer>
   )
