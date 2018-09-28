@@ -7,6 +7,7 @@ import About from './sections/About'
 import Resume from './sections/Resume'
 import Portfolio from './sections/Portfolio'
 import Contact from './sections/Contact'
+import FooterSection from './sections/FooterSection'
 
 class Site extends Component {
   render() {
@@ -18,6 +19,7 @@ class Site extends Component {
         <Resume />
         <Portfolio />
         <Contact />
+        <FooterSection />
       </App>
     )
   }
