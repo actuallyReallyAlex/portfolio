@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section, Columns, Box, Paragraph, Image, Button } from 'grommet'
+import { Section, Box, Paragraph, Image, Button } from 'grommet'
 import SectionHeader from '../components/SectionHeader'
 import Profile from '../components/Profile'
 import Skills from '../components/Skills'
@@ -9,15 +9,15 @@ const About = () => {
   return (
     <Section id="about">
       <SectionHeader title="About" subtitle="Let me introduce myself." />
-      <Columns maxCount={2} justify="center">
-        <Box align="end" pad="medium">
+      <Box direction="row" justify="center" align="center">
+        <Box pad="large">
           <Image
             src="https://avatars2.githubusercontent.com/u/41493792?s=400&u=d55d8a934c12a5a11c0618657aa60e2efb5e89d4&v=4"
             alt="Alex Lee"
             size="small"
           />
         </Box>
-        <Box textAlign="left">
+        <Box pad="large">
           <Paragraph>
             Lorem ipsum Exercitation culpa qui dolor consequat exercitation
             fugiat laborum ex ea eiusmod ad do aliqua occaecat nisi ad irure
@@ -25,7 +25,7 @@ const About = () => {
             consectetur ea id quis eiusmod.
           </Paragraph>
         </Box>
-      </Columns>
+      </Box>
       <Box direction="row" justify="center">
         <Box>
           <Profile />
@@ -36,7 +36,7 @@ const About = () => {
           <Skills />
         </Box>
       </Box>
-      <Box direction="row" justify="center">
+      <Box responsive={false} direction="row" justify="center">
         <Button
           label="Résumé"
           icon={<DocumentDownload />}
