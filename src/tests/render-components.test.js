@@ -26,6 +26,7 @@ import Remembera from '../components/works/Remembera'
 import Pickitt from '../components/works/Pickitt'
 import Contact from '../sections/Contact'
 import ContactForm from '../components/ContactForm'
+import FooterSection from '../sections/FooterSection'
 
 it('Site component renders without crashing.', () => {
   const div = document.createElement('div')
@@ -212,3 +213,9 @@ it('Contact component renders without crashing.', () => {
 //   )
 //   ReactDOM.unmountComponentAtNode(div)
 // })
+
+it('FooterSection component renders without crashing.', () => {
+  const div = document.createElement('div')
+  ReactDOM.render(<FooterSection />, div)
+  ReactDOM.unmountComponentAtNode(div)
+})
