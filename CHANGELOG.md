@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.8.0](https://github.com/alexlee-dev/portfolio/tree/v0.8.0) (2018-09-28)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.7.0...v0.8.0)
+
+**Implemented enhancements:**
+
+- Navbar is 50% Done [\#20](https://github.com/alexlee-dev/portfolio/issues/20)
+- ✨ Fix/navbar [\#42](https://github.com/alexlee-dev/portfolio/pull/42) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.7.0](https://github.com/alexlee-dev/portfolio/tree/v0.7.0) (2018-09-28)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.6.1...v0.7.0)
 
