@@ -1,5 +1,6 @@
 import React from 'react'
 import { Hero, Image, Box, Heading, Button } from 'grommet'
+import Mail from 'grommet/components/icons/base/Mail'
 import SocialGithub from 'grommet/components/icons/base/SocialGithub'
 import SocialTwitter from 'grommet/components/icons/base/SocialTwitter'
 import SocialLinkedin from 'grommet/components/icons/base/SocialLinkedin'
@@ -26,6 +27,12 @@ export const Intro = () => {
         </Box>
       </Box>
       <Box direction="row" justify="center">
+        <Button
+          icon={<Mail />}
+          onClick={() =>
+            window.open('mailto:alex@alex-lee.site', '_self')
+          }
+        />
         <Button
           icon={<SocialGithub />}
           onClick={() =>
