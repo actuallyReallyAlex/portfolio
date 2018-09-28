@@ -2,14 +2,12 @@ import React from 'react'
 import { Tile, Card, Anchor } from 'grommet'
 import LinkNext from 'grommet/components/icons/base/LinkNext'
 
-import screenshot from '../../assets/screenshots/contractor.png'
-
 const Contractor = () => {
   return (
     <Tile>
       <Card
         colorIndex="brand"
-        thumbnail={screenshot}
+        thumbnail={'https://res.cloudinary.com/alexlee-dev/image/upload/v1538177963/portfolio/contractor.png'}
         heading="Contractor Tool"
         label="Tool"
         description="A tool used to contract employees. A part of the Staffing Dashboard."
