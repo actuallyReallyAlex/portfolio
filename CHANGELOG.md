@@ -1,5 +1,20 @@
 # Change Log
 
+## [v0.11.0](https://github.com/alexlee-dev/portfolio/tree/v0.11.0) (2018-09-29)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.10.2...v0.11.0)
+
+**Implemented enhancements:**
+
+- Add "Languages Used" Legend to Portfolio Items [\#22](https://github.com/alexlee-dev/portfolio/issues/22)
+- ✨ Feat/portfolio item legends [\#55](https://github.com/alexlee-dev/portfolio/pull/55) ([alexlee-dev](https://github.com/alexlee-dev))
+- ✏️ Edit "Languages" of Resume [\#54](https://github.com/alexlee-dev/portfolio/pull/54) ([alexlee-dev](https://github.com/alexlee-dev))
+- 📝 Feat/docs [\#50](https://github.com/alexlee-dev/portfolio/pull/50) ([alexlee-dev](https://github.com/alexlee-dev))
+
+**Fixed bugs:**
+
+- 🔥 Remove old .docz folder files. [\#53](https://github.com/alexlee-dev/portfolio/pull/53) ([alexlee-dev](https://github.com/alexlee-dev))
+- 🏗️ Attempt to Build Docs Again [\#52](https://github.com/alexlee-dev/portfolio/pull/52) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.10.2](https://github.com/alexlee-dev/portfolio/tree/v0.10.2) (2018-09-29)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.10.1...v0.10.2)
 
