@@ -42,12 +42,12 @@ const Experience = () => {
       </Box>
       <Box direction="column" pad="large">
         <TimelineItem
-          title="Bachelor's of Science"
+          title="Bachelor of Science"
           startDate=""
           present
           icon="book"
           subtitle="Portland State University"
-          summary="Currently pursuing a Bachelor's of Science in Biology."
+          summary="Currently pursuing a Bachelor of Science in Biology."
         />
         <TimelineItem
           title="Associate's Degree"
