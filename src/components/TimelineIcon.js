@@ -44,6 +44,7 @@ const TimelineIcon = props => {
 }
 
 TimelineIcon.propTypes = {
+  /** Responsible for which icon will be rendered. */
   icon: PropTypes.string
 }
 
