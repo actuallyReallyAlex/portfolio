@@ -19,10 +19,10 @@ const About = () => {
         </Box>
         <Box pad="large">
           <Paragraph>
-            Lorem ipsum Exercitation culpa qui dolor consequat exercitation
-            fugiat laborum ex ea eiusmod ad do aliqua occaecat nisi ad irure
-            sunt id pariatur Duis laboris amet exercitation veniam labore
-            consectetur ea id quis eiusmod.
+            I'm a passionate Web Developer. Since I was 11, I've been fascinated
+            with computers and design. I started writing in Visual Basic. Now
+            I'm proud to say that I've grown in my development and design
+            skillsets, making me a valuable asset to any team.
           </Paragraph>
         </Box>
       </Box>

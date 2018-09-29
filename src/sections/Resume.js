@@ -9,10 +9,7 @@ const Resume = () => {
       <SectionHeader
         title="Résumé"
         subtitle="More of my credentials."
-        summary="Lorem ipsum Exercitation culpa qui dolor consequat exercitation
-            fugiat laborum ex ea eiusmod ad do aliqua occaecat nisi ad irure
-            sunt id pariatur Duis laboris amet exercitation veniam labore
-            consectetur ea id quis eiusmod."
+        summary="With a &#8220;can do&#8221; attitude and a determination to put my best work into fruition, I can be a positive asset to any team."
       />
       <Experience />
     </Section>
