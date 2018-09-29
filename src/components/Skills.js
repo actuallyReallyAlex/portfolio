@@ -1,6 +1,5 @@
 import React from 'react'
-import { Box, Heading, Label } from 'grommet'
-import LoremIpsum from './LoremIpsum'
+import { Box, Heading, Label, Paragraph } from 'grommet'
 import LanguagesLegend from './LanguagesLegend'
 
 const Skills = () => {
@@ -9,7 +8,12 @@ const Skills = () => {
       <Box pad="large" direction="row" justify="center">
         <Box pad={{ vertical: 'small' }}>
           <Heading tag="h3">Skills</Heading>
-          <LoremIpsum />
+          <Paragraph>
+            As a self-taught developer, I've gained a variety of skillsets that
+            I can apply to my projects. Currently, I'm focused on React.JS. I'm
+            eager to put my skills to good use, and continue my love of
+            learning.
+          </Paragraph>
         </Box>
       </Box>
       <Box direction="row">

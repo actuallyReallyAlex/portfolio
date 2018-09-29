@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Label, Paragraph } from 'grommet'
+import { Box, Label, Paragraph, Anchor } from 'grommet'
 
 const paragraphStyle = {
   marginTop: '0'
@@ -24,7 +24,7 @@ const ProfileStats = () => {
         Email:
       </Label>
       <Paragraph margin="small" style={paragraphStyle}>
-        alex@alex-lee.site
+        <Anchor href="mailto:alex@alex-lee.site">alex@alex-lee.site</Anchor>
       </Paragraph>
     </Box>
   )
