@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.10.1](https://github.com/alexlee-dev/portfolio/tree/v0.10.1) (2018-09-29)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.10.0...v0.10.1)
+
+**Implemented enhancements:**
+
+- Edit Copy [\#7](https://github.com/alexlee-dev/portfolio/issues/7)
+- ✏️ Updated Copy [\#48](https://github.com/alexlee-dev/portfolio/pull/48) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.10.0](https://github.com/alexlee-dev/portfolio/tree/v0.10.0) (2018-09-28)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.9.1...v0.10.0)
 
