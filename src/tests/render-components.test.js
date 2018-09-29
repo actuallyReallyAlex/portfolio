@@ -27,6 +27,7 @@ import Pickitt from '../components/works/Pickitt'
 import Contact from '../sections/Contact'
 import ContactForm from '../components/ContactForm'
 import FooterSection from '../sections/FooterSection'
+import PortfolioItemDescription from '../components/PortfolioItemDescription'
 
 it('Site component renders without crashing.', () => {
   const div = document.createElement('div')
@@ -217,5 +218,17 @@ it('Contact component renders without crashing.', () => {
 it('FooterSection component renders without crashing.', () => {
   const div = document.createElement('div')
   ReactDOM.render(<FooterSection />, div)
+  ReactDOM.unmountComponentAtNode(div)
+})
+
+it('PortfolioItemDescription component renders without crashing.', () => {
+  const div = document.createElement('div')
+  ReactDOM.render(
+    <PortfolioItemDescription
+      languages={['HTML', 'CSS', 'JavaScript']}
+      description="Test description."
+    />,
+    div
+  )
   ReactDOM.unmountComponentAtNode(div)
 })
