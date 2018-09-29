@@ -1,3 +1,0 @@
-# Redirects from what the browser requests to what Netlify serves
-/docs              ../.docz/dist
-/google            https://www.google.com
