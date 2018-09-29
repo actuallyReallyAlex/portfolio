@@ -1,16 +1,24 @@
 import React from 'react'
 import { Tile, Card, Anchor } from 'grommet'
 import LinkNext from 'grommet/components/icons/base/LinkNext'
+import PortfolioItemDescription from '../PortfolioItemDescription'
 
 const Pickitt = () => {
   return (
     <Tile>
       <Card
         colorIndex="brand"
-        thumbnail={'https://res.cloudinary.com/alexlee-dev/image/upload/v1538177964/portfolio/pickitt.png'}
+        thumbnail={
+          'https://res.cloudinary.com/alexlee-dev/image/upload/v1538177964/portfolio/pickitt.png'
+        }
         heading="Pickitt"
         label="Utility"
-        description="When you need you need a computer to just pick it, reach for Pickitt!"
+        description={
+          <PortfolioItemDescription
+            languages={['Node.js', 'JavaScript']}
+            description="When you need you need a computer to just pick it, reach for Pickitt!"
+          />
+        }
         link={
           <Anchor
             href="https://www.pickitt.netlify.com/"

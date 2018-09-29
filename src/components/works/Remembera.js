@@ -1,16 +1,24 @@
 import React from 'react'
 import { Tile, Card, Anchor } from 'grommet'
 import LinkNext from 'grommet/components/icons/base/LinkNext'
+import PortfolioItemDescription from '../PortfolioItemDescription'
 
 const Remembera = () => {
   return (
     <Tile>
       <Card
         colorIndex="brand"
-        thumbnail={'https://res.cloudinary.com/alexlee-dev/image/upload/v1538177964/portfolio/remembera.png'}
+        thumbnail={
+          'https://res.cloudinary.com/alexlee-dev/image/upload/v1538177964/portfolio/remembera.png'
+        }
         heading="Remembera"
         label="Documentation"
-        description="A knowledge bank."
+        description={
+          <PortfolioItemDescription
+            languages={['MDX', 'JSX', 'JavaScript']}
+            description="A knowledge bank."
+          />
+        }
         link={
           <Anchor
             href="https://www.remembera.info/"
