@@ -1,5 +1,17 @@
 # Change Log
 
+## [v0.12.0](https://github.com/alexlee-dev/portfolio/tree/v0.12.0) (2018-09-30)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.11.0...v0.12.0)
+
+**Implemented enhancements:**
+
+- Add Documentation w/ Component Library [\#14](https://github.com/alexlee-dev/portfolio/issues/14)
+- 📝 Docs/add components [\#59](https://github.com/alexlee-dev/portfolio/pull/59) ([alexlee-dev](https://github.com/alexlee-dev))
+
+**Fixed bugs:**
+
+- Add Documentation w/ Component Library [\#14](https://github.com/alexlee-dev/portfolio/issues/14)
+
 ## [v0.11.0](https://github.com/alexlee-dev/portfolio/tree/v0.11.0) (2018-09-29)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.10.2...v0.11.0)
 
