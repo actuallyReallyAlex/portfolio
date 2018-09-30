@@ -1,12 +1,13 @@
 # Change Log
 
-## [Unreleased](https://github.com/alexlee-dev/portfolio/tree/HEAD)
-
-[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.12.1...HEAD)
+## [v0.12.2](https://github.com/alexlee-dev/portfolio/tree/v0.12.2) (2018-09-30)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.12.1...v0.12.2)
 
 **Implemented enhancements:**
 
+- Re-Organize Skills / Languages by Language Category [\#58](https://github.com/alexlee-dev/portfolio/issues/58)
 - Add Default Props to Custom Components [\#29](https://github.com/alexlee-dev/portfolio/issues/29)
+- 🎨Fix/skills organization [\#64](https://github.com/alexlee-dev/portfolio/pull/64) ([alexlee-dev](https://github.com/alexlee-dev))
 
 ## [v0.12.1](https://github.com/alexlee-dev/portfolio/tree/v0.12.1) (2018-09-30)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.12.0...v0.12.1)
