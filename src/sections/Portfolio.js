@@ -13,6 +13,8 @@ import StaffWebsite from '../components/works/StaffWebsite'
 import FacilitatorWebsite from '../components/works/FacilitatorWebsite'
 import Remembera from '../components/works/Remembera'
 import Pickitt from '../components/works/Pickitt'
+import PortfolioWork from '../components/works/PortfolioWork'
+import PortfolioDocs from '../components/works/PortfolioDocs'
 
 const Portfolio = () => {
   return (
@@ -32,6 +34,8 @@ const Portfolio = () => {
         <Contractor />
         <StaffWebsite />
         <FacilitatorWebsite />
+        <PortfolioWork />
+        <PortfolioDocs />
       </Tiles>
     </Section>
   )
