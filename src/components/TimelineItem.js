@@ -33,14 +33,31 @@ const TimelineItem = props => {
   )
 }
 
+TimelineItem.defaultProps = {
+  endDate: 'End Date',
+  icon: 'briefcase',
+  present: false,
+  startDate: 'Start Date',
+  subtitle: 'Example Subtitle',
+  summary: 'Example Summary',
+  title: 'Example Title'
+}
+
 TimelineItem.propTypes = {
-  startDate: PropTypes.string.isRequired,
+  /** End date for item. */
   endDate: PropTypes.string,
+  /** Icon to be displayed in the middle of the item. */
+  icon: PropTypes.string,
+  /** If this item is still ongoing, apply the `present` prop. */
   present: PropTypes.bool,
-  title: PropTypes.string.isRequired,
+  /** Start date for item. */
+  startDate: PropTypes.string.isRequired,
+  /** A smaller title with more description. */
   subtitle: PropTypes.string.isRequired,
+  /** A summary of the item. */
   summary: PropTypes.string.isRequired,
-  icon: PropTypes.string
+  /** A title for the item. */
+  title: PropTypes.string.isRequired
 }
 
 export default TimelineItem

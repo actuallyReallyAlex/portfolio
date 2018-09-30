@@ -22,6 +22,10 @@ const dictionary = [
   {
     name: 'book',
     icon: <Book />
+  },
+  {
+    name: 'briefcase',
+    icon: <Briefcase />
   }
 ]
 

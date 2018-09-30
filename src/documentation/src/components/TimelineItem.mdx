@@ -1,0 +1,64 @@
+---
+name: TimelineItem
+route: /components/TimelineItem
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import TimelineItem from '../../../components/TimelineItem'
+
+# TimelineItem
+
+An item to be displayed among other items in a timeline.
+
+## Example
+
+---
+
+<TimelineItem />
+
+---
+
+## Properties
+
+<PropsTable of={TimelineItem} />
+
+## Basic Usage
+
+### Event
+
+<Playground>
+  <TimelineItem 
+    startDate="March 24th, 2005" 
+    endDate="March 25th, 2005" 
+    title="Stapler in Jell-O" 
+    subtitle="Jim put my stapler in Jell-O." 
+    summary="I really can't believe he did this. I can't stand to sit this close to him every day."
+  />
+</Playground>
+
+### Job
+
+<Playground>
+  <TimelineItem
+    title="HR Specialist"
+    startDate="June 2016"
+    present
+    icon="analytics"
+    subtitle="Quantum Learning Network"
+    summary="Responsible for staffing the SuperCamp summer program - recruitment, interviewing, contracting over 100 new employees. Created a staff website, designed HTML newsletters, and created numerous media campaigns as a key member of the SuperCamp Programs Department."
+  />
+</Playground>
+
+### Education
+
+<Playground>
+  <TimelineItem
+    title="Bachelor of Science"
+    startDate=""
+    present
+    icon="book"
+    subtitle="Portland State University"
+    summary="Currently pursuing a Bachelor of Science in Biology."
+  />
+</Playground>
