@@ -225,7 +225,7 @@ it('PortfolioItemDescription component renders without crashing.', () => {
   const div = document.createElement('div')
   ReactDOM.render(
     <PortfolioItemDescription
-      languages={['HTML', 'CSS', 'JavaScript']}
+      languages={['HTML5', 'CSS3', 'JavaScript']}
       description="Test description."
     />,
     div
