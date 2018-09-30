@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.12.3](https://github.com/alexlee-dev/portfolio/tree/v0.12.3) (2018-09-30)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.12.2...v0.12.3)
+
+**Implemented enhancements:**
+
+- Create Custom Portfolio Work for Portfolio Itself + Docs [\#57](https://github.com/alexlee-dev/portfolio/issues/57)
+- ✨ Feat/works portfolio documentation [\#65](https://github.com/alexlee-dev/portfolio/pull/65) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.12.2](https://github.com/alexlee-dev/portfolio/tree/v0.12.2) (2018-09-30)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.12.1...v0.12.2)
 
