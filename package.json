@@ -6,6 +6,7 @@
     "dotenv": "^6.0.0",
     "grommet": "^1.11.0",
     "lodash.capitalize": "^4.2.1",
+    "logrocket": "^0.6.17",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.0"
