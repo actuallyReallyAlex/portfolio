@@ -15,7 +15,7 @@ const Contractor = () => {
         label="Tool"
         description={
           <PortfolioItemDescription
-            languages={['HTML', 'CSS', 'JavaScript']}
+            languages={['HTML5', 'CSS3', 'JavaScript']}
             description="A tool used to contract employees. A part of the Staffing Dashboard."
           />
         }

@@ -15,7 +15,7 @@ const StaffingDashboard = () => {
         label="Dashboard"
         description={
           <PortfolioItemDescription
-            languages={['HTML', 'CSS', 'JavaScript']}
+            languages={['HTML5', 'CSS3', 'JavaScript']}
             description="A fully functional dashboard to help with staffing and recruiting."
           />
         }

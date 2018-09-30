@@ -15,7 +15,7 @@ const PayrollAdmin = () => {
         label="Dashboard"
         description={
           <PortfolioItemDescription
-            languages={['HTML', 'CSS', 'JavaScript']}
+            languages={['HTML5', 'CSS3', 'JavaScript']}
             description="A comprehensive dashboard to view payroll information."
           />
         }

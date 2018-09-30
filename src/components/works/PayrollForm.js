@@ -15,7 +15,7 @@ const PayrollForm = () => {
         label="Form"
         description={
           <PortfolioItemDescription
-            languages={['HTML', 'CSS', 'JavaScript']}
+            languages={['HTML5', 'CSS3', 'JavaScript']}
             description="A form integrated with a dashboard to collect and process employee payroll information."
           />
         }
