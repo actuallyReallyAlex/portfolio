@@ -1,4 +1,6 @@
 export default {
+  title: 'Documentation',
+  description: "Alex Lee's Portfolio",
   ordering: 'ascending',
   dest: '/src/docs/',
   htmlContext: {
@@ -8,7 +10,8 @@ export default {
       links: [
         {
           rel: 'stylesheet',
-          href: 'https://cdnjs.cloudflare.com/ajax/libs/grommet/1.11.0/grommet.min.css'
+          href:
+            'https://cdnjs.cloudflare.com/ajax/libs/grommet/1.11.0/grommet.min.css'
         }
       ]
     }
