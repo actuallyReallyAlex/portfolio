@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.12.4](https://github.com/alexlee-dev/portfolio/tree/v0.12.4) (2018-09-30)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.12.3...v0.12.4)
+
+**Implemented enhancements:**
+
+- Add Documentation Home Page [\#62](https://github.com/alexlee-dev/portfolio/issues/62)
+- 🎨Feat/docs home Add Documentation Home Page [\#66](https://github.com/alexlee-dev/portfolio/pull/66) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.12.3](https://github.com/alexlee-dev/portfolio/tree/v0.12.3) (2018-09-30)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.12.2...v0.12.3)
 
