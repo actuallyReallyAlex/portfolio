@@ -8,7 +8,7 @@ const PortfolioDocs = () => {
       <Card
         colorIndex="accent-1"
         thumbnail={
-          'https://res.cloudinary.com/alexlee-dev/image/upload/v1538331957/portfolio/documentation.png'
+          'https://res.cloudinary.com/alexlee-dev/image/upload/v1538333594/portfolio/docs.png'
         }
         heading="Portfolio Docs"
         label="Documentation"
