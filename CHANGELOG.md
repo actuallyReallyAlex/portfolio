@@ -1,5 +1,21 @@
 # Change Log
 
+## [Unreleased](https://github.com/alexlee-dev/portfolio/tree/HEAD)
+
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.12.1...HEAD)
+
+**Implemented enhancements:**
+
+- Add Default Props to Custom Components [\#29](https://github.com/alexlee-dev/portfolio/issues/29)
+
+## [v0.12.1](https://github.com/alexlee-dev/portfolio/tree/v0.12.1) (2018-09-30)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.12.0...v0.12.1)
+
+**Fixed bugs:**
+
+- Fix Default Prop Overrides [\#60](https://github.com/alexlee-dev/portfolio/issues/60)
+- ✏️ Fix Default Prop Override on SectionHeader [\#61](https://github.com/alexlee-dev/portfolio/pull/61) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.12.0](https://github.com/alexlee-dev/portfolio/tree/v0.12.0) (2018-09-30)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.11.0...v0.12.0)
 
