@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.13.0](https://github.com/alexlee-dev/portfolio/tree/v0.13.0) (2018-09-30)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.12.4...v0.13.0)
+
+**Implemented enhancements:**
+
+- Integrate with LogRocket [\#56](https://github.com/alexlee-dev/portfolio/issues/56)
+- 🚀 Feat/integrate logrocket [\#67](https://github.com/alexlee-dev/portfolio/pull/67) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.12.4](https://github.com/alexlee-dev/portfolio/tree/v0.12.4) (2018-09-30)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.12.3...v0.12.4)
 
