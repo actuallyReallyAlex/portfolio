@@ -22,10 +22,21 @@ const TimelineHeading = props => {
   )
 }
 
+TimelineHeading.defaultProps = {
+  endDate: 'End Date',
+  present: false,
+  startDate: 'Start Date',
+  title: 'Example Title'
+}
+
 TimelineHeading.propTypes = {
-  startDate: PropTypes.string.isRequired,
+  /** The end date for the TimelineItem. */
   endDate: PropTypes.string,
+  /** If this item is still ongoing, apply the `present` prop. */
   present: PropTypes.bool,
+  /** The start date for the TimelineItem. */
+  startDate: PropTypes.string.isRequired,
+  /** The title of the item. */
   title: PropTypes.string.isRequired
 }
 
