@@ -8,6 +8,10 @@ const languageProperties = [
     color: 'accent-2'
   },
   {
+    name: 'Grommet',
+    color: 'brand'
+  },
+  {
     name: 'JavaScript',
     color: 'neutral-1'
   },
