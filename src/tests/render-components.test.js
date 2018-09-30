@@ -38,7 +38,7 @@ it('Site component renders without crashing.', () => {
 it('LanguagesLegend component renders without crashing.', () => {
   const div = document.createElement('div')
   ReactDOM.render(
-    <LanguagesLegend languages={['HTML', 'CSS', 'JavaScript']} />,
+    <LanguagesLegend languages={['HTML5', 'CSS3', 'JavaScript']} />,
     div
   )
   ReactDOM.unmountComponentAtNode(div)
