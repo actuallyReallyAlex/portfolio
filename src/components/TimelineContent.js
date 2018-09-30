@@ -12,8 +12,15 @@ const TimelineContent = props => {
   )
 }
 
+TimelineContent.defaultProps = {
+  subtitle: 'Example Subtitle',
+  summary: 'Example Summary'
+}
+
 TimelineContent.propTypes = {
+  /** A subtitle to place in the item. */
   subtitle: PropTypes.string.isRequired,
+  /** A summary to place in the item. */
   summary: PropTypes.string.isRequired
 }
 
