@@ -22,7 +22,6 @@ const SectionHeader = props => {
 
 SectionHeader.defaultProps = {
   subtitle: 'Example Subtitle',
-  summary: 'Example Summary',
   title: 'Example Title'
 }
 
