@@ -14,9 +14,16 @@ const PortfolioItemDescription = props => {
   )
 }
 
+PortfolioItemDescription.defaultProps = {
+  description: 'Example Description',
+  languages: ['HTML', 'CSS', 'JavaScript']
+}
+
 PortfolioItemDescription.propTypes = {
-  languages: PropTypes.array.isRequired,
-  description: PropTypes.string.isRequired
+  /** A short description of the project. */
+  description: PropTypes.string.isRequired,
+  /** A colorful legend to show which languages were used on the project. */
+  languages: PropTypes.array.isRequired
 }
 
 export default PortfolioItemDescription
