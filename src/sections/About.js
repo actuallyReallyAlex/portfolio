@@ -36,7 +36,7 @@ const About = () => {
           <Skills />
         </Box>
       </Box>
-      <Box responsive={false} direction="row" justify="center">
+      <Box pad={{ vertical: 'medium' }} responsive={false} direction="row" justify="center">
         <Button
           label="Résumé"
           icon={<DocumentDownload />}
