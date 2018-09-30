@@ -9,7 +9,12 @@ const LanguagesLegend = props => {
   )
 }
 
+LanguagesLegend.defaultProps = {
+  languages: ['HTML', 'CSS', 'JavaScript']
+}
+
 LanguagesLegend.propTypes = {
+  /** A colorful legend to show which languages were used on the project. */
   languages: PropTypes.array.isRequired
 }
 
