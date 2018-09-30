@@ -5,7 +5,7 @@ import LanguagesLegend from './LanguagesLegend'
 const Skills = () => {
   return (
     <Box>
-      <Box pad="large" direction="row" justify="center">
+      <Box direction="row" justify="center">
         <Box pad={{ vertical: 'small' }}>
           <Heading tag="h3">Skills</Heading>
           <Paragraph>
@@ -16,24 +16,26 @@ const Skills = () => {
           </Paragraph>
         </Box>
       </Box>
-      <Box direction="row">
-        <Box pad="large">
-          <Label>Programming Languages</Label>
-          <LanguagesLegend languages={['JavaScript', 'C#']} />
+      <Box size={{ width: { max: 'xxlarge' } }} direction="row">
+        <Box pad={{ horizontal: 'small', vertical: 'large' }}>
+          <Label>HTML</Label>
+          <LanguagesLegend languages={['HTML5', 'JSX', 'MDX', 'Markdown']} />
         </Box>
-        <Box pad="large">
-          <Label>Not Exactly A Programming Language</Label>
+        <Box pad={{ horizontal: 'small', vertical: 'large' }}>
+          <Label>CSS</Label>
+          <LanguagesLegend languages={['CSS3', 'Bootstrap']} />
+        </Box>
+        <Box pad={{ horizontal: 'small', vertical: 'large' }}>
+          <Label>JavaScript</Label>
           <LanguagesLegend
-            languages={['HTML', 'CSS', 'Markdown', 'MDX', 'JSX', 'JSON']}
+            languages={['JavaScript', 'React.js', 'Node.js', 'JQuery']}
           />
         </Box>
-        <Box pad="large">
-          <Label>Technologies / Frameworks</Label>
-          <LanguagesLegend
-            languages={['React.js', 'Node.js', 'JQuery', 'Bootstrap']}
-          />
+        <Box pad={{ horizontal: 'small', vertical: 'large' }}>
+          <Label>Other</Label>
+          <LanguagesLegend languages={['C#', 'JSON']} />
         </Box>
-        <Box pad="large">
+        <Box pad={{ horizontal: 'small', vertical: 'large' }}>
           <Label>Tools / Software</Label>
           <LanguagesLegend
             languages={[

@@ -15,7 +15,7 @@ const StaffWebsite = () => {
         label="Website"
         description={
           <PortfolioItemDescription
-            languages={['HTML', 'CSS', 'JavaScript']}
+            languages={['HTML5', 'CSS3', 'JavaScript']}
             description="A staff website for SuperCamp."
           />
         }

@@ -1,10 +1,10 @@
 const languageProperties = [
   {
-    name: 'HTML',
+    name: 'HTML5',
     color: 'accent-1'
   },
   {
-    name: 'CSS',
+    name: 'CSS3',
     color: 'accent-2'
   },
   {
