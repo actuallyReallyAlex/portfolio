@@ -20,10 +20,19 @@ const SectionHeader = props => {
   )
 }
 
+SectionHeader.defaultProps = {
+  subtitle: 'Example Subtitle',
+  summary: 'Example Summary',
+  title: 'Example Title'
+}
+
 SectionHeader.propTypes = {
-  title: PropTypes.string.isRequired,
+  /** A subtitle for the section. */
   subtitle: PropTypes.string.isRequired,
-  summary: PropTypes.string
+  /** A brief overview of what content the section contains. */
+  summary: PropTypes.string,
+  /** What the section is about. */
+  title: PropTypes.string.isRequired
 }
 
 export default SectionHeader
