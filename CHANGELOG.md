@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.14.1](https://github.com/alexlee-dev/portfolio/tree/v0.14.1) (2018-10-02)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.14.0...v0.14.1)
+
+**Implemented enhancements:**
+
+- Filter LogRocket Init [\#70](https://github.com/alexlee-dev/portfolio/issues/70)
+- 🚀 LogRocket Changes - Tracking [\#72](https://github.com/alexlee-dev/portfolio/pull/72) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.14.0](https://github.com/alexlee-dev/portfolio/tree/v0.14.0) (2018-10-02)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.13.0...v0.14.0)
 
