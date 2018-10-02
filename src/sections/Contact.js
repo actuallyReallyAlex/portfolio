@@ -3,6 +3,8 @@ import { Section, Box, Toast } from 'grommet'
 import SectionHeader from '../components/SectionHeader'
 import ContactForm from '../components/ContactForm'
 
+import LogRocket from 'logrocket'
+
 // TODO: Clean up Validation
 
 class Contact extends Component {
@@ -152,6 +154,7 @@ class Contact extends Component {
     window.emailjs
       .sendForm('mailjet', templateId, document.getElementById('contact-form'))
       .then(res => {
+        LogRocket.track('Contact Form Submitted')
         this.setState({ emailSent: true })
       })
       .catch(err => console.error(err))
