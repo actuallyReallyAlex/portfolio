@@ -28,6 +28,7 @@ import Contact from '../sections/Contact'
 import ContactForm from '../components/ContactForm'
 import FooterSection from '../sections/FooterSection'
 import PortfolioItemDescription from '../components/PortfolioItemDescription'
+import Tilty from '../components/Tilty'
 
 it('Site component renders without crashing.', () => {
   const div = document.createElement('div')
@@ -230,5 +231,11 @@ it('PortfolioItemDescription component renders without crashing.', () => {
     />,
     div
   )
+  ReactDOM.unmountComponentAtNode(div)
+})
+
+it('Tilty component renders without crashing.', () => {
+  const div = document.createElement('div')
+  ReactDOM.render(<Tilty />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
