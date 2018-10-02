@@ -1,6 +1,7 @@
 import React from 'react'
 import { Section, Tiles } from 'grommet'
 import SectionHeader from '../components/SectionHeader'
+import Tilty from '../components/Tilty'
 
 // Works
 import Reposier from '../components/works/Reposier'
@@ -24,18 +25,18 @@ const Portfolio = () => {
         subtitle="Check out some of my projects."
       />
       <Tiles flush={false} fill>
-        <Reposier />
-        <Splague />
-        <PayrollAdmin />
-        <PayrollForm />
-        <Remembera />
-        <Pickitt />
-        <StaffingDashboard />
-        <Contractor />
-        <StaffWebsite />
-        <FacilitatorWebsite />
-        <PortfolioWork />
-        <PortfolioDocs />
+        <Tilty portfolioItem item={<Reposier />} />
+        <Tilty portfolioItem item={<Splague />} />
+        <Tilty portfolioItem item={<PayrollAdmin />} />
+        <Tilty portfolioItem item={<PayrollForm />} />
+        <Tilty portfolioItem item={<Remembera />} />
+        <Tilty portfolioItem item={<Pickitt />} />
+        <Tilty portfolioItem item={<StaffingDashboard />} />
+        <Tilty portfolioItem item={<Contractor />} />
+        <Tilty portfolioItem item={<StaffWebsite />} />
+        <Tilty portfolioItem item={<FacilitatorWebsite />} />
+        <Tilty portfolioItem item={<PortfolioWork />} />
+        <Tilty portfolioItem item={<PortfolioDocs />} />
       </Tiles>
     </Section>
   )
