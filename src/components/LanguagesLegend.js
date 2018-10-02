@@ -10,7 +10,7 @@ const LanguagesLegend = props => {
 }
 
 LanguagesLegend.defaultProps = {
-  languages: ['HTML', 'CSS', 'JavaScript']
+  languages: ['HTML5', 'CSS3', 'JavaScript']
 }
 
 LanguagesLegend.propTypes = {
