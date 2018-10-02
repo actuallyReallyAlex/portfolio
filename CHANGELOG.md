@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.14.0](https://github.com/alexlee-dev/portfolio/tree/v0.14.0) (2018-10-02)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.13.0...v0.14.0)
+
+**Implemented enhancements:**
+
+- Add Tilt Effect [\#69](https://github.com/alexlee-dev/portfolio/issues/69)
+- ✨ Add Tilt Effect on Portfolio Items [\#71](https://github.com/alexlee-dev/portfolio/pull/71) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.13.0](https://github.com/alexlee-dev/portfolio/tree/v0.13.0) (2018-09-30)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.12.4...v0.13.0)
 
