@@ -1,5 +1,13 @@
 # Change Log
 
+## [v1.0.0](https://github.com/alexlee-dev/portfolio/tree/v1.0.0) (2018-10-03)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.15.2...v1.0.0)
+
+**Implemented enhancements:**
+
+- Production LogRocket [\#88](https://github.com/alexlee-dev/portfolio/issues/88)
+- 🚀 Init LogRocket Prod [\#89](https://github.com/alexlee-dev/portfolio/pull/89) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.15.2](https://github.com/alexlee-dev/portfolio/tree/v0.15.2) (2018-10-03)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.15.1...v0.15.2)
 
