@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.15.2](https://github.com/alexlee-dev/portfolio/tree/v0.15.2) (2018-10-03)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.15.1...v0.15.2)
+
+**Implemented enhancements:**
+
+- Change Copy to Be More "Me" [\#63](https://github.com/alexlee-dev/portfolio/issues/63)
+- ✏️ Edited Copy [\#87](https://github.com/alexlee-dev/portfolio/pull/87) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.15.1](https://github.com/alexlee-dev/portfolio/tree/v0.15.1) (2018-10-03)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.15.0...v0.15.1)
 
