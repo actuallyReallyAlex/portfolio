@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section, Tiles, Tile } from 'grommet'
+import { Section, Tiles } from 'grommet'
 import { BrowserView, MobileView } from 'react-device-detect'
 import SectionHeader from '../components/SectionHeader'
 import Tilty from '../components/Tilty'
