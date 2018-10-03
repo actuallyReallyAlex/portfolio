@@ -21,7 +21,7 @@ const Contractor = () => {
         }
         link={
           <Anchor
-            href="https://alexlee-dev.github.io/Staffing/contractor.html"
+            href="https://demo-staffing-dashboard.netlify.com/contractor.html"
             icon={<LinkNext />}
             label="Demo"
             target="_blank"
