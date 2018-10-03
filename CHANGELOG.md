@@ -1,5 +1,17 @@
 # Change Log
 
+## [v0.14.2](https://github.com/alexlee-dev/portfolio/tree/v0.14.2) (2018-10-03)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.14.1...v0.14.2)
+
+**Implemented enhancements:**
+
+- Update README [\#68](https://github.com/alexlee-dev/portfolio/issues/68)
+
+**Fixed bugs:**
+
+- Skills Section Has Incorrect Padding on Mobile [\#73](https://github.com/alexlee-dev/portfolio/issues/73)
+- 🐛 Fix Padding Issue on Skills Section [\#75](https://github.com/alexlee-dev/portfolio/pull/75) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.14.1](https://github.com/alexlee-dev/portfolio/tree/v0.14.1) (2018-10-02)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.14.0...v0.14.1)
 
