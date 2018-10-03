@@ -8,6 +8,7 @@
     "lodash.capitalize": "^4.2.1",
     "logrocket": "^0.6.17",
     "react": "^16.5.2",
+    "react-device-detect": "^1.6.1",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.0",
     "react-tilt": "^0.1.4"
