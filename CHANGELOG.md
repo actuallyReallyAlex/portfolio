@@ -1,5 +1,8 @@
 # Change Log
 
+## [v0.15.1](https://github.com/alexlee-dev/portfolio/tree/v0.15.1) (2018-10-03)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.15.0...v0.15.1)
+
 ## [v0.15.0](https://github.com/alexlee-dev/portfolio/tree/v0.15.0) (2018-10-03)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.14.4...v0.15.0)
 
