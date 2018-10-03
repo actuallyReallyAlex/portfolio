@@ -42,42 +42,18 @@ const Portfolio = () => {
         </Tiles>
       </BrowserView>
       <MobileView>
-        <Tile pad="medium">
-          <Reposier />
-        </Tile>
-        <Tile pad="medium">
-          <Splague />
-        </Tile>
-        <Tile pad="medium">
-          <PayrollAdmin />
-        </Tile>
-        <Tile pad="medium">
-          <PayrollForm />
-        </Tile>
-        <Tile pad="medium">
-          <Remembera />
-        </Tile>
-        <Tile pad="medium">
-          <Pickitt />
-        </Tile>
-        <Tile pad="medium">
-          <StaffingDashboard />
-        </Tile>
-        <Tile pad="medium">
-          <Contractor />
-        </Tile>
-        <Tile pad="medium">
-          <StaffWebsite />
-        </Tile>
-        <Tile pad="medium">
-          <FacilitatorWebsite />
-        </Tile>
-        <Tile pad="medium">
-          <PortfolioWork />
-        </Tile>
-        <Tile pad="medium">
-          <PortfolioDocs />
-        </Tile>
+        <Reposier />
+        <Splague />
+        <PayrollAdmin />
+        <PayrollForm />
+        <Remembera />
+        <Pickitt />
+        <StaffingDashboard />
+        <Contractor />
+        <StaffWebsite />
+        <FacilitatorWebsite />
+        <PortfolioWork />
+        <PortfolioDocs />
       </MobileView>
     </Section>
   )

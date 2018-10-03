@@ -5,7 +5,7 @@ import PortfolioItemDescription from '../PortfolioItemDescription'
 
 const StaffingDashboard = () => {
   return (
-    <Tile>
+    <Tile pad="medium">
       <Card
         colorIndex="brand"
         thumbnail={

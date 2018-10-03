@@ -4,7 +4,7 @@ import PortfolioItemDescription from '../PortfolioItemDescription'
 
 const PortfolioWork = () => {
   return (
-    <Tile>
+    <Tile pad="medium">
       <Card
         colorIndex="accent-1"
         thumbnail={
