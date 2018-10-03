@@ -16,7 +16,7 @@ const StaffWebsite = () => {
         description={
           <PortfolioItemDescription
             languages={['HTML5', 'CSS3', 'JavaScript']}
-            description="A staff website for SuperCamp."
+            description="A staff website for SuperCamp. Helps with recruitment, marketing, and revamping a much older website. Built on WordPress"
           />
         }
         link={

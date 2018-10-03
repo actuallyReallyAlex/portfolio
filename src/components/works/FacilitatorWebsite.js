@@ -16,7 +16,7 @@ const FacilitatorWebsite = () => {
         description={
           <PortfolioItemDescription
             languages={['HTML5', 'CSS3', 'JavaScript']}
-            description="A staff showcase for SuperCamp."
+            description="A staff showcase for SuperCamp. Used to show clients the staff of SuperCamp, and their credentials. Successful marketing campaign."
           />
         }
         link={
