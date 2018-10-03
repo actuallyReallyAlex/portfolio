@@ -10,9 +10,10 @@ const Skills = () => {
           <Heading tag="h3">Skills</Heading>
           <Paragraph>
             As a self-taught developer, I've gained a variety of skillsets that
-            I can apply to my projects. Currently, I'm focused on React.JS. I'm
-            eager to put my skills to good use, and continue my love of
-            learning.
+            I can apply to my projects. Currently, I'm focused on React.js. With
+            an industry that's ever-evolving, no one is a master at every
+            language. I aim to let my excitement for learning new things guide
+            me in my path toward growth.
           </Paragraph>
         </Box>
       </Box>
