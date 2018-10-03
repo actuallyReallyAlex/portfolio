@@ -5,16 +5,11 @@ import Site from './Site'
 import registerServiceWorker from './registerServiceWorker'
 import packageInfo from '../package.json'
 
-import LogRocket from 'logrocket';
+import LogRocket from 'logrocket'
 
-const environment = 'dev'
-
-if (!environment === 'dev') {
-  LogRocket.init('alex-lee/portfolio-dev', {
-    release: packageInfo.version
-  });
-}
-
+LogRocket.init('alex-lee/portfolio-prod', {
+  release: packageInfo.version
+})
 
 require('dotenv').config()
 
