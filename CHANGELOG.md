@@ -1,5 +1,17 @@
 # Change Log
 
+## [v0.15.0](https://github.com/alexlee-dev/portfolio/tree/v0.15.0) (2018-10-03)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.14.4...v0.15.0)
+
+**Implemented enhancements:**
+
+- Add Longer Descriptions to Portfolio Items [\#81](https://github.com/alexlee-dev/portfolio/issues/81)
+- Create Dummy Data for Specific Portfolio Items [\#76](https://github.com/alexlee-dev/portfolio/issues/76)
+- ✏️ Add / Fix Links to Portfolio Items [\#84](https://github.com/alexlee-dev/portfolio/pull/84) ([alexlee-dev](https://github.com/alexlee-dev))
+- ➕ Add Payroll Demo Sites [\#83](https://github.com/alexlee-dev/portfolio/pull/83) ([alexlee-dev](https://github.com/alexlee-dev))
+- 📝 Add Longer Descriptions for Portfolio Items [\#82](https://github.com/alexlee-dev/portfolio/pull/82) ([alexlee-dev](https://github.com/alexlee-dev))
+- ➕ Add Staffing Dashboard Demo Site [\#80](https://github.com/alexlee-dev/portfolio/pull/80) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.14.4](https://github.com/alexlee-dev/portfolio/tree/v0.14.4) (2018-10-03)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.14.3...v0.14.4)
 
