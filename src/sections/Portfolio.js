@@ -42,40 +42,40 @@ const Portfolio = () => {
         </Tiles>
       </BrowserView>
       <MobileView>
-        <Tile>
+        <Tile pad="medium">
           <Reposier />
         </Tile>
-        <Tile>
+        <Tile pad="medium">
           <Splague />
         </Tile>
-        <Tile>
+        <Tile pad="medium">
           <PayrollAdmin />
         </Tile>
-        <Tile>
+        <Tile pad="medium">
           <PayrollForm />
         </Tile>
-        <Tile>
+        <Tile pad="medium">
           <Remembera />
         </Tile>
-        <Tile>
+        <Tile pad="medium">
           <Pickitt />
         </Tile>
-        <Tile>
+        <Tile pad="medium">
           <StaffingDashboard />
         </Tile>
-        <Tile>
+        <Tile pad="medium">
           <Contractor />
         </Tile>
-        <Tile>
+        <Tile pad="medium">
           <StaffWebsite />
         </Tile>
-        <Tile>
+        <Tile pad="medium">
           <FacilitatorWebsite />
         </Tile>
-        <Tile>
+        <Tile pad="medium">
           <PortfolioWork />
         </Tile>
-        <Tile>
+        <Tile pad="medium">
           <PortfolioDocs />
         </Tile>
       </MobileView>
