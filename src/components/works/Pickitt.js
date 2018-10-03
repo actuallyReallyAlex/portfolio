@@ -5,7 +5,7 @@ import PortfolioItemDescription from '../PortfolioItemDescription'
 
 const Pickitt = () => {
   return (
-    <Tile>
+    <Tile pad="medium">
       <Card
         colorIndex="brand"
         thumbnail={
