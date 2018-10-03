@@ -17,7 +17,7 @@ const Experience = () => {
           present
           icon="analytics"
           subtitle="Quantum Learning Network"
-          summary="Responsible for staffing the SuperCamp summer program - recruitment, interviewing, contracting over 100 new employees. Created a staff website, designed HTML newsletters, and created numerous media campaigns as a key member of the SuperCamp Programs Department."
+          summary="Responsible for creating web tools to assist the SuperCamp Programs Department grow. Developed an overhaul of a staff website, and introduced new features to the public browsing the SuperCamp homepage. Designed and sent HTML newsletters to staff. Responsible for staffing the SuperCamp summer program - recruitment, interviewing, contracting over 100 new employees every year. Created numerous media campaigns as a key member of the SuperCamp Programs Department."
         />
         <TimelineItem
           title="Administrative Assistant"
