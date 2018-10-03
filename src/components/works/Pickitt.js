@@ -16,7 +16,7 @@ const Pickitt = () => {
         description={
           <PortfolioItemDescription
             languages={['Node.js', 'JavaScript']}
-            description="When you need you need a computer to just pick it, reach for Pickitt!"
+            description="When you need you need a computer to just pick it, reach for Pickitt! A JavaScript utility."
           />
         }
         link={

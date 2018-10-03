@@ -16,7 +16,7 @@ const Splague = () => {
         description={
           <PortfolioItemDescription
             languages={['React.js']}
-            description="Be prepared."
+            description="Be prepared. A web game built with React, inspired by the popular game 'Plague Inc'. Control either a disease, or a doctor to destroy or save the world."
           />
         }
         link={

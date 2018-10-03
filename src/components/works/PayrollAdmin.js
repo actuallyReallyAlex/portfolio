@@ -16,7 +16,7 @@ const PayrollAdmin = () => {
         description={
           <PortfolioItemDescription
             languages={['HTML5', 'CSS3', 'JavaScript']}
-            description="A comprehensive dashboard to view payroll information."
+            description="A comprehensive dashboard to view payroll information. Used by companies to manage previous, current, and future reports. Ability to export data in a variety of formats."
           />
         }
         link={
