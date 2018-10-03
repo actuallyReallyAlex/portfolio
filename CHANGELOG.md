@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.14.3](https://github.com/alexlee-dev/portfolio/tree/v0.14.3) (2018-10-03)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.14.2...v0.14.3)
+
+**Fixed bugs:**
+
+- Tilty's React Weird on Mobile [\#74](https://github.com/alexlee-dev/portfolio/issues/74)
+- 📱 No Tilty Portfolio on Mobile [\#77](https://github.com/alexlee-dev/portfolio/pull/77) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.14.2](https://github.com/alexlee-dev/portfolio/tree/v0.14.2) (2018-10-03)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.14.1...v0.14.2)
 
