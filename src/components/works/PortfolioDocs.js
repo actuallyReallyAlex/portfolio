@@ -1,5 +1,6 @@
 import React from 'react'
-import { Tile, Card, Anchor, LinkNext } from 'grommet'
+import { Tile, Card, Anchor } from 'grommet'
+import LinkNext from 'grommet/components/icons/base/LinkNext'
 import PortfolioItemDescription from '../PortfolioItemDescription'
 
 const PortfolioDocs = () => {
