@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.14.4](https://github.com/alexlee-dev/portfolio/tree/v0.14.4) (2018-10-03)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.14.3...v0.14.4)
+
+**Fixed bugs:**
+
+- No Padding for Portfolio Tiles on Mobile [\#78](https://github.com/alexlee-dev/portfolio/issues/78)
+- 📱 Add Padding to Portfolio Tiles on Mobile [\#79](https://github.com/alexlee-dev/portfolio/pull/79) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v0.14.3](https://github.com/alexlee-dev/portfolio/tree/v0.14.3) (2018-10-03)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.14.2...v0.14.3)
 
