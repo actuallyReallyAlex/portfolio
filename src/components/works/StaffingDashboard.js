@@ -21,7 +21,7 @@ const StaffingDashboard = () => {
         }
         link={
           <Anchor
-            href="https://alexlee-dev.github.io/Staffing/index.html"
+            href="https://demo-staffing-dashboard.netlify.com"
             icon={<LinkNext />}
             label="Demo"
             target="_blank"
