@@ -21,9 +21,9 @@ const PayrollAdmin = () => {
         }
         link={
           <Anchor
-            href="https://www.google.com/"
+            href="https://demo-payroll-admin.netlify.com/admin/"
             icon={<LinkNext />}
-            label="www.DUMMYSITE.com"
+            label="Demo"
             target="_blank"
           />
         }
