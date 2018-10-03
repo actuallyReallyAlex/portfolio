@@ -1,5 +1,6 @@
 import React from 'react'
-import { Section, Tiles } from 'grommet'
+import { Section, Tiles, Tile } from 'grommet'
+import { BrowserView, MobileView } from 'react-device-detect'
 import SectionHeader from '../components/SectionHeader'
 import Tilty from '../components/Tilty'
 
@@ -24,20 +25,60 @@ const Portfolio = () => {
         title="Portfolio"
         subtitle="Check out some of my projects."
       />
-      <Tiles flush={false} fill>
-        <Tilty portfolioItem item={<Reposier />} />
-        <Tilty portfolioItem item={<Splague />} />
-        <Tilty portfolioItem item={<PayrollAdmin />} />
-        <Tilty portfolioItem item={<PayrollForm />} />
-        <Tilty portfolioItem item={<Remembera />} />
-        <Tilty portfolioItem item={<Pickitt />} />
-        <Tilty portfolioItem item={<StaffingDashboard />} />
-        <Tilty portfolioItem item={<Contractor />} />
-        <Tilty portfolioItem item={<StaffWebsite />} />
-        <Tilty portfolioItem item={<FacilitatorWebsite />} />
-        <Tilty portfolioItem item={<PortfolioWork />} />
-        <Tilty portfolioItem item={<PortfolioDocs />} />
-      </Tiles>
+      <BrowserView>
+        <Tiles flush={false} fill>
+          <Tilty portfolioItem item={<Reposier />} />
+          <Tilty portfolioItem item={<Splague />} />
+          <Tilty portfolioItem item={<PayrollAdmin />} />
+          <Tilty portfolioItem item={<PayrollForm />} />
+          <Tilty portfolioItem item={<Remembera />} />
+          <Tilty portfolioItem item={<Pickitt />} />
+          <Tilty portfolioItem item={<StaffingDashboard />} />
+          <Tilty portfolioItem item={<Contractor />} />
+          <Tilty portfolioItem item={<StaffWebsite />} />
+          <Tilty portfolioItem item={<FacilitatorWebsite />} />
+          <Tilty portfolioItem item={<PortfolioWork />} />
+          <Tilty portfolioItem item={<PortfolioDocs />} />
+        </Tiles>
+      </BrowserView>
+      <MobileView>
+        <Tile>
+          <Reposier />
+        </Tile>
+        <Tile>
+          <Splague />
+        </Tile>
+        <Tile>
+          <PayrollAdmin />
+        </Tile>
+        <Tile>
+          <PayrollForm />
+        </Tile>
+        <Tile>
+          <Remembera />
+        </Tile>
+        <Tile>
+          <Pickitt />
+        </Tile>
+        <Tile>
+          <StaffingDashboard />
+        </Tile>
+        <Tile>
+          <Contractor />
+        </Tile>
+        <Tile>
+          <StaffWebsite />
+        </Tile>
+        <Tile>
+          <FacilitatorWebsite />
+        </Tile>
+        <Tile>
+          <PortfolioWork />
+        </Tile>
+        <Tile>
+          <PortfolioDocs />
+        </Tile>
+      </MobileView>
     </Section>
   )
 }
