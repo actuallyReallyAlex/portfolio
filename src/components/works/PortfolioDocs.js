@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tile, Card } from 'grommet'
+import { Tile, Card, Anchor, LinkNext } from 'grommet'
 import PortfolioItemDescription from '../PortfolioItemDescription'
 
 const PortfolioDocs = () => {
@@ -16,6 +16,14 @@ const PortfolioDocs = () => {
           <PortfolioItemDescription
             languages={['MDX', 'JSX', 'JavaScript']}
             description="Documentation for this portfolio - complete with custom component library. Built with Docz."
+          />
+        }
+        link={
+          <Anchor
+            href="https://alexlee-portfolio-docs.netlify.com"
+            icon={<LinkNext />}
+            label="Docs"
+            target="_blank"
           />
         }
       />
