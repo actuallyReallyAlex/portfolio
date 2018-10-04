@@ -1,9 +1,15 @@
 # Change Log
 
+## [v1.0.2](https://github.com/alexlee-dev/portfolio/tree/v1.0.2) (2018-10-04)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v1.0.1...v1.0.2)
+
+**Implemented enhancements:**
+
+- Migrate New Portfolio to Domain [\#99](https://github.com/alexlee-dev/portfolio/issues/99)
+- 🏗 Migrate to Main Domain [\#100](https://github.com/alexlee-dev/portfolio/pull/100) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v1.0.1](https://github.com/alexlee-dev/portfolio/tree/v1.0.1) (2018-10-04)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v1.0.0...v1.0.1)
-
-Thanks Radhika!
 
 **Implemented enhancements:**
 
