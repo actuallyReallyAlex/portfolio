@@ -9,7 +9,7 @@ import Cube from 'grommet/components/icons/base/Cube'
 export const Intro = () => {
   return (
     <Hero
-      background={<Image src={'https://res.cloudinary.com/alexlee-dev/image/upload/v1538177955/portfolio/portland-dark.jpg'} full={true} fit="cover" />}
+      background={<Image src={'https://res.cloudinary.com/alexlee-dev/image/upload/v1538630398/portfolio/portfolio_portland_dark_min.jpg'} full={true} fit="cover" />}
       backgroundColorIndex="dark"
       id="home"
     >
