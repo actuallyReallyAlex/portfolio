@@ -9,19 +9,19 @@ import Cube from 'grommet/components/icons/base/Cube'
 export const Intro = () => {
   return (
     <Hero
-      background={<Image src={'https://res.cloudinary.com/alexlee-dev/image/upload/v1538630398/portfolio/portfolio_portland_dark_min.jpg'} full={true} fit="cover" />}
+      background={<Image src={'https://res.cloudinary.com/alexlee-dev/image/upload/v1538667941/portfolio_portland_dark70_min.jpg'} full={true} fit="cover" />}
       backgroundColorIndex="dark"
       id="home"
     >
       <Box direction="row" justify="center" align="center">
         <Box pad="medium">
-          <Heading tag="h5" align="center" uppercase={true} strong={true}>
+          <Heading tag="h4" align="center" uppercase={true} strong={true}>
             Hello, World.
           </Heading>
-          <Heading tag="h1" align="center" margin="none">
+          <Heading tag="h1" align="center" margin="none" strong={true}>
             I&#39;m Alex Lee
           </Heading>
-          <Heading tag="h5" align="center" uppercase={true}>
+          <Heading tag="h4" align="center" uppercase={true} strong={true}>
             Web Developer
           </Heading>
         </Box>
