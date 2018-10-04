@@ -3,7 +3,6 @@ import { Section, Box, Paragraph, Image, Button } from 'grommet'
 import SectionHeader from '../components/SectionHeader'
 import Profile from '../components/Profile'
 import Skills from '../components/Skills'
-import DocumentDownload from 'grommet/components/icons/base/DocumentDownload'
 
 const About = () => {
   return (
@@ -35,14 +34,6 @@ const About = () => {
         <Box>
           <Skills />
         </Box>
-      </Box>
-      <Box pad={{ vertical: 'medium' }} responsive={false} direction="row" justify="center">
-        <Button
-          label="Résumé"
-          icon={<DocumentDownload />}
-          secondary
-          href="https://github.com/alexlee-dev/portfolio/raw/master/src/assets/Resume.pdf"
-        />
       </Box>
     </Section>
   )
