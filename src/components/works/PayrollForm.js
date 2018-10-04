@@ -17,6 +17,7 @@ const PayrollForm = () => {
           <PortfolioItemDescription
             languages={['HTML5', 'CSS3', 'JavaScript']}
             description="A form integrated with a dashboard to collect and process employee payroll information."
+            sourceLink="https://github.com/alexlee-dev/Payroll/"
           />
         }
         link={

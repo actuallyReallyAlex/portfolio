@@ -17,6 +17,7 @@ const StaffingDashboard = () => {
           <PortfolioItemDescription
             languages={['HTML5', 'CSS3', 'JavaScript']}
             description="A fully functional dashboard to help with staffing and recruiting."
+            sourceLink="https://github.com/alexlee-dev/Staffing"
           />
         }
         link={

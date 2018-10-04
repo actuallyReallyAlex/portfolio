@@ -17,6 +17,7 @@ const Pickitt = () => {
           <PortfolioItemDescription
             languages={['Node.js', 'JavaScript']}
             description="When you need you need a computer to just pick it, reach for Pickitt! A JavaScript utility."
+            sourceLink="https://github.com/alexlee-dev/pickitt"
           />
         }
         link={

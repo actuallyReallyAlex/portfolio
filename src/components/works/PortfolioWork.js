@@ -16,6 +16,7 @@ const PortfolioWork = () => {
           <PortfolioItemDescription
             languages={['React.js', 'JavaScript', 'Grommet']}
             description="A portfolio build with React.js - an attempt to get away from repeated Bootstrap template portfolios. Also a chance to try out Grommet."
+            sourceLink="https://github.com/alexlee-dev/portfolio"
           />
         }
       />

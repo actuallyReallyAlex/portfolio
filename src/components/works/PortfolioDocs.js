@@ -17,6 +17,7 @@ const PortfolioDocs = () => {
           <PortfolioItemDescription
             languages={['MDX', 'JSX', 'JavaScript']}
             description="Documentation for this portfolio - complete with custom component library. Built with Docz."
+            sourceLink="https://github.com/alexlee-dev/portfolio/tree/master/src/documentation/src"
           />
         }
         link={
