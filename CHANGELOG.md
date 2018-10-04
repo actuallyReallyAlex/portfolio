@@ -1,5 +1,21 @@
 # Change Log
 
+## [v1.0.1](https://github.com/alexlee-dev/portfolio/tree/v1.0.1) (2018-10-04)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v1.0.0...v1.0.1)
+
+Thanks Radhika!
+
+**Implemented enhancements:**
+
+- Include Source Code Links on Portfolio Items [\#95](https://github.com/alexlee-dev/portfolio/issues/95)
+- Increase Contrast / Thickness of Header Text [\#94](https://github.com/alexlee-dev/portfolio/issues/94)
+- Move Resume Download Button Under Resume Header [\#93](https://github.com/alexlee-dev/portfolio/issues/93)
+- Minify Hero Image [\#90](https://github.com/alexlee-dev/portfolio/issues/90)
+- 🎨 Increase Heading Sizes / Contrast in Hero. Hero Image is Darker [\#98](https://github.com/alexlee-dev/portfolio/pull/98) ([alexlee-dev](https://github.com/alexlee-dev))
+- ✨ Add Source Links to Portfolio Items [\#97](https://github.com/alexlee-dev/portfolio/pull/97) ([alexlee-dev](https://github.com/alexlee-dev))
+- 🎨 Move Resume Download Button Under Resume SectionHeader [\#96](https://github.com/alexlee-dev/portfolio/pull/96) ([alexlee-dev](https://github.com/alexlee-dev))
+- 🎨 Minified Hero Image [\#91](https://github.com/alexlee-dev/portfolio/pull/91) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v1.0.0](https://github.com/alexlee-dev/portfolio/tree/v1.0.0) (2018-10-03)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v0.15.2...v1.0.0)
 
