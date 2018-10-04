@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Box, Paragraph, Legend } from 'grommet'
+import { Box, Paragraph, Legend, Anchor } from 'grommet'
+import Code from 'grommet/components/icons/base/Code'
 import { languageProperties, getArrayofLabels } from '../utilities'
 
 const PortfolioItemDescription = props => {
@@ -10,20 +11,31 @@ const PortfolioItemDescription = props => {
       <Paragraph size="large" margin="medium">
         {props.description}
       </Paragraph>
+      {props.sourceLink ? (
+        <Anchor
+          href={props.sourceLink}
+          icon={<Code />}
+          label="Source"
+          target="_blank"
+        />
+      ) : null}
     </Box>
   )
 }
 
 PortfolioItemDescription.defaultProps = {
   description: 'Example Description',
-  languages: ['HTML', 'CSS', 'JavaScript']
+  languages: ['HTML5', 'CSS3', 'JavaScript'],
+  sourceLink: null
 }
 
 PortfolioItemDescription.propTypes = {
   /** A short description of the project. */
   description: PropTypes.string.isRequired,
   /** A colorful legend to show which languages were used on the project. */
-  languages: PropTypes.array.isRequired
+  languages: PropTypes.array.isRequired,
+  /** A link to the source code. */
+  sourceLink: PropTypes.string
 }
 
 export default PortfolioItemDescription

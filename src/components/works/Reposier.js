@@ -17,6 +17,7 @@ const Reposier = () => {
           <PortfolioItemDescription
             languages={['Node.js', 'JavaScript']}
             description="Tasty CLI on the outside, simple integration with GitHub's API on the inside."
+            sourceLink="https://github.com/alexlee-dev/reposier"
           />
         }
         link={

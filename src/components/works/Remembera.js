@@ -17,6 +17,7 @@ const Remembera = () => {
           <PortfolioItemDescription
             languages={['MDX', 'JSX', 'JavaScript']}
             description="A knowledge bank. A documentation for hurdles in developement and design - a 'blog' to document how to solve problems."
+            sourceLink="https://github.com/alexlee-dev/remembera"
           />
         }
         link={

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section, Box, Paragraph, Image, Button } from 'grommet'
+import { Section, Box, Paragraph, Image } from 'grommet'
 import SectionHeader from '../components/SectionHeader'
 import Profile from '../components/Profile'
 import Skills from '../components/Skills'
