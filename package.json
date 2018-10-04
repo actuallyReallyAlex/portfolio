@@ -14,12 +14,14 @@
     "react-tilt": "^0.1.4"
   },
   "files": [
+    "old",
     "public",
     "src",
     "package.json",
     "README.md",
     "CHANGELOG.md",
-    ".env"
+    ".env",
+    "doczrc.js"
   ],
   "scripts": {
     "start": "react-scripts start",

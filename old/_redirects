@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://sharp-engelbart-ba5787.netlify.com/* https://www.alex-lee.site/:splat 301!
