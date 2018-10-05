@@ -1,7 +1,7 @@
 {
   "name": "alexlee-dev-portfolio",
   "description": "Alex Lee's online portfolio. Built with React.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "dependencies": {
     "dotenv": "^6.0.0",
     "grommet": "^1.11.0",
