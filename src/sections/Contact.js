@@ -3,8 +3,6 @@ import { Section, Box, Toast } from 'grommet'
 import SectionHeader from '../components/SectionHeader'
 import ContactForm from '../components/ContactForm'
 
-import LogRocket from 'logrocket'
-
 // TODO: Clean up Validation
 
 class Contact extends Component {
@@ -105,7 +103,8 @@ class Contact extends Component {
 
     if (tempIsValid === null) {
       tempIsValid = true
-      this.sendEmail(process.env.REACT_APP_EMAILJS_TEMPLATEID)
+      // this.sendEmail(process.env.REACT_APP_EMAILJS_TEMPLATEID)
+      this.setState({ emailSent: true })
       const form = document.getElementById('contact-form')
       form.reset()
     }
@@ -150,15 +149,15 @@ class Contact extends Component {
   /**
    * Sends email through EmailJS.
    */
-  sendEmail = templateId => {
-    window.emailjs
-      .sendForm('mailjet', templateId, document.getElementById('contact-form'))
-      .then(res => {
-        LogRocket.track('Contact Form Submitted')
-        this.setState({ emailSent: true })
-      })
-      .catch(err => console.error(err))
-  }
+  // sendEmail = templateId => {
+  //   window.emailjs
+  //     .sendForm('mailjet', templateId, document.getElementById('contact-form'))
+  //     .then(res => {
+  //       LogRocket.track('Contact Form Submitted')
+  //       this.setState({ emailSent: true })
+  //     })
+  //     .catch(err => console.error(err))
+  // }
 
   SuccessToast = () => {
     return (
