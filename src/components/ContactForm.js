@@ -5,14 +5,13 @@ import {
   FormField,
   TextInput,
   Footer,
-  Button,
-  Paragraph,
-  Anchor
+  Button
 } from 'grommet'
 
 const ContactForm = props => {
   return (
     <Form
+      action="https://formspree.io/alex@alex-lee.site"
       name="Contact Form"
       id="contact-form"
       onSubmit={e => {
@@ -107,25 +106,17 @@ const ContactForm = props => {
           }}
         />
       </FormField>
-      <Paragraph size="small">
-        Form submissions are sent to my email using{' '}
-        <Anchor
-          target="_blank"
-          label="EmailJS"
-          href="http://www.emailjs.com/"
-        />
-        .
-      </Paragraph>
-      <Footer primary={false} pad={{ vertical: 'none' }}>
+      <Footer primary={false} pad={{ vertical: 'large' }}>
         <Button type="submit" label="Send" />
       </Footer>
     </Form>
   )
 }
 
-ContactForm.proptTypes = {
+ContactForm.propTypes = {
   validate: PropTypes.func.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
+  resetError: PropTypes.func.isRequired
 }
 
 export default ContactForm
