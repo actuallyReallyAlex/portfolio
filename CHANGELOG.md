@@ -1,5 +1,33 @@
 # Change Log
 
+## [v1.0.4](https://github.com/alexlee-dev/portfolio/tree/v1.0.4) (2018-10-23)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v1.0.3...v1.0.4)
+
+**Implemented enhancements:**
+
+- Add Google Analytics [\#102](https://github.com/alexlee-dev/portfolio/issues/102)
+- 🔧 Hopefully fix Contact Form [\#109](https://github.com/alexlee-dev/portfolio/pull/109) ([alexlee-dev](https://github.com/alexlee-dev))
+- ➕Add Google Analytics [\#103](https://github.com/alexlee-dev/portfolio/pull/103) ([alexlee-dev](https://github.com/alexlee-dev))
+
+**Fixed bugs:**
+
+- 🌐 Fix Google Analytics [\#107](https://github.com/alexlee-dev/portfolio/issues/107)
+- 🌐 Fix Google Analytics [\#106](https://github.com/alexlee-dev/portfolio/issues/106)
+- 📝 Contact Form is Broken [\#105](https://github.com/alexlee-dev/portfolio/issues/105)
+- Color Issue [\#92](https://github.com/alexlee-dev/portfolio/issues/92)
+- ✨ Simplify Contact Form Using Formspree [\#115](https://github.com/alexlee-dev/portfolio/pull/115) ([alexlee-dev](https://github.com/alexlee-dev))
+- 🔧 Hopefully fix Contact Form [\#109](https://github.com/alexlee-dev/portfolio/pull/109) ([alexlee-dev](https://github.com/alexlee-dev))
+- 🔧 Attempt to Fix GA by Adding Pageview [\#108](https://github.com/alexlee-dev/portfolio/pull/108) ([alexlee-dev](https://github.com/alexlee-dev))
+
+**Closed issues:**
+
+- LogRocket confirmation [\#104](https://github.com/alexlee-dev/portfolio/issues/104)
+
+**Merged pull requests:**
+
+- Bump docz from 0.12.4 to 0.12.5 [\#113](https://github.com/alexlee-dev/portfolio/pull/113) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump eslint from 5.6.0 to 5.7.0 [\#111](https://github.com/alexlee-dev/portfolio/pull/111) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v1.0.3](https://github.com/alexlee-dev/portfolio/tree/v1.0.3) (2018-10-05)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v1.0.2...v1.0.3)
 
