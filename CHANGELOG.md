@@ -1,5 +1,18 @@
 # Change Log
 
+## [v1.0.5](https://github.com/alexlee-dev/portfolio/tree/v1.0.5) (2018-10-26)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v1.0.4...v1.0.5)
+
+**Implemented enhancements:**
+
+- 📝 Update Résumé [\#118](https://github.com/alexlee-dev/portfolio/issues/118)
+- 📝 Update Résumé [\#119](https://github.com/alexlee-dev/portfolio/pull/119) ([alexlee-dev](https://github.com/alexlee-dev))
+
+**Merged pull requests:**
+
+- Bump react from 16.5.2 to 16.6.0 [\#117](https://github.com/alexlee-dev/portfolio/pull/117) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump react-dom from 16.5.2 to 16.6.0 [\#116](https://github.com/alexlee-dev/portfolio/pull/116) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v1.0.4](https://github.com/alexlee-dev/portfolio/tree/v1.0.4) (2018-10-23)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v1.0.3...v1.0.4)
 
