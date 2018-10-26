@@ -46,7 +46,7 @@ class NavMenu extends Component {
               onClick={() => this.smoothlyScroll('resume')}
               className={this.state.currentSection === 'resume' ? 'active' : ''}
             >
-              Resume
+              Résumé
             </Anchor>
             <Anchor
               onClick={() => this.smoothlyScroll('portfolio')}
