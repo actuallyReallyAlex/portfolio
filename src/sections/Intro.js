@@ -12,11 +12,11 @@ export const Intro = () => {
       background={
         <Image
           src={
-            'https://res.cloudinary.com/alexlee-dev/image/upload/v1538667941/portfolio_portland_dark70_min.jpg'
+            'https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_1152,f_auto/v1538630398/portfolio/portfolio_portland_dark_min.jpg'
           }
           full={true}
           fit="cover"
-          alt="Portland's south waterfront at night."
+          alt="Portland's South Waterfront at night."
         />
       }
       backgroundColorIndex="dark"

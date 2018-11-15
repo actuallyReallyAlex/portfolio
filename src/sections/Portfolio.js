@@ -3,6 +3,7 @@ import { Section, Tiles } from 'grommet'
 import { BrowserView, MobileView } from 'react-device-detect'
 import SectionHeader from '../components/SectionHeader'
 import Tilty from '../components/Tilty'
+import LazyLoad from 'react-lazyload'
 
 // Works
 import Reposier from '../components/works/Reposier'
@@ -27,18 +28,102 @@ const Portfolio = () => {
       />
       <BrowserView>
         <Tiles flush={false} fill>
-          <Tilty portfolioItem item={<Reposier />} />
-          <Tilty portfolioItem item={<Splague />} />
-          <Tilty portfolioItem item={<PayrollAdmin />} />
-          <Tilty portfolioItem item={<PayrollForm />} />
-          <Tilty portfolioItem item={<Remembera />} />
-          <Tilty portfolioItem item={<Pickitt />} />
-          <Tilty portfolioItem item={<StaffingDashboard />} />
-          <Tilty portfolioItem item={<Contractor />} />
-          <Tilty portfolioItem item={<StaffWebsite />} />
-          <Tilty portfolioItem item={<FacilitatorWebsite />} />
-          <Tilty portfolioItem item={<PortfolioWork />} />
-          <Tilty portfolioItem item={<PortfolioDocs />} />
+          <Tilty
+            portfolioItem
+            item={
+              <LazyLoad height={694}>
+                <Reposier />
+              </LazyLoad>
+            }
+          />
+          <Tilty
+            portfolioItem
+            item={
+              <LazyLoad height={694}>
+                <Splague />
+              </LazyLoad>
+            }
+          />
+          <Tilty
+            portfolioItem
+            item={
+              <LazyLoad height={694}>
+                <PayrollAdmin />
+              </LazyLoad>
+            }
+          />
+          <Tilty
+            portfolioItem
+            item={
+              <LazyLoad height={694}>
+                <PayrollForm />
+              </LazyLoad>
+            }
+          />
+          <Tilty
+            portfolioItem
+            item={
+              <LazyLoad height={694}>
+                <Remembera />
+              </LazyLoad>
+            }
+          />
+          <Tilty
+            portfolioItem
+            item={
+              <LazyLoad height={694}>
+                <Pickitt />
+              </LazyLoad>
+            }
+          />
+          <Tilty
+            portfolioItem
+            item={
+              <LazyLoad height={694}>
+                <StaffingDashboard />
+              </LazyLoad>
+            }
+          />
+          <Tilty
+            portfolioItem
+            item={
+              <LazyLoad height={694}>
+                <Contractor />
+              </LazyLoad>
+            }
+          />
+          <Tilty
+            portfolioItem
+            item={
+              <LazyLoad height={694}>
+                <StaffWebsite />
+              </LazyLoad>
+            }
+          />
+          <Tilty
+            portfolioItem
+            item={
+              <LazyLoad height={694}>
+                <FacilitatorWebsite />
+              </LazyLoad>
+            }
+          />
+          <Tilty
+            portfolioItem
+            item={
+              <LazyLoad height={694}>
+                <PortfolioWork />
+              </LazyLoad>
+            }
+          />
+          <Tilty
+            portfolioItem
+            item={
+              <LazyLoad height={694}>
+                <PortfolioDocs />
+              </LazyLoad>
+            }
+          />
         </Tiles>
       </BrowserView>
       <MobileView>
