@@ -1,5 +1,13 @@
 # Change Log
 
+## [v1.1.0](https://github.com/alexlee-dev/portfolio/tree/v1.1.0) (2018-11-15)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v1.0.6...v1.1.0)
+
+**Implemented enhancements:**
+
+- 💨 Improve Perf - Images [\#136](https://github.com/alexlee-dev/portfolio/pull/136) ([alexlee-dev](https://github.com/alexlee-dev))
+- ✏️ Add alt tag for Portland Image. [\#135](https://github.com/alexlee-dev/portfolio/pull/135) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v1.0.6](https://github.com/alexlee-dev/portfolio/tree/v1.0.6) (2018-11-15)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v1.0.5...v1.0.6)
 
