@@ -9,7 +9,7 @@ const Splague = () => {
       <Card
         colorIndex="brand"
         thumbnail={
-          'https://res.cloudinary.com/alexlee-dev/image/upload/v1538177964/portfolio/splague.png'
+          'https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/splague.png'
         }
         heading="splague"
         label="Game"

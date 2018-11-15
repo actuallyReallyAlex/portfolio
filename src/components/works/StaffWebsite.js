@@ -9,7 +9,7 @@ const StaffWebsite = () => {
       <Card
         colorIndex="brand"
         thumbnail={
-          'https://res.cloudinary.com/alexlee-dev/image/upload/v1538178276/portfolio/staff-website.png'
+          'https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538178276/portfolio/staff-website.png'
         }
         heading="SuperCamp Staff Page"
         label="Website"

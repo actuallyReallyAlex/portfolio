@@ -9,7 +9,7 @@ const PayrollAdmin = () => {
       <Card
         colorIndex="brand"
         thumbnail={
-          'https://res.cloudinary.com/alexlee-dev/image/upload/v1538177963/portfolio/payroll-admin.png'
+          'https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177963/portfolio/payroll-admin.png'
         }
         heading="Payroll Admin"
         label="Dashboard"
