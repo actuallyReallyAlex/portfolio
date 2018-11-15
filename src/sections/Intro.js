@@ -9,7 +9,16 @@ import Cube from 'grommet/components/icons/base/Cube'
 export const Intro = () => {
   return (
     <Hero
-      background={<Image src={'https://res.cloudinary.com/alexlee-dev/image/upload/v1538667941/portfolio_portland_dark70_min.jpg'} full={true} fit="cover" />}
+      background={
+        <Image
+          src={
+            'https://res.cloudinary.com/alexlee-dev/image/upload/v1538667941/portfolio_portland_dark70_min.jpg'
+          }
+          full={true}
+          fit="cover"
+          alt="Portland's south waterfront at night."
+        />
+      }
       backgroundColorIndex="dark"
       id="home"
     >
@@ -29,9 +38,7 @@ export const Intro = () => {
       <Box responsive={false} direction="row" justify="center">
         <Button
           icon={<Mail />}
-          onClick={() =>
-            window.open('mailto:alex@alex-lee.site', '_self')
-          }
+          onClick={() => window.open('mailto:alex@alex-lee.site', '_self')}
         />
         <Button
           icon={<SocialGithub />}
