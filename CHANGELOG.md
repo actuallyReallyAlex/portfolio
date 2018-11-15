@@ -1,5 +1,18 @@
 # Change Log
 
+## [v1.0.6](https://github.com/alexlee-dev/portfolio/tree/v1.0.6) (2018-11-15)
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v1.0.5...v1.0.6)
+
+**Merged pull requests:**
+
+- \[Security\] Bump merge from 1.2.0 to 1.2.1 [\#132](https://github.com/alexlee-dev/portfolio/pull/132) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump react from 16.6.0 to 16.6.3 [\#131](https://github.com/alexlee-dev/portfolio/pull/131) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump eslint from 5.6.0 to 5.9.0 [\#130](https://github.com/alexlee-dev/portfolio/pull/130) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump grommet from 1.11.0 to 1.13.0 [\#129](https://github.com/alexlee-dev/portfolio/pull/129) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump react-dom from 16.6.0 to 16.6.1 [\#127](https://github.com/alexlee-dev/portfolio/pull/127) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump ajv from 6.5.4 to 6.5.5 [\#126](https://github.com/alexlee-dev/portfolio/pull/126) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump eslint-plugin-node from 7.0.1 to 8.0.0 [\#120](https://github.com/alexlee-dev/portfolio/pull/120) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v1.0.5](https://github.com/alexlee-dev/portfolio/tree/v1.0.5) (2018-10-26)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v1.0.4...v1.0.5)
 
