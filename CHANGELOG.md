@@ -6,6 +6,7 @@
 
 **Implemented enhancements:**
 
+- 🎨 Better contrast on links and legend items. [\#141](https://github.com/alexlee-dev/portfolio/pull/141) ([alexlee-dev](https://github.com/alexlee-dev))
 - ✏️ Add aria-label to form inputs for screen-readers. [\#140](https://github.com/alexlee-dev/portfolio/pull/140) ([alexlee-dev](https://github.com/alexlee-dev))
 - 🎨 More contrast on LanguagesLegend spans for a11y. [\#139](https://github.com/alexlee-dev/portfolio/pull/139) ([alexlee-dev](https://github.com/alexlee-dev))
 - ✏️ Add rel="noreferrer" to \_blank links. [\#138](https://github.com/alexlee-dev/portfolio/pull/138) ([alexlee-dev](https://github.com/alexlee-dev))
