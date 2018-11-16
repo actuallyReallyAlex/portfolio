@@ -6,6 +6,7 @@
     "dotenv": "^6.0.0",
     "fg-loadcss": "^2.0.1",
     "grommet": "^1.11.0",
+    "lazysizes": "^4.1.4",
     "lodash.capitalize": "^4.2.1",
     "logrocket": "^0.6.17",
     "react": "^16.5.2",
