@@ -27,10 +27,11 @@ const Splague = () => {
         link={
           <Anchor
             href="https://www.splague.com/"
-            icon={<LinkNext />}
+            icon={<LinkNext id="portfolio-link" />}
             label="www.splague.com"
             target="_blank"
             rel="noreferrer"
+            id="portfolio-link"
           />
         }
       />

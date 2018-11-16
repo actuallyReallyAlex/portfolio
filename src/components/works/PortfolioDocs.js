@@ -27,10 +27,11 @@ const PortfolioDocs = () => {
         link={
           <Anchor
             href="https://alexlee-portfolio-docs.netlify.com"
-            icon={<LinkNext />}
+            icon={<LinkNext id="portfolio-link" />}
             label="Docs"
             target="_blank"
             rel="noreferrer"
+            id="portfolio-link"
           />
         }
       />

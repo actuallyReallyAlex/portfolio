@@ -27,10 +27,11 @@ const Remembera = () => {
         link={
           <Anchor
             href="https://www.remembera.info/"
-            icon={<LinkNext />}
+            icon={<LinkNext id="portfolio-link" />}
             label="www.remembera.info"
             target="_blank"
             rel="noreferrer"
+            id="portfolio-link"
           />
         }
       />

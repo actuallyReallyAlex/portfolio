@@ -26,10 +26,11 @@ const StaffWebsite = () => {
         link={
           <Anchor
             href="http://www.supercamp.com/staff/"
-            icon={<LinkNext />}
+            icon={<LinkNext id="portfolio-link"/>}
             label="www.supercamp.com/staff"
             target="_blank"
             rel="noreferrer"
+            id="portfolio-link"
           />
         }
       />

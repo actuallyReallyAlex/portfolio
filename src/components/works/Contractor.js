@@ -27,10 +27,11 @@ const Contractor = () => {
         link={
           <Anchor
             href="https://demo-staffing-dashboard.netlify.com/contractor.html"
-            icon={<LinkNext />}
+            icon={<LinkNext id="portfolio-link" />}
             label="Demo"
             target="_blank"
             rel="noreferrer"
+            id="portfolio-link"
           />
         }
       />
