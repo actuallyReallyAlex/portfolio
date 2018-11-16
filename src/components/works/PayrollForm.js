@@ -27,10 +27,11 @@ const PayrollForm = () => {
         link={
           <Anchor
             href="https://demo-payroll-admin.netlify.com/"
-            icon={<LinkNext />}
+            icon={<LinkNext id="portfolio-link" />}
             label="Demo"
             target="_blank"
             rel="noreferrer"
+            id="portfolio-link"
           />
         }
       />

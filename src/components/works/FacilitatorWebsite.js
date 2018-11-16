@@ -26,10 +26,11 @@ const FacilitatorWebsite = () => {
         link={
           <Anchor
             href="http://www.supercamp.com/our-staff/"
-            icon={<LinkNext />}
+            icon={<LinkNext id="portfolio-link" />}
             label="www.supercamp.com/our-staff"
             target="_blank"
             rel="noreferrer"
+            id="portfolio-link"
           />
         }
       />

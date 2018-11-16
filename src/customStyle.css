@@ -1,9 +1,30 @@
+/* Sticky navBar */
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
 }
 
+/* Languages are better contrast on white background. */
 .languages-legend > li {
   color: black;
+}
+
+/* Legend items are better contrast on purple background. */
+.grommetux-legend__item > span {
+  color: white;
+}
+
+/* Portfolio descriptions have better contrast on purple background. */
+.portfolio-desc.grommetux-paragraph {
+  color: white;
+}
+
+#portfolio-source, #portfolio-link {
+  color: white;
+}
+
+#portfolio-source > svg, #portfolio-link > svg {
+  fill: white;
+  stroke: white;
 }

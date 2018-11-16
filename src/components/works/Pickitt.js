@@ -27,10 +27,11 @@ const Pickitt = () => {
         link={
           <Anchor
             href="https://pickitt.netlify.com/"
-            icon={<LinkNext />}
+            icon={<LinkNext id="portfolio-link" />}
             label="www.pickitt.netlify.com"
             target="_blank"
             rel="noreferrer"
+            id="portfolio-link"
           />
         }
       />

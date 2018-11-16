@@ -8,7 +8,7 @@ const PortfolioItemDescription = props => {
   return (
     <Box>
       <Legend series={getArrayofLabels(props.languages, languageProperties)} />
-      <Paragraph size="large" margin="medium">
+      <Paragraph size="large" margin="medium" className="portfolio-desc">
         {props.description}
       </Paragraph>
       {props.sourceLink ? (
@@ -18,6 +18,8 @@ const PortfolioItemDescription = props => {
           label="Source"
           target="_blank"
           rel="noreferrer"
+          className="portfolio-source"
+          id="portfolio-source"
         />
       ) : null}
     </Box>

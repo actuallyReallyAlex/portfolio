@@ -27,10 +27,11 @@ const Reposier = () => {
         link={
           <Anchor
             href="https://www.reposier.com/"
-            icon={<LinkNext />}
+            icon={<LinkNext id="portfolio-link" />}
             label="www.reposier.com"
             target="_blank"
             rel="noreferrer"
+            id="portfolio-link"
           />
         }
       />
