@@ -1,7 +1,7 @@
 {
   "name": "alexlee-dev-portfolio",
   "description": "Alex Lee's online portfolio. Built with React.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "dependencies": {
     "dotenv": "^6.0.0",
     "fg-loadcss": "^2.0.1",
