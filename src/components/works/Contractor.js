@@ -9,7 +9,11 @@ const Contractor = () => {
       <Card
         colorIndex="brand"
         thumbnail={
-          'https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177963/portfolio/contractor.png'
+          <img
+            data-src="https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177963/portfolio/contractor.png"
+            alt="Screeshot of Contractor Tool."
+            className="lazyload"
+          />
         }
         heading="Contractor Tool"
         label="Tool"
