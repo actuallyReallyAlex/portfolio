@@ -5,7 +5,7 @@ import { languageProperties, getArrayofLabels } from '../utilities'
 
 const LanguagesLegend = props => {
   return (
-    <Legend series={getArrayofLabels(props.languages, languageProperties)} />
+    <Legend className="languages-legend" series={getArrayofLabels(props.languages, languageProperties)} />
   )
 }
 
