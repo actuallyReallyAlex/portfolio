@@ -30,6 +30,7 @@ const Splague = () => {
             icon={<LinkNext />}
             label="www.splague.com"
             target="_blank"
+            rel="noreferrer"
           />
         }
       />

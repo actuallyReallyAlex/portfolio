@@ -29,6 +29,7 @@ const FacilitatorWebsite = () => {
             icon={<LinkNext />}
             label="www.supercamp.com/our-staff"
             target="_blank"
+            rel="noreferrer"
           />
         }
       />

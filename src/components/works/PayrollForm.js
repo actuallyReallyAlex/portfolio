@@ -30,6 +30,7 @@ const PayrollForm = () => {
             icon={<LinkNext />}
             label="Demo"
             target="_blank"
+            rel="noreferrer"
           />
         }
       />

@@ -30,6 +30,7 @@ const Pickitt = () => {
             icon={<LinkNext />}
             label="www.pickitt.netlify.com"
             target="_blank"
+            rel="noreferrer"
           />
         }
       />
