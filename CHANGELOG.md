@@ -1,5 +1,16 @@
 # Change Log
 
+## [Unreleased](https://github.com/alexlee-dev/portfolio/tree/HEAD)
+
+[Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v1.1.0...HEAD)
+
+**Implemented enhancements:**
+
+- ✏️ Add aria-label to form inputs for screen-readers. [\#140](https://github.com/alexlee-dev/portfolio/pull/140) ([alexlee-dev](https://github.com/alexlee-dev))
+- 🎨 More contrast on LanguagesLegend spans for a11y. [\#139](https://github.com/alexlee-dev/portfolio/pull/139) ([alexlee-dev](https://github.com/alexlee-dev))
+- ✏️ Add rel="noreferrer" to \_blank links. [\#138](https://github.com/alexlee-dev/portfolio/pull/138) ([alexlee-dev](https://github.com/alexlee-dev))
+- ✏️ Lazysizes test. [\#137](https://github.com/alexlee-dev/portfolio/pull/137) ([alexlee-dev](https://github.com/alexlee-dev))
+
 ## [v1.1.0](https://github.com/alexlee-dev/portfolio/tree/v1.1.0) (2018-11-15)
 [Full Changelog](https://github.com/alexlee-dev/portfolio/compare/v1.0.6...v1.1.0)
 
