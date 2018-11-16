@@ -30,6 +30,7 @@ const Remembera = () => {
             icon={<LinkNext />}
             label="www.remembera.info"
             target="_blank"
+            rel="noreferrer"
           />
         }
       />

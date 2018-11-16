@@ -30,6 +30,7 @@ const Reposier = () => {
             icon={<LinkNext />}
             label="www.reposier.com"
             target="_blank"
+            rel="noreferrer"
           />
         }
       />

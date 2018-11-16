@@ -29,6 +29,7 @@ const StaffWebsite = () => {
             icon={<LinkNext />}
             label="www.supercamp.com/staff"
             target="_blank"
+            rel="noreferrer"
           />
         }
       />

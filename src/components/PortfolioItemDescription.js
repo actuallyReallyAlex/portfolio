@@ -17,6 +17,7 @@ const PortfolioItemDescription = props => {
           icon={<Code />}
           label="Source"
           target="_blank"
+          rel="noreferrer"
         />
       ) : null}
     </Box>

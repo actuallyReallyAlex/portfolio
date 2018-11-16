@@ -30,6 +30,7 @@ const PortfolioDocs = () => {
             icon={<LinkNext />}
             label="Docs"
             target="_blank"
+            rel="noreferrer"
           />
         }
       />
