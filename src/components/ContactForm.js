@@ -12,10 +12,22 @@ const ContactForm = () => {
           value="New Submission From Portfolio Contact Form"
         />
         <Box pad={{ vertical: 'none' }}>
-          <input required type="text" name="name" placeholder="Name" />
+          <input
+            required
+            type="text"
+            name="name"
+            placeholder="Name"
+            aria-label="Name"
+          />
         </Box>
         <Box pad={{ vertical: 'small' }}>
-          <input required type="email" name="_replyto" placeholder="Email" />
+          <input
+            required
+            type="email"
+            name="_replyto"
+            placeholder="Email"
+            aria-label="Email"
+          />
         </Box>
         <Box pad={{ vertical: 'none' }}>
           <textarea
@@ -25,6 +37,7 @@ const ContactForm = () => {
             name="message"
             placeholder="Message"
             rows="8"
+            aria-label="Message"
           />
         </Box>
         <Box direction="row" justify="center">
