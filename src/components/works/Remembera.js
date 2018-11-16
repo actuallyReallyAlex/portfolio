@@ -9,7 +9,11 @@ const Remembera = () => {
       <Card
         colorIndex="brand"
         thumbnail={
-          'https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/remembera.png'
+          <img
+            data-src="https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/remembera.png"
+            alt="Screeshot of Remembera site."
+            className="lazyload"
+          />
         }
         heading="Remembera"
         label="Documentation"

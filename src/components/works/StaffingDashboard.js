@@ -9,7 +9,11 @@ const StaffingDashboard = () => {
       <Card
         colorIndex="brand"
         thumbnail={
-          'https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177965/portfolio/staffing-dashboard.png'
+          <img
+            data-src="https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177965/portfolio/staffing-dashboard.png"
+            alt="Screeshot of Staffing Dashboard."
+            className="lazyload"
+          />
         }
         heading="Staffing Dashboard"
         label="Dashboard"
