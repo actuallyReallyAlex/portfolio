@@ -7,7 +7,10 @@ import { languageProperties, getArrayofLabels } from '../utilities'
 const PortfolioItemDescription = props => {
   return (
     <Box>
-      <Legend series={getArrayofLabels(props.languages, languageProperties)} />
+      <Legend
+        className="project"
+        series={getArrayofLabels(props.languages, languageProperties)}
+      />
       <Paragraph size="large" margin="medium" className="portfolio-desc">
         {props.description}
       </Paragraph>

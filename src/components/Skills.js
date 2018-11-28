@@ -20,25 +20,30 @@ const Skills = () => {
       <Box size={{ width: { max: 'xxlarge' } }} direction="row">
         <Box pad={{ horizontal: 'small', vertical: 'large' }}>
           <Label>HTML</Label>
-          <LanguagesLegend languages={['HTML5', 'JSX', 'MDX', 'Markdown']} />
+          <LanguagesLegend
+            section="skills"
+            languages={['HTML5', 'JSX', 'MDX', 'Markdown']}
+          />
         </Box>
         <Box pad={{ horizontal: 'small', vertical: 'large' }}>
           <Label>CSS</Label>
-          <LanguagesLegend languages={['CSS3', 'Bootstrap']} />
+          <LanguagesLegend section="skills" languages={['CSS3', 'Bootstrap']} />
         </Box>
         <Box pad={{ horizontal: 'small', vertical: 'large' }}>
           <Label>JavaScript</Label>
           <LanguagesLegend
+            section="skills"
             languages={['JavaScript', 'React.js', 'Node.js', 'JQuery']}
           />
         </Box>
         <Box pad={{ horizontal: 'small', vertical: 'large' }}>
           <Label>Other</Label>
-          <LanguagesLegend languages={['C#', 'JSON']} />
+          <LanguagesLegend section="skills" languages={['C#', 'JSON']} />
         </Box>
         <Box pad={{ horizontal: 'small', vertical: 'large' }}>
           <Label>Tools / Software</Label>
           <LanguagesLegend
+            section="skills"
             languages={[
               'MS Visual Studio',
               'Adobe Photoshop',

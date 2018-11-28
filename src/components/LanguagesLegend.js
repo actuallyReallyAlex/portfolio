@@ -5,7 +5,10 @@ import { languageProperties, getArrayofLabels } from '../utilities'
 
 const LanguagesLegend = props => {
   return (
-    <Legend className="languages-legend" series={getArrayofLabels(props.languages, languageProperties)} />
+    <Legend
+      className={props.section}
+      series={getArrayofLabels(props.languages, languageProperties)}
+    />
   )
 }
 
@@ -15,7 +18,9 @@ LanguagesLegend.defaultProps = {
 
 LanguagesLegend.propTypes = {
   /** A colorful legend to show which languages were used on the project. */
-  languages: PropTypes.array.isRequired
+  languages: PropTypes.array.isRequired,
+  /** Used to change the color of the spans. */
+  section: PropTypes.string.isRequired
 }
 
 export default LanguagesLegend
