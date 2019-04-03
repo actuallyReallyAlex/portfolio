@@ -3,18 +3,20 @@ import ReactDOM from 'react-dom'
 import './customStyle.css'
 import Site from './Site'
 import registerServiceWorker from './registerServiceWorker'
-import packageInfo from '../package.json'
-
-import LogRocket from 'logrocket'
 import ReactGA from 'react-ga'
+import * as Sentry from '@sentry/browser'
+import ErrorBoundary from './ErrorBoundary'
 ReactGA.initialize('UA-124507483-3')
 ReactGA.pageview('/home')
 
-LogRocket.init('alex-lee/portfolio-prod', {
-  release: packageInfo.version
+Sentry.init({
+  dsn: 'https://9bdeb775ed794184b80f143e62dae44d@sentry.io/1429953'
 })
 
-require('dotenv').config()
-
-ReactDOM.render(<Site />, document.getElementById('root'))
+ReactDOM.render(
+  <ErrorBoundary>
+    <Site />
+  </ErrorBoundary>,
+  document.getElementById('root')
+)
 registerServiceWorker()
