@@ -108,22 +108,6 @@ const Portfolio = () => {
               </LazyLoad>
             }
           />
-          <Tilty
-            portfolioItem
-            item={
-              <LazyLoad height={694}>
-                <PortfolioWork />
-              </LazyLoad>
-            }
-          />
-          <Tilty
-            portfolioItem
-            item={
-              <LazyLoad height={694}>
-                <PortfolioDocs />
-              </LazyLoad>
-            }
-          />
         </Tiles>
       </BrowserView>
       <MobileView>
