@@ -10,9 +10,8 @@ const Pickitt = () => {
         colorIndex="brand"
         thumbnail={
           <img
-            data-src="https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/pickitt.png"
+            src="https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/pickitt.png"
             alt="Screeshot of Pickitt documentation."
-            className="lazyload"
           />
         }
         heading="Pickitt"
