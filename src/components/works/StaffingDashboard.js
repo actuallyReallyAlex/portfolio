@@ -10,9 +10,8 @@ const StaffingDashboard = () => {
         colorIndex="brand"
         thumbnail={
           <img
-            data-src="https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177965/portfolio/staffing-dashboard.png"
+            src="https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177965/portfolio/staffing-dashboard.png"
             alt="Screeshot of Staffing Dashboard."
-            className="lazyload"
           />
         }
         heading="Staffing Dashboard"

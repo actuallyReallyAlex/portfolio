@@ -10,9 +10,8 @@ const Splague = () => {
         colorIndex="brand"
         thumbnail={
           <img
-            data-src="https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/splague.png"
+            src="https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/splague.png"
             alt="Screeshot of Splague documentation."
-            className="lazyload"
           />
         }
         heading="splague"

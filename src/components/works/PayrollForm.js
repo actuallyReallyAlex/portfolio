@@ -10,9 +10,8 @@ const PayrollForm = () => {
         colorIndex="brand"
         thumbnail={
           <img
-            data-src="https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/payroll-form.png"
+            src="https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/payroll-form.png"
             alt="Screeshot of Payroll Form Tool."
-            className="lazyload"
           />
         }
         heading="Payroll Form"

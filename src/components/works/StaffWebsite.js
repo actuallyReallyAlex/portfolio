@@ -10,9 +10,9 @@ const StaffWebsite = () => {
         colorIndex="brand"
         thumbnail={
           <img
-            data-src="https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538178276/portfolio/staff-website.png"
+            src="https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538178276/portfolio/staff-website.png"
             alt="Screeshot of Staff Website."
-            className="lazyload"
+
           />
         }
         heading="SuperCamp Staff Page"
