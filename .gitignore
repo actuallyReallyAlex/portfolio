@@ -25,3 +25,5 @@ yarn-error.log*
 \.docz/app/
 
 \.docz/cache/
+
+build/
