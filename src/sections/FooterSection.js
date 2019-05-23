@@ -16,7 +16,7 @@ const FooterSection = () => {
         align="center"
         pad={{ between: 'medium' }}
       >
-        <Paragraph margin="none">© 2018 Alex Lee</Paragraph>
+        <Paragraph margin="none">© 2019 Alex Lee</Paragraph>
         <Menu direction="row" size="small" dropAlign={{ bottom: 'top', right: 'right' }}>
           <Anchor icon={<Mail />} href="mailto:alex@alex-lee.site" />
           <Anchor

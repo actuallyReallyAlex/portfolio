@@ -12,19 +12,20 @@ const Experience = () => {
       </Box>
       <Box direction="column" pad="large">
         <TimelineItem
+          title="Front End Web Developer"
+          startDate="December 2018"
+          present
+          icon="code"
+          subtitle="U.S. Bank (KForce)"
+          summary="Identified system dependencies by designing an end-to-end testing framework with Cypress. Created an accessible product by rewriting codebase to be compliant with WCAG 2.0 AA. Strengthened the codebase by increasing coverage to greater than 90%."
+        />
+        <TimelineItem
           title="Web Developer"
           startDate="Summer 2016"
           present
           icon="code"
           subtitle="Quantum Learning Network"
           summary="Developed an integrated payroll information system for site administrators. Spearheaded a new staff branding by redesigning staff website for SuperCamp. Improved hiring efficiency by developing an employee contracting tool."
-        />
-        <TimelineItem
-          title="HR Specialist"
-          startDate="Spring 2016"
-          present
-          subtitle="Quantum Learning Network"
-          summary="Produced and designed monthly HTML newsletters. Shaped an improved interview process by interviewing over 100 employees yearly. Increased user reach by creating video and photo series for media campaigns."
         />
       </Box>
       <Box justify="center" textAlign="center">
