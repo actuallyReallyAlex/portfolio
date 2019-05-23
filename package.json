@@ -5,7 +5,7 @@
   "dependencies": {
     "@sentry/browser": "^5.0.3",
     "fg-loadcss": "^2.0.1",
-    "grommet": "^1.11.0",
+    "grommet": "^2.7.0",
     "lodash.capitalize": "^4.2.1",
     "react": "^16.5.2",
     "react-device-detect": "^1.6.1",
