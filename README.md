@@ -13,7 +13,7 @@
 
 ---
 
-<p align="center"> A React Navbar/Sidebar combo component.
+<p align="center"> Alex Lee's Professional Portfolio
     <br> 
 </p>
 
