@@ -17,3 +17,7 @@
 .uppercase {
   text-transform: uppercase;
 }
+
+.slow-transition {
+  transition: all 0.5s;
+}

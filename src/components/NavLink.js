@@ -4,7 +4,7 @@ import { Anchor } from 'grommet'
 
 const NavLink = ({ title }) => {
   return (
-    <Anchor className="nav-link" onClick={() => smoothlyScroll(`#${title}`)}>
+    <Anchor className="nav-link slow-transition" onClick={() => smoothlyScroll(`#${title}`)}>
       {title}
     </Anchor>
   )
