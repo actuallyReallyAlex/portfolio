@@ -1,0 +1,15 @@
+.primary-color {
+  background-color: #0077c2;
+  color: #000000;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-weight: 400;
+}
+
+.nav-link:hover,
+.nav-link .active {
+  color: rgba(255, 255, 255, 1) !important;
+  text-decoration: none !important;
+}

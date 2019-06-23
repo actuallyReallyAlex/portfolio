@@ -1,26 +1,26 @@
 import React from 'react'
-import { Anchor, Box, Text } from 'grommet'
+import { Box, Text } from 'grommet'
+import { navigationSections } from '../config.json'
+import NavLink from './NavLink.js'
 
 const Nav = () => {
   return (
     <Box
       align="center"
-      background="neutral-3"
+      className="primary-color"
       direction="row"
       fill="horizontal"
       height="50px"
       justify="between"
       pad={{ horizontal: 'medium' }}
     >
-      <Text size="xlarge" weight="bold">
+      <Text color="white" size="xlarge" weight="bold">
         Alex Lee
       </Text>
       <Box direction="row" gap="small">
-        <Anchor color="white">Home</Anchor>
-        <Anchor color="white">About</Anchor>
-        <Anchor color="white">Résumé</Anchor>
-        <Anchor color="white">Portfolio</Anchor>
-        <Anchor color="white">Contact</Anchor>
+        {navigationSections.map(title => (
+          <NavLink key={title} title={title} />
+        ))}
       </Box>
     </Box>
   )
