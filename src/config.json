@@ -1,3 +1,25 @@
 {
-  "navigationSections": ["Home", "About", "Résumé", "Portfolio", "Contact"]
+  "navigationSections": ["Home", "About", "Résumé", "Portfolio", "Contact"],
+  "social": [
+    {
+      "icon": "Mail",
+      "link": "mailto:alex@alex-lee.site"
+    },
+    {
+      "icon": "Github",
+      "link": "https://github.com/alexlee-dev/"
+    },
+    {
+      "icon": "Cube",
+      "link": "https://www.npmjs.com/~alexlee-dev"
+    },
+    {
+      "icon": "Twitter",
+      "link": "https://twitter.com/alexlee_dev"
+    },
+    {
+      "icon": "Linkedin",
+      "link": "https://www.linkedin.com/in/alexlee-dev"
+    }
+  ]
 }
