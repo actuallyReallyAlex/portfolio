@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box, Paragraph } from 'grommet'
+import { Box, Paragraph, Heading, Text } from 'grommet'
 import SectionHeading from '../components/SectionHeading'
+import { about } from '../config.json'
 
 const About = () => {
   return (
@@ -12,7 +13,7 @@ const About = () => {
         fill="horizontal"
         gap="xlarge"
         justify="center"
-        margin={{ top: 'medium' }}
+        margin={{ vertical: 'large' }}
       >
         <Box
           background={`url(https://avatars2.githubusercontent.com/u/41493792?s=400&u=d55d8a934c12a5a11c0618657aa60e2efb5e89d4&v=4)`}
@@ -25,6 +26,70 @@ const About = () => {
           proud to say that I've grown in my development and design skillsets,
           making me a valuable asset to any team.
         </Paragraph>
+      </Box>
+      <Box
+        align="start"
+        direction="row"
+        fill="horizontal"
+        gap="xlarge"
+        justify="center"
+        margin={{ vertical: 'large' }}
+      >
+        <Box>
+          <Heading level="3">Profile</Heading>
+          <Paragraph>{about.profile}</Paragraph>
+        </Box>
+        <Box>
+          <Heading className="uppercase" level="3" margin="none">
+            Full Name:
+          </Heading>
+          <Text margin={{ bottom: 'small' }}>{about.fullName}</Text>
+          <Heading className="uppercase" level="3" margin="none">
+            Job:
+          </Heading>
+          <Text margin={{ bottom: 'small' }}>{about.job}</Text>
+          <Heading className="uppercase" level="3" margin="none">
+            Email:
+          </Heading>
+          <Text>{about.email}</Text>
+        </Box>
+      </Box>
+      <Box
+        align="center"
+        fill="horizontal"
+        justify="start"
+        margin={{ vertical: 'large' }}
+      >
+        <Box gap="medium">
+          <Heading level="3" margin="none">
+            Skills
+          </Heading>
+          <Paragraph>{about.skillsCopy}</Paragraph>
+        </Box>
+      </Box>
+      <Box
+        align="start"
+        direction="row"
+        fill="horizontal"
+        gap="xlarge"
+        justify="center"
+        margin={{ vertical: 'large' }}
+      >
+        {about.skills.map(({ sectionTitle, languages }) => (
+          <Box align="start" justify="start">
+            <Box align="center" fill="horizontal">
+              <Heading level="3">{sectionTitle}</Heading>
+            </Box>
+            {languages.map(({ color, title }) => (
+              <Box align="center" direction="row" gap="small" justify="center">
+                <Box background={color} height="10px" width="10px" />
+                <Heading level="4" margin="none">
+                  {title}
+                </Heading>
+              </Box>
+            ))}
+          </Box>
+        ))}
       </Box>
     </Box>
   )

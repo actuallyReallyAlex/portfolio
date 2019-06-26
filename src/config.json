@@ -21,5 +21,54 @@
       "icon": "Linkedin",
       "link": "https://www.linkedin.com/in/alexlee-dev"
     }
-  ]
+  ],
+  "about": {
+    "profile": "I love to brainstorm in a team environment; however, I'm also incredibly self-motivated. In every project, I'm determined to get the job done without compromising on quality.",
+    "fullName": "Alex Lee",
+    "job": "Web Developer",
+    "email": "alex@alex-lee.site",
+    "skillsCopy": "As a self-taught developer, I've gained a variety of skillsets that I can apply to my projects. Currently, I'm focused on React.js. With an industry that's ever-evolving, no one is a master at every language. I aim to let my excitement for learning new things guide me in my path toward growth.",
+    "skills": [
+      {
+        "sectionTitle": "HTML",
+        "languages": [
+          { "color": "accent-3", "title": "HTML5" },
+          { "color": "neutral-1", "title": "JSX" },
+          { "color": "accent-4", "title": "MDX" },
+          { "color": "status-critical", "title": "Markdown" }
+        ]
+      },
+      {
+        "sectionTitle": "CSS",
+        "languages": [
+          { "color": "accent-4", "title": "CSS3" },
+          { "color": "accent-3", "title": "Bootstrap" }
+        ]
+      },
+      {
+        "sectionTitle": "JavaScript",
+        "languages": [
+          { "color": "neutral-3", "title": "JavaScript" },
+          { "color": "accent-4", "title": "React.js" },
+          { "color": "accent-2", "title": "Node.js" },
+          { "color": "neutral-1", "title": "JQuery" }
+        ]
+      },
+      {
+        "sectionTitle": "Other",
+        "languages": [
+          { "color": "accent-2", "title": "C#" },
+          { "color": "accent-3", "title": "JSON" }
+        ]
+      },
+      {
+        "sectionTitle": "Tools / Software",
+        "languages": [
+          { "color": "neutral-3", "title": "MS Visual Studio" },
+          { "color": "status-critical", "title": "Adobe Photoshop" },
+          { "color": "accent-4", "title": "Adobe Illustrator" }
+        ]
+      }
+    ]
+  }
 }
