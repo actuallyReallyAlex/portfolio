@@ -12,8 +12,13 @@ describe('<NavLink />', () => {
     // defaultProps.handler.mockClear()
   })
 
-  test('Should render the <NavLink /> component.', () => {
+  test('Should render the <NavLink /> component when active.', () => {
     const component = shallow(<NavLink {...defaultProps} />)
+    expect(component).toMatchSnapshot()
+  })
+
+  test('Should render the <NavLink /> component when not active.', () => {
+    const component = shallow(<NavLink {...defaultProps} active={false} />)
     expect(component).toMatchSnapshot()
   })
 

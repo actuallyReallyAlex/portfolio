@@ -7,7 +7,15 @@ const defaultProps = {
   description: 'Description',
   image: 'fakeURL',
   languages: [{ color: 'accent-1', title: 'JavaScript' }],
-  title: "Title"
+  title: 'Title',
+  source: {
+    title: 'Source',
+    href: 'fakeURL'
+  },
+  link: {
+    title: 'Demo',
+    href: 'fakeURL'
+  }
 }
 
 describe('<PortfolioItem />', () => {
