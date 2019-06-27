@@ -259,5 +259,10 @@
         }
       }
     ]
+  },
+  "contact": {
+    "heading": "Contact",
+    "subHeading": "I'd love to hear from you.",
+    "toEmail": "alex@alex-lee.site"
   }
 }
