@@ -1,11 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Box, Paragraph, Heading } from 'grommet'
 import SectionHeading from '../SectionHeading'
 import { about } from '../../config.json'
 import InfoList from './InfoList'
 import Skills from './Skills'
 
-const About = ({ navRef }) => {
+const About = ({ navRef, size }) => {
   return (
     <Box
       align="center"
@@ -15,10 +16,14 @@ const About = ({ navRef }) => {
       pad="large"
       ref={navRef}
     >
-      <SectionHeading heading={about.heading} subHeading={about.subHeading} />
+      <SectionHeading
+        heading={about.heading}
+        subHeading={about.subHeading}
+        size={size === 'small' ? 'medium' : 'large'}
+      />
       <Box
         align="center"
-        direction="row"
+        direction={size === 'small' ? 'column' : 'row'}
         fill="horizontal"
         gap="xlarge"
         justify="center"
@@ -52,4 +57,40 @@ const About = ({ navRef }) => {
   )
 }
 
+About.propTypes = {
+  navRef: PropTypes.func.isRequired,
+  size: PropTypes.string.isRequired
+}
+
 export default About
+
+// {size === 'small' ? (
+//   <Box align="center" justify="center" gap="medium">
+//     <Box
+//       background={`url(${about.profileImage})`}
+//       height="192px"
+//       width="192px"
+//     />
+//     <Paragraph margin="none" size="medium">
+//       {about.copy}
+//     </Paragraph>
+//   </Box>
+// ) : (
+//   <Box
+//     align="center"
+//     direction="row"
+//     fill="horizontal"
+//     gap="xlarge"
+//     justify="center"
+//     margin={{ vertical: 'large' }}
+//   >
+//     <Box
+//       background={`url(${about.profileImage})`}
+//       height="192px"
+//       width="192px"
+//     />
+//     <Paragraph margin="none" size="medium">
+//       {about.copy}
+//     </Paragraph>
+//   </Box>
+// )}

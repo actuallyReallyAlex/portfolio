@@ -1,10 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Anchor } from 'grommet'
+import { smoothlyScroll } from '../util'
 
 const NavLink = ({ active, title }) => {
   return (
     <Anchor
+      color="black"
       className={`nav-link slow-transition ${active ? 'active' : ''}`}
       onClick={() => smoothlyScroll(title)}
     >
@@ -19,12 +21,3 @@ NavLink.propTypes = {
 }
 
 export default NavLink
-
-const smoothlyScroll = elementId => {
-  const element = document.getElementById(elementId)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  } else {
-    console.log(`Could not locate element: ${elementId}`)
-  }
-}

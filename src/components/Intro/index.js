@@ -1,15 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Box, Heading } from 'grommet'
 import { intro, social } from '../../config.json'
 import SocialIcon from '../SocialIcon'
 
-const Intro = ({ navRef }) => {
+const Intro = ({ navRef, size }) => {
   return (
     <Box
       align="center"
       background={`url(${intro.backgroundImage})`}
       fill="horizontal"
-      height="500px"
+      height={size === 'small' ? '400px' : '500px'}
       id="Home"
       justify="center"
       ref={navRef}
@@ -23,7 +24,7 @@ const Intro = ({ navRef }) => {
             color="white"
             level="1"
             margin={{ top: 'small', bottom: 'none' }}
-            size="4em"
+            size={size === 'small' ? '3em' : '4em'}
           >
             I&#39;m Alex Lee
           </Heading>
@@ -32,13 +33,23 @@ const Intro = ({ navRef }) => {
           </Heading>
           <Box direction="row" margin={{ top: 'large' }}>
             {social.map(({ icon, link }, i) => (
-              <SocialIcon key={i} icon={icon} link={link} size="large" />
+              <SocialIcon
+                key={i}
+                icon={icon}
+                link={link}
+                size={size === 'small' ? '30px' : 'large'}
+              />
             ))}
           </Box>
         </Box>
       </Box>
     </Box>
   )
+}
+
+Intro.propTypes = {
+  navRef: PropTypes.func.isRequired,
+  size: PropTypes.string.isRequired
 }
 
 export default Intro

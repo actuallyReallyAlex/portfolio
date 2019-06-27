@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Box, Heading, Text } from 'grommet'
 
-const SectionHeading = ({ heading, subHeading }) => {
+const SectionHeading = ({ heading, size, subHeading }) => {
   return (
     <Box align="center" justify="center">
       <Text className="uppercase">{heading}</Text>
-      <Heading level="2" margin={{ top: 'medium' }} size="large">
+      <Heading level="2" margin={{ top: 'medium' }} size={size}>
         {subHeading}
       </Heading>
     </Box>

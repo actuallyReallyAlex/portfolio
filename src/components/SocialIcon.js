@@ -28,7 +28,7 @@ const SocialIcon = ({ icon, link, size }) => {
 SocialIcon.propTypes = {
   icon: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['large', 'medium']).isRequired
+  size: PropTypes.string.isRequired
 }
 
 export default SocialIcon

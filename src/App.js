@@ -1,5 +1,5 @@
-import React from 'react'
-import { Grommet, grommet } from 'grommet'
+import React, { Fragment } from 'react'
+import { Grommet, grommet, ResponsiveContext } from 'grommet'
 import Nav from './components/Nav'
 import Intro from './components/Intro'
 import About from './components/About'
@@ -23,12 +23,18 @@ const App = () => {
 
   return (
     <Grommet full theme={grommet}>
-      <Nav views={views} />
-      <Intro navRef={introRef} />
-      <About navRef={aboutRef} />
-      <Resume navRef={resumeRef} />
-      <Portfolio navRef={portfolioRef} />
-      <Footer />
+      <ResponsiveContext.Consumer>
+        {size => (
+          <Fragment>
+            <Nav size={size} views={views} />
+            <Intro navRef={introRef} size={size} />
+            <About navRef={aboutRef} size={size} />
+            <Resume navRef={resumeRef} size={size} />
+            <Portfolio navRef={portfolioRef} size={size} />
+            <Footer size={size} />
+          </Fragment>
+        )}
+      </ResponsiveContext.Consumer>
     </Grommet>
   )
 }
