@@ -15,8 +15,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:coveralls": "jest --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/hooks/**/* --collectCoverageFrom=!src/setupTests.js --coverageReporters=text-lcov | coveralls"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,5 +54,15 @@
     "portfolio"
   ],
   "author": "Alex Lee <alexlee-dev>",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "coveralls": "^3.0.4",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./src/setupTests.js"
+    ]
+  }
 }
