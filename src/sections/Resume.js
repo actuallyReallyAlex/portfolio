@@ -21,7 +21,10 @@ const Resume = () => {
       <SectionHeading subHeading="Work Experience" />
       <Box fill="horizontal" gap="small" margin={{ vertical: 'medium' }}>
         {experience.map(
-          ({ title, startDate, endDate, present, icon, company, summary }) => {
+          (
+            { title, startDate, endDate, present, icon, company, summary },
+            i
+          ) => {
             const Icon = icons[icon]
 
             return (
@@ -30,15 +33,16 @@ const Resume = () => {
                 direction="row"
                 fill="horizontal"
                 gap="xlarge"
+                key={i}
                 justify="center"
               >
-                <Box style={{ textAlign: 'right' }}>
+                <Box style={{ textAlign: 'right' }} width="30%">
                   <Heading level="3">{title}</Heading>
                   <Text>
                     {startDate} - {present ? 'Present' : endDate}
                   </Text>
                 </Box>
-                <Box align="center" pad="medium">
+                <Box align="center" pad="medium" width="10%">
                   <Icon />
                 </Box>
                 <Box>
@@ -50,7 +54,7 @@ const Resume = () => {
                     height="3px"
                     margin={{ top: 'small', bottom: 'medium' }}
                     round="small"
-                    width="100px"
+                    width="60%"
                   />
                   <Paragraph>{summary}</Paragraph>
                 </Box>
@@ -62,15 +66,10 @@ const Resume = () => {
       <SectionHeading subHeading="Education" />
       <Box fill="horizontal" gap="small" margin={{ vertical: 'medium' }}>
         {education.map(
-          ({
-            title,
-            startDate,
-            endDate,
-            present,
-            icon,
-            university,
-            summary
-          }) => {
+          (
+            { title, startDate, endDate, present, icon, university, summary },
+            i
+          ) => {
             const Icon = icons[icon]
 
             return (
@@ -79,13 +78,14 @@ const Resume = () => {
                 direction="row"
                 fill="horizontal"
                 gap="xlarge"
+                key={i}
                 justify="center"
               >
-                <Box style={{ textAlign: 'right' }}>
+                <Box style={{ textAlign: 'right' }} width="30%">
                   <Heading level="3">{title}</Heading>
                   <Text>{present ? 'Present' : endDate}</Text>
                 </Box>
-                <Box align="center" pad="medium">
+                <Box align="center" pad="medium" width="10%">
                   <Icon />
                 </Box>
                 <Box>
@@ -97,7 +97,7 @@ const Resume = () => {
                     height="3px"
                     margin={{ top: 'small', bottom: 'medium' }}
                     round="small"
-                    width="100px"
+                    width="60%"
                   />
                   <Paragraph>{summary}</Paragraph>
                 </Box>

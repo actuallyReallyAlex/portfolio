@@ -75,13 +75,19 @@ const About = () => {
         justify="center"
         margin={{ vertical: 'large' }}
       >
-        {about.skills.map(({ sectionTitle, languages }) => (
-          <Box align="start" justify="start">
+        {about.skills.map(({ sectionTitle, languages }, i) => (
+          <Box align="start" key={i} justify="start">
             <Box align="center" fill="horizontal">
               <Heading level="3">{sectionTitle}</Heading>
             </Box>
-            {languages.map(({ color, title }) => (
-              <Box align="center" direction="row" gap="small" justify="center">
+            {languages.map(({ color, title }, i) => (
+              <Box
+                align="center"
+                direction="row"
+                gap="small"
+                key={i}
+                justify="center"
+              >
                 <Box background={color} height="10px" width="10px" />
                 <Heading level="4" margin="none">
                   {title}

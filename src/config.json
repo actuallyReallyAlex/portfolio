@@ -108,5 +108,121 @@
       "university": "MiraCosta College",
       "summary": "Biology Major with lab experience in Organic Chemistry, Molecular & Evolutionary Biology, and Foundational Physics."
     }
-  ]
+  ],
+  "portfolio": {
+    "heading": "Portfolio",
+    "subHeading": "Check out some of my projects.",
+    "rows": [
+      {
+        "column1": {
+          "title": "Reposier",
+          "description": "Tasty CLI on the outside, simple integration with GitHub's API on the inside.",
+          "category": "CLI",
+          "image": "https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/reposier.png",
+          "languages": [
+            { "color": "accent-2", "title": "Node.js" },
+            { "color": "neutral-3", "title": "JavaScript" }
+          ],
+          "source": {
+            "href": "https://github.com/alexlee-dev/reposier",
+            "title": "Source"
+          },
+          "link": {
+            "href": "https://www.reposier.com/",
+            "title": "www.reposier.com"
+          }
+        },
+        "column2": {
+          "title": "Contractor Tool",
+          "description": "A tool used to contract employees. Ability to export important information in a specific format. A part of the Staffing Dashboard.",
+          "category": "Tool",
+          "image": "https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177963/portfolio/contractor.png",
+          "languages": [
+            { "color": "accent-3", "title": "HTML5" },
+            { "color": "accent-4", "title": "CSS3" },
+            { "color": "neutral-3", "title": "JavaScript" }
+          ],
+          "source": {
+            "href": "https://github.com/alexlee-dev/Staffing/blob/master/contractor.html",
+            "title": "Source"
+          },
+          "link": {
+            "href": "https://demo-staffing-dashboard.netlify.com/contractor.html",
+            "title": "Demo"
+          }
+        }
+      },
+      {
+        "column1": {
+          "title": "SuperCamp Facilitator Page",
+          "description": "A staff showcase for SuperCamp. Used to show clients the staff of SuperCamp, and their credentials. Successful marketing campaign.",
+          "category": "Website",
+          "image": "https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/facilitator-website.png",
+          "languages": [
+            { "color": "accent-3", "title": "HTML5" },
+            { "color": "accent-4", "title": "CSS3" },
+            { "color": "neutral-3", "title": "JavaScript" }
+          ],
+          "link": {
+            "href": "http://www.supercamp.com/our-staff/",
+            "title": "www.supercamp.com/our-staff"
+          }
+        },
+        "column2": {
+          "title": "Payroll Admin",
+          "description": "A comprehensive dashboard to view payroll information. Used by companies to manage previous, current, and future reports. Ability to export data in a variety of formats.",
+          "category": "Dashboard",
+          "image": "https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177963/portfolio/payroll-admin.png",
+          "languages": [
+            { "color": "accent-3", "title": "HTML5" },
+            { "color": "accent-4", "title": "CSS3" },
+            { "color": "neutral-3", "title": "JavaScript" }
+          ],
+          "link": {
+            "href": "https://demo-payroll-admin.netlify.com/admin/",
+            "title": "Demo"
+          }
+        }
+      },
+      {
+        "column1": {
+          "title": "Payroll Form",
+          "description": "A form integrated with a dashboard to collect and process employee payroll information.",
+          "category": "Form",
+          "image": "https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/payroll-form.png",
+          "languages": [
+            { "color": "accent-3", "title": "HTML5" },
+            { "color": "accent-4", "title": "CSS3" },
+            { "color": "neutral-3", "title": "JavaScript" }
+          ],
+          "source": {
+            "href": "https://github.com/alexlee-dev/Payroll/",
+            "title": "Source"
+          },
+          "link": {
+            "href": "https://demo-payroll-admin.netlify.com/",
+            "title": "Demo"
+          }
+        },
+        "column2": {
+          "title": "Pickitt",
+          "description": "A comprehensive dashboard to view payroll information. Used by companies to manage previous, current, and future reports. Ability to export data in a variety of formats.",
+          "category": "Utility",
+          "image": "https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/pickitt.png",
+          "languages": [
+            { "color": "accent-2", "title": "Node.js" },
+            { "color": "neutral-3", "title": "JavaScript" }
+          ],
+          "source": {
+            "href": "https://github.com/alexlee-dev/pickitt",
+            "title": "Source"
+          },
+          "link": {
+            "href": "https://pickitt.netlify.com/",
+            "title": "www.pickitt.netlify.com"
+          }
+        }
+      }
+    ]
+  }
 }
