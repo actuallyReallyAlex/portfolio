@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Resume /> Should render the <Resume />. 1`] = `ShallowWrapper {}`;

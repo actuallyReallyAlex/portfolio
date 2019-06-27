@@ -13,10 +13,6 @@ const defaultProps = {
 }
 
 describe('<Nav />', () => {
-  afterEach(() => {
-    // defaultProps.handler.mockClear()
-  })
-
   test('Should render the <Nav /> component.', () => {
     const component = shallow(<Nav {...defaultProps} />)
     expect(component).toMatchSnapshot()
