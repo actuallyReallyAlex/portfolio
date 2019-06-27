@@ -1,16 +1,18 @@
 import React from 'react'
-import App from '../../App'
+import Nav from '../../components/Nav'
 import { shallow } from 'enzyme'
 
-const defaultProps = {}
+const defaultProps = {
+  navigationSections: ['Home', 'About', 'Résumé', 'Portfolio']
+}
 
-describe('<App />', () => {
+describe('<Nav />', () => {
   afterEach(() => {
     // defaultProps.handler.mockClear()
   })
 
-  test('Should render the <App /> component.', () => {
-    const component = shallow(<App {...defaultProps} />)
+  test('Should render the <Nav /> component.', () => {
+    const component = shallow(<Nav {...defaultProps} />)
     expect(component).toMatchSnapshot()
   })
 })

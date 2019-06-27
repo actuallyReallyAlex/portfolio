@@ -3,4 +3,5 @@ node_js:
   - 'node'
 script:
   - yarn build
-  - yarn run test:coveralls
+  # - yarn run test:coveralls
+  - yarn run test

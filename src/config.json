@@ -88,7 +88,7 @@
       "startDate": "December 2018",
       "present": true,
       "icon": "Code",
-      "company": "U.S. Bank (KForce)",
+      "orgnization": "U.S. Bank (KForce)",
       "summary": "Identified system dependencies by designing an end-to-end testing framework with Cypress. Created an accessible product by rewriting codebase to be compliant with WCAG 2.0 AA. Strengthened the codebase by increasing coverage to greater than 90%."
     },
     {
@@ -96,7 +96,7 @@
       "startDate": "June 2016",
       "endDate": "December 2018",
       "icon": "Code",
-      "company": "Quantum Learning Network",
+      "organization": "Quantum Learning Network",
       "summary": "Developed an integrated payroll information system for site administrators. Spearheaded a new staff branding by redesigning staff website for SuperCamp. Improved hiring efficiency by developing an employee contracting tool."
     }
   ],
@@ -105,14 +105,14 @@
       "title": "Bachelor of Science",
       "present": true,
       "icon": "Book",
-      "university": "Portland State University",
+      "organization": "Portland State University",
       "summary": "Currently pursuing a Bachelor of Science in Biology."
     },
     {
       "title": "Associate's Degree",
       "endDate": "June 2016",
       "icon": "Book",
-      "university": "MiraCosta College",
+      "organization": "MiraCosta College",
       "summary": "Biology Major with lab experience in Organic Chemistry, Molecular & Evolutionary Biology, and Foundational Physics."
     }
   ],

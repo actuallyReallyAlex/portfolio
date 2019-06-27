@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavLink /> Should render the <NavLink /> component. 1`] = `ShallowWrapper {}`;
