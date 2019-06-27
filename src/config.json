@@ -22,7 +22,14 @@
       "link": "https://www.linkedin.com/in/alexlee-dev"
     }
   ],
+  "intro": {
+    "backgroundImage": "https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_1152,f_auto/v1538630398/portfolio/portfolio_portland_dark_min.jpg"
+  },
   "about": {
+    "heading": "About",
+    "subHeading": "Let me introduce myself.",
+    "profileImage": "https://avatars2.githubusercontent.com/u/41493792?s=400&u=d55d8a934c12a5a11c0618657aa60e2efb5e89d4&v=4",
+    "copy": "I'm a passionate Web Developer. Since I was 11, I've been fascinated with computers and design. I started writing in Visual Basic. Now I'm proud to say that I've grown in my development and design skillsets, making me a valuable asset to any team.",
     "profile": "I love to brainstorm in a team environment; however, I'm also incredibly self-motivated. In every project, I'm determined to get the job done without compromising on quality.",
     "fullName": "Alex Lee",
     "job": "Web Developer",

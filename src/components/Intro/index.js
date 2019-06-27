@@ -1,15 +1,13 @@
 import React from 'react'
 import { Box, Heading } from 'grommet'
-import { social } from '../../config.json'
+import { intro, social } from '../../config.json'
 import SocialIcon from '../SocialIcon'
 
 const Intro = () => {
   return (
     <Box
       align="center"
-      background="url(
-        'https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_1152,f_auto/v1538630398/portfolio/portfolio_portland_dark_min.jpg'
-      )"
+      background={`url(${intro.backgroundImage})`}
       fill="horizontal"
       height="500px"
       id="Home"
