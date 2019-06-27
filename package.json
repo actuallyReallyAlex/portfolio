@@ -13,6 +13,11 @@
     "react-tilt": "^0.1.4",
     "styled-components": "^4.3.2"
   },
+  "devDependencies": {
+    "coveralls": "^3.0.4",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -56,11 +61,6 @@
   ],
   "author": "Alex Lee <alexlee-dev>",
   "license": "GPL-3.0",
-  "devDependencies": {
-    "coveralls": "^3.0.4",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0"
-  },
   "jest": {
     "setupFilesAfterEnv": [
       "./src/setupTests.js"
