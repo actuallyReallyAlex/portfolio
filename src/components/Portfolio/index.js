@@ -1,7 +1,7 @@
 import React from 'react'
 import { Anchor, Box, Heading, Text } from 'grommet'
-import SectionHeading from '../components/SectionHeading'
-import { portfolio } from '../config.json'
+import SectionHeading from '../SectionHeading'
+import { portfolio } from '../../config.json'
 import { Code, LinkNext } from 'grommet-icons'
 import Tilt from 'react-tilt'
 

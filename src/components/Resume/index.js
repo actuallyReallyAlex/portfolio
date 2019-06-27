@@ -1,9 +1,8 @@
 import React from 'react'
 import { Box, Button, Paragraph, Heading, Text } from 'grommet'
 import { Download } from 'grommet-icons'
-import { resume } from '../config.json'
-import SectionHeading from '../components/SectionHeading'
-import { education, experience } from '../config.json'
+import SectionHeading from '../SectionHeading'
+import { education, experience, resume } from '../../config.json'
 import * as icons from 'grommet-icons'
 
 const Resume = () => {

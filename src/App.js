@@ -1,12 +1,11 @@
 import React from 'react'
 import { Grommet, grommet } from 'grommet'
 import Nav from './components/Nav'
-import Intro from './sections/Intro'
-import About from './sections/About'
-import Resume from './sections/Resume'
-import Portfolio from './sections/Portfolio'
-import Contact from './sections/Contact'
-import Footer from './sections/Footer'
+import Intro from './components/Intro'
+import About from './components/About'
+import Resume from './components/Resume'
+import Portfolio from './components/Portfolio'
+import Footer from './components/Footer'
 
 const App = () => {
   return (

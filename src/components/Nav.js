@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Text } from 'grommet'
-import { navigationSections } from '../config.json'
 import NavLink from './NavLink.js'
+import { navigationSections } from '../config.json'
 
 const Nav = () => {
   return (

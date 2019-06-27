@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Paragraph, Heading, Text } from 'grommet'
-import SectionHeading from '../components/SectionHeading'
-import { about } from '../config.json'
+import SectionHeading from '../SectionHeading'
+import { about } from '../../config.json'
 
 const About = () => {
   return (

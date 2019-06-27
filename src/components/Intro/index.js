@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Heading } from 'grommet'
-import { social } from '../config.json'
-import SocialIcon from '../components/SocialIcon'
+import { social } from '../../config.json'
+import SocialIcon from '../SocialIcon'
 
 const Intro = () => {
   return (

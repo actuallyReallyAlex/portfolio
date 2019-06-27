@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Heading, Text } from 'grommet'
+import { Box, Text } from 'grommet'
 import SocialIcon from '../components/SocialIcon'
 import { social } from '../config.json'
 
