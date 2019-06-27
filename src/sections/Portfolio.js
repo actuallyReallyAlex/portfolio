@@ -11,6 +11,7 @@ const Portfolio = () => {
       align="center"
       fill="horizontal"
       gap="medium"
+      id="Portfolio"
       justify="center"
       pad="large"
     >

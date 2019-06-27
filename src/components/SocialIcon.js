@@ -4,7 +4,7 @@ import { Button } from 'grommet'
 import * as icons from 'grommet-icons'
 import { useHover } from '../hooks/useHover'
 
-const SocialIcon = ({ icon, link }) => {
+const SocialIcon = ({ icon, link, size }) => {
   const Icon = icons[icon]
   const [hoverRef, isHovered] = useHover()
 
@@ -16,6 +16,7 @@ const SocialIcon = ({ icon, link }) => {
           color={
             isHovered ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.75)'
           }
+          size={size}
         />
       }
       onClick={() => window.open(link, '_blank')}
@@ -26,7 +27,8 @@ const SocialIcon = ({ icon, link }) => {
 
 SocialIcon.propTypes = {
   icon: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired
+  link: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(['large', 'medium']).isRequired
 }
 
 export default SocialIcon

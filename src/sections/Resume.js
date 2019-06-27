@@ -12,6 +12,7 @@ const Resume = () => {
       align="center"
       fill="horizontal"
       gap="medium"
+      id="Résumé"
       justify="center"
       pad="large"
     >

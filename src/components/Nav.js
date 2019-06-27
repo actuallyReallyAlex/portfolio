@@ -13,6 +13,7 @@ const Nav = () => {
       height="50px"
       justify="between"
       pad={{ horizontal: 'medium' }}
+      style={{ position: 'fixed', zIndex: '10' }}
     >
       <Text color="white" size="xlarge" weight="bold">
         Alex Lee

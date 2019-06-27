@@ -5,7 +5,13 @@ import { about } from '../config.json'
 
 const About = () => {
   return (
-    <Box align="center" fill="horizontal" justify="center" pad="large">
+    <Box
+      align="center"
+      fill="horizontal"
+      id="About"
+      justify="center"
+      pad="large"
+    >
       <SectionHeading heading="About" subHeading="Let me introduce myself." />
       <Box
         align="center"
