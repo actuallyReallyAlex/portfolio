@@ -3,6 +3,7 @@ import NavLink from '../../components/NavLink'
 import { shallow } from 'enzyme'
 
 const defaultProps = {
+  active: false,
   title: 'Title'
 }
 

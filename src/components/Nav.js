@@ -5,7 +5,6 @@ import { navigationSections } from '../config.json'
 
 const Nav = ({ views }) => {
   const sectionInView = views.filter(view => view.isInView === true)
-  console.log({ sectionInView })
 
   return (
     <Box
