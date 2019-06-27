@@ -222,6 +222,41 @@
             "title": "www.pickitt.netlify.com"
           }
         }
+      },
+      {
+        "column1": {
+          "title": "reposier",
+          "description": "Tasty CLI on the outside, simple integration with GitHub's API on the inside.",
+          "category": "CLI",
+          "image": "https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/reposier.png",
+          "languages": [
+            { "color": "accent-2", "title": "Node.js" },
+            { "color": "neutral-3", "title": "JavaScript" }
+          ],
+          "source": {
+            "href": "https://github.com/alexlee-dev/reposier",
+            "title": "Source"
+          },
+          "link": {
+            "href": "https://www.reposier.com/",
+            "title": "www.reposier.com"
+          }
+        },
+        "column2": {
+          "title": "Splague",
+          "description": "Be prepared. A web game built with React, inspired by the popular game 'Plague Inc'. Control either a disease, or a doctor to destroy or save the world.",
+          "category": "Game",
+          "image": "https://res.cloudinary.com/alexlee-dev/image/upload/c_scale,q_90,w_384,f_auto/v1538177964/portfolio/splague.png",
+          "languages": [{ "color": "accent-4", "title": "React.js" }],
+          "source": {
+            "href": "https://github.com/alexlee-dev/splague",
+            "title": "Source"
+          },
+          "link": {
+            "href": "https://www.splague.com/",
+            "title": "www.splague.com"
+          }
+        }
       }
     ]
   }
