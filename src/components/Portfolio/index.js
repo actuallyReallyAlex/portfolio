@@ -4,7 +4,7 @@ import SectionHeading from '../SectionHeading'
 import { portfolio } from '../../config.json'
 import PortfolioItem from './PortfolioItem'
 
-const Portfolio = () => {
+const Portfolio = ({ navRef }) => {
   return (
     <Box
       align="center"
@@ -13,6 +13,7 @@ const Portfolio = () => {
       id="Portfolio"
       justify="center"
       pad="large"
+      ref={navRef}
     >
       <SectionHeading
         heading={portfolio.heading}

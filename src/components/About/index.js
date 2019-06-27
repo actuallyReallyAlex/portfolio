@@ -3,9 +3,9 @@ import { Box, Paragraph, Heading } from 'grommet'
 import SectionHeading from '../SectionHeading'
 import { about } from '../../config.json'
 import InfoList from './InfoList'
-import Skills from './Skills';
+import Skills from './Skills'
 
-const About = () => {
+const About = ({ navRef }) => {
   return (
     <Box
       align="center"
@@ -13,6 +13,7 @@ const About = () => {
       id="About"
       justify="center"
       pad="large"
+      ref={navRef}
     >
       <SectionHeading heading={about.heading} subHeading={about.subHeading} />
       <Box

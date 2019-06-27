@@ -88,7 +88,7 @@
       "startDate": "December 2018",
       "present": true,
       "icon": "Code",
-      "orgnization": "U.S. Bank (KForce)",
+      "organization": "U.S. Bank (KForce)",
       "summary": "Identified system dependencies by designing an end-to-end testing framework with Cypress. Created an accessible product by rewriting codebase to be compliant with WCAG 2.0 AA. Strengthened the codebase by increasing coverage to greater than 90%."
     },
     {

@@ -3,7 +3,7 @@ import { Box, Heading } from 'grommet'
 import { intro, social } from '../../config.json'
 import SocialIcon from '../SocialIcon'
 
-const Intro = () => {
+const Intro = ({ navRef }) => {
   return (
     <Box
       align="center"
@@ -12,6 +12,7 @@ const Intro = () => {
       height="500px"
       id="Home"
       justify="center"
+      ref={navRef}
     >
       <Box direction="row" justify="center" align="center">
         <Box align="center" justify="center" pad="medium">

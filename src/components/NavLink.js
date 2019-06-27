@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Anchor } from 'grommet'
 
-const NavLink = ({ title }) => {
+const NavLink = ({ active, title }) => {
   return (
     <Anchor
-      className="nav-link slow-transition"
+      className={`nav-link slow-transition ${active ? 'active' : ''}`}
       onClick={() => smoothlyScroll(title)}
     >
       {title}
@@ -14,6 +14,7 @@ const NavLink = ({ title }) => {
 }
 
 NavLink.propTypes = {
+  active: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired
 }
 

@@ -5,7 +5,7 @@ import SectionHeading from '../SectionHeading'
 import { education, experience, resume } from '../../config.json'
 import TimelineItem from './TimelineItem'
 
-const Resume = () => {
+const Resume = ({ navRef }) => {
   return (
     <Box
       align="center"
@@ -14,6 +14,7 @@ const Resume = () => {
       id="Résumé"
       justify="center"
       pad="large"
+      ref={navRef}
     >
       <SectionHeading heading="RÉSUMÉ" subHeading="More of my credentials" />
       <Paragraph>{resume.copy}</Paragraph>

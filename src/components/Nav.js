@@ -3,7 +3,10 @@ import { Box, Text } from 'grommet'
 import NavLink from './NavLink.js'
 import { navigationSections } from '../config.json'
 
-const Nav = () => {
+const Nav = ({ views }) => {
+  const sectionInView = views.filter(view => view.isInView === true)
+  console.log({ sectionInView })
+
   return (
     <Box
       align="center"
@@ -20,7 +23,11 @@ const Nav = () => {
       </Text>
       <Box direction="row" gap="small">
         {navigationSections.map(title => (
-          <NavLink key={title} title={title} />
+          <NavLink
+            active={sectionInView.length > 0 && title === sectionInView[0].title}
+            key={title}
+            title={title}
+          />
         ))}
       </Box>
     </Box>

@@ -8314,6 +8314,14 @@ react-hook-form@^3.13.1:
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-3.13.1.tgz#080f8419fc7e5279c914da857de3b7e314955e47"
   integrity sha512-JnWFPI2BrnIi44asokA9IoTX+4RKrRmK29fcL3FUvnoHJ0oTwl4euAG9Abzvw8+uU7yBrX2VzpwoJy+WgBbyeA==
 
+react-intersection-observer@^8.23.0:
+  version "8.23.0"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.23.0.tgz#1533aaf39cc70300ff8ca37e6551d2d68a589cd0"
+  integrity sha512-kHXfxhGKvVDNkrvmh9CKCnAWvJBigyB7oSDzMXL54weFDwwI4WfTr58YauZ0RRPkGzoD/hYEuzfS1wipXn23fA==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    invariant "^2.2.4"
+
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"

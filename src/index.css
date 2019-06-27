@@ -9,7 +9,7 @@
 }
 
 .nav-link:hover,
-.nav-link .active {
+.nav-link.active {
   color: rgba(255, 255, 255, 1) !important;
   text-decoration: none !important;
 }
