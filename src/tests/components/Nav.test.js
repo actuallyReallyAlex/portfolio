@@ -4,6 +4,7 @@ import { shallow } from 'enzyme'
 
 const defaultProps = {
   navigationSections: ['Home', 'About', 'Résumé', 'Portfolio'],
+  size: 'medium',
   views: [
     { title: 'Home', isInView: true },
     { title: 'About', isInView: false },

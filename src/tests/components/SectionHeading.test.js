@@ -4,14 +4,11 @@ import { shallow } from 'enzyme'
 
 const defaultProps = {
   heading: 'Heading',
+  size: 'medium',
   subHeading: 'Sub Heading'
 }
 
 describe('<SectionHeading />', () => {
-  afterEach(() => {
-    // defaultProps.handler.mockClear()
-  })
-
   test('Should render the <SectionHeading /> component.', () => {
     const component = shallow(<SectionHeading {...defaultProps} />)
     expect(component).toMatchSnapshot()

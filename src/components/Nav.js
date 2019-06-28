@@ -9,8 +9,6 @@ import { smoothlyScroll } from '../util'
 const Nav = ({ size, views }) => {
   const sectionInView = views.filter(view => view.isInView === true)
 
-  console.log({ size })
-
   return (
     <Box
       align="center"
@@ -31,7 +29,7 @@ const Nav = ({ size, views }) => {
           icon={<More color="white" />}
           items={navigationSections.map(title => ({
             label: title,
-            onClick: () => smoothlyScroll(title),
+            onClick: () => smoothlyScroll(title)
           }))}
         />
       ) : (
