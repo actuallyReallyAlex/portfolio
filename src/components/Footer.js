@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Box, Text } from 'grommet'
+import { Box, Button, Text } from 'grommet'
 import SocialIcon from '../components/SocialIcon'
 import { social } from '../config.json'
+import { smoothlyScroll } from '../util'
 
 const Footer = ({ size }) => (
   <Box
@@ -14,9 +15,11 @@ const Footer = ({ size }) => (
     justify="between"
     pad={{ horizontal: 'medium' }}
   >
-    <Text color="white" size="xlarge" weight="bold">
-      Alex Lee
-    </Text>
+    <Button onClick={() => smoothlyScroll('Home')}>
+      <Text color="white" size="xlarge" weight="bold">
+        Alex Lee
+      </Text>
+    </Button>
     <Box align="center" direction="row" gap="medium">
       <Text color="white">© 2019 Alex Lee</Text>
       {size !== 'small' && (

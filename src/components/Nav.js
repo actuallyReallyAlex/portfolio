@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Box, Menu, Text } from 'grommet'
+import { Box, Button, Menu, Text } from 'grommet'
 import NavLink from './NavLink.js'
 import { navigationSections } from '../config.json'
 import { More } from 'grommet-icons'
@@ -20,9 +20,11 @@ const Nav = ({ size, views }) => {
       pad={{ horizontal: 'medium' }}
       style={{ position: 'fixed', zIndex: '10' }}
     >
-      <Text color="white" size="xlarge" weight="bold">
-        Alex Lee
-      </Text>
+      <Button onClick={() => smoothlyScroll('Home')}>
+        <Text color="white" size="xlarge" weight="bold">
+          Alex Lee
+        </Text>
+      </Button>
       {size === 'small' ? (
         <Menu
           dropAlign={{ top: 'bottom', right: 'right' }}
