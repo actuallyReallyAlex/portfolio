@@ -27,8 +27,9 @@ const Nav = ({ size, views }) => {
         <Menu
           dropAlign={{ top: 'bottom', right: 'right' }}
           icon={<More color="white" />}
-          items={navigationSections.map(title => ({
-            label: title,
+          id="menu"
+          items={navigationSections.map((title, i) => ({
+            label: <Box pad="medium">{title}</Box>,
             onClick: () => smoothlyScroll(title)
           }))}
         />
