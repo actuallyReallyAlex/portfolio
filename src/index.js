@@ -6,11 +6,15 @@ import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 
-Sentry.init({
-  dsn: 'https://5a28f5da01f34b0283639b079218978e@sentry.io/1492278'
-})
+const { NODE_ENV } = process.env
 
-LogRocket.init('alex-lee/portfolio-prod')
+if (NODE_ENV === 'production') {
+  Sentry.init({
+    dsn: 'https://5a28f5da01f34b0283639b079218978e@sentry.io/1492278'
+  })
+
+  LogRocket.init('alex-lee/portfolio-prod')
+}
 
 ReactDOM.render(<App />, document.getElementById('root'))
 
