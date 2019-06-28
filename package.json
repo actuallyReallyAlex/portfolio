@@ -3,12 +3,12 @@
   "description": "Alex Lee's portfolio. Built with React.",
   "version": "2.1.0",
   "dependencies": {
+    "@sanity/client": "^0.141.1",
     "@sentry/browser": "^5.4.3",
     "grommet": "^2.7.1",
     "grommet-icons": "^4.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-hook-form": "^3.13.1",
     "react-intersection-observer": "^8.23.0",
     "react-scripts": "3.0.1",
     "react-tilt": "^0.1.4",

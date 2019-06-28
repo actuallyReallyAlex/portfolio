@@ -5,6 +5,7 @@ import Intro from './components/Intro'
 import About from './components/About'
 import Resume from './components/Resume'
 import Portfolio from './components/Portfolio'
+import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { useInView } from 'react-intersection-observer'
 
@@ -13,12 +14,14 @@ const App = () => {
   const [aboutRef, isAboutInView] = useInView()
   const [resumeRef, isResumeInView] = useInView()
   const [portfolioRef, isPortfolioInView] = useInView()
+  const [contactRef, isContactInView] = useInView()
 
   const views = [
     { title: 'Home', isInView: isIntroInView },
     { title: 'About', isInView: isAboutInView },
     { title: 'Résumé', isInView: isResumeInView },
-    { title: 'Portfolio', isInView: isPortfolioInView }
+    { title: 'Portfolio', isInView: isPortfolioInView },
+    { title: 'Contact', isInView: isContactInView }
   ]
 
   return (
@@ -31,6 +34,7 @@ const App = () => {
             <About navRef={aboutRef} size={size} />
             <Resume navRef={resumeRef} size={size} />
             <Portfolio navRef={portfolioRef} size={size} />
+            <Contact navRef={contactRef} size={size} />
             <Footer size={size} />
           </Fragment>
         )}

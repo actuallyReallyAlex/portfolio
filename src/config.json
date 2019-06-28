@@ -1,5 +1,5 @@
 {
-  "navigationSections": ["Home", "About", "Résumé", "Portfolio"],
+  "navigationSections": ["Home", "About", "Résumé", "Portfolio", "Contact"],
   "social": [
     {
       "icon": "Mail",
@@ -269,7 +269,6 @@
   },
   "contact": {
     "heading": "Contact",
-    "subHeading": "I'd love to hear from you.",
-    "toEmail": "alex@alex-lee.site"
+    "subHeading": "I'd love to hear from you."
   }
 }
