@@ -1,22 +1,31 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Box, Heading } from 'grommet'
 import { about } from '../../config.json'
 import SkillBox from './SkillBox.js'
 
-const Skills = () => {
+const Skills = ({ size }) => {
   return (
     <Box
-      align="start"
-      direction="row"
+      align={size === 'small' ? 'center' : 'start'}
+      direction={size === 'small' ? 'column' : 'row'}
       fill="horizontal"
-      gap="xlarge"
+      gap={size === 'small' ? 'large' : 'xlarge'}
       justify="center"
       margin={{ vertical: 'large' }}
     >
       {about.skills.map(({ sectionTitle, languages }, i) => (
         <Box align="start" key={i} justify="start">
-          <Box align="center" fill="horizontal">
-            <Heading level="3">{sectionTitle}</Heading>
+          <Box align="center" margin={{ bottom: 'small' }}>
+            <Heading level="3" margin={{ bottom: 'xsmall' }}>
+              {sectionTitle}
+            </Heading>
+            <Box
+              background="neutral-3"
+              fill="horizontal"
+              height="3px"
+              round="small"
+            />
           </Box>
           {languages.map(({ color, title }, i) => (
             <SkillBox color={color} key={i} title={title} />
@@ -25,6 +34,10 @@ const Skills = () => {
       ))}
     </Box>
   )
+}
+
+Skills.propTypes = {
+  size: PropTypes.string.isRequired
 }
 
 export default Skills

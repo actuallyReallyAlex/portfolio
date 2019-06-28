@@ -38,7 +38,7 @@ const About = ({ navRef, size }) => {
           {about.copy}
         </Paragraph>
       </Box>
-      <InfoList />
+      <InfoList size={size} />
       <Box
         align="center"
         fill="horizontal"
@@ -52,7 +52,7 @@ const About = ({ navRef, size }) => {
           <Paragraph>{about.skillsCopy}</Paragraph>
         </Box>
       </Box>
-      <Skills />
+      <Skills size={size} />
     </Box>
   )
 }

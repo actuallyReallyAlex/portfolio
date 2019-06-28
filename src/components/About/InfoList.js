@@ -1,14 +1,15 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Box, Heading, Paragraph, Text } from 'grommet'
 import { about } from '../../config.json'
 
-const InfoList = () => {
+const InfoList = ({ size }) => {
   return (
     <Box
       align="start"
-      direction="row"
+      direction={size === 'small' ? 'column' : 'row'}
       fill="horizontal"
-      gap="xlarge"
+      gap={size === 'small' ? 'medium' : 'xlarge'}
       justify="center"
       margin={{ vertical: 'large' }}
     >
@@ -32,6 +33,10 @@ const InfoList = () => {
       </Box>
     </Box>
   )
+}
+
+InfoList.propTypes = {
+  size: PropTypes.string.isRequired
 }
 
 export default InfoList
