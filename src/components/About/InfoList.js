@@ -22,9 +22,9 @@ const InfoList = ({ size }) => (
       </Heading>
       <Text margin={{ bottom: 'small' }}>{about.fullName}</Text>
       <Heading className="uppercase" level="3" margin="none">
-        Job:
+        Occupation:
       </Heading>
-      <Text margin={{ bottom: 'small' }}>{about.job}</Text>
+      <Text margin={{ bottom: 'small' }}>{about.occupation}</Text>
       <Heading className="uppercase" level="3" margin="none">
         Email:
       </Heading>
