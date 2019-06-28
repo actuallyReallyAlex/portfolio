@@ -47,7 +47,7 @@ const TimelineItem = ({
           {organization}
         </Heading>
         <Box
-          background="neutral-3"
+          background="#eb1736"
           height="3px"
           margin={{ top: 'small', bottom: 'medium' }}
           round="small"

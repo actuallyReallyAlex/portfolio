@@ -23,6 +23,7 @@ const Resume = ({ navRef, size }) => (
     />
     <Paragraph>{resume.copy}</Paragraph>
     <Button
+      color="#5252d4"
       href={resume.url}
       icon={<Download />}
       label="Résumé"

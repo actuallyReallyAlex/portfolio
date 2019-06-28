@@ -20,7 +20,7 @@ const Skills = ({ size }) => (
             {sectionTitle}
           </Heading>
           <Box
-            background="neutral-3"
+            background="#eb1736"
             fill="horizontal"
             height="3px"
             round="small"

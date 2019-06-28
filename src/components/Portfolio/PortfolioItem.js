@@ -16,7 +16,7 @@ const PortfolioItem = ({
 }) => (
   <Tilt className="Tilt" options={{ max: 15, perspective: 2000, scale: 1.05 }}>
     <Box
-      background="brand"
+      background="#5252d4"
       className="Tilt-inner"
       width={size === 'small' ? '300' : '384px'}
     >
