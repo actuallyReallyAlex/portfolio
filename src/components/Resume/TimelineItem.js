@@ -8,6 +8,7 @@ const TimelineItem = ({
   icon,
   organization,
   present,
+  size,
   startDate,
   summary,
   title
@@ -17,21 +18,31 @@ const TimelineItem = ({
   return (
     <Box
       align="start"
-      direction="row"
+      direction={size === 'small' ? 'column' : 'row'}
       fill="horizontal"
-      gap="xlarge"
+      gap={size === 'small' ? 'medium' : 'xlarge'}
       justify="center"
+      margin={size === 'small' ? { vertical: 'medium' } : undefined}
     >
-      <Box style={{ textAlign: 'right' }} width="30%">
-        <Heading level="3">{title}</Heading>
+      <Box
+        style={{ textAlign: `${size === 'small' ? 'center' : 'right'}` }}
+        width={size === 'small' ? '100%' : '30%'}
+      >
+        <Heading level="3" margin={size === 'small' ? 'none' : undefined}>
+          {title}
+        </Heading>
         <Text>
-          {startDate} - {present ? 'Present' : endDate}
+          {startDate} {startDate && '-'} {present ? 'Present' : endDate}
         </Text>
       </Box>
-      <Box align="center" pad="medium" width="10%">
+      <Box
+        align="center"
+        pad="medium"
+        width={size === 'small' ? '100%' : '10%'}
+      >
         <Icon />
       </Box>
-      <Box>
+      <Box align={size === 'small' ? 'center' : undefined}>
         <Heading level="4" margin="none">
           {organization}
         </Heading>
@@ -42,7 +53,9 @@ const TimelineItem = ({
           round="small"
           width="60%"
         />
-        <Paragraph>{summary}</Paragraph>
+        <Paragraph textAlign={size === 'small' ? 'center' : undefined}>
+          {summary}
+        </Paragraph>
       </Box>
     </Box>
   )
@@ -53,6 +66,7 @@ TimelineItem.propTypes = {
   icon: PropTypes.string.isRequired,
   organization: PropTypes.string.isRequired,
   present: PropTypes.bool,
+  size: PropTypes.string.isRequired,
   startDate: PropTypes.string,
   summary: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired

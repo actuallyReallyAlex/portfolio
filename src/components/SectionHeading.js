@@ -15,6 +15,7 @@ const SectionHeading = ({ heading, size, subHeading }) => {
 
 SectionHeading.propTypes = {
   heading: PropTypes.string,
+  size: PropTypes.string.isRequired,
   subHeading: PropTypes.string.isRequired
 }
 

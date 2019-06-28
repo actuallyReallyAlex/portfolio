@@ -4,7 +4,7 @@ import SectionHeading from '../SectionHeading'
 import { portfolio } from '../../config.json'
 import PortfolioItem from './PortfolioItem'
 
-const Portfolio = ({ navRef }) => {
+const Portfolio = ({ navRef, size }) => {
   return (
     <Box
       align="center"
@@ -17,6 +17,7 @@ const Portfolio = ({ navRef }) => {
     >
       <SectionHeading
         heading={portfolio.heading}
+        size={size}
         subHeading={portfolio.subHeading}
       />
       {portfolio.rows.map(({ column1, column2 }, i) => {

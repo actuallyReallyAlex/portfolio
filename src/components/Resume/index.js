@@ -1,11 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Box, Button, Paragraph } from 'grommet'
 import { Download } from 'grommet-icons'
 import SectionHeading from '../SectionHeading'
 import { education, experience, resume } from '../../config.json'
 import TimelineItem from './TimelineItem'
 
-const Resume = ({ navRef }) => {
+const Resume = ({ navRef, size }) => {
   return (
     <Box
       align="center"
@@ -16,23 +17,62 @@ const Resume = ({ navRef }) => {
       pad="large"
       ref={navRef}
     >
-      <SectionHeading heading="RÉSUMÉ" subHeading="More of my credentials" />
+      <SectionHeading
+        heading="RÉSUMÉ"
+        size={size}
+        subHeading="More of my credentials"
+      />
       <Paragraph>{resume.copy}</Paragraph>
-      <Button href={resume.url} icon={<Download />} label="Résumé" primary />
-      <SectionHeading subHeading="Work Experience" />
-      <Box fill="horizontal" gap="small" margin={{ vertical: 'medium' }}>
+      <Button
+        href={resume.url}
+        icon={<Download />}
+        label="Résumé"
+        pad="xlarge"
+        primary
+      />
+      <Box
+        margin={
+          size === 'small' ? { top: 'large', bottom: '-20px' } : undefined
+        }
+      >
+        <SectionHeading size={size} subHeading="Work Experience" />
+      </Box>
+      <Box
+        fill="horizontal"
+        gap="small"
+        margin={
+          size === 'small' ? { vertical: 'xsmall' } : { vertical: 'medium' }
+        }
+      >
         {experience.map((props, i) => (
-          <TimelineItem key={i} {...props} />
+          <TimelineItem key={i} {...props} size={size} />
         ))}
       </Box>
-      <SectionHeading subHeading="Education" />
-      <Box fill="horizontal" gap="small" margin={{ vertical: 'medium' }}>
+      <Box
+        margin={
+          size === 'small' ? { top: 'large', bottom: '-20px' } : undefined
+        }
+      >
+        <SectionHeading size={size} subHeading="Education" />
+      </Box>
+      <Box
+        fill="horizontal"
+        gap="small"
+        margin={
+          size === 'small' ? { vertical: 'xsmall' } : { vertical: 'medium' }
+        }
+      >
         {education.map((props, i) => (
-          <TimelineItem key={i} {...props} />
+          <TimelineItem key={i} {...props} size={size} />
         ))}
       </Box>
     </Box>
   )
+}
+
+Resume.propTypes = {
+  navRef: PropTypes.func.isRequired,
+  size: PropTypes.string.isRequired
 }
 
 export default Resume
