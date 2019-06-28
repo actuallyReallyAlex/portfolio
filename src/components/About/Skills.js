@@ -15,7 +15,12 @@ const Skills = ({ size }) => (
   >
     {about.skills.map(({ sectionTitle, languages }, i) => (
       <Box align="start" key={i} justify="start">
-        <Box align="center" margin={{ bottom: 'small' }}>
+        <Box
+          align="center"
+          justify="center"
+          fill="horizontal"
+          margin={{ bottom: 'small' }}
+        >
           <Heading level="3" margin={{ bottom: 'xsmall' }}>
             {sectionTitle}
           </Heading>
@@ -26,9 +31,11 @@ const Skills = ({ size }) => (
             round="small"
           />
         </Box>
-        {languages.map(({ color, title }, i) => (
-          <SkillBox color={color} key={i} title={title} />
-        ))}
+        <Box fill="horizontal">
+          {languages.map(({ color, title }, i) => (
+            <SkillBox color={color} key={i} title={title} />
+          ))}
+        </Box>
       </Box>
     ))}
   </Box>
