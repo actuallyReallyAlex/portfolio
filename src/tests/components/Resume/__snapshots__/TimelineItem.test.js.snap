@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<PortfoliTimelineItemoItem /> Should render the <TimelineItem /> when viewed from a small device. 1`] = `ShallowWrapper {}`;
+
 exports[`<PortfoliTimelineItemoItem /> Should render the <TimelineItem /> with present prop. 1`] = `ShallowWrapper {}`;
 
 exports[`<PortfoliTimelineItemoItem /> Should render the <TimelineItem />. 1`] = `ShallowWrapper {}`;

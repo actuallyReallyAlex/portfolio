@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Resume /> Should render the <Resume /> when viewed from a small device. 1`] = `ShallowWrapper {}`;
+
 exports[`<Resume /> Should render the <Resume />. 1`] = `ShallowWrapper {}`;

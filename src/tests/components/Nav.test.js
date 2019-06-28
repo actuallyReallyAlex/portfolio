@@ -18,4 +18,9 @@ describe('<Nav />', () => {
     const component = shallow(<Nav {...defaultProps} />)
     expect(component).toMatchSnapshot()
   })
+
+  test('Should render the <Nav /> component when viewed from a small device.', () => {
+    const component = shallow(<Nav {...defaultProps} size="small" />)
+    expect(component).toMatchSnapshot()
+  })
 })

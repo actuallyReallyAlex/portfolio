@@ -18,6 +18,11 @@ describe('<PortfoliTimelineItemoItem />', () => {
     expect(component).toMatchSnapshot()
   })
 
+  test('Should render the <TimelineItem /> when viewed from a small device.', () => {
+    const component = shallow(<TimelineItem {...defaultProps} size="small" />)
+    expect(component).toMatchSnapshot()
+  })
+
   test('Should render the <TimelineItem /> with present prop.', () => {
     const component = shallow(<TimelineItem {...defaultProps} present={true} />)
     expect(component).toMatchSnapshot()

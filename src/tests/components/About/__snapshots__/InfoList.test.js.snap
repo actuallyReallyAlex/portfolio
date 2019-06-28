@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<InfoList /> Should render the <InfoList /> when viewed from a small device. 1`] = `ShallowWrapper {}`;
+
 exports[`<InfoList /> Should render the <InfoList />. 1`] = `ShallowWrapper {}`;

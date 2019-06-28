@@ -12,4 +12,9 @@ describe('<About />', () => {
     const component = shallow(<About {...defaultProps} />)
     expect(component).toMatchSnapshot()
   })
+
+  test('Should render the <About /> when viewed from a small device.', () => {
+    const component = shallow(<About {...defaultProps} size="small" />)
+    expect(component).toMatchSnapshot()
+  })
 })

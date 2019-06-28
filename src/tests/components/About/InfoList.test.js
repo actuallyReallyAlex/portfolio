@@ -11,4 +11,9 @@ describe('<InfoList />', () => {
     const component = shallow(<InfoList {...defaultProps} />)
     expect(component).toMatchSnapshot()
   })
+
+  test('Should render the <InfoList /> when viewed from a small device.', () => {
+    const component = shallow(<InfoList {...defaultProps} size="small" />)
+    expect(component).toMatchSnapshot()
+  })
 })
