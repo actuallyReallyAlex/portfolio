@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Box, Heading } from 'grommet'
+import { Box, Heading, Text } from 'grommet'
 import { intro, social } from '../../config.json'
 import SocialIcon from '../SocialIcon'
 
@@ -16,9 +16,9 @@ const Intro = ({ navRef, size }) => (
   >
     <Box direction="row" justify="center" align="center">
       <Box align="center" justify="center" pad="medium">
-        <Heading className="uppercase" color="white" level="4" margin="none">
+        <Text className="uppercase" color="white" margin="none" weight="bold">
           Hello, World.
-        </Heading>
+        </Text>
         <Heading
           color="white"
           level="1"
@@ -27,9 +27,9 @@ const Intro = ({ navRef, size }) => (
         >
           I&#39;m Alex Lee
         </Heading>
-        <Heading className="uppercase" color="white" level="4" margin="none">
+        <Text className="uppercase" color="white" margin="none" weight="bold">
           Web Developer
-        </Heading>
+        </Text>
         <Box direction="row" margin={{ top: 'large' }}>
           {social.map(({ icon, link }, i) => (
             <SocialIcon

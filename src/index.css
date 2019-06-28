@@ -1,12 +1,12 @@
 .primary-color {
   /* background-color: #0077c2; */
-  /* background-color: #5252d4; */
-  background-color: #eb1736;
+  /* background-color: #eb1736; */
+  background-color: #5252d4;
   color: #eee;
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.75) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
   font-weight: 400;
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Anchor, Box, Heading, Text } from 'grommet'
+import { Anchor, Box, Text } from 'grommet'
 import { Code, LinkNext } from 'grommet-icons'
 import Tilt from 'react-tilt'
 
@@ -40,9 +40,9 @@ const PortfolioItem = ({
               justify="start"
             >
               <Box background={color} height="10px" width="10px" />
-              <Heading level="4" margin="none">
+              <Text margin="none" weight="bold">
                 {title}
-              </Heading>
+              </Text>
             </Box>
           ))}
         </Box>
