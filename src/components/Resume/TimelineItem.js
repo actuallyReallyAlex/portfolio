@@ -17,7 +17,7 @@ const TimelineItem = ({
 
   return (
     <Box
-      align="start"
+      align={size === 'small' ? 'center' : 'start'}
       direction={size === 'small' ? 'column' : 'row'}
       fill="horizontal"
       gap={size === 'small' ? 'medium' : 'xlarge'}
@@ -28,18 +28,14 @@ const TimelineItem = ({
         style={{ textAlign: `${size === 'small' ? 'center' : 'right'}` }}
         width={size === 'small' ? '100%' : '30%'}
       >
-        <Heading level="3" margin={size === 'small' ? 'none' : undefined}>
+        <Heading level="3" margin={size === 'small' ? 'none' : { top: 'none' }}>
           {title}
         </Heading>
         <Text>
           {startDate} {startDate && '-'} {present ? 'Present' : endDate}
         </Text>
       </Box>
-      <Box
-        align="center"
-        pad="medium"
-        width={size === 'small' ? '100%' : '10%'}
-      >
+      <Box align="center" width={size === 'small' ? '100%' : '10%'}>
         <Icon />
       </Box>
       <Box align={size === 'small' ? 'center' : undefined} width="medium">
