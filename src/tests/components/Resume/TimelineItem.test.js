@@ -8,7 +8,8 @@ const defaultProps = {
   summary: 'Summary',
   title: 'Title',
   startDate: 'December 1999',
-  endDate: 'January 2000'
+  endDate: 'January 2000',
+  size: 'medium'
 }
 
 describe('<PortfoliTimelineItemoItem />', () => {

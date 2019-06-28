@@ -42,7 +42,7 @@ const TimelineItem = ({
       >
         <Icon />
       </Box>
-      <Box align={size === 'small' ? 'center' : undefined}>
+      <Box align={size === 'small' ? 'center' : undefined} width="medium">
         <Heading level="4" margin="none">
           {organization}
         </Heading>
@@ -51,7 +51,6 @@ const TimelineItem = ({
           height="3px"
           margin={{ top: 'small', bottom: 'medium' }}
           round="small"
-          width="60%"
         />
         <Paragraph textAlign={size === 'small' ? 'center' : undefined}>
           {summary}
