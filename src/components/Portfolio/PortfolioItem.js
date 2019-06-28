@@ -10,6 +10,7 @@ const PortfolioItem = ({
   image,
   languages,
   link,
+  size,
   source,
   title
 }) => {
@@ -18,8 +19,16 @@ const PortfolioItem = ({
       className="Tilt"
       options={{ max: 15, perspective: 2000, scale: 1.05 }}
     >
-      <Box background="brand" className="Tilt-inner" width="384px">
-        <Box background={`url(${image})`} height="189px" width="384px" />
+      <Box
+        background="brand"
+        className="Tilt-inner"
+        width={size === 'small' ? '300' : '384px'}
+      >
+        <Box
+          background={`url(${image})`}
+          height="189px"
+          width={size === 'small' ? '300' : '384px'}
+        />
         <Box pad="medium">
           <Text size="medium">{category}</Text>
           <Text size="xlarge" weight="bold">
@@ -82,6 +91,7 @@ PortfolioItem.propTypes = {
   image: PropTypes.string.isRequired,
   languages: PropTypes.array.isRequired,
   link: PropTypes.object,
+  size: PropTypes.string.isRequired,
   source: PropTypes.object,
   title: PropTypes.string.isRequired
 }

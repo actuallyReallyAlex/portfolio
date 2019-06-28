@@ -8,6 +8,7 @@ const defaultProps = {
   image: 'fakeURL',
   languages: [{ color: 'accent-1', title: 'JavaScript' }],
   title: 'Title',
+  size: 'medium',
   source: {
     title: 'Source',
     href: 'fakeURL'
