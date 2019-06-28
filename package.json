@@ -7,6 +7,7 @@
     "@sentry/browser": "^5.4.3",
     "grommet": "^2.7.1",
     "grommet-icons": "^4.2.0",
+    "logrocket": "^1.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-intersection-observer": "^8.23.0",
