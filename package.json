@@ -1,7 +1,7 @@
 {
   "name": "alexlee-dev-portfolio",
   "description": "Alex Lee's portfolio. Built with React.",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "dependencies": {
     "@sanity/client": "^0.141.1",
     "@sentry/browser": "^5.4.3",
