@@ -7,7 +7,7 @@ import { info, sections } from '../../config.json'
 import TimelineItem from './TimelineItem'
 
 const resume = sections.find(({ title }) => title === 'Résumé')
-const { education, experience } = resume
+const { experience } = resume
 
 const Resume = ({ navRef, size }) => (
   <Box
@@ -46,22 +46,6 @@ const Resume = ({ navRef, size }) => (
       }
     >
       {experience.map((props, i) => (
-        <TimelineItem key={i} {...props} size={size} />
-      ))}
-    </Box>
-    <Box
-      margin={size === 'small' ? { top: 'large', bottom: '-20px' } : undefined}
-    >
-      <SectionHeading size={size} subHeading="Education" />
-    </Box>
-    <Box
-      fill="horizontal"
-      gap="small"
-      margin={
-        size === 'small' ? { vertical: 'xsmall' } : { vertical: 'medium' }
-      }
-    >
-      {education.map((props, i) => (
         <TimelineItem key={i} {...props} size={size} />
       ))}
     </Box>

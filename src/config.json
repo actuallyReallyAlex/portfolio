@@ -69,6 +69,7 @@
         {
           "sectionTitle": "Other",
           "languages": [
+            { "color": "accent-4", "title": "Java" },
             { "color": "accent-2", "title": "C#" },
             { "color": "accent-3", "title": "JSON" }
           ]
@@ -88,11 +89,11 @@
       "copy": "With a “can do” attitude and a determination to put my best work into fruition, I can be a positive asset to any team.",
       "experience": [
         {
-          "title": "Front End Web Developer",
+          "title": "Application Developer",
           "startDate": "December 2018",
           "present": true,
           "icon": "Code",
-          "organization": "U.S. Bank (KForce)",
+          "organization": "U.S. Bank",
           "summary": "Identified system dependencies by designing an end-to-end testing framework with Cypress. Created an accessible product by rewriting codebase to be compliant with WCAG 2.0 AA. Strengthened the codebase by increasing coverage to greater than 90%."
         },
         {
@@ -102,22 +103,6 @@
           "icon": "Code",
           "organization": "Quantum Learning Network",
           "summary": "Developed an integrated payroll information system for site administrators. Spearheaded a new staff branding by redesigning staff website for SuperCamp. Improved hiring efficiency by developing an employee contracting tool."
-        }
-      ],
-      "education": [
-        {
-          "title": "Bachelor of Science",
-          "present": true,
-          "icon": "Book",
-          "organization": "Portland State University",
-          "summary": "Currently pursuing a Bachelor of Science in Biology."
-        },
-        {
-          "title": "Associate's Degree",
-          "endDate": "June 2016",
-          "icon": "Book",
-          "organization": "MiraCosta College",
-          "summary": "Biology Major with lab experience in Organic Chemistry, Molecular & Evolutionary Biology, and Foundational Physics."
         }
       ]
     },
