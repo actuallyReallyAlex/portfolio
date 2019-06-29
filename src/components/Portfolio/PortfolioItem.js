@@ -18,6 +18,7 @@ const PortfolioItem = ({
     <Box
       background="#5252d4"
       className="Tilt-inner"
+      elevation="large"
       width={size === 'small' ? '300' : '384px'}
     >
       <Box

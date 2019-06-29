@@ -14,6 +14,7 @@ const Nav = ({ size, views }) => {
       align="center"
       className="primary-color"
       direction="row"
+      elevation="large"
       fill="horizontal"
       height="50px"
       justify="between"
