@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Skills /> Should render the <Skills /> when viewed from a small device. 1`] = `ShallowWrapper {}`;
+
+exports[`<Skills /> Should render the <Skills />. 1`] = `ShallowWrapper {}`;

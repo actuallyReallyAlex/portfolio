@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Intro /> Should render the <Intro /> when viewed from a small device. 1`] = `ShallowWrapper {}`;
+
+exports[`<Intro /> Should render the <Intro />. 1`] = `ShallowWrapper {}`;

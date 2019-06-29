@@ -1,19 +1,24 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import './customStyle.css'
-import Site from './Site'
-import registerServiceWorker from './registerServiceWorker'
 import * as Sentry from '@sentry/browser'
-import ErrorBoundary from './ErrorBoundary'
+import LogRocket from 'logrocket'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+import * as serviceWorker from './serviceWorker'
 
-Sentry.init({
-  dsn: 'https://9bdeb775ed794184b80f143e62dae44d@sentry.io/1429953'
-})
+const { NODE_ENV } = process.env
 
-ReactDOM.render(
-  <ErrorBoundary>
-    <Site />
-  </ErrorBoundary>,
-  document.getElementById('root')
-)
-registerServiceWorker()
+if (NODE_ENV === 'production') {
+  Sentry.init({
+    dsn: 'https://5a28f5da01f34b0283639b079218978e@sentry.io/1492278'
+  })
+
+  LogRocket.init('alex-lee/portfolio-prod')
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister()

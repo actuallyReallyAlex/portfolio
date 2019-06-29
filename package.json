@@ -1,27 +1,46 @@
 {
   "name": "alexlee-dev-portfolio",
-  "description": "Alex Lee's online portfolio. Built with React.",
+  "description": "Alex Lee's portfolio. Built with React.",
   "version": "2.1.0",
   "dependencies": {
-    "@sentry/browser": "^5.0.3",
-    "fg-loadcss": "^2.0.1",
-    "grommet": "^2.7.0",
-    "lodash.capitalize": "^4.2.1",
-    "react": "^16.5.2",
-    "react-device-detect": "^1.6.1",
-    "react-dom": "^16.5.2",
-    "react-scripts": "^3.0.1",
+    "@sanity/client": "^0.141.1",
+    "@sentry/browser": "^5.4.3",
+    "grommet": "^2.7.1",
+    "grommet-icons": "^4.2.0",
+    "logrocket": "^1.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-intersection-observer": "^8.23.0",
+    "react-scripts": "3.0.1",
     "react-tilt": "^0.1.4",
-    "styled-components": "^4.2.1"
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "ajv": "^6.5.4",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-react": "^7.11.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "coveralls": "^3.0.4",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:coveralls": "jest --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/index.js --collectCoverageFrom=!src/serviceWorker.js --collectCoverageFrom=!src/hooks/**/* --collectCoverageFrom=!src/setupTests.js --coverageReporters=text-lcov | coveralls"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "files": [
     "public",
@@ -30,11 +49,6 @@
     "README.md",
     "CHANGELOG.md"
   ],
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "CI=true react-scripts test --env=jsdom"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexlee-dev/portfolio.git"
@@ -49,10 +63,9 @@
   ],
   "author": "Alex Lee <alexlee-dev>",
   "license": "GPL-3.0",
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./src/setupTests.js"
+    ]
+  }
 }
