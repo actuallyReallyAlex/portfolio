@@ -3,8 +3,11 @@ import PropTypes from 'prop-types'
 import { Box, Button, Paragraph } from 'grommet'
 import { Download } from 'grommet-icons'
 import SectionHeading from '../SectionHeading'
-import { education, experience, resume } from '../../config.json'
+import { info, sections } from '../../config.json'
 import TimelineItem from './TimelineItem'
+
+const resume = sections.find(({ title }) => title === 'Résumé')
+const { education, experience } = resume
 
 const Resume = ({ navRef, size }) => (
   <Box
@@ -24,7 +27,7 @@ const Resume = ({ navRef, size }) => (
     <Paragraph>{resume.copy}</Paragraph>
     <Button
       color="#5252d4"
-      href={resume.url}
+      href={info.resumeLink}
       icon={<Download />}
       label="Résumé"
       pad="xlarge"

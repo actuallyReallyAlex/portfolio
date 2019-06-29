@@ -2,9 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Box, Button, Menu, Text } from 'grommet'
 import NavLink from './NavLink.js'
-import { navigationSections } from '../config.json'
+import { sections } from '../config.json'
 import { More } from 'grommet-icons'
 import { smoothlyScroll } from '../util'
+
+const navigationSections = sections.map(({ title }) => title)
 
 const Nav = ({ size, views }) => {
   const sectionInView = views.filter(view => view.isInView === true)

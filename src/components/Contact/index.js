@@ -3,8 +3,10 @@ import PropTypes from 'prop-types'
 import sanityClient from '@sanity/client'
 import { Box, Button, Form, FormField, TextArea } from 'grommet'
 import { Alert, CloudUpload, Send, Validate } from 'grommet-icons'
-import { contact } from '../../config.json'
+import { sections } from '../../config.json'
 import SectionHeading from '../SectionHeading.js'
+
+const contact = sections.find(({ title }) => title === 'Contact')
 
 const readClient = sanityClient({
   projectId: 'bzx328dj',

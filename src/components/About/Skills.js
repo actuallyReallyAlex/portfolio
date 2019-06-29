@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box, Heading } from 'grommet'
-import { about } from '../../config.json'
+import { sections } from '../../config.json'
 import SkillBox from './SkillBox.js'
+
+const about = sections.find(({ title }) => title === 'About')
 
 const Skills = ({ size }) => (
   <Box

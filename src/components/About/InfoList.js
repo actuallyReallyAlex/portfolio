@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box, Heading, Paragraph, Text } from 'grommet'
-import { about } from '../../config.json'
+import { info, sections } from '../../config.json'
+
+const about = sections.find(({ title }) => title === 'About')
 
 const InfoList = ({ size }) => (
   <Box
@@ -18,17 +20,17 @@ const InfoList = ({ size }) => (
     </Box>
     <Box>
       <Heading className="uppercase" level="3" margin="none">
-        Full Name:
+        Name:
       </Heading>
-      <Text margin={{ bottom: 'small' }}>{about.fullName}</Text>
+      <Text margin={{ bottom: 'small' }}>{info.name}</Text>
       <Heading className="uppercase" level="3" margin="none">
         Occupation:
       </Heading>
-      <Text margin={{ bottom: 'small' }}>{about.occupation}</Text>
+      <Text margin={{ bottom: 'small' }}>{info.occupation}</Text>
       <Heading className="uppercase" level="3" margin="none">
         Email:
       </Heading>
-      <Text>{about.email}</Text>
+      <Text>{info.email}</Text>
     </Box>
   </Box>
 )

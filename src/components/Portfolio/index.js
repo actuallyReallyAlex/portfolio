@@ -2,8 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Box } from 'grommet'
 import SectionHeading from '../SectionHeading'
-import { portfolio } from '../../config.json'
+import { sections } from '../../config.json'
 import PortfolioItem from './PortfolioItem'
+
+const portfolio = sections.find(({ title }) => title === 'Portfolio')
 
 const Portfolio = ({ navRef, size }) => (
   <Box
@@ -20,7 +22,7 @@ const Portfolio = ({ navRef, size }) => (
       size={size}
       subHeading={portfolio.subHeading}
     />
-    {portfolio.rows.map(({ column1, column2 }, i) => {
+    {portfolio.works.map(({ column1, column2 }, i) => {
       return (
         <Box
           align="start"

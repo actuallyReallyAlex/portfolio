@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box, Heading, Text } from 'grommet'
-import { intro, social } from '../../config.json'
+import { info, social } from '../../config.json'
 import SocialIcon from '../SocialIcon'
 
 const Intro = ({ navRef, size }) => (
   <Box
     align="center"
-    background={`url(${intro.backgroundImage})`}
+    background={`url(${info.heroImage})`}
     fill="horizontal"
     height={size === 'small' ? '400px' : '500px'}
     id="Home"

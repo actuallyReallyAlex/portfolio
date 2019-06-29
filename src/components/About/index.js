@@ -2,9 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Box, Paragraph, Heading } from 'grommet'
 import SectionHeading from '../SectionHeading'
-import { about } from '../../config.json'
+import { info, sections } from '../../config.json'
 import InfoList from './InfoList'
 import Skills from './Skills'
+
+const about = sections.find(({ title }) => title === 'About')
 
 const About = ({ navRef, size }) => (
   <Box
@@ -29,7 +31,7 @@ const About = ({ navRef, size }) => (
       margin={{ vertical: 'large' }}
     >
       <Box
-        background={`url(${about.profileImage})`}
+        background={`url(${info.profileImage})`}
         height="192px"
         width="192px"
       />
