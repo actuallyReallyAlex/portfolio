@@ -1120,35 +1120,35 @@
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
 "@sanity/client@^0.141.1":
-  version "0.141.1"
-  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-0.141.1.tgz#1404a49541a9648f8ddd1f9592ee7112a4ef31e8"
-  integrity sha512-fSzxyRnWkEbxyloQsQjXFMP3azaAeY6tkv2QjRk1uqdN5MtN8mwy0+zy/IzyVdhvPThgE5mJWehUsbgj3MRUuA==
+  version "0.141.5"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-0.141.5.tgz#6e76ee749fd1f7cb3875387bd5b86c33473ba7de"
+  integrity sha512-LaikVyB5Oq+vClM0EnRXvOgN3f75HQjO1kDIlHWxcrO/xVgwOpS/cAteRj216GVT5AwXV1QBnsJleFJlOgjsCg==
   dependencies:
-    "@sanity/eventsource" "0.141.1"
-    "@sanity/generate-help-url" "0.141.1"
-    "@sanity/observable" "0.141.1"
+    "@sanity/eventsource" "0.141.5"
+    "@sanity/generate-help-url" "0.141.5"
+    "@sanity/observable" "0.141.5"
     deep-assign "^2.0.0"
     get-it "^5.0.0"
     make-error "^1.3.0"
     object-assign "^4.1.1"
 
-"@sanity/eventsource@0.141.1":
-  version "0.141.1"
-  resolved "https://registry.yarnpkg.com/@sanity/eventsource/-/eventsource-0.141.1.tgz#177ccd9ac885190d29cbae0e3df1ab6e8e32117d"
-  integrity sha512-Zl4oIF00cjaJlU4Yop51Z/o5WGXmwvMm3WU4z4s8b/8Ea+emGnHt+I2+csJ9hdD/GENuTumvsJxIpRmFZ4TMSw==
+"@sanity/eventsource@0.141.5":
+  version "0.141.5"
+  resolved "https://registry.yarnpkg.com/@sanity/eventsource/-/eventsource-0.141.5.tgz#46adb7604541a62718f96dc93cd93b1cca7332b1"
+  integrity sha512-V/dhKnzrbR3G3gvG1SvBP/NXz5A7SXyxdX6BCQGPj/QuEE3zpOpplB8ykQ0Ut2vI1k/HQZH4+ImEWustqJQX+w==
   dependencies:
     eventsource "^1.0.6"
     eventsource-polyfill "^0.9.6"
 
-"@sanity/generate-help-url@0.141.1":
-  version "0.141.1"
-  resolved "https://registry.yarnpkg.com/@sanity/generate-help-url/-/generate-help-url-0.141.1.tgz#4aa5b077a4463b3637f344c87d7bf1d45cca115d"
-  integrity sha512-l+9j7gbKrUEu7cidFqul6o+fZccumfPvMY8Ie/MLj8klZYmsFiZ44FkQ07TLCHzzHfVmlmZ604LpEX54BPyJvA==
+"@sanity/generate-help-url@0.141.5":
+  version "0.141.5"
+  resolved "https://registry.yarnpkg.com/@sanity/generate-help-url/-/generate-help-url-0.141.5.tgz#6d4bd94934858850bd8eb28de3d71e0239edbec6"
+  integrity sha512-ud5o4poCnuxXNHNjmeOlGmwbMnR6af3qa5LBrCh2ukbHFu+GsjqeEl+tqNax+6EOvtdpDmHOyssNzBqXb0vQNQ==
 
-"@sanity/observable@0.141.1":
-  version "0.141.1"
-  resolved "https://registry.yarnpkg.com/@sanity/observable/-/observable-0.141.1.tgz#e6adb4160b51d48ba6f7ce53e7b814a71a712284"
-  integrity sha512-56SqR6F76Gbfs3l0GStlzQqA4qtikiiislvNJMm8rTdl/rqvH6rhV30NeThZGWQ6m22FkO1Sw2mNbOGFqgvU5Q==
+"@sanity/observable@0.141.5":
+  version "0.141.5"
+  resolved "https://registry.yarnpkg.com/@sanity/observable/-/observable-0.141.5.tgz#0f79283869ce9e6fb6eaa2ee7e8b73a53930be62"
+  integrity sha512-YPKMXVQ45eEWwhz5gRjlVa3al+IE8BjcKWDgcbCh1i58BYxnVJWpnRIwkpBgPjhJTiCzy/N9gARlnJeeaMedrg==
   dependencies:
     object-assign "^4.1.1"
     rxjs "^6.1.0"
