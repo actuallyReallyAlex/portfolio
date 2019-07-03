@@ -1,18 +1,12 @@
 import React, { Fragment, useState } from 'react'
 import PropTypes from 'prop-types'
-import sanityClient from '@sanity/client'
 import { Box, Button, Form, FormField, TextArea } from 'grommet'
 import { Alert, CloudUpload, Send, Validate } from 'grommet-icons'
 import { sections } from '../../config.json'
 import SectionHeading from '../SectionHeading.js'
+import { submitContactForm } from '../../util'
 
 const contact = sections.find(({ title }) => title === 'Contact')
-
-const readClient = sanityClient({
-  projectId: 'bzx328dj',
-  dataset: 'production',
-  useCdn: true
-})
 
 const Contact = ({ navRef, size }) => {
   const [status, setStatus] = useState(null)
@@ -31,36 +25,7 @@ const Contact = ({ navRef, size }) => {
     ERROR: <Alert />
   }
 
-  const handleSubmit = ({ value }) => {
-    setStatus('SENDING')
-    const { name, email, message } = value
-    const contactFormEntry = {
-      _type: 'contactFormEntry',
-      name,
-      email,
-      message
-    }
-
-    try {
-      readClient
-        .getDocument('c8907146-850c-4200-b801-2f8aef04694a')
-        .then(({ message }) => {
-          const writeClient = sanityClient({
-            projectId: 'bzx328dj',
-            dataset: 'production',
-            token: message,
-            useCdn: true
-          })
-
-          writeClient.create(contactFormEntry).then(() => {
-            setStatus('SUCCESS')
-          })
-        })
-    } catch (error) {
-      console.error({ error })
-      setStatus('ERROR')
-    }
-  }
+  const handleSubmit = ({ value }) => submitContactForm(setStatus, value)
 
   return (
     <Box
