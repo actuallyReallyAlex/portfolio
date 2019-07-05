@@ -1120,9 +1120,9 @@
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
 "@sanity/client@^0.141.1":
-  version "0.141.5"
-  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-0.141.5.tgz#6e76ee749fd1f7cb3875387bd5b86c33473ba7de"
-  integrity sha512-LaikVyB5Oq+vClM0EnRXvOgN3f75HQjO1kDIlHWxcrO/xVgwOpS/cAteRj216GVT5AwXV1QBnsJleFJlOgjsCg==
+  version "0.141.6"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-0.141.6.tgz#06241b521b839214fb7b8ece30ddc645c7e29b58"
+  integrity sha512-1S8E0AgKIYw8Vz0yNJUe2qESHYvDhecS/T1BBeCk6uk/SaLK99rW2oxWXoL4kPwFmUUBpwfngKCPMc00kyNqAA==
   dependencies:
     "@sanity/eventsource" "0.141.5"
     "@sanity/generate-help-url" "0.141.5"
