@@ -852,14 +852,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2":
-  version "7.4.4"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.4.tgz#dc2e34982eb236803aa27a07fea6857af1b9171d"
-  integrity sha512-w0+uT71b6Yi7i5SE0co4NioIpSYS6lLiXvCzWzGSKvpK5vdQtCbICHMj+gbAKAOtxiV6HsVh/MBdaF9EQ6faSg==
-  dependencies:
-    regenerator-runtime "^0.13.2"
-
-"@babel/runtime@^7.2.0":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.5.tgz#582bb531f5f9dc67d2fcb682979894f75e253f12"
   integrity sha512-TuI4qpWZP6lGOGIuGWtp9sPluqYICmbk8T/1vpSysqJxRPkudh/ofFWyqdcMsDf2s7KvDL4/YHgKyvcS3g9CJQ==
@@ -8523,9 +8516,9 @@ react-error-overlay@^5.1.6:
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
 
 react-intersection-observer@^8.23.0:
-  version "8.23.0"
-  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.23.0.tgz#1533aaf39cc70300ff8ca37e6551d2d68a589cd0"
-  integrity sha512-kHXfxhGKvVDNkrvmh9CKCnAWvJBigyB7oSDzMXL54weFDwwI4WfTr58YauZ0RRPkGzoD/hYEuzfS1wipXn23fA==
+  version "8.24.1"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.24.1.tgz#f98ec6807a039c7f1456d457e4fe2f434a28d12e"
+  integrity sha512-4ugly0PWrYpGIgZeMD/aqjBzSlA5+W8k89+1FBC7T8w9Q0k1aOXFyQrcKQOoGfxSUnCPItqmWLsg7j50WsfVnw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     invariant "^2.2.4"
