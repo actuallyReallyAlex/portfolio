@@ -6385,9 +6385,9 @@ loglevel@^1.4.1:
   integrity sha1-4PyVEztu8nbNyIh82vJKpvFW+Po=
 
 logrocket@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-1.0.1.tgz#0555ec619d2db54a7b345c4e8df09baea835b176"
-  integrity sha512-oPA0c5GzMKsWp/6p19OaujZQMzttluqVOI+989uHeciPAljPZvGEpZRbNO3Rr+jC/8jVLJdlMP9IHuyhKsASGA==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-1.0.2.tgz#6ac569abadfc853268495888a85d214febdd5078"
+  integrity sha512-Ol9pjIY09oiFVupZf6SwD2+QpTV4T6e5d0Xb7Yya3P90R+P7eMafnVTix8nIX0SKumKksuhc0R1zednzAzLoTA==
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
