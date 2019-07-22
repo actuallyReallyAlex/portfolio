@@ -4657,9 +4657,9 @@ grommet-styles@^0.2.0:
   integrity sha512-0OMSYuGeyifYKpg4Gv2HzL8rUdd0ddnJ5LbCBKgDuloC71XIwr9g/Fxa6rs737MbPV7OZ4pEm4wvrjH4epzf1A==
 
 grommet@^2.7.1:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/grommet/-/grommet-2.7.3.tgz#d5adac18a714b6a74df39030e8af9074dafdda1c"
-  integrity sha512-Eqg9nituE2/CseEjxBDUMi2EZZIBTMF185L+erJOWOqIHKmtqhRAhrl8MCxO5St7i05ZeQmqg1NQBaFZ6v0BNg==
+  version "2.7.4"
+  resolved "https://registry.yarnpkg.com/grommet/-/grommet-2.7.4.tgz#17c12106f9f75a229f4fd4d5726ae1d5adba0b59"
+  integrity sha512-/6XGi9zEpFHCyOg5lFitUIqabqpygrPa2689eKRWTBfes7kRIa5UwmUqfZUDllI/WoT6ZIksST/YiQqun5Gm/w==
   dependencies:
     css "^2.2.3"
     grommet-icons "^4.2.0"
