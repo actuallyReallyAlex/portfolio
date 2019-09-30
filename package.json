@@ -3,7 +3,7 @@
   "description": "Alex Lee's portfolio. Built with React.",
   "version": "3.0.1",
   "dependencies": {
-    "@sanity/client": "^0.141.1",
+    "@sanity/client": "^0.142.6",
     "@sentry/browser": "^5.4.3",
     "grommet": "^2.7.1",
     "grommet-icons": "^4.2.0",
