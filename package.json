@@ -11,7 +11,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-intersection-observer": "^8.23.0",
-    "react-scripts": "3.0.1",
+    "react-scripts": "3.2.0",
     "react-tilt": "^0.1.4",
     "styled-components": "^4.3.2"
   },
