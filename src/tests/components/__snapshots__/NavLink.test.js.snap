@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<NavLink /> Should render the <NavLink /> component when active. 1`] = `ShallowWrapper {}`;
-
-exports[`<NavLink /> Should render the <NavLink /> component when not active. 1`] = `ShallowWrapper {}`;
