@@ -8,8 +8,9 @@ import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { useInView } from 'react-intersection-observer'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-const App = () => {
+const Home = () => {
   const [introRef, isIntroInView] = useInView()
   const [aboutRef, isAboutInView] = useInView()
   const [resumeRef, isResumeInView] = useInView()
@@ -40,6 +41,47 @@ const App = () => {
         )}
       </ResponsiveContext.Consumer>
     </Grommet>
+  )
+}
+
+const Blog = () => {
+  const [introRef, isIntroInView] = useInView()
+  const [aboutRef, isAboutInView] = useInView()
+  const [resumeRef, isResumeInView] = useInView()
+  const [portfolioRef, isPortfolioInView] = useInView()
+  const [contactRef, isContactInView] = useInView()
+
+  const views = [
+    { title: 'Home', isInView: isIntroInView },
+    { title: 'About', isInView: isAboutInView },
+    { title: 'Résumé', isInView: isResumeInView },
+    { title: 'Portfolio', isInView: isPortfolioInView },
+    { title: 'Contact', isInView: isContactInView }
+  ]
+
+  return (
+    <Grommet full theme={grommet}>
+      <ResponsiveContext.Consumer>
+        {size => (
+          <Fragment>
+            <Nav size={size} views={views} />
+            <h1 style={{ marginTop: '100px'}}>BLOG</h1>
+            <Footer size={size} />
+          </Fragment>
+        )}
+      </ResponsiveContext.Consumer>
+    </Grommet>
+  )
+}
+
+const App = () => {
+  return (
+    <Router>
+      <Switch>
+        <Route exact component={Home} path="/" />
+        <Route component={Blog} path="/blog" />
+      </Switch>
+    </Router>
   )
 }
 
