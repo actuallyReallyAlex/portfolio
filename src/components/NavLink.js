@@ -24,7 +24,9 @@ const dict = {
 }
 
 const RouterLink = ({ active, title }) => (
-  <Link to={dict[title].to}>{title}</Link>
+  <Link className="router-link nav-link slow-transition" to={dict[title].to}>
+    {title}
+  </Link>
 )
 
 const NavLink = ({ active, title }) =>
