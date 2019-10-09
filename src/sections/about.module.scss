@@ -1,0 +1,18 @@
+div.avatar {
+  height: 200px;
+  transform: rotate(90deg);
+  width: 200px;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px;
+}
+
+p.copy {
+  margin-left: 50px;
+  width: 50%;
+}
