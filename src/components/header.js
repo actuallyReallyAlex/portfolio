@@ -4,7 +4,7 @@ import headerStyles from "./header.module.scss";
 
 const Header = () => {
   return (
-    <AppBar>
+    <AppBar position="sticky">
       <Toolbar>
         <Typography className={headerStyles.author} variant="h6">
           Alex Lee
