@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography } from "@material-ui/core";
 import heroStyles from "./hero.module.scss";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Social from "./social";
 
 const Hero = () => {
   const smaller = useMediaQuery("(max-width:820px)");
@@ -47,6 +48,7 @@ const Hero = () => {
           WEB DEVELOPER
         </Typography>
       </Box>
+      <Social />
     </Box>
   );
 };
