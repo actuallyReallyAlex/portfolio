@@ -1,3 +1,6 @@
-import React from "react"
+import React from "react";
+import Layout from "../components/layout";
 
-export default () => <div>Hello world!</div>
+export default () => {
+  return <Layout>Hello world!</Layout>;
+};
