@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <AppBar>
       <Toolbar>
-        <Typography className={headerStyles.applicationTitle} variant="h6">
+        <Typography className={headerStyles.author} variant="h6">
           Alex Lee
         </Typography>
         <Button color="inherit">Home</Button>
