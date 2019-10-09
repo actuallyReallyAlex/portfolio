@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<SkillBox /> Should render the <SkillBox />. 1`] = `ShallowWrapper {}`;
