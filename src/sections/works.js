@@ -40,11 +40,9 @@ const WorksSection = () => {
               title={node.title}
             />
           ))}
-        <Button>
-          <Link className={worksStyles.plainLink} to="/works">
-            View all works
-          </Link>
-        </Button>
+        <Link className={worksStyles.plainLink} to="/works">
+          <Button variant="contained">View all works</Button>
+        </Link>
       </Box>
     </Box>
   );
