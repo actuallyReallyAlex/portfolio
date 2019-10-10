@@ -9,10 +9,12 @@ import selfImage from "./self.jpg";
 const AboutSection = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulAboutCopyContentRichTextNode {
+      allContentfulAboutCopy {
         edges {
           node {
-            json
+            content {
+              json
+            }
           }
         }
       }
@@ -24,7 +26,7 @@ const AboutSection = () => {
       <SectionHeading heading="About" />
       <Avatar className={aboutStyles.avatar} src={selfImage} />
       {documentToReactComponents(
-        data.allContentfulAboutCopyContentRichTextNode.edges[0].node.json
+        data.allContentfulAboutCopy.edges[0].node.content.json
       )}
     </Box>
   );
