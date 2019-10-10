@@ -40,7 +40,7 @@ const WorksSection = () => {
               title={node.title}
             />
           ))}
-        <Button color="inherit">
+        <Button>
           <Link className={worksStyles.plainLink} to="/works">
             View all works
           </Link>

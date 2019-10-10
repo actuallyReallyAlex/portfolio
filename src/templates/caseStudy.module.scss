@@ -1,5 +1,12 @@
 .container {
-  margin: 100px;
+  margin-bottom: 100px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 100px;
+
+  img {
+    width: 100%;
+  }
 
   h1 {
     font-size: 6rem;
@@ -27,4 +34,14 @@
     letter-spacing: 0.00938em;
     // margin: 0;
   }
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.med-space {
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
