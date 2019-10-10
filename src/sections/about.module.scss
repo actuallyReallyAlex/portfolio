@@ -8,11 +8,33 @@ div.avatar {
   align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin: 50px;
+  margin: 75px;
 }
 
-p.copy {
+.center {
+  justify-content: center;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+p.main-copy {
   margin-left: 50px;
   width: 50%;
+}
+
+div.profile-left-container {
+  width: 50%;
+}
+
+p.profile-copy {
+  margin-top: 25px;
+}
+
+a.link {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
 }
