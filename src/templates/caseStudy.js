@@ -1,12 +1,17 @@
 import React from "react";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
-// import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Box } from "@material-ui/core";
 // import Head from "../components/head"
+import caseStudyStyles from "./caseStudy.module.scss";
 
 export const query = graphql`
   query($slug: String!) {
     contentfulPortfolioWork(slug: { eq: $slug }) {
+      caseStudy {
+        json
+      }
       title
     }
   }
@@ -23,15 +28,16 @@ const CaseStudy = props => {
   //   },
   // }
 
+  console.log(props.data.contentfulPortfolioWork);
+
   return (
     <Layout displayHeader={true}>
-      {/* <Head title={props.data.contentfulBlogPost.title} /> */}
-      <h1>{props.data.contentfulPortfolioWork.title}</h1>
-      {/* <p>{props.data.contentfulBlogPost.publishedDate}</p> */}
-      {/* {documentToReactComponents(
-        props.data.contentfulBlogPost.body.json,
-        options
-      )} */}
+      <Box className={caseStudyStyles.container}>
+        {/* <Head title={props.data.contentfulBlogPost.title} /> */}
+        {documentToReactComponents(
+          props.data.contentfulPortfolioWork.caseStudy.json
+        )}
+      </Box>
     </Layout>
   );
 };
