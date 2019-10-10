@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "env-cmd gatsby build",
+    "develop": "env-cmd gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -18,11 +18,13 @@
     "gatsby": "^2.15.34",
     "gatsby-plugin-sass": "^2.1.18",
     "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-contentful": "^2.1.47",
     "node-sass": "^4.12.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
   },
   "devDependencies": {
+    "env-cmd": "^10.0.1",
     "prettier": "^1.18.2"
   },
   "repository": {

@@ -5,6 +5,10 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: "Portfolio",
+    author: "Alex Lee"
+  },
   plugins: [
     "gatsby-plugin-sass",
     {
@@ -13,6 +17,13 @@ module.exports = {
         google: {
           families: ["Roboto"]
         }
+      }
+    },
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
     }
   ]

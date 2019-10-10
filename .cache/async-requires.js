@@ -2,6 +2,7 @@
 const preferDefault = m => m && m.default || m
 
 exports.components = {
+  "component---src-templates-case-study-js": () => import("/Users/alex/Repos/portfolio/src/templates/caseStudy.js" /* webpackChunkName: "component---src-templates-case-study-js" */),
   "component---cache-dev-404-page-js": () => import("/Users/alex/Repos/portfolio/.cache/dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
   "component---src-pages-index-js": () => import("/Users/alex/Repos/portfolio/src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */)
 }
