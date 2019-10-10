@@ -3,11 +3,35 @@ import { Avatar, Box, Typography, Link } from "@material-ui/core";
 import SectionHeading from "../components/sectionHeading";
 import aboutStyles from "./about.module.scss";
 import selfImage from "../images/self.jpg";
+import CustomChip from "../components/customChip";
+
+const skills = [
+  "JavaScript",
+  "Node.js",
+  "React.js",
+  "React Native",
+  "Java",
+  "C#",
+  "HTML5",
+  "CSS3",
+  "Bootstrap",
+  "JQuery",
+  "JSX",
+  "Markdown"
+];
+const tools = [
+  "MS Visual Studio",
+  "MS Visual Studio Code",
+  "Adobe Photoshop",
+  "Adobe Illustrator",
+  "Adobe Premier"
+];
 
 const AboutSection = () => {
   return (
     <Box>
       <SectionHeading heading="About" subHeading="Let me introduce myself." />
+
       <Box className={`${aboutStyles.content} ${aboutStyles.center}`}>
         <Avatar alt="Alex Lee" src={selfImage} className={aboutStyles.avatar} />
         <Typography className={aboutStyles.mainCopy}>
@@ -17,6 +41,7 @@ const AboutSection = () => {
           making me a valuable asset to any team.
         </Typography>
       </Box>
+
       <Box className={`${aboutStyles.content} ${aboutStyles.between}`}>
         <Box className={aboutStyles.profileLeftContainer}>
           <Typography variant="h4">Profile</Typography>
@@ -40,6 +65,38 @@ const AboutSection = () => {
           >
             alex@alexlee.dev
           </Link>
+        </Box>
+      </Box>
+
+      <Box className={aboutStyles.content}>
+        <Box>
+          <Typography variant="h4">Skills</Typography>
+          <Typography className={aboutStyles.profileCopy}>
+            As a self-taught developer, I've gained a variety of skillsets that
+            I can apply to my projects. Currently, I'm focused on React.js. With
+            an industry that's ever-evolving, no one is a master at every
+            language. I aim to let my excitement for learning new things guide
+            me in my path toward growth.
+          </Typography>
+        </Box>
+      </Box>
+
+      <Box className={`${aboutStyles.content} ${aboutStyles.start}`}>
+        <Box className={aboutStyles.profileLeftContainer}>
+          <Typography variant="h5">Languages / Technology</Typography>
+          <Box>
+            {skills.map(skill => (
+              <CustomChip key={skill} label={skill} />
+            ))}
+          </Box>
+        </Box>
+        <Box className={aboutStyles.profileLeftContainer}>
+          <Typography variant="h5">Tools / Software</Typography>
+          <Box>
+            {tools.map(tool => (
+              <CustomChip key={tool} label={tool} />
+            ))}
+          </Box>
         </Box>
       </Box>
     </Box>
