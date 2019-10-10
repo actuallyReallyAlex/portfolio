@@ -29,7 +29,7 @@ const WorksSection = () => {
 
   return (
     <Box className={worksStyles.container}>
-      <Box>
+      <Box className={worksStyles.innerContainer}>
         <SectionHeading heading="Works" />
         {data.allContentfulPortfolioWork.edges
           .filter(({ node }) => node.showcase) // TODO - Figure out how to do this with graphql query filter!
