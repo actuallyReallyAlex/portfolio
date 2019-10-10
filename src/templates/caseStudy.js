@@ -24,7 +24,7 @@ const CaseStudy = props => {
   // }
 
   return (
-    <Layout>
+    <Layout displayHeader={true}>
       {/* <Head title={props.data.contentfulBlogPost.title} /> */}
       <h1>{props.data.contentfulPortfolioWork.title}</h1>
       {/* <p>{props.data.contentfulBlogPost.publishedDate}</p> */}

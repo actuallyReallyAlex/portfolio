@@ -1,17 +1,17 @@
 import React from "react";
-import { Box, Button } from "@material-ui/core";
+import Layout from "../components/layout";
+import { Box } from "@material-ui/core";
 import SectionHeading from "../components/sectionHeading";
-import worksStyles from "./works.module.scss";
+import worksStyles from "../sections/works.module.scss";
 import Work from "../components/work";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
-const WorksSection = () => {
+const Works = () => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulPortfolioWork {
         edges {
           node {
-            showcase
             id
             title
             description
@@ -28,12 +28,11 @@ const WorksSection = () => {
   `);
 
   return (
-    <Box className={worksStyles.container}>
-      <Box>
-        <SectionHeading heading="Works" />
-        {data.allContentfulPortfolioWork.edges
-          .filter(({ node }) => node.showcase) // TODO - Figure out how to do this with graphql query filter!
-          .map(({ node }) => (
+    <Layout displayHeader={true}>
+      <Box className={worksStyles.container}>
+        <Box>
+          <SectionHeading heading="Works" />
+          {data.allContentfulPortfolioWork.edges.map(({ node }) => (
             <Work
               description={node.description}
               iconUrl={node.icon ? node.icon.file.url : undefined}
@@ -42,14 +41,10 @@ const WorksSection = () => {
               title={node.title}
             />
           ))}
-        <Button color="inherit">
-          <Link className={worksStyles.plainLink} to="/works">
-            View all works
-          </Link>
-        </Button>
+        </Box>
       </Box>
-    </Box>
+    </Layout>
   );
 };
 
-export default WorksSection;
+export default Works;
