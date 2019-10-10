@@ -11,16 +11,13 @@ const WorksSection = () => {
       allContentfulPortfolioWork {
         edges {
           node {
-            showcase
             id
             title
             description
             slug
-            icon {
-              file {
-                url
-              }
-            }
+            iconString
+            iconBackground
+            showcase
           }
         }
       }
@@ -36,7 +33,8 @@ const WorksSection = () => {
           .map(({ node }) => (
             <Work
               description={node.description}
-              iconUrl={node.icon ? node.icon.file.url : undefined}
+              iconBackground={node.iconBackground}
+              iconString={node.iconString}
               key={node.id}
               slug={node.slug}
               title={node.title}

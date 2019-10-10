@@ -1,6 +1,4 @@
 div.avatar {
-  background-color: #9c27b0;
-  font-size: 3rem;
   height: 100px;
   margin-right: 50px;
   width: 100px;
@@ -16,4 +14,16 @@ div.avatar {
 
 p.link {
   margin-top: 10px;
+}
+
+h4.title {
+  margin-bottom: 10px;
+}
+
+span.icon {
+  align-items: center;
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+  overflow: visible;
 }

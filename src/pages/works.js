@@ -5,6 +5,7 @@ import SectionHeading from "../components/sectionHeading";
 import worksStyles from "../sections/works.module.scss";
 import Work from "../components/work";
 import { useStaticQuery, graphql } from "gatsby";
+import Helmet from "../components/helmet";
 
 const Works = () => {
   const data = useStaticQuery(graphql`
@@ -16,11 +17,8 @@ const Works = () => {
             title
             description
             slug
-            icon {
-              file {
-                url
-              }
-            }
+            iconString
+            iconBackground
           }
         }
       }
@@ -29,13 +27,15 @@ const Works = () => {
 
   return (
     <Layout displayHeader={true}>
+      <Helmet title="Works" />
       <Box className={worksStyles.container}>
         <Box>
           <SectionHeading heading="Works" />
           {data.allContentfulPortfolioWork.edges.map(({ node }) => (
             <Work
               description={node.description}
-              iconUrl={node.icon ? node.icon.file.url : undefined}
+              iconBackground={node.iconBackground}
+              iconString={node.iconString}
               key={node.id}
               slug={node.slug}
               title={node.title}
