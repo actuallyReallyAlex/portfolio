@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<About /> Should render the <About /> when viewed from a small device. 1`] = `ShallowWrapper {}`;
-
-exports[`<About /> Should render the <About />. 1`] = `ShallowWrapper {}`;

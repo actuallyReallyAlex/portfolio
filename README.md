@@ -21,22 +21,13 @@
 
 ## 📝 Table of Contents
 
-- [About](#about)
 - [Built Using](#built_using)
 - [Author](#author)
 - [Acknowledgments](#acknowledgement)
 
-## 🧐 About <a name="about"></a>
-
-I wanted to step away from the overdone Bootstrap template portfolio sites, and try out writing my own portfolio using React.
-
-I also came across [Grommet](https://grommet.io/) and decided this would be a good project to try it out with.
-
 ## ⛏️ Built Using <a name="built_using"></a>
 
-- [Grommet](https://v2.grommet.io/) - UI Framework
 - [React](https://reactjs.org/) - UI Framework
-- [react-tilt](https://www.npmjs.com/package/react-tilt) - Tilty Component
 
 ## ✍️ Author <a name="author"></a>
 
@@ -45,7 +36,6 @@ I also came across [Grommet](https://grommet.io/) and decided this would be a go
 ## 🎉 Acknowledgements <a name="acknowledgement"></a>
 
 - Briefcase Icon (used in favicon) by [smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](www.flaticon.com).
-- Theme concept inspired by [Kards](https://www.styleshout.com/free-templates/kards/) from [www.styleshout.com](https://www.styleshout.com/).
 
 [size-image]: https://img.shields.io/bundlephobia/minzip/portfolio.svg
 [portfolio-icon]: https://github.com/alexlee-dev/portfolio/raw/master/portfolio.png

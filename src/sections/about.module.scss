@@ -1,0 +1,47 @@
+$break-small: 500px;
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 100px;
+
+  @media screen and (max-width: $break-small) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  h1 {
+    font-size: 6rem;
+    font-family: "Comfortaa", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.01562em;
+  }
+
+  h2 {
+    font-size: 3.75rem;
+    font-family: "Comfortaa", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.00833em;
+  }
+
+  p {
+    font-size: 1rem;
+    font-family: "Comfortaa", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+  }
+}
+
+div.avatar {
+  height: 200px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  width: 200px;
+}

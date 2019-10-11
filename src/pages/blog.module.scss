@@ -1,0 +1,19 @@
+$break-small: 500px;
+
+.posts {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 30%;
+  margin-right: 30%;
+
+  @media screen and (max-width: $break-small) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}

@@ -1,71 +1,40 @@
 {
   "name": "alexlee-dev-portfolio",
-  "description": "Alex Lee's portfolio. Built with React.",
-  "version": "3.0.1",
+  "description": "Alex Lee's portfolio. Built with React and Gatsby.",
+  "version": "4.0.0",
+  "scripts": {
+    "build": "env-cmd gatsby build",
+    "develop": "env-cmd gatsby develop -H 0.0.0.0",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  },
   "dependencies": {
-    "@sanity/client": "^0.141.1",
-    "@sentry/browser": "^5.4.3",
-    "grommet": "^2.7.1",
-    "grommet-icons": "^4.2.0",
-    "logrocket": "^1.0.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-intersection-observer": "^8.23.0",
-    "react-scripts": "3.0.1",
-    "react-tilt": "^0.1.4",
-    "styled-components": "^4.3.2"
+    "@contentful/rich-text-react-renderer": "^13.4.0",
+    "@material-ui/core": "^4.5.0",
+    "@material-ui/icons": "^4.4.3",
+    "gatsby": "^2.15.34",
+    "gatsby-plugin-google-analytics": "^2.1.21",
+    "gatsby-plugin-sass": "^2.1.18",
+    "gatsby-plugin-sentry": "^1.0.1",
+    "gatsby-plugin-sharp": "^2.2.29",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-contentful": "^2.1.47",
+    "node-sass": "^4.12.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "coveralls": "^3.0.4",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0"
+    "env-cmd": "^10.0.1",
+    "prettier": "^1.18.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "jest",
-    "test:watch": "jest --watchAll",
-    "test:coveralls": "jest --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/index.js --collectCoverageFrom=!src/serviceWorker.js --collectCoverageFrom=!src/hooks/**/* --collectCoverageFrom=!src/setupTests.js --coverageReporters=text-lcov | coveralls"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "files": [
-    "public",
-    "src",
-    "package.json",
-    "README.md",
-    "CHANGELOG.md"
-  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexlee-dev/portfolio.git"
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
   },
   "bugs": {
-    "url": "https://github.com/alexlee-dev/portfolio/issues"
-  },
-  "homepage": "https://alexlee.dev/",
-  "main": "index.js",
-  "keywords": [
-    "portfolio"
-  ],
-  "author": "Alex Lee <alexlee-dev>",
-  "license": "GPL-3.0",
-  "jest": {
-    "setupFilesAfterEnv": [
-      "./src/setupTests.js"
-    ]
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
