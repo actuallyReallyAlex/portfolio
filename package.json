@@ -18,6 +18,7 @@
     "@material-ui/icons": "^4.4.3",
     "gatsby": "^2.15.34",
     "gatsby-plugin-sass": "^2.1.18",
+    "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-plugin-sharp": "^2.2.29",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-contentful": "^2.1.47",

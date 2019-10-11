@@ -13,6 +13,14 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-sass",
     {
+      resolve: "gatsby-plugin-sentry",
+      options: {
+        dsn: process.env.SENTRY_DSN,
+        environment: process.env.NODE_ENV,
+        enabled: (() => ["production"].indexOf(process.env.NODE_ENV) !== -1)()
+      }
+    },
+    {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
