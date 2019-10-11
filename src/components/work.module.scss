@@ -1,0 +1,30 @@
+div.avatar {
+  height: 100px;
+  margin-right: 50px;
+  width: 100px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+p.link {
+  margin-top: 10px;
+}
+
+h4.title {
+  margin-bottom: 10px;
+}
+
+span.icon {
+  align-items: center;
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+  overflow: visible;
+}

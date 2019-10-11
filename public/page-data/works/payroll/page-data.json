@@ -1,0 +1,60 @@
+{
+  "componentChunkName": "component---src-templates-case-study-js",
+  "path": "/works/payroll",
+  "webpackCompilationHash": "",
+  "result": {
+    "data": {
+      "contentfulPortfolioWork": {
+        "caseStudy": {
+          "json": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Payroll Admin",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-1"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [{ "type": "italic" }],
+                    "value": "A comprehensive dashboard to view payroll information. Used by companies to manage previous, current, and future reports. Ability to export data in a variety of formats.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              { "data": {}, "content": [], "nodeType": "hr" },
+              {
+                "data": {},
+                "content": [
+                  { "data": {}, "marks": [], "value": "", "nodeType": "text" }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "title": "Payroll Admin",
+        "description": "A comprehensive dashboard to view payroll information. Used by companies to manage previous, current, and future reports. Ability to export data in a variety of formats.",
+        "contentLink": "https://demo-payroll-admin.netlify.com/admin/",
+        "sourceLink": null,
+        "screenshot": null
+      }
+    },
+    "pageContext": {
+      "isCreatedByStatefulCreatePages": false,
+      "slug": "payroll"
+    }
+  }
+}
