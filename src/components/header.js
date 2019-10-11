@@ -12,21 +12,21 @@ const Header = () => {
         </Link>
 
         <Box>
-          <Button color="inherit" name="Home">
-            <Link className={headerStyles.plainLink} to="/">
+          <Link className={headerStyles.plainLink} to="/">
+            <Button color="inherit" name="Home">
               Home
-            </Link>
-          </Button>
-          <Button color="inherit" name="Works">
-            <Link className={headerStyles.plainLink} to="/works">
+            </Button>
+          </Link>
+          <Link className={headerStyles.plainLink} to="/works">
+            <Button color="inherit" name="Works">
               Works
-            </Link>
-          </Button>
-          <Button color="inherit" name="Blog">
-            <Link className={headerStyles.plainLink} to="/blog">
+            </Button>
+          </Link>
+          <Link className={headerStyles.plainLink} to="/blog">
+            <Button color="inherit" name="Blog">
               Blog
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </Box>
       </Toolbar>
     </AppBar>

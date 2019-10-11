@@ -17,7 +17,7 @@ const Work = ({ description, iconBackground, iconString, slug, title }) => {
         </Typography>
         <Typography>{description}</Typography>
         <Typography className={workStyles.link}>
-          <Link href={`/works/${slug}`}>Learn More</Link>
+          <Link href={`/works/${slug}`}>Learn about the process</Link>
         </Typography>
       </Box>
     </Box>
