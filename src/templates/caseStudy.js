@@ -51,7 +51,6 @@ const CaseStudy = props => {
         <Typography variant="h1">{title}</Typography>
         <Box
           className={caseStudyStyles.medSpace}
-          fontFamily="Comfortaa"
           fontStyle="italic"
         >
           <Typography variant="subtitle1">{description}</Typography>
