@@ -1,7 +1,14 @@
+$break-small: 500px;
+
 div.avatar {
   height: 100px;
   margin-right: 50px;
   width: 100px;
+
+  @media screen and (max-width: $break-small) {
+    margin-bottom: 25px;
+    margin-right: 0;
+  }
 }
 
 .container {
@@ -11,6 +18,10 @@ div.avatar {
   margin-bottom: 50px;
   margin-top: 50px;
   width: 100%;
+
+  @media screen and (max-width: $break-small) {
+    flex-direction: column;
+  }
 }
 
 p.link {

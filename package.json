@@ -4,7 +4,7 @@
   "version": "4.0.0",
   "scripts": {
     "build": "env-cmd gatsby build",
-    "develop": "env-cmd gatsby develop",
+    "develop": "env-cmd gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

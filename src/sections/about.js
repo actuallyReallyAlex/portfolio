@@ -4,7 +4,7 @@ import aboutStyles from "./about.module.scss";
 import SectionHeading from "../components/sectionHeading";
 import { useStaticQuery, graphql } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import selfImage from "./self.jpg";
+import selfImage from "../images/self.jpg";
 
 const AboutSection = () => {
   const data = useStaticQuery(graphql`
