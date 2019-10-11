@@ -49,10 +49,7 @@ const CaseStudy = props => {
       <Box className={caseStudyStyles.container}>
         <Helmet title={title} />
         <Typography variant="h1">{title}</Typography>
-        <Box
-          className={caseStudyStyles.medSpace}
-          fontStyle="italic"
-        >
+        <Box className={caseStudyStyles.medSpace} fontStyle="italic">
           <Typography variant="subtitle1">{description}</Typography>
         </Box>
         <Box

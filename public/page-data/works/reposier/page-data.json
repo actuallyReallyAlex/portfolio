@@ -1,1 +1,451 @@
-{"componentChunkName":"component---src-templates-case-study-js","path":"/works/reposier","webpackCompilationHash":"","result":{"data":{"contentfulPortfolioWork":{"caseStudy":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"I wanted to build a CLI tool for interacting with the GitHub API. I created ","nodeType":"text"},{"data":{},"marks":[{"type":"bold"}],"value":"Reposier","nodeType":"text"},{"data":{},"marks":[],"value":", a tool that could transfer starred repositories between accounts, and create a clean looking pdf list of all the starred repositories on an account.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{"target":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"pjkzvgd4d5cg"}},"id":"c6o76jTpVNbxZ3g3qw7vQ44","type":"Asset","createdAt":"2019-10-10T22:01:26.766Z","updatedAt":"2019-10-10T22:01:26.766Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en-US":"Reposier - Install"},"description":{"en-US":"Demonstration of installation with Reposier."},"file":{"en-US":{"url":"//images.ctfassets.net/pjkzvgd4d5cg/6o76jTpVNbxZ3g3qw7vQ44/21fa8c8fd594b5a691db7f76860406d1/install.svg","details":{"size":119267,"image":{"width":1040,"height":516}},"fileName":"install.svg","contentType":"image/svg+xml"}}}}},"content":[],"nodeType":"embedded-asset-block"},{"data":{},"content":[{"data":{},"marks":[],"value":"As I wanted this tool to be easily available, I put it out on the NPM registry.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{"target":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"pjkzvgd4d5cg"}},"id":"c4KnhdK9Q0rXoXEwcJHw2eG","type":"Asset","createdAt":"2019-10-10T22:00:50.827Z","updatedAt":"2019-10-10T22:00:50.827Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en-US":"Reposier - Setup"},"description":{"en-US":"Demonstration of setup with Reposier."},"file":{"en-US":{"url":"//images.ctfassets.net/pjkzvgd4d5cg/4KnhdK9Q0rXoXEwcJHw2eG/191f2d29beb9b072c11dcede812d4b2e/setup.svg","details":{"size":62988,"image":{"width":1040,"height":516}},"fileName":"setup.svg","contentType":"image/svg+xml"}}}}},"content":[],"nodeType":"embedded-asset-block"},{"data":{},"content":[{"data":{},"marks":[],"value":"Users can easily follow a set of prompts when they launch the program for the first time, and their information will be saved to their machine so they don't have to authenticate each time the run the program.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{"target":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"pjkzvgd4d5cg"}},"id":"c2IjSMZAcALQasrcNgNfvgD","type":"Asset","createdAt":"2019-10-10T22:00:34.262Z","updatedAt":"2019-10-10T22:00:34.262Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en-US":"Reposier - Generate List"},"description":{"en-US":"Demonstration of list generation in Reposier."},"file":{"en-US":{"url":"//images.ctfassets.net/pjkzvgd4d5cg/2IjSMZAcALQasrcNgNfvgD/1dc6493efaddd81af240964ffb3c3b69/generateList.svg","details":{"size":51908,"image":{"width":1040,"height":516}},"fileName":"generateList.svg","contentType":"image/svg+xml"}}}}},"content":[],"nodeType":"embedded-asset-block"},{"data":{},"content":[{"data":{},"marks":[],"value":"The user can generate a markdown list or a pdf list of the starred repositories on their GitHub account.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{"target":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"pjkzvgd4d5cg"}},"id":"c3X9HpFwZgB3KRZirF36TQv","type":"Asset","createdAt":"2019-10-10T22:01:10.836Z","updatedAt":"2019-10-10T22:01:10.836Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en-US":"Reposier - Transfer"},"description":{"en-US":"Demonstration of star transferring with Reposier."},"file":{"en-US":{"url":"//images.ctfassets.net/pjkzvgd4d5cg/3X9HpFwZgB3KRZirF36TQv/edde58eab4fe0aa530d5b68feb6024b5/fromDefaultToOther.svg","details":{"size":103151,"image":{"width":1040,"height":516}},"fileName":"fromDefaultToOther.svg","contentType":"image/svg+xml"}}}}},"content":[],"nodeType":"embedded-asset-block"},{"data":{},"content":[{"data":{},"marks":[],"value":"I also wanted to give the ability to transfer starred repositories between accounts. I had 2 different GitHub accounts, and I wanted all of my starred repositories from one account to be on the other. I was surprised there wasn't already an option to do this with GitHub, so I decided to bake it into Reposier.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Learning Experiences","nodeType":"text"}],"nodeType":"heading-2"},{"data":{},"content":[{"data":{},"marks":[],"value":"Working with a CLI is both rewarding and challenging. You don't have all the debugging tools and visibility of data as you do in the Web Browser.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"What worked well?","nodeType":"text"}],"nodeType":"heading-3"},{"data":{},"content":[{"data":{},"marks":[],"value":"Each feature that I set out to create worked as expected, and looked pretty at the end.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"The landing page/documentation page created with ","nodeType":"text"},{"data":{"uri":"https://docsify.now.sh/"},"content":[{"data":{},"marks":[],"value":"Docsify","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":", looked really good and I was very satisfied with them.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"What didn't work well?","nodeType":"text"}],"nodeType":"heading-3"},{"data":{},"content":[{"data":{},"marks":[],"value":"Authentication sometimes didn't work as expected, and the CLI itself was fairly slow at times.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Do-Overs","nodeType":"text"}],"nodeType":"heading-2"},{"data":{},"content":[{"data":{},"marks":[],"value":"What would I do differently?","nodeType":"text"}],"nodeType":"heading-3"},{"data":{},"content":[{"data":{},"marks":[],"value":"I would refactor the tool in order to be more performant - perhaps making use of more CLI libraries.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"A Git Hit","nodeType":"text"}],"nodeType":"heading-2"},{"data":{},"content":[{"data":{},"marks":[],"value":"This was a very fun tool to make. It was my first shot at a CLI tool, and it served as a stepping stone for other smaller CLI tools that I made in the future on smaller projects.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"title":"Reposier","description":"Tasty CLI on the outside, simple integration with GitHub's API on the inside.","contentLink":"https://www.reposier.com/","sourceLink":"https://github.com/alexlee-dev/reposier","screenshot":{"title":"Reposier","file":{"url":"//images.ctfassets.net/pjkzvgd4d5cg/GK13878HtBzASvNDklEyT/0bf6013eb5e7e9bf62b51c19a49395a4/Screen_Shot_2019-10-10_at_2.55.57_PM.png"}}}},"pageContext":{"isCreatedByStatefulCreatePages":false,"slug":"reposier"}}}
+{
+  "componentChunkName": "component---src-templates-case-study-js",
+  "path": "/works/reposier",
+  "webpackCompilationHash": "",
+  "result": {
+    "data": {
+      "contentfulPortfolioWork": {
+        "caseStudy": {
+          "json": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "I wanted to build a CLI tool for interacting with the GitHub API. I created ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [{ "type": "bold" }],
+                    "value": "Reposier",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", a tool that could transfer starred repositories between accounts, and create a clean looking pdf list of all the starred repositories on an account.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "space": {
+                        "sys": {
+                          "type": "Link",
+                          "linkType": "Space",
+                          "id": "pjkzvgd4d5cg"
+                        }
+                      },
+                      "id": "c6o76jTpVNbxZ3g3qw7vQ44",
+                      "type": "Asset",
+                      "createdAt": "2019-10-10T22:01:26.766Z",
+                      "updatedAt": "2019-10-10T22:01:26.766Z",
+                      "environment": {
+                        "sys": {
+                          "id": "master",
+                          "type": "Link",
+                          "linkType": "Environment"
+                        }
+                      },
+                      "revision": 1
+                    },
+                    "fields": {
+                      "title": { "en-US": "Reposier - Install" },
+                      "description": {
+                        "en-US": "Demonstration of installation with Reposier."
+                      },
+                      "file": {
+                        "en-US": {
+                          "url": "//images.ctfassets.net/pjkzvgd4d5cg/6o76jTpVNbxZ3g3qw7vQ44/21fa8c8fd594b5a691db7f76860406d1/install.svg",
+                          "details": {
+                            "size": 119267,
+                            "image": { "width": 1040, "height": 516 }
+                          },
+                          "fileName": "install.svg",
+                          "contentType": "image/svg+xml"
+                        }
+                      }
+                    }
+                  }
+                },
+                "content": [],
+                "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "As I wanted this tool to be easily available, I put it out on the NPM registry.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "space": {
+                        "sys": {
+                          "type": "Link",
+                          "linkType": "Space",
+                          "id": "pjkzvgd4d5cg"
+                        }
+                      },
+                      "id": "c4KnhdK9Q0rXoXEwcJHw2eG",
+                      "type": "Asset",
+                      "createdAt": "2019-10-10T22:00:50.827Z",
+                      "updatedAt": "2019-10-10T22:00:50.827Z",
+                      "environment": {
+                        "sys": {
+                          "id": "master",
+                          "type": "Link",
+                          "linkType": "Environment"
+                        }
+                      },
+                      "revision": 1
+                    },
+                    "fields": {
+                      "title": { "en-US": "Reposier - Setup" },
+                      "description": {
+                        "en-US": "Demonstration of setup with Reposier."
+                      },
+                      "file": {
+                        "en-US": {
+                          "url": "//images.ctfassets.net/pjkzvgd4d5cg/4KnhdK9Q0rXoXEwcJHw2eG/191f2d29beb9b072c11dcede812d4b2e/setup.svg",
+                          "details": {
+                            "size": 62988,
+                            "image": { "width": 1040, "height": 516 }
+                          },
+                          "fileName": "setup.svg",
+                          "contentType": "image/svg+xml"
+                        }
+                      }
+                    }
+                  }
+                },
+                "content": [],
+                "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Users can easily follow a set of prompts when they launch the program for the first time, and their information will be saved to their machine so they don't have to authenticate each time the run the program.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "space": {
+                        "sys": {
+                          "type": "Link",
+                          "linkType": "Space",
+                          "id": "pjkzvgd4d5cg"
+                        }
+                      },
+                      "id": "c2IjSMZAcALQasrcNgNfvgD",
+                      "type": "Asset",
+                      "createdAt": "2019-10-10T22:00:34.262Z",
+                      "updatedAt": "2019-10-10T22:00:34.262Z",
+                      "environment": {
+                        "sys": {
+                          "id": "master",
+                          "type": "Link",
+                          "linkType": "Environment"
+                        }
+                      },
+                      "revision": 1
+                    },
+                    "fields": {
+                      "title": { "en-US": "Reposier - Generate List" },
+                      "description": {
+                        "en-US": "Demonstration of list generation in Reposier."
+                      },
+                      "file": {
+                        "en-US": {
+                          "url": "//images.ctfassets.net/pjkzvgd4d5cg/2IjSMZAcALQasrcNgNfvgD/1dc6493efaddd81af240964ffb3c3b69/generateList.svg",
+                          "details": {
+                            "size": 51908,
+                            "image": { "width": 1040, "height": 516 }
+                          },
+                          "fileName": "generateList.svg",
+                          "contentType": "image/svg+xml"
+                        }
+                      }
+                    }
+                  }
+                },
+                "content": [],
+                "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "The user can generate a markdown list or a pdf list of the starred repositories on their GitHub account.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "space": {
+                        "sys": {
+                          "type": "Link",
+                          "linkType": "Space",
+                          "id": "pjkzvgd4d5cg"
+                        }
+                      },
+                      "id": "c3X9HpFwZgB3KRZirF36TQv",
+                      "type": "Asset",
+                      "createdAt": "2019-10-10T22:01:10.836Z",
+                      "updatedAt": "2019-10-10T22:01:10.836Z",
+                      "environment": {
+                        "sys": {
+                          "id": "master",
+                          "type": "Link",
+                          "linkType": "Environment"
+                        }
+                      },
+                      "revision": 1
+                    },
+                    "fields": {
+                      "title": { "en-US": "Reposier - Transfer" },
+                      "description": {
+                        "en-US": "Demonstration of star transferring with Reposier."
+                      },
+                      "file": {
+                        "en-US": {
+                          "url": "//images.ctfassets.net/pjkzvgd4d5cg/3X9HpFwZgB3KRZirF36TQv/edde58eab4fe0aa530d5b68feb6024b5/fromDefaultToOther.svg",
+                          "details": {
+                            "size": 103151,
+                            "image": { "width": 1040, "height": 516 }
+                          },
+                          "fileName": "fromDefaultToOther.svg",
+                          "contentType": "image/svg+xml"
+                        }
+                      }
+                    }
+                  }
+                },
+                "content": [],
+                "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "I also wanted to give the ability to transfer starred repositories between accounts. I had 2 different GitHub accounts, and I wanted all of my starred repositories from one account to be on the other. I was surprised there wasn't already an option to do this with GitHub, so I decided to bake it into Reposier.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Learning Experiences",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-2"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Working with a CLI is both rewarding and challenging. You don't have all the debugging tools and visibility of data as you do in the Web Browser.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "What worked well?",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Each feature that I set out to create worked as expected, and looked pretty at the end.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "The landing page/documentation page created with ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": { "uri": "https://docsify.now.sh/" },
+                    "content": [
+                      {
+                        "data": {},
+                        "marks": [],
+                        "value": "Docsify",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", looked really good and I was very satisfied with them.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "What didn't work well?",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Authentication sometimes didn't work as expected, and the CLI itself was fairly slow at times.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Do-Overs",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-2"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "What would I do differently?",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "I would refactor the tool in order to be more performant - perhaps making use of more CLI libraries.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "A Git Hit",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-2"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "This was a very fun tool to make. It was my first shot at a CLI tool, and it served as a stepping stone for other smaller CLI tools that I made in the future on smaller projects.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "title": "Reposier",
+        "description": "Tasty CLI on the outside, simple integration with GitHub's API on the inside.",
+        "contentLink": "https://www.reposier.com/",
+        "sourceLink": "https://github.com/alexlee-dev/reposier",
+        "screenshot": {
+          "title": "Reposier",
+          "file": {
+            "url": "//images.ctfassets.net/pjkzvgd4d5cg/GK13878HtBzASvNDklEyT/0bf6013eb5e7e9bf62b51c19a49395a4/Screen_Shot_2019-10-10_at_2.55.57_PM.png"
+          }
+        }
+      }
+    },
+    "pageContext": {
+      "isCreatedByStatefulCreatePages": false,
+      "slug": "reposier"
+    }
+  }
+}

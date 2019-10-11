@@ -1,1 +1,12 @@
-{"componentChunkName":"component---src-templates-case-study-js","path":"/reposier","webpackCompilationHash":"","result":{"data":{"contentfulPortfolioWork":{"title":"Reposier"}},"pageContext":{"isCreatedByStatefulCreatePages":false,"slug":"reposier"}}}
+{
+  "componentChunkName": "component---src-templates-case-study-js",
+  "path": "/reposier",
+  "webpackCompilationHash": "",
+  "result": {
+    "data": { "contentfulPortfolioWork": { "title": "Reposier" } },
+    "pageContext": {
+      "isCreatedByStatefulCreatePages": false,
+      "slug": "reposier"
+    }
+  }
+}

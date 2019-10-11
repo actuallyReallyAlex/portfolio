@@ -1,1 +1,16 @@
-{"data":{"allContentfulPortfolioWork":{"edges":[{"node":{"title":"Hermes","description":"A game about space and junk.","slug":"hermes","icon":{"id":"d6084dc3-9053-51ca-bc8e-deac2d497f10"}}}]}}}
+{
+  "data": {
+    "allContentfulPortfolioWork": {
+      "edges": [
+        {
+          "node": {
+            "title": "Hermes",
+            "description": "A game about space and junk.",
+            "slug": "hermes",
+            "icon": { "id": "d6084dc3-9053-51ca-bc8e-deac2d497f10" }
+          }
+        }
+      ]
+    }
+  }
+}
