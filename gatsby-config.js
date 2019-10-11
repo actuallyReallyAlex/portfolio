@@ -10,6 +10,7 @@ module.exports = {
     author: "Alex Lee"
   },
   plugins: [
+    "gatsby-plugin-sharp",
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-web-font-loader",
