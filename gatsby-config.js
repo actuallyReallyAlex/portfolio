@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-module.exports = {
+const config = {
   siteMetadata: {
     title: "Portfolio",
     author: "Alex Lee"
@@ -37,3 +37,15 @@ module.exports = {
     }
   ]
 };
+
+if (process.env.NODE_ENV === "production") {
+  config.plugins.push({
+    resolve: `gatsby-plugin-google-analytics`,
+    options: {
+      trackingId: "UA-124507483-3",
+      head: true
+    }
+  });
+}
+
+module.exports = config;
