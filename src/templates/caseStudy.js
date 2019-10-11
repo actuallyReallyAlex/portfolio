@@ -58,6 +58,7 @@ const CaseStudy = props => {
           {contentLink && (
             <Button
               color="primary"
+              name="See it in action"
               onClick={() => window.open(contentLink, "_blank")}
               variant="contained"
             >
@@ -67,6 +68,7 @@ const CaseStudy = props => {
           {sourceLink && (
             <Button
               color="secondary"
+              name="View source"
               onClick={() => window.open(sourceLink, "_blank")}
               variant="contained"
             >

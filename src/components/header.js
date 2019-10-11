@@ -12,17 +12,17 @@ const Header = () => {
         </Link>
 
         <Box>
-          <Button color="inherit">
+          <Button color="inherit" name="Home">
             <Link className={headerStyles.plainLink} to="/">
               Home
             </Link>
           </Button>
-          <Button color="inherit">
+          <Button color="inherit" name="Works">
             <Link className={headerStyles.plainLink} to="/works">
               Works
             </Link>
           </Button>
-          <Button color="inherit">
+          <Button color="inherit" name="Blog">
             <Link className={headerStyles.plainLink} to="/blog">
               Blog
             </Link>
