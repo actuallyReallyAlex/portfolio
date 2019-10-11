@@ -1,10 +1,10 @@
 import React from "react";
-import { Box, Avatar } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import aboutStyles from "./about.module.scss";
 import SectionHeading from "../components/sectionHeading";
 import { useStaticQuery, graphql } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import selfImage from "../images/self.webp";
+import Avatar from "../components/avatar";
 
 const AboutSection = () => {
   const data = useStaticQuery(graphql`
@@ -24,7 +24,7 @@ const AboutSection = () => {
   return (
     <Box className={aboutStyles.container}>
       <SectionHeading heading="About" />
-      <Avatar className={aboutStyles.avatar} src={selfImage} />
+      <Avatar />
       {documentToReactComponents(
         data.allContentfulAboutCopy.edges[0].node.content.json
       )}
