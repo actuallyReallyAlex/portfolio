@@ -41,7 +41,9 @@ const WorksSection = () => {
             />
           ))}
         <Link className={worksStyles.plainLink} to="/works">
-          <Button variant="contained">View all works</Button>
+          <Button name="View all works" variant="contained">
+            View all works
+          </Button>
         </Link>
       </Box>
     </Box>

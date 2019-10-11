@@ -17,30 +17,35 @@ const Social = () => {
     <Box className={socialStyles.container}>
       <Button
         className={socialStyles.socialButton}
+        name="Email"
         onClick={() => handleClick("mail")}
       >
         <Icon className="far fa-envelope-open-text" />
       </Button>
       <Button
         className={socialStyles.socialButton}
+        name="GitHub"
         onClick={() => handleClick("github")}
       >
         <Icon className="fab fa-github" />
       </Button>
       <Button
         className={socialStyles.socialButton}
+        name="NPM"
         onClick={() => handleClick("npm")}
       >
         <Icon className="fab fa-npm" />
       </Button>
       <Button
         className={socialStyles.socialButton}
+        name="Twitter"
         onClick={() => handleClick("twitter")}
       >
         <Icon className="fab fa-twitter" />
       </Button>
       <Button
         className={socialStyles.socialButton}
+        name="LinkedIn"
         onClick={() => handleClick("linkedin")}
       >
         <Icon className="fab fa-linkedin" />

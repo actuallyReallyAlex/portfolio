@@ -39,7 +39,7 @@ const NotFound = () => {
           }}
           to="/"
         >
-          <Button color="primary" variant="contained">
+          <Button color="primary" name="Return Home" variant="contained">
             Return Home
           </Button>
         </Link>
