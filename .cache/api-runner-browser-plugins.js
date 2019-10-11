@@ -4,7 +4,4 @@ module.exports = [{
     },{
       plugin: require('/Users/alex/Repos/portfolio/node_modules/gatsby-plugin-web-font-loader/gatsby-browser.js'),
       options: {"plugins":[],"google":{"families":["Comfortaa"]}},
-    },{
-      plugin: require('/Users/alex/Repos/portfolio/node_modules/gatsby-plugin-google-analytics/gatsby-browser.js'),
-      options: {"plugins":[],"trackingId":"UA-124507483-3","head":true},
     }]
