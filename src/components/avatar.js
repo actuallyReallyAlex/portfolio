@@ -6,11 +6,14 @@ import avatarStyles from "./avatar.module.scss";
 const Avatar = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "self.webp" }) {
+      file(relativePath: { eq: "self2.jpg" }) {
         childImageSharp {
-          fixed(width: 200, height: 203) {
-            ...GatsbyImageSharpFixed
+          fluid {
+            ...GatsbyImageSharpFluid
           }
+          # fixed(width: 200, height: 202) {
+          # ...GatsbyImageSharpFixed
+          # }
         }
       }
     }
@@ -18,7 +21,7 @@ const Avatar = () => {
 
   return (
     <div className={avatarStyles.avatar}>
-      <Img fixed={data.file.childImageSharp.fixed} />
+      <Img fluid={data.file.childImageSharp.fluid} />
     </div>
   );
 };
