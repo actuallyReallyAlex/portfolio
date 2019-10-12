@@ -1,1 +1,15 @@
-{"data":{"file":{"childImageSharp":{"fluid":{"base64":"data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAwBQCdASoUABQAPtFeqE+oJKOiKAgBABoJQBZwAjXuACVesBQ+q92k2bGmvGGbabtaoAD+7WHKpNilB0ZkvT8KRZU5pS3wYo8zmeJTXAnZCvgTCXIBQcqw43UemUA10mrMEu1kxiKhFqtl++bWyOr3QzJVkqp8Og/ZktUxgdM33jHaqhagYjG+Br8mMxY74AA=","aspectRatio":0.9851127179923437,"src":"/static/c68849ebae97b9b63d024cc81303fb3b/c6096/self.webp","srcSet":"/static/c68849ebae97b9b63d024cc81303fb3b/1932c/self.webp 200w,\n/static/c68849ebae97b9b63d024cc81303fb3b/f4957/self.webp 400w,\n/static/c68849ebae97b9b63d024cc81303fb3b/c6096/self.webp 800w,\n/static/c68849ebae97b9b63d024cc81303fb3b/b6424/self.webp 1200w,\n/static/c68849ebae97b9b63d024cc81303fb3b/7a72d/self.webp 1600w,\n/static/c68849ebae97b9b63d024cc81303fb3b/5929d/self.webp 2316w","sizes":"(max-width: 800px) 100vw, 800px"}}}}}
+{
+  "data": {
+    "file": {
+      "childImageSharp": {
+        "fluid": {
+          "base64": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAwBQCdASoUABQAPtFeqE+oJKOiKAgBABoJQBZwAjXuACVesBQ+q92k2bGmvGGbabtaoAD+7WHKpNilB0ZkvT8KRZU5pS3wYo8zmeJTXAnZCvgTCXIBQcqw43UemUA10mrMEu1kxiKhFqtl++bWyOr3QzJVkqp8Og/ZktUxgdM33jHaqhagYjG+Br8mMxY74AA=",
+          "aspectRatio": 0.9851127179923437,
+          "src": "/static/c68849ebae97b9b63d024cc81303fb3b/c6096/self.webp",
+          "srcSet": "/static/c68849ebae97b9b63d024cc81303fb3b/1932c/self.webp 200w,\n/static/c68849ebae97b9b63d024cc81303fb3b/f4957/self.webp 400w,\n/static/c68849ebae97b9b63d024cc81303fb3b/c6096/self.webp 800w,\n/static/c68849ebae97b9b63d024cc81303fb3b/b6424/self.webp 1200w,\n/static/c68849ebae97b9b63d024cc81303fb3b/7a72d/self.webp 1600w,\n/static/c68849ebae97b9b63d024cc81303fb3b/5929d/self.webp 2316w",
+          "sizes": "(max-width: 800px) 100vw, 800px"
+        }
+      }
+    }
+  }
+}
