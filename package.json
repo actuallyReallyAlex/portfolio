@@ -3,7 +3,8 @@
   "description": "Alex Lee's portfolio. Built with React and Gatsby.",
   "version": "4.0.1",
   "scripts": {
-    "build": "env-cmd gatsby build",
+    "build-local": "env-cmd gatsby build",
+    "build-server": "gatsby build",
     "develop": "env-cmd gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
