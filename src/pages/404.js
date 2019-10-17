@@ -11,8 +11,8 @@ const NotFound = () => {
         style={{
           marginTop: "100px",
           marginBottom: "100px",
-          marginLeft: "30%",
-          marginRight: "30%",
+          marginLeft: "25%",
+          marginRight: "25%",
           display: "flex",
           flexDirection: "column",
           alignItems: "center"
