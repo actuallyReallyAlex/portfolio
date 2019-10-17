@@ -1,9 +1,0 @@
-{
-  "componentChunkName": "component---src-templates-case-study-js",
-  "path": "/hermes",
-  "webpackCompilationHash": "",
-  "result": {
-    "data": { "contentfulPortfolioWork": { "title": "Hermes" } },
-    "pageContext": { "isCreatedByStatefulCreatePages": false, "slug": "hermes" }
-  }
-}

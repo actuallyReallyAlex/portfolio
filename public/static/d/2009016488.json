@@ -1,8 +1,0 @@
-{
-  "errors": [
-    {
-      "message": "Cannot query field \"icon\" on type \"ContentfulPortfolioWork\".",
-      "locations": [{ "line": 9, "column": 9 }]
-    }
-  ]
-}

@@ -5,6 +5,8 @@ import { Box, Typography } from "@material-ui/core";
 import blogStyles from "./blog.module.scss";
 import { graphql } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { INLINES } from "@contentful/rich-text-types";
+import Code from "../components/code";
 
 export const query = graphql`
   query($slug: String!) {
@@ -27,7 +29,17 @@ const Blog = props => {
     content
   } = props.data.contentfulBlogPost;
 
-  const options = {};
+  const options = {
+    renderNode: {
+      [INLINES.EMBEDDED_ENTRY]: node => {
+        const { fields } = node.data.target;
+        const language = fields.language["en-US"];
+        const { code } = fields.code["en-US"];
+
+        return <Code code={code} language={language} />;
+      }
+    }
+  };
 
   return (
     <Layout displayHeader={true}>
