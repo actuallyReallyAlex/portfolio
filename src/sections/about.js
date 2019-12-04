@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@material-ui/core";
+import { Box, Button } from "@material-ui/core";
 import aboutStyles from "./about.module.scss";
 import SectionHeading from "../components/sectionHeading";
 import { useStaticQuery, graphql } from "gatsby";
@@ -18,6 +18,12 @@ const AboutSection = () => {
           }
         }
       }
+      contentfulAsset(title: { eq: "Resume" }) {
+        title
+        file {
+          url
+        }
+      }
     }
   `);
 
@@ -28,6 +34,14 @@ const AboutSection = () => {
       {documentToReactComponents(
         data.allContentfulAboutCopy.edges[0].node.content.json
       )}
+      <Button
+        className={aboutStyles.resume}
+        href={data.contentfulAsset.file.url}
+        target="_blank"
+        variant="contained"
+      >
+        Résumé
+      </Button>
     </Box>
   );
 };
