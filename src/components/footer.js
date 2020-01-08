@@ -9,7 +9,7 @@ const Footer = () => {
       <Link to="/" className={footerStyles.plainLink}>
         <Typography variant="h6">Alex Lee</Typography>
       </Link>
-      <Typography variant="subtitle2">Alex Lee © 2019</Typography>
+      <Typography variant="subtitle2">Alex Lee © 2020</Typography>
     </Paper>
   );
 };
