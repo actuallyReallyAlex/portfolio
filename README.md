@@ -7,7 +7,7 @@
 
 <div align="center">
 
-[![Coverage Status](https://coveralls.io/repos/github/alexlee-dev/portfolio/badge.svg?branch=master)](https://coveralls.io/github/alexlee-dev/portfolio?branch=master) [![Build Status](https://travis-ci.org/alexlee-dev/portfolio.svg?branch=master)](https://travis-ci.org/alexlee-dev/portfolio.svg?branch=master)
+[![Build Status](https://travis-ci.org/alexlee-dev/portfolio.svg?branch=master)](https://travis-ci.org/alexlee-dev/portfolio.svg?branch=master)
 
 </div>
 
