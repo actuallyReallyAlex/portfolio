@@ -14,7 +14,12 @@ const handleClick = linkType => window.open(links[linkType], "_blank");
 
 const Social = () => {
   return (
-    <Box className={socialStyles.container}>
+    <Box
+      data-sal="fade"
+      data-sal-duration="1500"
+      data-sal-easing="ease"
+      className={socialStyles.container}
+    >
       <Button
         aria-label="Email"
         className={socialStyles.socialButton}
