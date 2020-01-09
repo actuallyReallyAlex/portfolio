@@ -1,5 +1,30 @@
 .container {
   align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  position: relative;
+}
+
+.top {
+  height: auto;
+  max-width: 100%;
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+  &:hover {
+    opacity: 0;
+  }
+}
+
+.bottom {
+  height: auto;
+  max-width: 100%;
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+}
+
+.container-high-def {
+  align-items: center;
   background-image: url("../images/palm.jpg");
   background-position: center;
   background-size: cover;
