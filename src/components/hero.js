@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Box, Typography } from "@material-ui/core";
 import heroStyles from "./hero.module.scss";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -9,15 +9,23 @@ import PalmFull from "../images/palm.jpg";
 const Hero = () => {
   const smaller = useMediaQuery("(max-width:820px)");
   const smallest = useMediaQuery("(max-width:575px)");
+  const large = useMediaQuery("(min-width:1024px)");
+
+  console.log({ smaller, smallest, large });
 
   return (
-    <Box className={heroStyles.container}>
-      <img
-        alt="Palm Tree"
-        className={heroStyles.bottom}
-        src={PalmTriangles50}
-      />
-      <img alt="Palm Tree" className={heroStyles.top} src={PalmFull} />
+    <Box className={large ? heroStyles.container : heroStyles.containerSmall}>
+      {large && (
+        <Fragment>
+          <img
+            alt="Palm Tree"
+            className={heroStyles.bottom}
+            src={PalmTriangles50}
+          />
+          <img alt="Palm Tree" className={heroStyles.top} src={PalmFull} />
+        </Fragment>
+      )}
+
       <Box className={heroStyles.typographyContainer}>
         <Typography
           className={
