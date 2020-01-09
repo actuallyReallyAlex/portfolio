@@ -1,7 +1,7 @@
 {
   "name": "alexlee-dev-portfolio",
   "description": "Alex Lee's portfolio. Built with React and Gatsby.",
-  "version": "4.2.0",
+  "version": "4.3.0",
   "scripts": {
     "build-local": "env-cmd gatsby build",
     "build-server": "gatsby build",
