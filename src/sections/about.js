@@ -5,6 +5,7 @@ import SectionHeading from "../components/sectionHeading";
 import { useStaticQuery, graphql } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Avatar from "../components/avatar";
+import { Link } from "gatsby";
 
 const AboutSection = () => {
   const data = useStaticQuery(graphql`
@@ -34,14 +35,21 @@ const AboutSection = () => {
       {documentToReactComponents(
         data.allContentfulAboutCopy.edges[0].node.content.json
       )}
-      <Button
-        className={aboutStyles.resume}
-        href={data.contentfulAsset.file.url}
-        target="_blank"
-        variant="contained"
-      >
-        Résumé
-      </Button>
+      <Box className={aboutStyles.buttonContainer}>
+        <Button
+          className={aboutStyles.resume}
+          href={data.contentfulAsset.file.url}
+          target="_blank"
+          variant="contained"
+        >
+          Résumé
+        </Button>
+        <Link className={aboutStyles.blog} to="/blog">
+          <Button color="secondary" name="Blog" variant="contained">
+            Blog
+          </Button>
+        </Link>
+      </Box>
     </Box>
   );
 };
