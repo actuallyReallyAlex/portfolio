@@ -24,7 +24,12 @@ const Hero = () => {
         </Fragment>
       )}
 
-      <Box className={heroStyles.typographyContainer}>
+      <Box
+        data-sal="fade"
+        data-sal-duration="1500"
+        data-sal-easing="ease"
+        className={heroStyles.typographyContainer}
+      >
         <Typography
           className={
             smallest

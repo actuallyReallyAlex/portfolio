@@ -4,7 +4,12 @@ import workStyles from "./work.module.scss";
 
 const Work = ({ description, iconBackground, iconString, slug, title }) => {
   return (
-    <Box className={workStyles.container}>
+    <Box
+      data-sal="slide-up"
+      data-sal-duration="1500"
+      data-sal-easing="ease"
+      className={workStyles.container}
+    >
       <Avatar
         className={workStyles.avatar}
         style={{ background: iconBackground }}

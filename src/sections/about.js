@@ -29,7 +29,12 @@ const AboutSection = () => {
   `);
 
   return (
-    <Box className={aboutStyles.container}>
+    <Box
+      data-sal="slide-up"
+      data-sal-duration="1500"
+      data-sal-easing="ease"
+      className={aboutStyles.container}
+    >
       <SectionHeading heading="About" />
       <Avatar />
       {documentToReactComponents(
