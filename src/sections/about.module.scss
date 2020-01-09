@@ -49,3 +49,14 @@ div.avatar {
 a.resume {
   margin-top: 50px;
 }
+
+a.blog {
+  margin-top: 50px;
+  text-decoration: none;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
