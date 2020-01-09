@@ -3,6 +3,8 @@ import { Box, Typography } from "@material-ui/core";
 import heroStyles from "./hero.module.scss";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Social from "./social";
+import PalmTriangles50 from "../images/palm-triangles-50.svg";
+import PalmFull from "../images/palm.jpg";
 
 const Hero = () => {
   const smaller = useMediaQuery("(max-width:820px)");
@@ -10,6 +12,12 @@ const Hero = () => {
 
   return (
     <Box className={heroStyles.container}>
+      <img
+        alt="Palm Tree"
+        className={heroStyles.bottom}
+        src={PalmTriangles50}
+      />
+      <img alt="Palm Tree" className={heroStyles.top} src={PalmFull} />
       <Box className={heroStyles.typographyContainer}>
         <Typography
           className={
