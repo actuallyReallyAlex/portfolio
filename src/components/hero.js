@@ -11,8 +11,6 @@ const Hero = () => {
   const smallest = useMediaQuery("(max-width:575px)");
   const large = useMediaQuery("(min-width:1024px)");
 
-  console.log({ smaller, smallest, large });
-
   return (
     <Box className={large ? heroStyles.container : heroStyles.containerSmall}>
       {large && (
