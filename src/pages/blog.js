@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import BlogPost from "../components/blogPost";
 import blogStyles from "./blog.module.scss";
 import { Box } from "@material-ui/core";
+import "../styles/prism-tomorrow.min.css";
 
 const Blog = () => {
   const data = useStaticQuery(graphql`

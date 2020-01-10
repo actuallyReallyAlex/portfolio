@@ -6,7 +6,7 @@ import avatarStyles from "./avatar.module.scss";
 const Avatar = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "self2.jpg" }) {
+      file(relativePath: { eq: "self-200.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
