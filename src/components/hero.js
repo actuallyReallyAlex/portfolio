@@ -12,7 +12,7 @@ const Hero = () => {
   const large = useMediaQuery("(min-width:1024px)");
 
   return (
-    <Box className={large ? heroStyles.container : heroStyles.containerSmall}>
+    <Box className={heroStyles.container}>
       {large && (
         <Fragment>
           <img
