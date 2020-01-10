@@ -6,6 +6,7 @@ import worksStyles from "../sections/works.module.scss";
 import Work from "../components/work";
 import { useStaticQuery, graphql } from "gatsby";
 import Helmet from "../components/helmet";
+import "../styles/prism-tomorrow.min.css";
 
 const Works = () => {
   const data = useStaticQuery(graphql`
