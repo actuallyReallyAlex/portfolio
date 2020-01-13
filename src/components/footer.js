@@ -2,16 +2,13 @@ import React from "react";
 import footerStyles from "./footer.module.scss";
 import { Link } from "gatsby";
 
-const Footer = () => {
-  return (
-    // <Paper className={footerStyles.footer}>
-    //   <Link to="/" className={footerStyles.plainLink}>
-    //     <Typography variant="h6">Alex Lee</Typography>
-    //   </Link>
-    //   <Typography variant="subtitle2">Alex Lee © 2020</Typography>
-    // </Paper>
-    <span>FOOTER</span>
-  );
-};
+const Footer = () => (
+  <div className={footerStyles.footer}>
+    <Link to="/" className={footerStyles.plainLink}>
+      <h6>Alex Lee</h6>
+    </Link>
+    <span>Alex Lee © 2020</span>
+  </div>
+);
 
 export default Footer;

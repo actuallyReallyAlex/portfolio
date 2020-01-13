@@ -1,13 +1,10 @@
 import React from "react";
 import sectionHeadingStyles from "./sectionHeading.module.scss";
 
-const SectionHeading = ({ heading }) => {
-  return (
-    // <Box className={sectionHeadingStyles.container}>
-    //   <Typography variant="h2">{heading}</Typography>
-    // </Box>
-    <span>SECTIONHEADING</span>
-  );
-};
+const SectionHeading = ({ heading }) => (
+  <div className={sectionHeadingStyles.container}>
+    <h2>{heading}</h2>
+  </div>
+);
 
 export default SectionHeading;

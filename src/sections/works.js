@@ -24,27 +24,26 @@ const WorksSection = () => {
   `);
 
   return (
-    // <Box className={worksStyles.container}>
-    //   <Box className={worksStyles.innerContainer}>
-    //     <SectionHeading heading="Works" />
-    //     {data.allContentfulPortfolioWork.edges
-    //       .filter(({ node }) => node.showcase) // TODO - Figure out how to do this with graphql query filter!
-    //       .map(({ node }) => (
-    //         <Work
-    //           description={node.description}
-    //           iconBackground={node.iconBackground}
-    //           iconString={node.iconString}
-    //           key={node.id}
-    //           slug={node.slug}
-    //           title={node.title}
-    //         />
-    //       ))}
-    //     <Link className={worksStyles.plainLink} to="/works">
-    //       <Button variant="contained">View all works</Button>
-    //     </Link>
-    //   </Box>
-    // </Box>
-    <span>WORKS</span>
+    <div className={worksStyles.container}>
+      <div className={worksStyles.innerContainer}>
+        <SectionHeading heading="Works" />
+        {data.allContentfulPortfolioWork.edges
+          .filter(({ node }) => node.showcase) // TODO - Figure out how to do this with graphql query filter!
+          .map(({ node }) => (
+            <Work
+              description={node.description}
+              iconBackground={node.iconBackground}
+              iconString={node.iconString}
+              key={node.id}
+              slug={node.slug}
+              title={node.title}
+            />
+          ))}
+        <Link className={worksStyles.plainLink} to="/works">
+          <button>View all works</button>
+        </Link>
+      </div>
+    </div>
   );
 };
 
