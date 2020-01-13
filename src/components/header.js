@@ -4,32 +4,24 @@ import { Link } from "gatsby";
 
 const Header = () => {
   return (
-    // <AppBar color="default" position="sticky">
-    //   <Toolbar className={headerStyles.container}>
-    //     <Link to="/" className={headerStyles.plainLink}>
-    //       <Typography variant="h6">Alex Lee</Typography>
-    //     </Link>
-
-    //     <Box>
-    //       <Link className={headerStyles.plainLink} to="/">
-    //         <Button color="inherit" name="Home">
-    //           Home
-    //         </Button>
-    //       </Link>
-    //       <Link className={headerStyles.plainLink} to="/works">
-    //         <Button color="inherit" name="Works">
-    //           Works
-    //         </Button>
-    //       </Link>
-    //       <Link className={headerStyles.plainLink} to="/blog">
-    //         <Button color="inherit" name="Blog">
-    //           Blog
-    //         </Button>
-    //       </Link>
-    //     </Box>
-    //   </Toolbar>
-    // </AppBar>
-    <span>HEADER</span>
+    <div style={{ backgroundColor: "grey", position: "sticky" }}>
+      <div>
+        <Link to="/" className={headerStyles.plainLink}>
+          <h6>Alex Lee</h6>
+        </Link>
+        <div>
+          <Link className={headerStyles.plainLink} to="/">
+            <button>Home</button>
+          </Link>
+          <Link className={headerStyles.plainLink} to="/works">
+            <button>Works</button>
+          </Link>
+          <Link className={headerStyles.plainLink} to="/blog">
+            <button>Blog</button>
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 };
 

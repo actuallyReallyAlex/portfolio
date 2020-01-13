@@ -26,25 +26,24 @@ const Works = () => {
   `);
 
   return (
-    // <Layout displayHeader={true}>
-    //   <Helmet title="Works" />
-    //   <Box className={worksStyles.container}>
-    //     <Box>
-    //       <SectionHeading heading="Works" />
-    //       {data.allContentfulPortfolioWork.edges.map(({ node }) => (
-    //         <Work
-    //           description={node.description}
-    //           iconBackground={node.iconBackground}
-    //           iconString={node.iconString}
-    //           key={node.id}
-    //           slug={node.slug}
-    //           title={node.title}
-    //         />
-    //       ))}
-    //     </Box>
-    //   </Box>
-    // </Layout>
-    <span>WORKS</span>
+    <Layout displayHeader={true}>
+      <Helmet title="Works" />
+      <div className={worksStyles.container}>
+        <div>
+          <SectionHeading heading="Works" />
+          {data.allContentfulPortfolioWork.edges.map(({ node }) => (
+            <Work
+              description={node.description}
+              iconBackground={node.iconBackground}
+              iconString={node.iconString}
+              key={node.id}
+              slug={node.slug}
+              title={node.title}
+            />
+          ))}
+        </div>
+      </div>
+    </Layout>
   );
 };
 
