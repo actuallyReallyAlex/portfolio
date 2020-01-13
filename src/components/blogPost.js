@@ -4,13 +4,12 @@ import blogPostStyles from "./blogPost.module.scss";
 
 const BlogPost = ({ publishedDate, slug, title }) => {
   return (
-    // <li className={blogPostStyles.post}>
-    //   <Link to={`/blog/${slug}`}>
-    //     <Typography variant="h2">{title}</Typography>
-    //     <Typography variant="caption">{publishedDate}</Typography>
-    //   </Link>
-    // </li>
-    <span>BLOGPOST</span>
+    <li className={blogPostStyles.post}>
+      <Link to={`/blog/${slug}`}>
+        <h2 variant="h2">{title}</h2>
+        <p variant="caption">{publishedDate}</p>
+      </Link>
+    </li>
   );
 };
 

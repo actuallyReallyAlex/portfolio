@@ -26,25 +26,24 @@ const Blog = () => {
   `);
 
   return (
-    // <Layout displayHeader={true}>
-    //   <Helmet title="Blog" />
-    //   <Box className={blogStyles.container}>
-    //     <ol className={blogStyles.posts}>
-    //       {data.allContentfulBlogPost.edges.map(edge => {
-    //         const { publishedDate, title, slug } = edge.node;
-    //         return (
-    //           <BlogPost
-    //             key={slug}
-    //             publishedDate={publishedDate}
-    //             slug={slug}
-    //             title={title}
-    //           />
-    //         );
-    //       })}
-    //     </ol>
-    //   </Box>
-    // </Layout>
-    <span>BLOG</span>
+    <Layout displayHeader={true}>
+      <Helmet title="Blog" />
+      <div className={blogStyles.container}>
+        <ol className={blogStyles.posts}>
+          {data.allContentfulBlogPost.edges.map(edge => {
+            const { publishedDate, title, slug } = edge.node;
+            return (
+              <BlogPost
+                key={slug}
+                publishedDate={publishedDate}
+                slug={slug}
+                title={title}
+              />
+            );
+          })}
+        </ol>
+      </div>
+    </Layout>
   );
 };
 

@@ -41,21 +41,20 @@ const Blog = props => {
   };
 
   return (
-    // <Layout displayHeader={true}>
-    //   <Box className={blogStyles.container}>
-    //     <Helmet title={title} />
-    //     <Typography variant="h1">{title}</Typography>
-    //     <Box className={blogStyles.medSpace} fontStyle="italic">
-    //       <Typography variant="subtitle1">{excerpt}</Typography>
-    //     </Box>
-    //     <Box className={blogStyles.medSpace}>
-    //       <Typography>{publishedDate}</Typography>
-    //     </Box>
-    //     <hr />
-    //     {documentToReactComponents(content.json, options)}
-    //   </Box>
-    // </Layout>
-    <span>BLOG</span>
+    <Layout displayHeader={true}>
+      <div className={blogStyles.container}>
+        <Helmet title={title} />
+        <h1>{title}</h1>
+        <div className={blogStyles.medSpace}>
+          <span>{excerpt}</span>
+        </div>
+        <div className={blogStyles.medSpace}>
+          <p>{publishedDate}</p>
+        </div>
+        <hr />
+        {documentToReactComponents(content.json, options)}
+      </div>
+    </Layout>
   );
 };
 
