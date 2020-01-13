@@ -1,6 +1,6 @@
 import React from "react";
-import SectionHeading from "../components/sectionHeading";
 import worksStyles from "./works.module.scss";
+import SectionHeading from "../components/sectionHeading";
 import Work from "../components/work";
 import { useStaticQuery, graphql, Link } from "gatsby";
 
