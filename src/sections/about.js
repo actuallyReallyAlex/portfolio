@@ -1,5 +1,4 @@
 import React from "react";
-import { Box, Button } from "@material-ui/core";
 import aboutStyles from "./about.module.scss";
 import SectionHeading from "../components/sectionHeading";
 import { useStaticQuery, graphql } from "gatsby";
@@ -29,33 +28,34 @@ const AboutSection = () => {
   `);
 
   return (
-    <Box
-      data-sal="slide-up"
-      data-sal-duration="1500"
-      data-sal-easing="ease"
-      className={aboutStyles.container}
-    >
-      <SectionHeading heading="About" />
-      <Avatar />
-      {documentToReactComponents(
-        data.allContentfulAboutCopy.edges[0].node.content.json
-      )}
-      <Box className={aboutStyles.buttonContainer}>
-        <Button
-          className={aboutStyles.resume}
-          href={data.contentfulAsset.file.url}
-          target="_blank"
-          variant="contained"
-        >
-          Résumé
-        </Button>
-        <Link className={aboutStyles.blog} to="/blog">
-          <Button color="secondary" name="Blog" variant="contained">
-            Blog
-          </Button>
-        </Link>
-      </Box>
-    </Box>
+    // <Box
+    //   data-sal="slide-up"
+    //   data-sal-duration="1500"
+    //   data-sal-easing="ease"
+    //   className={aboutStyles.container}
+    // >
+    //   <SectionHeading heading="About" />
+    //   <Avatar />
+    //   {documentToReactComponents(
+    //     data.allContentfulAboutCopy.edges[0].node.content.json
+    //   )}
+    //   <Box className={aboutStyles.buttonContainer}>
+    //     <Button
+    //       className={aboutStyles.resume}
+    //       href={data.contentfulAsset.file.url}
+    //       target="_blank"
+    //       variant="contained"
+    //     >
+    //       Résumé
+    //     </Button>
+    //     <Link className={aboutStyles.blog} to="/blog">
+    //       <Button color="secondary" name="Blog" variant="contained">
+    //         Blog
+    //       </Button>
+    //     </Link>
+    //   </Box>
+    // </Box>
+    <span>ABOUT</span>
   );
 };
 

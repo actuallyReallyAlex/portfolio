@@ -11,9 +11,6 @@ const Avatar = () => {
           fluid {
             ...GatsbyImageSharpFluid
           }
-          # fixed(width: 200, height: 202) {
-          # ...GatsbyImageSharpFixed
-          # }
         }
       }
     }

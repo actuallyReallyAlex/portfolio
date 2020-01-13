@@ -4,7 +4,6 @@ import Layout from "../components/layout";
 import { useStaticQuery, graphql } from "gatsby";
 import BlogPost from "../components/blogPost";
 import blogStyles from "./blog.module.scss";
-import { Box } from "@material-ui/core";
 import "../styles/prism-tomorrow.min.css";
 
 const Blog = () => {
@@ -27,24 +26,25 @@ const Blog = () => {
   `);
 
   return (
-    <Layout displayHeader={true}>
-      <Helmet title="Blog" />
-      <Box className={blogStyles.container}>
-        <ol className={blogStyles.posts}>
-          {data.allContentfulBlogPost.edges.map(edge => {
-            const { publishedDate, title, slug } = edge.node;
-            return (
-              <BlogPost
-                key={slug}
-                publishedDate={publishedDate}
-                slug={slug}
-                title={title}
-              />
-            );
-          })}
-        </ol>
-      </Box>
-    </Layout>
+    // <Layout displayHeader={true}>
+    //   <Helmet title="Blog" />
+    //   <Box className={blogStyles.container}>
+    //     <ol className={blogStyles.posts}>
+    //       {data.allContentfulBlogPost.edges.map(edge => {
+    //         const { publishedDate, title, slug } = edge.node;
+    //         return (
+    //           <BlogPost
+    //             key={slug}
+    //             publishedDate={publishedDate}
+    //             slug={slug}
+    //             title={title}
+    //           />
+    //         );
+    //       })}
+    //     </ol>
+    //   </Box>
+    // </Layout>
+    <span>BLOG</span>
   );
 };
 

@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
 import Helmet from "../components/helmet";
-import { Box, Typography } from "@material-ui/core";
 import blogStyles from "./blog.module.scss";
 import { graphql } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
@@ -42,20 +41,21 @@ const Blog = props => {
   };
 
   return (
-    <Layout displayHeader={true}>
-      <Box className={blogStyles.container}>
-        <Helmet title={title} />
-        <Typography variant="h1">{title}</Typography>
-        <Box className={blogStyles.medSpace} fontStyle="italic">
-          <Typography variant="subtitle1">{excerpt}</Typography>
-        </Box>
-        <Box className={blogStyles.medSpace}>
-          <Typography>{publishedDate}</Typography>
-        </Box>
-        <hr />
-        {documentToReactComponents(content.json, options)}
-      </Box>
-    </Layout>
+    // <Layout displayHeader={true}>
+    //   <Box className={blogStyles.container}>
+    //     <Helmet title={title} />
+    //     <Typography variant="h1">{title}</Typography>
+    //     <Box className={blogStyles.medSpace} fontStyle="italic">
+    //       <Typography variant="subtitle1">{excerpt}</Typography>
+    //     </Box>
+    //     <Box className={blogStyles.medSpace}>
+    //       <Typography>{publishedDate}</Typography>
+    //     </Box>
+    //     <hr />
+    //     {documentToReactComponents(content.json, options)}
+    //   </Box>
+    // </Layout>
+    <span>BLOG</span>
   );
 };
 
