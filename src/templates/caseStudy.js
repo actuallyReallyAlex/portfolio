@@ -44,44 +44,43 @@ const CaseStudy = props => {
     title
   } = props.data.contentfulPortfolioWork;
   return (
-    // <Layout displayHeader={true}>
-    //   <Box className={caseStudyStyles.container}>
-    //     <Helmet title={title} />
-    //     <Typography variant="h1">{title}</Typography>
-    //     <Box className={caseStudyStyles.medSpace} fontStyle="italic">
-    //       <Typography variant="subtitle1">{description}</Typography>
-    //     </Box>
-    //     <Box
-    //       className={`${caseStudyStyles.buttonContainer} ${caseStudyStyles.medSpace}`}
-    //     >
-    //       {contentLink && (
-    //         <Button
-    //           color="primary"
-    //           onClick={() => window.open(contentLink, "_blank")}
-    //           variant="contained"
-    //         >
-    //           See it in action
-    //         </Button>
-    //       )}
-    //       {sourceLink && (
-    //         <Button
-    //           color="secondary"
-    //           onClick={() => window.open(sourceLink, "_blank")}
-    //           variant="contained"
-    //         >
-    //           View source
-    //         </Button>
-    //       )}
-    //     </Box>
-    //     <img alt={screenshot.title} src={screenshot.file.url} />
-    //     <hr />
-    //     {documentToReactComponents(
-    //       props.data.contentfulPortfolioWork.caseStudy.json,
-    //       options
-    //     )}
-    //   </Box>
-    // </Layout>
-    <span>CASESTUDY</span>
+    <Layout displayHeader={true}>
+      <div className={caseStudyStyles.container}>
+        <Helmet title={title} />
+        <h1 variant="h1">{title}</h1>
+        <div className={caseStudyStyles.medSpace} fontStyle="italic">
+          <p variant="subtitle1">{description}</p>
+        </div>
+        <div
+          className={`${caseStudyStyles.buttonContainer} ${caseStudyStyles.medSpace}`}
+        >
+          {contentLink && (
+            <button
+              color="primary"
+              onClick={() => window.open(contentLink, "_blank")}
+              variant="contained"
+            >
+              See it in action
+            </button>
+          )}
+          {sourceLink && (
+            <button
+              color="secondary"
+              onClick={() => window.open(sourceLink, "_blank")}
+              variant="contained"
+            >
+              View source
+            </button>
+          )}
+        </div>
+        <img alt={screenshot.title} src={screenshot.file.url} />
+        <hr />
+        {documentToReactComponents(
+          props.data.contentfulPortfolioWork.caseStudy.json,
+          options
+        )}
+      </div>
+    </Layout>
   );
 };
 
