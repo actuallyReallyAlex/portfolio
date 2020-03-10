@@ -29,8 +29,6 @@ const AboutSection = () => {
     }
   `);
 
-  console.log(data);
-
   return (
     <Box
       data-sal="slide-up"
