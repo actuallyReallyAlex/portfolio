@@ -64,7 +64,7 @@ const Hero = () => {
           }
           variant="h3"
         >
-          WEB DEVELOPER
+          FULLSTACK APPLICATION DEVELOPER
         </Typography>
       </Box>
       <Social />
