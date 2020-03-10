@@ -19,14 +19,17 @@ const AboutSection = () => {
           }
         }
       }
-      contentfulAsset(title: { eq: "Resume" }) {
-        title
-        file {
-          url
+      contentfulStaticAsset(contentful_id: { eq: "2se5vxRWlbFKVwdeOlyuOm" }) {
+        content {
+          file {
+            url
+          }
         }
       }
     }
   `);
+
+  console.log(data);
 
   return (
     <Box
@@ -43,7 +46,7 @@ const AboutSection = () => {
       <Box className={aboutStyles.buttonContainer}>
         <Button
           className={aboutStyles.resume}
-          href={data.contentfulAsset.file.url}
+          href={data.contentfulStaticAsset.content.file.url}
           target="_blank"
           variant="contained"
         >
