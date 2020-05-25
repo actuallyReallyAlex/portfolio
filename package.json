@@ -19,7 +19,7 @@
     "gatsby-image": "^2.2.37",
     "gatsby-plugin-google-analytics": "^2.1.31",
     "gatsby-plugin-sass": "^2.1.26",
-    "gatsby-plugin-scroll-reveal": "^0.0.6",
+    "gatsby-plugin-scroll-reveal": "^0.0.7",
     "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-plugin-sharp": "^2.3.10",
     "gatsby-plugin-web-font-loader": "^1.0.4",
