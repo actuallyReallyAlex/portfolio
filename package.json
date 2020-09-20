@@ -1,7 +1,7 @@
 {
   "name": "alexlee-dev-portfolio",
   "description": "Alex Lee's portfolio. Built with React and Gatsby.",
-  "version": "4.4.1",
+  "version": "4.5.0",
   "scripts": {
     "build-local": "env-cmd gatsby build",
     "build-server": "gatsby build",
@@ -19,7 +19,7 @@
     "gatsby-image": "^2.2.37",
     "gatsby-plugin-google-analytics": "^2.1.31",
     "gatsby-plugin-sass": "^2.1.26",
-    "gatsby-plugin-scroll-reveal": "^0.0.4",
+    "gatsby-plugin-scroll-reveal": "^0.0.6",
     "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-plugin-sharp": "^2.3.10",
     "gatsby-plugin-web-font-loader": "^1.0.4",
