@@ -1,46 +1,9 @@
 {
-  "name": "alexlee-dev-portfolio",
-  "description": "Alex Lee's portfolio. Built with React and Gatsby.",
+  "name": "portfolio",
+  "description": "Alex Lee's portfolio.",
   "version": "5.0.0",
-  "scripts": {
-    "build-local": "env-cmd gatsby build",
-    "build-server": "gatsby build",
-    "develop": "env-cmd gatsby develop -H 0.0.0.0",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
-  },
-  "dependencies": {
-    "@contentful/rich-text-react-renderer": "^13.4.0",
-    "@material-ui/core": "^4.8.3",
-    "@material-ui/icons": "^4.5.1",
-    "gatsby": "^2.18.18",
-    "gatsby-image": "^2.2.37",
-    "gatsby-plugin-google-analytics": "^2.1.31",
-    "gatsby-plugin-sass": "^2.1.26",
-    "gatsby-plugin-scroll-reveal": "^0.0.6",
-    "gatsby-plugin-sentry": "^1.0.1",
-    "gatsby-plugin-sharp": "^2.3.10",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
-    "gatsby-source-contentful": "^2.1.73",
-    "gatsby-source-filesystem": "^2.1.43",
-    "gatsby-transformer-sharp": "^2.3.9",
-    "node-sass": "^4.13.0",
-    "prismjs": "^1.18.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
-  },
-  "devDependencies": {
-    "env-cmd": "^10.0.1",
-    "prettier": "^1.19.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  "author": "Alex Lee (www.alexlee.dev)",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
 }
