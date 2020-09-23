@@ -1,6 +1,7 @@
 import cookieParser from "cookie-parser";
 import cors, { CorsOptions } from "cors";
 import express, { Request, Response } from "express";
+import mongoose from "mongoose";
 import morgan from "morgan";
 import path from "path";
 
@@ -20,6 +21,15 @@ class App {
   }
 
   private initializeMiddlewares(): void {
+    if (!process.env.MONGODB_URL) throw new Error("No MOONGODB_URL");
+
+    mongoose.connect(process.env.MONGODB_URL, {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+    });
+
     this.app.use(cookieParser());
     this.app.use(express.json());
     this.app.use(morgan("dev"));
