@@ -32,5 +32,8 @@ export interface PortfolioItemDocument extends Document {
     npm?: string;
   };
   tagline: string;
+  createdAt: string;
+  updatedAt: string;
+  _id: string;
   __v: number;
 }

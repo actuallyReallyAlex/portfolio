@@ -1,5 +1,6 @@
 import express, { Request, Response, Router } from "express";
 import path from "path";
+import PortfolioItemModel from "../models/PortfolioItem";
 
 import { PortfolioItem } from "../types";
 
@@ -34,6 +35,22 @@ class PortfolioItemController {
           ];
 
           return res.send(mockPortfolioItems);
+        } catch (error) {
+          console.error(error);
+          return res.status(500).send({ error });
+        }
+      }
+    );
+
+    this.router.post(
+      "/portfolioItem",
+      async (req: Request, res: Response): Promise<Response<any>> => {
+        try {
+          const newPortfolioItem = new PortfolioItemModel(req.body);
+
+          await newPortfolioItem.save();
+
+          return res.send(newPortfolioItem);
         } catch (error) {
           console.error(error);
           return res.status(500).send({ error });
