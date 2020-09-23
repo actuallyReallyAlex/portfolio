@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import About from "./components/About";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Portfolio from "./components/Portfolio";
 
@@ -12,6 +13,7 @@ const App: React.FunctionComponent<AppProps> = () => {
       <Hero />
       <About />
       <Portfolio />
+      <Footer />
     </div>
   );
 };
