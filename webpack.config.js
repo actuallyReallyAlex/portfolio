@@ -27,20 +27,20 @@ const config = {
       },
     ],
   },
-  // optimization: {
-  //   moduleIds: "hashed",
-  //   runtimeChunk: "single",
-  //   splitChunks: {
-  //     chunks: "all",
-  //     cacheGroups: {
-  //       vendor: {
-  //         test: /[\\/]node_modules[\\/]/,
-  //         name: "vendors",
-  //         chunks: "all",
-  //       },
-  //     },
-  //   },
-  // },
+  optimization: {
+    moduleIds: "hashed",
+    runtimeChunk: "single",
+    splitChunks: {
+      chunks: "all",
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all",
+        },
+      },
+    },
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
