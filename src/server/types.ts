@@ -1,4 +1,4 @@
-import { Request, Router } from "express";
+import { Router } from "express";
 import { Document } from "mongoose";
 
 export type Controller = {
@@ -32,6 +32,7 @@ export interface PortfolioItemDocument extends Document {
     npm?: string;
   };
   tagline: string;
+  title: string;
   createdAt: string;
   updatedAt: string;
   _id: string;

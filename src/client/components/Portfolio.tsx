@@ -1,18 +1,20 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
-import { PortfolioItem } from "../types";
+import { PortfolioItemDocument } from "../types";
 
-export interface PortfolioProps {}
+export interface PortfolioProps {
+  portfolioItems: PortfolioItemDocument[];
+  setPortfolioItems: (portfolioItems: PortfolioItemDocument[]) => void;
+}
 
-const Portfolio: React.FunctionComponent<PortfolioProps> = () => {
-  const intialPortfolioItems: PortfolioItem[] = [];
-  const [portfolioItems, setPortfolioItems] = React.useState(
-    intialPortfolioItems
-  );
-
+const Portfolio: React.FunctionComponent<PortfolioProps> = (
+  props: PortfolioProps
+) => {
+  const { portfolioItems, setPortfolioItems } = props;
   React.useEffect(() => {
     const getPortfolioItems = async (): Promise<
-      PortfolioItem[] | { error: any }
+      PortfolioItemDocument[] | { error: any }
     > => {
       try {
         const response = await fetch("/portfolioItems", {
@@ -36,11 +38,11 @@ const Portfolio: React.FunctionComponent<PortfolioProps> = () => {
       <h2>Portfolio</h2>
       <ul>
         {portfolioItems.map((item) => (
-          <li key={item.title}>
+          <li key={item._id}>
             <div>
               <h3>{item.title}</h3>
               <h4>{item.tagline}</h4>
-              <a href="#">View Item</a>
+              <Link to={`/portfolio/${item._id}`}>View Item</Link>
             </div>
           </li>
         ))}
