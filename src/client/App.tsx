@@ -1,4 +1,5 @@
 import * as React from "react";
+import Hero from "./components/Hero";
 
 import { PortfolioItem } from "./types";
 
@@ -32,7 +33,7 @@ const App: React.FunctionComponent<AppProps> = () => {
   }, []);
   return (
     <div>
-      <h1>Hello, World!</h1>
+      <Hero />
       <ul>
         {portfolioItems.map((item) => (
           <li key={item.title}>{item.title}</li>
