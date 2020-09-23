@@ -5,13 +5,25 @@ const path = require("path");
 
 const config = {
   entry: "./src/client/index.tsx",
+  // externals: {
+  //   react: "React",
+  //   "react-dom": "ReactDOM",
+  // },
   mode: "development",
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: "ts-loader",
+        test: /\.ts(x?)$/,
         exclude: /node_modules/,
+        use: [
+          {
+            loader: "ts-loader",
+            options: {
+              configFile: "client-tsconfig.json",
+              logLevel: "info",
+            },
+          },
+        ],
       },
     ],
   },
@@ -39,9 +51,9 @@ const config = {
       template: path.join(__dirname, "src/client/index.html"),
     }),
   ],
-  // resolve: {
-  //   extensions: [".tsx"],
-  // },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
+  },
 };
 
 module.exports = config;
