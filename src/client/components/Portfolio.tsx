@@ -5,33 +5,12 @@ import { PortfolioItemDocument } from "../types";
 
 export interface PortfolioProps {
   portfolioItems: PortfolioItemDocument[];
-  setPortfolioItems: (portfolioItems: PortfolioItemDocument[]) => void;
 }
 
 const Portfolio: React.FunctionComponent<PortfolioProps> = (
   props: PortfolioProps
 ) => {
-  const { portfolioItems, setPortfolioItems } = props;
-  React.useEffect(() => {
-    const getPortfolioItems = async (): Promise<
-      PortfolioItemDocument[] | { error: any }
-    > => {
-      try {
-        const response = await fetch("/portfolioItems", {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        const data = await response.json();
-
-        setPortfolioItems(data);
-      } catch (error) {
-        console.error(error);
-        return { error };
-      }
-    };
-    getPortfolioItems();
-  }, []);
+  const { portfolioItems } = props;
 
   return (
     <div>

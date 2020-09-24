@@ -5,7 +5,7 @@
   "author": "Alex Lee (www.alexlee.dev)",
   "scripts": {
     "build": "npm run build-server && npm run build-client",
-    "build-client": "npm run clean-client && webpack",
+    "build-client": "npm run clean-client && webpack && copyfiles -f dist/**/* build/dist",
     "build-server": "npm run clean-server && tsc",
     "clean-client": "rimraf dist",
     "clean-server": "rimraf build",
@@ -30,6 +30,7 @@
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.5",
+    "copyfiles": "^2.3.0",
     "env-cmd": "^10.1.0",
     "html-webpack-plugin": "^4.5.0",
     "rimraf": "^3.0.2",

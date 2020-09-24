@@ -22,8 +22,12 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
   return (
     <div>
       <h1>Portfolio Item</h1>
-      <h2>{currentPortfolioItem.tagline}</h2>
-      <p>{currentPortfolioItem.content}</p>
+      {currentPortfolioItem && (
+        <>
+          <h2>{currentPortfolioItem.tagline}</h2>
+          <p>{currentPortfolioItem.content}</p>
+        </>
+      )}
     </div>
   );
 };

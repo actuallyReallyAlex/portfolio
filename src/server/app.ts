@@ -64,9 +64,24 @@ class App {
 
     this.app.use(express.static(path.join(__dirname, "../dist")));
 
-    this.app.get("*", (req: Request, res: Response) =>
-      res.sendFile(path.join(__dirname, "../dist/index.html"))
-    );
+    this.app.get("*", (req: Request, res: Response) => {
+      const requestForJS = req.path.includes(".js");
+      if (requestForJS) {
+        const file = req.path.split("/")[2];
+        console.log("");
+        console.log({
+          request: req.path,
+          response: path.join(__dirname, `/dist/${file}`),
+        });
+        return res.sendFile(path.join(__dirname, `/dist/${file}`));
+      }
+      console.log("");
+      console.log({
+        request: req.path,
+        response: path.join(__dirname, "/dist/index.html"),
+      });
+      res.sendFile(path.join(__dirname, "/dist/index.html"));
+    });
   }
 
   public listen(): void {

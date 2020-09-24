@@ -1,11 +1,10 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import About from "./components/About";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Portfolio from "./components/Portfolio";
-import PortfolioItemDetails from "./components/PortfolioItemDetails";
+const Home = React.lazy(() => import("./routes/Home"));
+const PortfolioItemDetails = React.lazy(
+  () => import("./routes/PortfolioItemDetails")
+);
 
 import { PortfolioItemDocument } from "./types";
 
@@ -16,24 +15,40 @@ const App: React.FunctionComponent<AppProps> = () => {
   const [portfolioItems, setPortfolioItems] = React.useState(
     initialPortfolioItems
   );
+
+  React.useEffect(() => {
+    const getPortfolioItems = async (): Promise<
+      PortfolioItemDocument[] | { error: any }
+    > => {
+      try {
+        const response = await fetch("/portfolioItems", {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const data = await response.json();
+
+        setPortfolioItems(data);
+      } catch (error) {
+        console.error(error);
+        return { error };
+      }
+    };
+    getPortfolioItems();
+  }, []);
+
   return (
     <Router>
-      <Switch>
-        <Route exact path="/">
-          <div>
-            <Hero />
-            <About />
-            <Portfolio
-              portfolioItems={portfolioItems}
-              setPortfolioItems={setPortfolioItems}
-            />
-            <Footer />
-          </div>
-        </Route>
-        <Route path="/portfolio/:id">
-          <PortfolioItemDetails portfolioItems={portfolioItems} />
-        </Route>
-      </Switch>
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <Switch>
+          <Route exact path="/">
+            <Home portfolioItems={portfolioItems} />
+          </Route>
+          <Route path="/portfolio/:id">
+            <PortfolioItemDetails portfolioItems={portfolioItems} />
+          </Route>
+        </Switch>
+      </React.Suspense>
     </Router>
   );
 };
