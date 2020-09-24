@@ -5,7 +5,7 @@
   "author": "Alex Lee (www.alexlee.dev)",
   "scripts": {
     "build": "npm run build-server && npm run build-client",
-    "build-client": "npm run clean-client && webpack && copyfiles -f dist/**/* build/dist",
+    "build-client": "npm run clean-client && webpack && copyfiles -f dist/**/* build/dist && npm run clean-client",
     "build-server": "npm run clean-server && tsc",
     "clean-client": "rimraf dist",
     "clean-server": "rimraf build",

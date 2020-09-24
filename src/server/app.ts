@@ -67,9 +67,12 @@ class App {
     this.app.get("*", (req: Request, res: Response) => {
       const requestForJS = req.path.includes(".js");
       if (requestForJS) {
-        const file = req.path.split("/")[2];
+        const split = req.path.split("/");
+        const file = split[2] ? split[2] : split[1];
         console.log("");
         console.log({
+          file,
+          split,
           request: req.path,
           response: path.join(__dirname, `/dist/${file}`),
         });

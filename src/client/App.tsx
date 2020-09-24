@@ -1,6 +1,7 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+const Admin = React.lazy(() => import("./routes/Admin"));
 const Home = React.lazy(() => import("./routes/Home"));
 const PortfolioItemDetails = React.lazy(
   () => import("./routes/PortfolioItemDetails")
@@ -43,6 +44,9 @@ const App: React.FunctionComponent<AppProps> = () => {
         <Switch>
           <Route exact path="/">
             <Home portfolioItems={portfolioItems} />
+          </Route>
+          <Route exact path="/admin">
+            <Admin />
           </Route>
           <Route path="/portfolio/:id">
             <PortfolioItemDetails portfolioItems={portfolioItems} />
