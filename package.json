@@ -9,6 +9,7 @@
     "build-server": "npm run clean-server && tsc",
     "clean-client": "rimraf dist",
     "clean-server": "rimraf build",
+    "develop": "npm run build && npm start",
     "start": "env-cmd node build/index.js"
   },
   "dependencies": {
