@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken";
 import User from "../models/User";
 
-import { UserDocument, UserRequest } from "../types";
+import { UserDocument } from "../types";
 
 const auth = async (
   req: Request,
@@ -10,15 +10,14 @@ const auth = async (
   next: NextFunction
 ): Promise<void | Response> => {
   try {
-    const tokenFromCookie = req.cookies.tgarrettpetersen;
+    if (!process.env.JWT_SECRET) {
+      throw new Error("JWT_SECRET not provided!");
+    }
+    const tokenFromCookie = req.cookies.alexlee_dev;
     // *Check if Cookie exists
     if (tokenFromCookie) {
       // *Verify the jwt value
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const decoded: any = jwt.verify(
-        tokenFromCookie,
-        process.env.JWT_SECRET || ""
-      );
+      const decoded: any = jwt.verify(tokenFromCookie, process.env.JWT_SECRET);
       const user: UserDocument | null = await User.findOne({
         _id: decoded._id,
         "tokens.token": tokenFromCookie,

@@ -16,6 +16,7 @@ class UserController {
   public router: Router = express.Router();
 
   constructor() {
+    this.initializeSecret();
     this.initializeRoutes();
   }
 
@@ -26,8 +27,8 @@ class UserController {
         try {
           const users: UserDocument[] = await UserModel.find({});
 
-          // * Just Alex and Garrett
-          if (users.length > 2) {
+          // * Just Alex
+          if (users.length > 1) {
             return res.status(403).send();
           }
 
@@ -39,8 +40,8 @@ class UserController {
 
           const token = await newUser.generateAuthToken();
           // * Set a Cookie with that token
-          res.cookie("tgarrettpetersen", token, {
-            maxAge: 60 * 60 * 1000, // 1 hour
+          res.cookie("alexlee_dev", token, {
+            maxAge: 60 * 60 * 1000, // * 1 hour
             httpOnly: true,
             secure: process.env.NODE_ENV === "production", // * localhost isn't https
             sameSite: true,
@@ -64,6 +65,53 @@ class UserController {
           }
 
           return res.status(400).send({ error });
+        }
+      }
+    );
+
+    this.router.post(
+      "/user/login",
+      async (req: Request, res: Response): Promise<Response<any>> => {
+        try {
+          if (!req.body.email) {
+            return res
+              .status(401)
+              .send({ error: "Field 'email' is required." });
+          }
+
+          if (!req.body.password) {
+            return res
+              .status(401)
+              .send({ error: "Field 'password' is required." });
+          }
+
+          if (!validator.isEmail(req.body.email)) {
+            return res.status(400).send({ error: "Invalid email" });
+          }
+
+          const matchingUser = await UserModel.findByCredentials(
+            req.body.email,
+            req.body.password
+          );
+
+          if (!matchingUser) {
+            return res.status(401).send({ error: "Invalid credentials." });
+          }
+
+          const token = await matchingUser.generateAuthToken();
+
+          // * Set a Cookie with that token
+          res.cookie("alexlee_dev", token, {
+            maxAge: 60 * 60 * 1000, // * 1 hour
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production", // * localhost isn't https
+            sameSite: true,
+          });
+
+          return res.send(matchingUser);
+        } catch (error) {
+          console.error(error);
+          return res.status(500).send({ error });
         }
       }
     );
@@ -98,7 +146,7 @@ class UserController {
           );
           await req.user.save();
 
-          res.clearCookie("tgarrettpetersen");
+          res.clearCookie("alexlee_dev");
 
           return res.send({});
         } catch (error) {
@@ -120,11 +168,10 @@ class UserController {
           req.user.tokens = [];
           await req.user.save();
 
-          res.clearCookie("tgarrettpetersen");
+          res.clearCookie("alexlee_dev");
 
           return res.send({});
         } catch (error) {
-          // eslint-disable-next-line no-console
           console.error(error);
           return res.status(500).send({ error });
         }
@@ -192,6 +239,12 @@ class UserController {
         }
       }
     );
+  }
+
+  public initializeSecret(): void {
+    if (!process.env.JWT_SECRET) {
+      throw new Error("JWT_SECRET not provided!");
+    }
   }
 }
 

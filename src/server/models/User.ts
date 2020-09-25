@@ -99,11 +99,12 @@ function contentToJSON(this: any): void {
 userSchema.methods.toJSON = contentToJSON;
 
 userSchema.methods.generateAuthToken = async function (): Promise<string> {
+  if (!process.env.JWT_SECRET) {
+    throw new Error("JWT_SECRET not provided!");
+  }
+
   const user = this;
-  const token = jwt.sign(
-    { _id: user.id.toString() },
-    process.env.JWT_SECRET || ""
-  );
+  const token = jwt.sign({ _id: user.id.toString() }, process.env.JWT_SECRET);
 
   user.tokens = user.tokens.concat({ token });
 

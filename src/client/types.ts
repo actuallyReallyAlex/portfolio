@@ -33,3 +33,17 @@ export interface PortfolioItemDocument extends Document {
   _id: string;
   __v: number;
 }
+
+export interface Token {
+  _id: string;
+  token: string;
+}
+
+export interface UserDocument extends Document {
+  _id: string;
+  email: string;
+  generateAuthToken(): Promise<string>;
+  password: string;
+  name: string;
+  tokens: Token[];
+}
