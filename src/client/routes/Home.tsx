@@ -1,9 +1,6 @@
 import * as React from "react";
 
-import About from "../components/About";
-import Footer from "../components/Footer";
-import Hero from "../components/Hero";
-import Portfolio from "../components/Portfolio";
+import HomePage from "../pages/HomePage";
 
 import { PortfolioItemDocument } from "../types";
 
@@ -13,14 +10,7 @@ export interface HomeProps {
 
 const Home: React.FunctionComponent<HomeProps> = (props: HomeProps) => {
   const { portfolioItems } = props;
-  return (
-    <div>
-      <Hero />
-      <About />
-      <Portfolio portfolioItems={portfolioItems} />
-      <Footer />
-    </div>
-  );
+  return <HomePage portfolioItems={portfolioItems} />;
 };
 
 export default Home;

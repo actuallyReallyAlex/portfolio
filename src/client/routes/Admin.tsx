@@ -1,5 +1,8 @@
 import * as React from "react";
 
+import AdminDashboardPage from "../pages/AdminDashboardPage";
+import AdminLoginPage from "../pages/AdminLoginPage";
+
 export interface AdminProps {}
 
 const Admin: React.FunctionComponent<AdminProps> = () => {
@@ -12,7 +15,11 @@ const Admin: React.FunctionComponent<AdminProps> = () => {
   React.useEffect(() => {
     const checkAuthentication = async (): Promise<void> => {
       try {
-        const response = await fetch("/user/me");
+        const response = await fetch("/user/me", {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         if (response.status === 200) {
           const res = await response.json();
           setUser(res);
@@ -28,38 +35,17 @@ const Admin: React.FunctionComponent<AdminProps> = () => {
     checkAuthentication();
   }, []);
 
-  const handleSubmit = (e) => {
-    try {
-      e.preventDefault();
-      alert("LOGIN ATTEMPTED");
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   if (isAuthenticated) {
-    return (
-      <div>
-        <h1>ADMIN DASHBOARD</h1>
-        <p>USER IS AUTHENTICATED!</p>
-        {JSON.stringify(user, null, 2)}
-      </div>
-    );
+    return <AdminDashboardPage user={user} />;
   }
 
   if (hasCheckedAuthentication) {
+    // TODO - User React Router to push user to path: /admin/login
     return (
-      <div>
-        <h1>ADMIN DASHBOARD</h1>
-        <p>USER IS NOT AUTHENTICATED</p>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email">Email</label>
-          <input id="email" type="text" />
-          <label htmlFor="password">Password</label>
-          <input id="password" type="password" />
-          <button type="submit">Log in</button>
-        </form>
-      </div>
+      <AdminLoginPage
+        setIsAuthenticated={setIsAuthenticated}
+        setUser={setUser}
+      />
     );
   }
 
