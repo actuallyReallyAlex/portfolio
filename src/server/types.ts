@@ -1,5 +1,10 @@
-import { Router } from "express";
-import { Document } from "mongoose";
+import { Request, Router } from "express";
+import { Document, Model } from "mongoose";
+
+export interface AuthenticatedRequest extends Request {
+  token?: string;
+  user?: UserDocument;
+}
 
 export type Controller = {
   router: Router;
@@ -37,4 +42,27 @@ export interface PortfolioItemDocument extends Document {
   updatedAt: string;
   _id: string;
   __v: number;
+}
+
+export interface Token {
+  _id: string;
+  token: string;
+}
+
+export interface UserDocument extends Document {
+  _id: string;
+  email: string;
+  generateAuthToken(): Promise<string>;
+  password: string;
+  name: string;
+  tokens: Token[];
+}
+
+export interface UserModel extends Model<UserDocument> {
+  findByCredentials(email: string, password: string): Promise<UserDocument>;
+}
+
+export interface UserRequest extends Request {
+  token?: string;
+  user?: UserDocument;
 }

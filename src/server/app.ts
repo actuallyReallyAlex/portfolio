@@ -64,6 +64,7 @@ class App {
 
     this.app.use(express.static(path.join(__dirname, "../dist")));
 
+    // TODO - Fix this. This is dumb and should be better.
     this.app.get("*", (req: Request, res: Response) => {
       const requestForJS = req.path.includes(".js");
       if (requestForJS) {
