@@ -10,12 +10,16 @@ export type Controller = {
   router: Router;
 };
 
+export interface File {
+  buffer: Buffer;
+  name: string;
+  size: number;
+  type: string;
+}
+
 export interface PortfolioItem {
   content: string;
-  images?: {
-    additional: string[];
-    cover: string;
-  };
+  coverImage: File;
   links?: {
     demo?: string;
     github?: string;
@@ -27,10 +31,7 @@ export interface PortfolioItem {
 
 export interface PortfolioItemDocument extends Document {
   content: string;
-  images?: {
-    additional: string[];
-    cover: string;
-  };
+  coverImage: File;
   links?: {
     demo?: string;
     github?: string;

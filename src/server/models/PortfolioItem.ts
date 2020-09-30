@@ -8,13 +8,21 @@ const portfolioItemSchema = new mongoose.Schema(
       required: [true, "Field 'content' is required."],
       type: String,
     },
-    images: {
-      additional: {
-        required: false,
-        type: [String],
+    coverImage: {
+      buffer: {
+        required: [true, "Field 'coverImage.buffer' is required."],
+        type: Buffer,
       },
-      cover: {
-        required: false,
+      name: {
+        required: [true, "Field 'coverImage.name' is required."],
+        type: String,
+      },
+      size: {
+        required: [true, "Field 'coverImage.size' is required."],
+        type: Number,
+      },
+      type: {
+        required: [true, "Field 'coverImage.type' is required."],
         type: String,
       },
     },
