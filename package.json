@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build-server && npm run build-client",
     "build-client": "npm run clean-client && webpack && copyfiles -f dist/**/* build/dist && npm run clean-client",
-    "build-server": "npm run clean-server && tsc",
+    "build-server": "npm run clean-server && tsc && copyfiles -f src/server/assets/**/* build/assets",
     "clean-client": "rimraf dist",
     "clean-server": "rimraf build",
     "develop": "env-cmd webpack-dev-server",

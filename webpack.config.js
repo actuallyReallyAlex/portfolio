@@ -4,7 +4,9 @@ const chalk = require("chalk");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
+console.log("");
 console.log(`MODE - ${chalk.blue(process.env.NODE_ENV)}`);
+console.log("");
 
 const config = {
   entry: "./src/client/index.tsx",
@@ -22,6 +24,7 @@ const config = {
           }
         },
       },
+      "/assets": "http://localhost:3000/",
       "/portfolio": {
         target: "http://localhost:3000/",
         bypass: function (req, res, proxyOptions) {
