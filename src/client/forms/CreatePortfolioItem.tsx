@@ -11,7 +11,9 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
   const [cover, setCover] = React.useState(null);
   const [content, setContent] = React.useState("");
 
-  const handleNewPortfolioItemSubmit = async (e) => {
+  const handleNewPortfolioItemSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
     e.preventDefault();
     try {
       const bodyData = new FormData();
@@ -30,16 +32,15 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
       if (response.status !== 201) {
         return alert(`Error! - ${JSON.stringify(data, null, 2)}`);
       }
-      console.log({ data });
       alert(`PortfolioItem - ${title} - Added successfully!`);
-      resetForm();
+      resetForm(e);
     } catch (error) {
       console.error(error);
       alert(`Error! - ${JSON.stringify(error, null, 2)}`);
     }
   };
 
-  const resetForm = () => {
+  const resetForm = (e: React.FormEvent<HTMLFormElement>) => {
     setTitle("");
     setTagline("");
     setDemo("");
@@ -47,6 +48,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
     setNPM("");
     setCover(null);
     setContent("");
+    e.currentTarget.reset();
   };
 
   return (
