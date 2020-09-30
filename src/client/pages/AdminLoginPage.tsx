@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
+
 import { UserDocument } from "../types";
 
 export interface AdminLoginPageProps {
@@ -40,6 +42,7 @@ const AdminLoginPage: React.FunctionComponent<AdminLoginPageProps> = (
 
   return (
     <div>
+      <Link to="/">Back</Link>
       <h1>Admin Login Page</h1>
       <p>USER IS NOT AUTHENTICATED</p>
       <form onSubmit={handleSubmit}>
