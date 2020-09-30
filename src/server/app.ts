@@ -73,7 +73,13 @@ class App {
           request: req.path,
           response: path.join(__dirname, `/dist/${file}`),
         });
-        return res.sendFile(path.join(__dirname, `/dist/${file}`));
+        if (process.env.NODE_ENV === "development") {
+          console.log(`Redirecting to /${file}`);
+          console.log("");
+          return res.redirect(`/${file}`);
+        } else {
+          return res.sendFile(path.join(__dirname, `/dist/${file}`));
+        }
       }
       console.log("");
       console.log({
