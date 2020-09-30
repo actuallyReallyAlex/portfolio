@@ -72,7 +72,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = (
           <h2>About</h2>
           <img
             alt="Alex Lee profile image"
-            src="https://alexlee.dev/static/3380014c62deb5ae093d75d47cb23b95/0e329/avatar-2.jpg"
+            src="/assets/avatar-optimized.jpg"
           />
           <p>
             Hi. I'm Alex, a Fullstack Application Developer in San Diego. I
