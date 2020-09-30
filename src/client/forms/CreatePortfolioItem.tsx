@@ -3,13 +3,13 @@ import * as React from "react";
 export interface CreatePortfolioItemProps {}
 
 const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = () => {
-  const [content, setContent] = React.useState("");
-  const [tagline, setTagline] = React.useState("");
   const [title, setTitle] = React.useState("");
-  const [cover, setCover] = React.useState(null);
+  const [tagline, setTagline] = React.useState("");
   const [demo, setDemo] = React.useState("");
   const [github, setGithub] = React.useState("");
   const [npm, setNPM] = React.useState("");
+  const [cover, setCover] = React.useState(null);
+  const [content, setContent] = React.useState("");
 
   const handleNewPortfolioItemSubmit = async (e) => {
     e.preventDefault();
@@ -40,36 +40,35 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
   };
 
   const resetForm = () => {
-    setContent("");
-    setTagline("");
     setTitle("");
-    setCover(null);
+    setTagline("");
     setDemo("");
     setGithub("");
     setNPM("");
+    setCover(null);
+    setContent("");
   };
 
   return (
     <div>
       <h2>Create a New Portfolio Item</h2>
       <form onSubmit={handleNewPortfolioItemSubmit}>
-        <label htmlFor="content">Content</label>
+        <label htmlFor="title">Title</label>
         <input
-          id="content"
-          onChange={(e) => setContent(e.target.value)}
+          id="title"
+          onChange={(e) => setTitle(e.target.value)}
           required
-          type="textarea"
-          value={content}
+          type="text"
+          value={title}
         />
 
-        <h3>Images</h3>
-
-        <label htmlFor="cover">Cover</label>
+        <label htmlFor="tagline">Tagline</label>
         <input
-          accept="image/png, image/jpeg"
-          id="cover"
-          onChange={(e) => setCover(e.target.files[0])}
-          type="file"
+          id="tagline"
+          onChange={(e) => setTagline(e.target.value)}
+          required
+          type="text"
+          value={tagline}
         />
 
         <h3>Links</h3>
@@ -95,22 +94,23 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
           value={npm}
         />
 
-        <label htmlFor="tagline">Tagline</label>
+        <h3>Images</h3>
+
+        <label htmlFor="cover">Cover</label>
         <input
-          id="tagline"
-          onChange={(e) => setTagline(e.target.value)}
-          required
-          type="text"
-          value={tagline}
+          accept="image/png, image/jpeg"
+          id="cover"
+          onChange={(e) => setCover(e.target.files[0])}
+          type="file"
         />
 
-        <label htmlFor="title">Title</label>
+        <label htmlFor="content">Content</label>
         <input
-          id="title"
-          onChange={(e) => setTitle(e.target.value)}
+          id="content"
+          onChange={(e) => setContent(e.target.value)}
           required
-          type="text"
-          value={title}
+          type="textarea"
+          value={content}
         />
 
         <button type="submit">Create</button>
