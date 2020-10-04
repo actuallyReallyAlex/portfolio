@@ -1,5 +1,7 @@
 import express, { Request, Response, Router } from "express";
 import multer from "multer";
+import path from "path";
+import { v4 as uuidv4 } from "uuid";
 
 import PortfolioItemModel from "../models/PortfolioItem";
 import { PortfolioItem } from "../types";
@@ -8,16 +10,32 @@ class PortfolioItemController {
   public router: Router = express.Router();
 
   private parseFile = multer({
+    fileFilter: (req: express.Request, file: any, cb: Function) => {
+      if (
+        !file.originalname.match(/\.(png)$/) &&
+        !file.originalname.match(/\.(jpg)$/) &&
+        !file.originalname.match(/\.(jpeg)$/)
+      ) {
+        return cb(
+          new Error(
+            "File must be in one of the following formats: [.png, .jpg, .jpeg]."
+          )
+        );
+      }
+
+      return cb(undefined, true);
+    },
     limits: {
       fileSize: 1000000,
     },
-    // fileFilter: (req: express.Request, file: any, cb: Function) => {
-    //   // if (!file.originalname.match(/\.(csv)$/)) {
-    //   //   return cb(new Error('File must be a .csv file.'));
-    //   // }
-
-    //   return cb(undefined, true);
-    // },
+    storage: multer.diskStorage({
+      destination: function (req, file, cb) {
+        cb(null, path.join(__dirname, "../../uploads"));
+      },
+      filename: function (req, file, cb) {
+        cb(null, `${uuidv4()}.${file.originalname.split(".")[1]}`);
+      },
+    }),
   });
 
   constructor() {
@@ -44,14 +62,13 @@ class PortfolioItemController {
       this.parseFile.single("file"),
       async (req: Request, res: Response): Promise<Response<any>> => {
         try {
+          const { content, links, tagline, title } = req.body;
           const newItemData: PortfolioItem = {
-            ...req.body,
-            coverImage: {
-              buffer: req.file.buffer,
-              name: req.file.originalname,
-              size: req.file.size,
-              type: req.file.mimetype,
-            },
+            content,
+            coverImage: `/uploads/${req.file.filename}`,
+            links: JSON.parse(links),
+            tagline,
+            title,
           };
           const newPortfolioItem = new PortfolioItemModel(newItemData);
 

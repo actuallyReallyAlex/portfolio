@@ -35,6 +35,7 @@ const config = {
       },
       "/portfolioItem": "http://localhost:3000/",
       "/portfolioItems": "http://localhost:3000/",
+      "/uploads": "http://localhost:3000/",
       "/user": "http://localhost:3000/",
     },
     stats: "minimal",
