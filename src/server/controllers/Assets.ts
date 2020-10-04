@@ -4,7 +4,7 @@ import path from "path";
 class AssetsController {
   public router: Router = express.Router();
 
-  static assetList: string[] = ["avatar-optimized.jpg"];
+  static assetList: string[] = ["avatar-optimized.jpg", "tinymce.min.js"];
 
   constructor() {
     this.initializeRoutes();
@@ -15,7 +15,15 @@ class AssetsController {
       this.router.get(
         `/assets/${asset}`,
         async (req: Request, res: Response) => {
-          res.sendFile(path.join(__dirname, `../assets/${asset}`));
+          try {
+            // console.log(`Asset Request - ${req.path}`);
+            const filePath = path.join(__dirname, `../assets/${asset}`);
+            // console.log(`Sending - ${filePath}`);
+            return res.sendFile(filePath);
+          } catch (error) {
+            console.error(error);
+            return res.status(500).send();
+          }
         }
       );
     });

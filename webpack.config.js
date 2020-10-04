@@ -44,6 +44,10 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.svg$/,
+        loader: "svg-inline-loader",
+      },
+      {
         test: /\.ts(x?)$/,
         exclude: /node_modules/,
         use: [

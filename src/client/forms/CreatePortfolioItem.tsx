@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Editor } from "@tinymce/tinymce-react";
 
 export interface CreatePortfolioItemProps {}
 
@@ -50,6 +51,13 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
     setContent("");
     e.currentTarget.reset();
   };
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      const element = document.querySelector(".tox-statusbar__branding");
+      element.parentNode.removeChild(element);
+    }, 1000);
+  }, []);
 
   return (
     <div>
@@ -106,13 +114,27 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
           type="file"
         />
 
-        <label htmlFor="content">Content</label>
-        <input
-          id="content"
-          onChange={(e) => setContent(e.target.value)}
-          required
-          type="textarea"
-          value={content}
+        <label>Content</label>
+        <Editor
+          apiKey={process.env.TINYMCE_API_KEY}
+          initialValue="<p>This is the initial content of the editor</p>"
+          init={{
+            height: 500,
+            menubar: true,
+            plugins: [
+              "advlist autolink lists link image charmap print preview anchor",
+              "searchreplace visualblocks code fullscreen",
+              "insertdatetime media table paste code help wordcount",
+            ],
+            toolbar:
+              "undo redo | formatselect | bold italic backcolor | \
+             alignleft aligncenter alignright alignjustify | \
+             bullist numlist outdent indent | link image code | removeformat | help",
+          }}
+          onEditorChange={(content, editor) => {
+            console.log("Content was updated:", content);
+            setContent(content);
+          }}
         />
 
         <button type="submit">Create</button>

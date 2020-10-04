@@ -6,13 +6,14 @@
   "scripts": {
     "build": "npm run build-server && npm run build-client",
     "build-client": "npm run clean-client && webpack && copyfiles -f dist/**/* build/dist && npm run clean-client",
-    "build-server": "npm run clean-server && tsc && copyfiles -f src/server/assets/**/* build/assets",
+    "build-server": "npm run clean-server && tsc && copyfiles -f src/server/assets/* build/assets --error --verbose",
     "clean-client": "rimraf dist",
     "clean-server": "rimraf build",
     "develop": "env-cmd webpack-dev-server",
     "start-server": "env-cmd node build/index.js"
   },
   "dependencies": {
+    "@tinymce/tinymce-react": "^3.7.0",
     "bcryptjs": "^2.4.3",
     "chalk": "^4.1.0",
     "cookie-parser": "^1.4.5",
@@ -26,6 +27,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
+    "svg-inline-loader": "^0.8.2",
+    "tinymce": "^5.5.1",
     "uuid": "^8.3.0",
     "validator": "^13.1.17"
   },
