@@ -68,7 +68,9 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
                 </li>
               ))}
           </ul>
-          <p>{currentPortfolioItem.content}</p>
+          <div
+            dangerouslySetInnerHTML={{ __html: currentPortfolioItem.content }}
+          />
         </>
       )}
     </div>
