@@ -81,6 +81,80 @@ class PortfolioItemController {
         }
       }
     );
+
+    this.router.patch(
+      "/portfolioItem",
+      this.parseFile.single("file"),
+      async (req: Request, res: Response): Promise<Response<any>> => {
+        try {
+          const { content, id, links, tagline, title } = req.body;
+          const correspondingPortfolioItem = await PortfolioItemModel.findById(
+            id
+          );
+          if (!correspondingPortfolioItem) {
+            return res
+              .status(404)
+              .send({ error: "No corresponding PortfolioItem found!" });
+          }
+
+          const updateFieldNames = Object.keys(req.body);
+
+          if (
+            req.body.title &&
+            req.body.title !== correspondingPortfolioItem.title
+          ) {
+            correspondingPortfolioItem.title = req.body.title;
+          }
+
+          if (
+            req.body.tagline &&
+            req.body.tagline !== correspondingPortfolioItem.tagline
+          ) {
+            correspondingPortfolioItem.tagline = req.body.tagline;
+          }
+
+          if (
+            req.body.links && req.body.links.demo &&
+            correspondingPortfolioItem.links &&
+            req.body.links.demo !== correspondingPortfolioItem.links.demo
+          ) {
+            correspondingPortfolioItem.links.demo = req.body.links.demo;
+          }
+
+          if (
+            req.body.links && req.body.links.github &&
+            correspondingPortfolioItem.links &&
+            req.body.links.github !== correspondingPortfolioItem.links.github
+          ) {
+            correspondingPortfolioItem.links.github = req.body.links.github;
+          }
+
+          if (
+            req.body.links && req.body.links.npm &&
+            correspondingPortfolioItem.links &&
+            req.body.links.npm !== correspondingPortfolioItem.links.npm
+          ) {
+            correspondingPortfolioItem.links.npm = req.body.links.npm;
+          }
+
+          // TODO - Implement CoverImage modification
+
+          if (
+            req.body.content &&
+            req.body.content !== correspondingPortfolioItem.content
+          ) {
+            correspondingPortfolioItem.content = req.body.content;
+          }
+
+          await correspondingPortfolioItem.save();
+
+          return res.send(correspondingPortfolioItem);
+        } catch (error) {
+          console.error(error);
+          return res.status(500).send({ error });
+        }
+      }
+    );
   }
 }
 

@@ -12,6 +12,7 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
   props: ModifyPortfolioItemProps
 ) => {
   const { portfolioItems } = props;
+  const [id, setId] = React.useState("");
   const [selectedPortfolioItem, setSelectedPortfolioItem] = React.useState(
     null
   );
@@ -31,12 +32,35 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
   ) => {
     e.preventDefault();
     try {
+      const updatedLinks = {
+        demo,
+        github,
+        npm,
+      };
+      if (demo === selectedPortfolioItem.demo) {
+        delete updatedLinks.demo;
+      }
+      if (github === selectedPortfolioItem.github) {
+        delete updatedLinks.github;
+      }
+      if (npm === selectedPortfolioItem.npm) {
+        delete updatedLinks.npm;
+      }
       const bodyData = new FormData();
-      bodyData.append("file", coverImage);
-      bodyData.append("content", content);
-      bodyData.append("links", JSON.stringify({ demo, github, npm }));
-      bodyData.append("tagline", tagline);
-      bodyData.append("title", title);
+      bodyData.append("id", id);
+      newCoverImage && bodyData.append("file", newCoverImage);
+      title &&
+        title !== selectedPortfolioItem.title &&
+        bodyData.append("title", title);
+      tagline &&
+        tagline !== selectedPortfolioItem.tagline &&
+        bodyData.append("tagline", tagline);
+      demo &&
+        demo !== selectedPortfolioItem.links.demo &&
+        bodyData.append("links", JSON.stringify(updatedLinks));
+      content &&
+        content !== selectedPortfolioItem.content &&
+        bodyData.append("content", content);
 
       const response = await fetch("/portfolioItem", {
         body: bodyData,
@@ -44,8 +68,10 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
       });
       const data = await response.json();
 
-      alert(`PortfolioItem - ${title} - Added successfully!`);
-      resetForm(e);
+      alert(`data - ${JSON.stringify(data, null, 2)}`);
+      if (response.status === 200) {
+        resetForm(e);
+      }
     } catch (error) {
       console.error(error);
       alert(`Error! - ${JSON.stringify(error, null, 2)}`);
@@ -65,7 +91,6 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
 
   React.useEffect(() => {
     if (selectedPortfolioItem) {
-      console.log(selectedPortfolioItem);
       setTitle(selectedPortfolioItem.title);
       setTagline(selectedPortfolioItem.tagline);
       setDemo(selectedPortfolioItem.links.demo);
@@ -83,13 +108,13 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
       <form onSubmit={handleModifyPortfolioItemSubmit}>
         <label htmlFor="select-portfolio-item">Select Portfolio Item</label>
         <select
-          onChange={(e) =>
-            setSelectedPortfolioItem(
-              portfolioItems.find(
-                (portfolioItem) => portfolioItem._id === e.target.value
-              )
-            )
-          }
+          onChange={(e) => {
+            const selection = portfolioItems.find(
+              (portfolioItem) => portfolioItem._id === e.target.value
+            );
+            setSelectedPortfolioItem(selection);
+            setId(selection._id);
+          }}
           value={selectedPortfolioItem ? selectedPortfolioItem : ""}
         >
           <option disabled value="">
@@ -176,7 +201,6 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
              bullist numlist outdent indent | link image code | removeformat | help",
               }}
               onEditorChange={(content, editor) => {
-                console.log("Content was updated:", content);
                 setContent(content);
               }}
             />
