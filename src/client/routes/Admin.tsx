@@ -2,10 +2,14 @@ import * as React from "react";
 
 import AdminDashboardPage from "../pages/AdminDashboardPage";
 import AdminLoginPage from "../pages/AdminLoginPage";
+import { PortfolioItem, PortfolioItemDocument } from "../types";
 
-export interface AdminProps {}
+export interface AdminProps {
+  portfolioItems: PortfolioItemDocument[];
+}
 
-const Admin: React.FunctionComponent<AdminProps> = () => {
+const Admin: React.FunctionComponent<AdminProps> = (props: AdminProps) => {
+  const { portfolioItems } = props;
   const [isAuthenticated, setIsAuthenticated] = React.useState(false);
   const [user, setUser] = React.useState(null);
   const [hasCheckedAuthentication, setHasCheckedAuthetication] = React.useState(
@@ -36,7 +40,7 @@ const Admin: React.FunctionComponent<AdminProps> = () => {
   }, []);
 
   if (isAuthenticated) {
-    return <AdminDashboardPage user={user} />;
+    return <AdminDashboardPage portfolioItems={portfolioItems} user={user} />;
   }
 
   if (hasCheckedAuthentication) {
