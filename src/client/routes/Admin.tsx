@@ -6,10 +6,11 @@ import { PortfolioItem, PortfolioItemDocument } from "../types";
 
 export interface AdminProps {
   portfolioItems: PortfolioItemDocument[];
+  setPortfolioItems: (portfolioItems: PortfolioItemDocument[]) => void;
 }
 
 const Admin: React.FunctionComponent<AdminProps> = (props: AdminProps) => {
-  const { portfolioItems } = props;
+  const { portfolioItems, setPortfolioItems } = props;
   const [isAuthenticated, setIsAuthenticated] = React.useState(false);
   const [user, setUser] = React.useState(null);
   const [hasCheckedAuthentication, setHasCheckedAuthetication] = React.useState(
@@ -40,7 +41,13 @@ const Admin: React.FunctionComponent<AdminProps> = (props: AdminProps) => {
   }, []);
 
   if (isAuthenticated) {
-    return <AdminDashboardPage portfolioItems={portfolioItems} user={user} />;
+    return (
+      <AdminDashboardPage
+        portfolioItems={portfolioItems}
+        setPortfolioItems={setPortfolioItems}
+        user={user}
+      />
+    );
   }
 
   if (hasCheckedAuthentication) {

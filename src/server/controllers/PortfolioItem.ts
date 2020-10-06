@@ -114,7 +114,8 @@ class PortfolioItemController {
           }
 
           if (
-            req.body.links && req.body.links.demo &&
+            req.body.links &&
+            req.body.links.demo &&
             correspondingPortfolioItem.links &&
             req.body.links.demo !== correspondingPortfolioItem.links.demo
           ) {
@@ -122,7 +123,8 @@ class PortfolioItemController {
           }
 
           if (
-            req.body.links && req.body.links.github &&
+            req.body.links &&
+            req.body.links.github &&
             correspondingPortfolioItem.links &&
             req.body.links.github !== correspondingPortfolioItem.links.github
           ) {
@@ -130,7 +132,8 @@ class PortfolioItemController {
           }
 
           if (
-            req.body.links && req.body.links.npm &&
+            req.body.links &&
+            req.body.links.npm &&
             correspondingPortfolioItem.links &&
             req.body.links.npm !== correspondingPortfolioItem.links.npm
           ) {
@@ -148,7 +151,12 @@ class PortfolioItemController {
 
           await correspondingPortfolioItem.save();
 
-          return res.send(correspondingPortfolioItem);
+          const portfolioItems = await PortfolioItemModel.find({});
+
+          return res.send({
+            portfolioItem: correspondingPortfolioItem,
+            portfolioItems,
+          });
         } catch (error) {
           console.error(error);
           return res.status(500).send({ error });

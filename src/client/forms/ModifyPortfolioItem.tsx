@@ -6,12 +6,13 @@ import PortfolioItemDetails from "../routes/PortfolioItemDetails";
 
 export interface ModifyPortfolioItemProps {
   portfolioItems: PortfolioItemDocument[];
+  setPortfolioItems: (portfolioItems: PortfolioItemDocument[]) => void;
 }
 
 const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
   props: ModifyPortfolioItemProps
 ) => {
-  const { portfolioItems } = props;
+  const { portfolioItems, setPortfolioItems } = props;
   const [id, setId] = React.useState("");
   const [selectedPortfolioItem, setSelectedPortfolioItem] = React.useState(
     null
@@ -68,9 +69,12 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
       });
       const data = await response.json();
 
-      alert(`data - ${JSON.stringify(data, null, 2)}`);
       if (response.status === 200) {
+        alert("Success!");
+        setPortfolioItems(data.portfolioItems);
         resetForm(e);
+      } else {
+        alert("ERROR!");
       }
     } catch (error) {
       console.error(error);
@@ -86,7 +90,9 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
     setNPM("");
     setNewCoverImage(null);
     setContent("");
-    e.currentTarget.reset();
+    if (e.currentTarget.reset) {
+      e.currentTarget.reset();
+    }
   };
 
   React.useEffect(() => {

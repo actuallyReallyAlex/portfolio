@@ -46,7 +46,10 @@ const App: React.FunctionComponent<AppProps> = () => {
             <Home portfolioItems={portfolioItems} />
           </Route>
           <Route exact path="/admin">
-            <Admin portfolioItems={portfolioItems} />
+            <Admin
+              portfolioItems={portfolioItems}
+              setPortfolioItems={setPortfolioItems}
+            />
           </Route>
           <Route path="/portfolio/:id">
             <PortfolioItemDetails portfolioItems={portfolioItems} />

@@ -8,13 +8,14 @@ import { PortfolioItem, PortfolioItemDocument, UserDocument } from "../types";
 
 export interface AdminDashboardPageProps {
   portfolioItems: PortfolioItemDocument[];
+  setPortfolioItems: (portfolioItems: PortfolioItemDocument[]) => void;
   user: UserDocument;
 }
 
 const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
   props: AdminDashboardPageProps
 ) => {
-  const { portfolioItems, user } = props;
+  const { portfolioItems, setPortfolioItems, user } = props;
 
   const [action, setAction] = React.useState("");
 
@@ -45,7 +46,12 @@ const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
         )}
       </select>
 
-      {action && <Action portfolioItems={portfolioItems} />}
+      {action && (
+        <Action
+          portfolioItems={portfolioItems}
+          setPortfolioItems={setPortfolioItems}
+        />
+      )}
     </div>
   );
 };
