@@ -66,26 +66,20 @@ class App {
       if (requestForJS) {
         const split = req.path.split("/");
         const file = split[2] ? split[2] : split[1];
-        // console.log("");
-        // console.log({
-        //   file,
-        //   split,
-        //   request: req.path,
-        //   response: path.join(__dirname, `/dist/${file}`),
-        // });
         if (process.env.NODE_ENV === "development") {
-          // console.log(`Redirecting to /${file}`);
-          // console.log("");
           return res.redirect(`/${file}`);
         } else {
           return res.sendFile(path.join(__dirname, `/dist/${file}`));
         }
       }
-      // console.log("");
-      // console.log({
-      //   request: req.path,
-      //   response: path.join(__dirname, "/dist/index.html"),
-      // });
+
+      if (
+        req.headers.host === "localhost:3000" &&
+        process.env.NODE_ENV === "development" &&
+        req.path === "/"
+      ) {
+        return res.send();
+      }
       res.sendFile(path.join(__dirname, "/dist/index.html"));
     });
   }

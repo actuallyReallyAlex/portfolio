@@ -9,8 +9,8 @@
     "build-server": "npm run clean-server && tsc && copyfiles -f src/server/assets/* build/assets --error --verbose",
     "clean-client": "rimraf dist",
     "clean-server": "rimraf build",
-    "develop": "env-cmd webpack-dev-server",
-    "start-server": "env-cmd node build/index.js"
+    "develop": "env-cmd start-server-and-test start-server 3000 webpack-dev-server",
+    "start-server": "npm run build-server && env-cmd node build/index.js"
   },
   "dependencies": {
     "@tinymce/tinymce-react": "^3.7.0",
@@ -52,6 +52,7 @@
     "env-cmd": "^10.1.0",
     "html-webpack-plugin": "^4.5.0",
     "rimraf": "^3.0.2",
+    "start-server-and-test": "^1.11.5",
     "ts-loader": "^8.0.4",
     "typescript": "^4.0.3",
     "webpack": "^4.44.2",
