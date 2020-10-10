@@ -26,7 +26,7 @@ class PortfolioItemController {
       return cb(undefined, true);
     },
     limits: {
-      fileSize: 1000000,
+      fileSize: 5000000,
     },
     storage: multer.diskStorage({
       destination: function (req, file, cb) {
