@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Box, Button, Heading } from "rebass";
+import { Label, Select } from "@rebass/forms";
 
 import { PortfolioItemDocument } from "../types";
 
@@ -38,11 +40,11 @@ const DeletePortfolioItem: React.FunctionComponent<DeletePortfolioItemProps> = (
   };
 
   return (
-    <div>
-      <h2>Delete a Portfolio Item</h2>
+    <Box>
+      <Heading as="h2">Delete a Portfolio Item</Heading>
       <form onSubmit={handleDeletePortfolioItemSubmit}>
-        <label htmlFor="portfolio-item">PortfolioItem</label>
-        <select
+        <Label htmlFor="portfolio-item">PortfolioItem</Label>
+        <Select
           id="portfolio-item"
           onChange={(e) => setId(e.target.value)}
           required
@@ -52,11 +54,11 @@ const DeletePortfolioItem: React.FunctionComponent<DeletePortfolioItemProps> = (
               {portfolioItem.title}
             </option>
           ))}
-        </select>
+        </Select>
 
-        <button type="submit">Delete</button>
+        <Button type="submit">Delete</Button>
       </form>
-    </div>
+    </Box>
   );
 };
 

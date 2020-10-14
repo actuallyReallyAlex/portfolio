@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Editor } from "@tinymce/tinymce-react";
+import { Box, Button, Heading } from "rebass";
+import { Input, Label } from "@rebass/forms";
 
 export interface CreatePortfolioItemProps {}
 
@@ -60,11 +62,11 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
   }, []);
 
   return (
-    <div>
-      <h2>Create a New Portfolio Item</h2>
+    <Box>
+      <Heading as="h2">Create a New Portfolio Item</Heading>
       <form onSubmit={handleNewPortfolioItemSubmit}>
-        <label htmlFor="title">Title</label>
-        <input
+        <Label htmlFor="title">Title</Label>
+        <Input
           id="title"
           onChange={(e) => setTitle(e.target.value)}
           required
@@ -72,8 +74,8 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
           value={title}
         />
 
-        <label htmlFor="tagline">Tagline</label>
-        <input
+        <Label htmlFor="tagline">Tagline</Label>
+        <Input
           id="tagline"
           onChange={(e) => setTagline(e.target.value)}
           required
@@ -81,40 +83,40 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
           value={tagline}
         />
 
-        <h3>Links</h3>
-        <label htmlFor="demo">Demo</label>
-        <input
+        <Heading as="h3">Links</Heading>
+        <Label htmlFor="demo">Demo</Label>
+        <Input
           id="demo"
           onChange={(e) => setDemo(e.target.value)}
           type="text"
           value={demo}
         />
-        <label htmlFor="github">Github</label>
-        <input
+        <Label htmlFor="github">Github</Label>
+        <Input
           id="github"
           onChange={(e) => setGithub(e.target.value)}
           type="text"
           value={github}
         />
-        <label htmlFor="npm">NPM</label>
-        <input
+        <Label htmlFor="npm">NPM</Label>
+        <Input
           id="npm"
           onChange={(e) => setNPM(e.target.value)}
           type="text"
           value={npm}
         />
 
-        <h3>Images</h3>
+        <Heading as="h3">Images</Heading>
 
-        <label htmlFor="cover">Cover</label>
-        <input
+        <Label htmlFor="cover">Cover</Label>
+        <Input
           accept="image/png, image/jpeg"
           id="cover"
           onChange={(e) => setCover(e.target.files[0])}
           type="file"
         />
 
-        <label>Content</label>
+        <Label>Content</Label>
         <Editor
           apiKey={process.env.TINYMCE_API_KEY}
           initialValue="<p>This is the initial content of the editor</p>"
@@ -137,9 +139,9 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
           }}
         />
 
-        <button type="submit">Create</button>
+        <Button type="submit" variant="primary">Create</Button>
       </form>
-    </div>
+    </Box>
   );
 };
 

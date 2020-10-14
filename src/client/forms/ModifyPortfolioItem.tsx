@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Editor } from "@tinymce/tinymce-react";
+import { Box, Button, Heading, Image } from "rebass";
+import { Input, Label, Select } from "@rebass/forms";
 
 import { PortfolioItemDocument } from "../types";
 
@@ -108,11 +110,11 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
   }, [selectedPortfolioItem]);
 
   return (
-    <div>
-      <h2>Modify an Existing Portfolio Item</h2>
+    <Box>
+      <Heading as="h2">Modify an Existing Portfolio Item</Heading>
       <form onSubmit={handleModifyPortfolioItemSubmit}>
-        <label htmlFor="select-portfolio-item">Select Portfolio Item</label>
-        <select
+        <Label htmlFor="select-portfolio-item">Select Portfolio Item</Label>
+        <Select
           onChange={(e) => {
             const selection = portfolioItems.find(
               (portfolioItem) => portfolioItem._id === e.target.value
@@ -130,12 +132,12 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
               {portfolioItem.title}
             </option>
           ))}
-        </select>
+        </Select>
 
         {selectedPortfolioItem && updated && (
-          <div>
-            <label htmlFor="title">Title</label>
-            <input
+          <Box>
+            <Label htmlFor="title">Title</Label>
+            <Input
               id="title"
               onChange={(e) => setTitle(e.target.value)}
               required
@@ -143,8 +145,8 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
               value={title}
             />
 
-            <label htmlFor="tagline">Tagline</label>
-            <input
+            <Label htmlFor="tagline">Tagline</Label>
+            <Input
               id="tagline"
               onChange={(e) => setTagline(e.target.value)}
               required
@@ -152,43 +154,43 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
               value={tagline}
             />
 
-            <h3>Links</h3>
-            <label htmlFor="demo">Demo</label>
-            <input
+            <Heading as="h3">Links</Heading>
+            <Label htmlFor="demo">Demo</Label>
+            <Input
               id="demo"
               onChange={(e) => setDemo(e.target.value)}
               type="text"
               value={demo}
             />
-            <label htmlFor="github">Github</label>
-            <input
+            <Label htmlFor="github">Github</Label>
+            <Input
               id="github"
               onChange={(e) => setGithub(e.target.value)}
               type="text"
               value={github}
             />
-            <label htmlFor="npm">NPM</label>
-            <input
+            <Label htmlFor="npm">NPM</Label>
+            <Input
               id="npm"
               onChange={(e) => setNPM(e.target.value)}
               type="text"
               value={npm}
             />
 
-            <h3>Images</h3>
+            <Heading as="h3">Images</Heading>
 
-            <label>Current Cover Image</label>
-            <img alt="Current cover image" src={coverImage} width="300px" />
+            <Label>Current Cover Image</Label>
+            <Image alt="Current cover image" src={coverImage} width="300px" />
 
-            <label htmlFor="new-cover-image">New Cover Image</label>
-            <input
+            <Label htmlFor="new-cover-image">New Cover Image</Label>
+            <Input
               accept="image/png, image/jpeg"
               id="new-cover-image"
               onChange={(e) => setNewCoverImage(e.target.files[0])}
               type="file"
             />
 
-            <label>Content</label>
+            <Label>Content</Label>
             <Editor
               apiKey={process.env.TINYMCE_API_KEY}
               initialValue={selectedPortfolioItem.content}
@@ -210,11 +212,13 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
               }}
             />
 
-            <button type="submit">Modify</button>
-          </div>
+            <Button type="submit" variant="primary">
+              Modify
+            </Button>
+          </Box>
         )}
       </form>
-    </div>
+    </Box>
   );
 };
 

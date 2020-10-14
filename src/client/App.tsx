@@ -1,5 +1,9 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import { ThemeProvider } from "emotion-theming";
+import { ThemeProvider } from 'theme-ui'
+// import theme from "@rebass/preset";
+import { dark } from '@theme-ui/presets'
 
 const Admin = React.lazy(() => import("./routes/Admin"));
 const Home = React.lazy(() => import("./routes/Home"));
@@ -39,24 +43,26 @@ const App: React.FunctionComponent<AppProps> = () => {
   }, []);
 
   return (
-    <Router>
-      <React.Suspense fallback={<div>Loading...</div>}>
-        <Switch>
-          <Route exact path="/">
-            <Home portfolioItems={portfolioItems} />
-          </Route>
-          <Route exact path="/admin">
-            <Admin
-              portfolioItems={portfolioItems}
-              setPortfolioItems={setPortfolioItems}
-            />
-          </Route>
-          <Route path="/portfolio/:id">
-            <PortfolioItemDetails portfolioItems={portfolioItems} />
-          </Route>
-        </Switch>
-      </React.Suspense>
-    </Router>
+    <ThemeProvider theme={dark}>
+      <Router>
+        <React.Suspense fallback={<div>Loading...</div>}>
+          <Switch>
+            <Route exact path="/">
+              <Home portfolioItems={portfolioItems} />
+            </Route>
+            <Route exact path="/admin">
+              <Admin
+                portfolioItems={portfolioItems}
+                setPortfolioItems={setPortfolioItems}
+              />
+            </Route>
+            <Route path="/portfolio/:id">
+              <PortfolioItemDetails portfolioItems={portfolioItems} />
+            </Route>
+          </Switch>
+        </React.Suspense>
+      </Router>
+    </ThemeProvider>
   );
 };
 

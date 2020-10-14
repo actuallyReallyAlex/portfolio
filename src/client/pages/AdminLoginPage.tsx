@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { Box, Button, Flex, Heading, Text } from "rebass";
+import { Label, Input } from "@rebass/forms";
 
 import { UserDocument } from "../types";
 
@@ -41,30 +43,38 @@ const AdminLoginPage: React.FunctionComponent<AdminLoginPageProps> = (
   };
 
   return (
-    <div>
-      <Link to="/">Back</Link>
-      <h1>Admin Login Page</h1>
-      <p>USER IS NOT AUTHENTICATED</p>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          onChange={(e) => setEmail(e.target.value)}
-          type="text"
-          value={email}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          onChange={(e) => setPassword(e.target.value)}
-          type="password"
-          value={password}
-        />
-        <button disabled={!email || !password} type="submit">
-          Log in
-        </button>
-      </form>
-    </div>
+    <Flex alignItems="center" flexDirection="column" justifyContent="center">
+      <Box backgroundColor="secondary">
+        <Link to="/">Back</Link>
+        <Heading as="h1">Admin Login Page</Heading>
+        <Text>USER IS NOT AUTHENTICATED</Text>
+        <Box>
+          <form onSubmit={handleSubmit}>
+            <Label htmlFor="email">Email</Label>
+            <Input
+              id="email"
+              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              value={email}
+            />
+            <Label htmlFor="password">Password</Label>
+            <Input
+              id="password"
+              onChange={(e) => setPassword(e.target.value)}
+              type="password"
+              value={password}
+            />
+            <Button
+              disabled={!email || !password}
+              type="submit"
+              variant="primary"
+            >
+              Log in
+            </Button>
+          </form>
+        </Box>
+      </Box>
+    </Flex>
   );
 };
 

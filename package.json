@@ -13,6 +13,9 @@
     "start-server": "npm run build-server && env-cmd node build/index.js"
   },
   "dependencies": {
+    "@rebass/forms": "^4.0.6",
+    "@rebass/preset": "^4.0.5",
+    "@theme-ui/presets": "^0.3.0",
     "@tinymce/tinymce-react": "^3.7.0",
     "bcryptjs": "^2.4.3",
     "chalk": "^4.1.0",
@@ -27,7 +30,9 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
+    "rebass": "^4.0.7",
     "svg-inline-loader": "^0.8.2",
+    "theme-ui": "^0.3.1",
     "tinymce": "^5.5.1",
     "uuid": "^8.3.0",
     "validator": "^13.1.17"
@@ -46,6 +51,8 @@
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.5",
+    "@types/rebass": "^4.0.7",
+    "@types/rebass__forms": "^4.0.4",
     "@types/uuid": "^8.3.0",
     "@types/validator": "^13.1.0",
     "copyfiles": "^2.3.0",

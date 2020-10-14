@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { Flex, Heading, Text } from "rebass";
+import { Select } from "@rebass/forms";
 
 import CreatePortfolioItem from "../forms/CreatePortfolioItem";
 import DeletePortfolioItem from "../forms/DeletePortfolioItem";
@@ -29,16 +31,12 @@ const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
   const Action = actions[action];
 
   return (
-    <div>
+    <Flex flexDirection="column">
       <Link to="/">Back</Link>
-      <h1>Admin Dashboard Page</h1>
-      <p>USER IS AUTHENTICATED!</p>
-      {JSON.stringify(user, null, 2)}
-
-      {JSON.stringify(action, null, 2)}
-
-      <h2>Select Action</h2>
-      <select onChange={(e) => setAction(e.target.value)} value={action}>
+      <Heading as="h1">Admin Dashboard Page</Heading>
+      <Text>USER IS AUTHENTICATED!</Text>
+      <Heading as="h2">Select Action</Heading>
+      <Select onChange={(e) => setAction(e.target.value)} value={action}>
         <option disabled value="">
           - Select Action -
         </option>
@@ -49,7 +47,7 @@ const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
             <option value="modifyPortfolioItem">Modify PortfolioItem</option>
           </>
         )}
-      </select>
+      </Select>
 
       {action && (
         <Action
@@ -57,7 +55,7 @@ const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
           setPortfolioItems={setPortfolioItems}
         />
       )}
-    </div>
+    </Flex>
   );
 };
 
