@@ -163,6 +163,33 @@ class PortfolioItemController {
         }
       }
     );
+
+    this.router.delete(
+      "/portfolioItem",
+      async (req: Request, res: Response): Promise<Response<any>> => {
+        try {
+          const { id } = req.body;
+
+          const item = await PortfolioItemModel.findOneAndDelete({ _id: id });
+
+          if (!item) {
+            return res
+              .status(404)
+              .send({ error: "No corresponding PortfolioItem found!" });
+          }
+
+          const portfolioItems = await PortfolioItemModel.find({});
+
+          return res.send({
+            portfolioItem: item,
+            portfolioItems,
+          });
+        } catch (error) {
+          console.error(error);
+          return res.status(500).send({ error });
+        }
+      }
+    );
   }
 }
 

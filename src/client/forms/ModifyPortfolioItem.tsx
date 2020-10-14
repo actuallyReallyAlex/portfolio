@@ -1,8 +1,7 @@
 import * as React from "react";
 import { Editor } from "@tinymce/tinymce-react";
 
-import { PortfolioItem, PortfolioItemDocument } from "../types";
-import PortfolioItemDetails from "../routes/PortfolioItemDetails";
+import { PortfolioItemDocument } from "../types";
 
 export interface ModifyPortfolioItemProps {
   portfolioItems: PortfolioItemDocument[];

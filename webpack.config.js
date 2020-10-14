@@ -16,7 +16,7 @@ const config = {
     open: true,
     port: 5000,
     proxy: {
-      "/": "http://localhost:3000/",
+      // "/": "http://localhost:3000/",
       "/admin": {
         target: "http://localhost:3000/",
         bypass: function (req, res, proxyOptions) {

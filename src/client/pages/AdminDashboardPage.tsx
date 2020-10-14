@@ -2,9 +2,10 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 
 import CreatePortfolioItem from "../forms/CreatePortfolioItem";
+import DeletePortfolioItem from "../forms/DeletePortfolioItem";
 import ModifyPortfolioItem from "../forms/ModifyPortfolioItem";
 
-import { PortfolioItem, PortfolioItemDocument, UserDocument } from "../types";
+import { PortfolioItemDocument, UserDocument } from "../types";
 
 export interface AdminDashboardPageProps {
   portfolioItems: PortfolioItemDocument[];
@@ -21,6 +22,7 @@ const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
 
   const actions = {
     createPortfolioItem: CreatePortfolioItem,
+    deletePortfolioItem: DeletePortfolioItem,
     modifyPortfolioItem: ModifyPortfolioItem,
   };
 
@@ -42,7 +44,10 @@ const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
         </option>
         <option value="createPortfolioItem">Create PortfolioItem</option>
         {portfolioItems.length > 0 && (
-          <option value="modifyPortfolioItem">Modify PortfolioItem</option>
+          <>
+            <option value="deletePortfolioItem">Delete PortfolioItem</option>
+            <option value="modifyPortfolioItem">Modify PortfolioItem</option>
+          </>
         )}
       </select>
 

@@ -62,25 +62,30 @@ class App {
 
     // TODO - Fix this. This is dumb and should be better.
     this.app.get("*", (req: Request, res: Response) => {
-      const requestForJS = req.path.includes(".js");
-      if (requestForJS) {
-        const split = req.path.split("/");
-        const file = split[2] ? split[2] : split[1];
-        if (process.env.NODE_ENV === "development") {
-          return res.redirect(`/${file}`);
-        } else {
-          return res.sendFile(path.join(__dirname, `/dist/${file}`));
+      try {
+        const requestForJS = req.path.includes(".js");
+        if (requestForJS) {
+          const split = req.path.split("/");
+          const file = split[2] ? split[2] : split[1];
+          if (process.env.NODE_ENV === "development") {
+            return res.redirect(`/${file}`);
+          } else {
+            return res.sendFile(path.join(__dirname, `/dist/${file}`));
+          }
         }
-      }
 
-      if (
-        req.headers.host === "localhost:3000" &&
-        process.env.NODE_ENV === "development" &&
-        req.path === "/"
-      ) {
-        return res.send();
+        if (
+          req.headers.host === "localhost:3000" &&
+          process.env.NODE_ENV === "development" &&
+          req.path === "/"
+        ) {
+          return res.send();
+        }
+        res.sendFile(path.join(__dirname, "/dist/index.html"));
+      } catch (error) {
+        console.error("Error in Main Router");
+        console.error(error);
       }
-      res.sendFile(path.join(__dirname, "/dist/index.html"));
     });
   }
 
