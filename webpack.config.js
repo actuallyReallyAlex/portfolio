@@ -45,13 +45,19 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
         test: /\.svg$/,
         loader: "svg-inline-loader",
       },
       {
         test: /\.ts(x?)$/,
+        enforce: "pre",
         exclude: /node_modules/,
         use: [
+          "source-map-loader",
           {
             loader: "ts-loader",
             options: {

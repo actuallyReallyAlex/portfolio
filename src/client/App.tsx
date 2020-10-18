@@ -1,9 +1,13 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import { ThemeProvider } from "emotion-theming";
-import { ThemeProvider } from 'theme-ui'
+import { ThemeProvider } from "theme-ui";
 // import theme from "@rebass/preset";
-import { dark } from '@theme-ui/presets'
+import { dark } from "@theme-ui/presets";
+
+import "fullpage.js/dist/fullpage.min.js";
+
+import "fullpage.js/dist/fullpage.min.css";
 
 const Admin = React.lazy(() => import("./routes/Admin"));
 const Home = React.lazy(() => import("./routes/Home"));
