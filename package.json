@@ -23,7 +23,7 @@
     "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-plugin-sharp": "^2.3.10",
     "gatsby-plugin-web-font-loader": "^1.0.4",
-    "gatsby-source-contentful": "^2.1.73",
+    "gatsby-source-contentful": "^3.0.2",
     "gatsby-source-filesystem": "^2.1.43",
     "gatsby-transformer-sharp": "^2.3.9",
     "node-sass": "^4.13.0",
