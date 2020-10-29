@@ -15,6 +15,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <link rel="stylesheet" href="/fa/all.css" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
@@ -28,11 +29,6 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script
-          defer
-          src="https://kit.fontawesome.com/2fb6ce3d91.js"
-          crossOrigin="anonymous"
-        />
       </body>
     </html>
   );
@@ -44,5 +40,5 @@ HTML.propTypes = {
   bodyAttributes: PropTypes.object,
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
-  postBodyComponents: PropTypes.array
+  postBodyComponents: PropTypes.array,
 };
