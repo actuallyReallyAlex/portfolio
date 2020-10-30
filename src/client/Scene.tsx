@@ -33,6 +33,7 @@ class PalmScene extends React.Component<PalmSceneProps, PalmSceneState> {
   lightHelper!: DirectionalLightHelper;
   lightHelperEnabled!: boolean;
   orbitControls!: OrbitControls;
+  polygon!: Mesh;
   renderer!: WebGL1Renderer;
   scene!: Scene;
 
@@ -84,6 +85,18 @@ class PalmScene extends React.Component<PalmSceneProps, PalmSceneState> {
     this.cube = new THREE.Mesh(geometry, material);
     this.cube.position.set(0, 0, 0);
     this.scene.add(this.cube);
+
+    const polygonPoints = [];
+    polygonPoints.push(new THREE.Vector2(0, 0));
+    polygonPoints.push(new THREE.Vector2(-1, 14));
+    polygonPoints.push(new THREE.Vector2(3, 11));
+    polygonPoints.push(new THREE.Vector2(3, 0));
+    const polygonShape = new THREE.Shape(polygonPoints);
+    const polygonGeometry = new THREE.ShapeGeometry(polygonShape);
+    const polygonMaterial = new THREE.MeshBasicMaterial({ color: "brown" });
+    this.polygon = new THREE.Mesh(polygonGeometry, polygonMaterial);
+    this.polygon.position.set(0, 0, 100);
+    this.scene.add(this.polygon);
   }
 
   init(): void {
