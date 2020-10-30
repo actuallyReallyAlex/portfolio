@@ -3,6 +3,7 @@ import * as THREE from "three";
 import {
   DirectionalLight,
   DirectionalLightHelper,
+  HemisphereLight,
   Light,
   Mesh,
   PerspectiveCamera,
@@ -18,19 +19,19 @@ export interface PalmSceneState {}
 class PalmScene extends React.Component<PalmSceneProps, PalmSceneState> {
   constructor(props: PalmSceneProps) {
     super(props);
-    // * Dummy state
-    this.state = { blue: "blue" };
-
-    console.log(props);
-    console.log(this.state);
+    this.state = {};
+    this.lightHelperEnabled = false;
   }
 
   // * Properties
+  backdrop!: Mesh;
   camera!: PerspectiveCamera;
   container!: HTMLDivElement;
   cube!: Mesh;
   directionalLight!: DirectionalLight;
+  hemisphereLight!: HemisphereLight;
   lightHelper!: DirectionalLightHelper;
+  lightHelperEnabled!: boolean;
   orbitControls!: OrbitControls;
   renderer!: WebGL1Renderer;
   scene!: Scene;
@@ -46,13 +47,32 @@ class PalmScene extends React.Component<PalmSceneProps, PalmSceneState> {
   // * Methods
   // * -------------------------
   createObjects(): void {
-    this.directionalLight = new DirectionalLight(0xffffff, 10);
+    // * Backdrop
+    const backdropGeometry = new THREE.BoxGeometry(500, 500, 1);
+    const backdropMaterial = new THREE.MeshPhongMaterial({ color: 0x60cbe6 });
+    const backdrop = new THREE.Mesh(backdropGeometry, backdropMaterial);
+    this.backdrop = backdrop;
+    this.scene.add(this.backdrop);
+
+    // * Light
+    this.directionalLight = new DirectionalLight(0xffffff, 1);
+    this.directionalLight.position.set(0, -900, 1200);
     this.scene.add(this.directionalLight);
-    this.lightHelper = new THREE.DirectionalLightHelper(
-      this.directionalLight,
-      10
-    );
-    this.scene.add(this.lightHelper);
+
+    this.hemisphereLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.6);
+    this.hemisphereLight.color.setHSL(0.6, 1, 0.6);
+    this.hemisphereLight.groundColor.setHSL(0.095, 1, 0.75);
+    this.hemisphereLight.position.set(0, 50, 0);
+    this.hemisphereLight.intensity = 0.4;
+    this.scene.add(this.hemisphereLight);
+
+    if (this.lightHelperEnabled) {
+      this.lightHelper = new THREE.DirectionalLightHelper(
+        this.directionalLight,
+        200
+      );
+      this.scene.add(this.lightHelper);
+    }
 
     this.orbitControls = new OrbitControls(
       this.camera,
@@ -68,16 +88,10 @@ class PalmScene extends React.Component<PalmSceneProps, PalmSceneState> {
 
   init(): void {
     // * Setup base scene
-    console.log("Setting up base scene ...");
     this.setupBaseScene();
-
-    console.log("Creating objects ...");
     this.createObjects();
-
-    console.log("Setting up listeners ...");
     this.setupListeners();
 
-    console.log("Setting up bindings ...");
     this.tick = this.tick.bind(this);
     this.tick();
   }
@@ -85,8 +99,6 @@ class PalmScene extends React.Component<PalmSceneProps, PalmSceneState> {
   setupBaseScene(): void {
     // * Setup Scene
     this.scene = new THREE.Scene();
-    // this.scene.background = new THREE.Color(0x1ca6c0);
-    // this.scene.fog = new THREE.Fog(0xf7d9aa, 100, 950);
     // * Setup Camera
     const height = window.innerHeight;
     const width = window.innerWidth;
@@ -134,6 +146,10 @@ class PalmScene extends React.Component<PalmSceneProps, PalmSceneState> {
 
     // * Additional updates
     this.orbitControls.update();
+
+    if (this.lightHelperEnabled) {
+      this.lightHelper.update();
+    }
   }
 
   // * -------------------------
