@@ -1,0 +1,21 @@
+.social__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social__list li {
+  border-radius: 6px;
+  margin: 0 10px;
+  padding: 0 20px;
+  transition: 0.25s ease-in-out;
+}
+
+.social__list li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.social__list li a {
+  color: #ffffff;
+}
