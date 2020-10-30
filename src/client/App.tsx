@@ -19,6 +19,12 @@ import { PortfolioItemDocument } from "./types";
 
 export interface AppProps {}
 
+dark.fonts = {
+  body: "'Poppins', sans-serif",
+  heading: "'Nunito', sans-serif",
+  monospace: "Menlo, monospace",
+};
+
 const App: React.FunctionComponent<AppProps> = () => {
   const initialPortfolioItems: PortfolioItemDocument[] = [];
   const [portfolioItems, setPortfolioItems] = React.useState(

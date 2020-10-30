@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run build-server && npm run build-client",
     "build-client": "npm run clean-client && webpack && copyfiles -f dist/**/* build/dist && npm run clean-client",
-    "build-server": "npm run clean-server && tsc && copyfiles -f src/server/assets/* build/assets --error --verbose",
+    "build-server": "npm run clean-server && tsc && copyfiles -f src/server/assets/* build/assets --error --verbose && copyfiles -f src/server/assets/webfonts/* build/assets/webfonts --error --verbose",
     "clean-client": "rimraf dist",
     "clean-server": "rimraf build",
     "develop": "env-cmd start-server-and-test start-server 3000 webpack-dev-server",
