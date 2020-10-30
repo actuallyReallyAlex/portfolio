@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import Scene from "../Scene";
+
 import { PortfolioItemDocument } from "../types";
 
 export interface HomePageProps {
@@ -11,7 +13,11 @@ const HomePage: React.FunctionComponent<HomePageProps> = (
 ) => {
   const { portfolioItems } = props;
 
-  return <div>NEW HOME PAGE</div>;
+  return (
+    <div>
+      <Scene />
+    </div>
+  );
 };
 
 export default HomePage;
