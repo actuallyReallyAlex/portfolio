@@ -19,3 +19,8 @@
 .social__list li a {
   color: #ffffff;
 }
+
+body {
+  background: linear-gradient(#14a4bf, #aff2fa);
+  background-color: none;
+}

@@ -1,6 +1,15 @@
 import * as React from "react";
 import * as THREE from "three";
-import { Light, Mesh, PerspectiveCamera, Scene, WebGL1Renderer } from "three";
+import {
+  DirectionalLight,
+  DirectionalLightHelper,
+  Light,
+  Mesh,
+  PerspectiveCamera,
+  Scene,
+  WebGL1Renderer,
+} from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 export interface PalmSceneProps {}
 
@@ -20,7 +29,9 @@ class PalmScene extends React.Component<PalmSceneProps, PalmSceneState> {
   camera!: PerspectiveCamera;
   container!: HTMLDivElement;
   cube!: Mesh;
-  light!: Light;
+  directionalLight!: DirectionalLight;
+  lightHelper!: DirectionalLightHelper;
+  orbitControls!: OrbitControls;
   renderer!: WebGL1Renderer;
   scene!: Scene;
 
@@ -35,10 +46,21 @@ class PalmScene extends React.Component<PalmSceneProps, PalmSceneState> {
   // * Methods
   // * -------------------------
   createObjects(): void {
-    this.light = new Light();
+    this.directionalLight = new DirectionalLight(0xffffff, 10);
+    this.scene.add(this.directionalLight);
+    this.lightHelper = new THREE.DirectionalLightHelper(
+      this.directionalLight,
+      10
+    );
+    this.scene.add(this.lightHelper);
+
+    this.orbitControls = new OrbitControls(
+      this.camera,
+      this.renderer.domElement
+    );
 
     const geometry = new THREE.BoxGeometry(50, 50, 50);
-    const material = new THREE.MeshBasicMaterial({ color: "red" });
+    const material = new THREE.MeshPhongMaterial({ color: "red" });
     this.cube = new THREE.Mesh(geometry, material);
     this.cube.position.set(0, 0, 0);
     this.scene.add(this.cube);
@@ -63,7 +85,8 @@ class PalmScene extends React.Component<PalmSceneProps, PalmSceneState> {
   setupBaseScene(): void {
     // * Setup Scene
     this.scene = new THREE.Scene();
-    this.scene.fog = new THREE.Fog(0xf7d9aa, 100, 950);
+    // this.scene.background = new THREE.Color(0x1ca6c0);
+    // this.scene.fog = new THREE.Fog(0xf7d9aa, 100, 950);
     // * Setup Camera
     const height = window.innerHeight;
     const width = window.innerWidth;
@@ -110,6 +133,7 @@ class PalmScene extends React.Component<PalmSceneProps, PalmSceneState> {
     this.renderer.render(this.scene, this.camera);
 
     // * Additional updates
+    this.orbitControls.update();
   }
 
   // * -------------------------
