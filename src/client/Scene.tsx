@@ -6,6 +6,7 @@ import {
   HemisphereLight,
   Light,
   Mesh,
+  Object3D,
   PerspectiveCamera,
   Scene,
   WebGL1Renderer,
@@ -36,6 +37,8 @@ class PalmScene extends React.Component<PalmSceneProps, PalmSceneState> {
   polygon!: Mesh;
   renderer!: WebGL1Renderer;
   scene!: Scene;
+  tree!: Object3D;
+  treeBase!: Object3D;
 
   // * -------------------------
   // * Lifecycle Events
@@ -86,6 +89,16 @@ class PalmScene extends React.Component<PalmSceneProps, PalmSceneState> {
     this.cube.position.set(0, 0, 0);
     this.scene.add(this.cube);
 
+    this.createTreeBase();
+
+    this.tree = new THREE.Object3D();
+    this.tree.add(this.treeBase);
+    this.scene.add(this.tree);
+  }
+
+  createTreeBase(): void {
+    this.treeBase = new THREE.Object3D();
+
     const polygonPoints = [];
     polygonPoints.push(new THREE.Vector2(0, 0));
     polygonPoints.push(new THREE.Vector2(-1, 14));
@@ -96,7 +109,8 @@ class PalmScene extends React.Component<PalmSceneProps, PalmSceneState> {
     const polygonMaterial = new THREE.MeshBasicMaterial({ color: "brown" });
     this.polygon = new THREE.Mesh(polygonGeometry, polygonMaterial);
     this.polygon.position.set(0, 0, 100);
-    this.scene.add(this.polygon);
+
+    this.treeBase.add(this.polygon);
   }
 
   init(): void {
