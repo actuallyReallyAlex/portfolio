@@ -15,7 +15,7 @@ const Works: React.FunctionComponent<WorksProps> = (props: WorksProps) => {
 
   return (
     <div id="works">
-      <Flex flexDirection="column" p="50px">
+      <Flex flexDirection="column" sx={{ margin: "100px 15%" }}>
         <Heading as="h2" sx={{ textTransform: "uppercase" }}>
           Works
         </Heading>

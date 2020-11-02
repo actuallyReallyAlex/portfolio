@@ -20,6 +20,29 @@
   color: #ffffff;
 }
 
+.links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links li {
+  border-radius: 6px;
+  margin: 0 10px;
+  padding: 0 20px;
+  transition: 0.25s ease-in-out;
+}
+
+.links li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.links li a {
+  color: #000000;
+}
+
 footer {
   text-align: center;
 }
