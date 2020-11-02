@@ -24,7 +24,6 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fs-extra": "^9.0.1",
-    "fullpage.js": "^3.0.9",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.6",
     "morgan": "^1.10.0",

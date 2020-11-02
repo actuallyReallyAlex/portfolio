@@ -5,7 +5,7 @@ export interface HeroProps {}
 
 const Hero: React.FunctionComponent<HeroProps> = () => {
   return (
-    <div className="section">
+    <div id="hero">
       <Flex
         alignItems={["center", "flex-start"]}
         bg="green"

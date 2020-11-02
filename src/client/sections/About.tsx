@@ -5,7 +5,7 @@ export interface AboutProps {}
 
 const About: React.FunctionComponent<AboutProps> = () => {
   return (
-    <div className="section">
+    <div id="about">
       <Flex alignItems="center" flexDirection="column" p="50px">
         <Heading as="h2" sx={{ textTransform: "uppercase" }}>
           About
