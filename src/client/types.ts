@@ -3,6 +3,7 @@ import { Document } from "mongoose";
 export interface PortfolioItem {
   content: string;
   coverImage: string;
+  iconClass: string;
   links?: {
     demo?: string;
     github?: string;
@@ -15,6 +16,7 @@ export interface PortfolioItem {
 export interface PortfolioItemDocument extends Document {
   content: string;
   coverImage: string;
+  iconClass: string;
   links?: {
     demo?: string;
     github?: string;

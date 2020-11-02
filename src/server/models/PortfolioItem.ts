@@ -12,6 +12,10 @@ const portfolioItemSchema = new mongoose.Schema(
       required: [true, "Field 'coverImage' is required."],
       type: String,
     },
+    iconClass: {
+      required: [true, "Field 'iconClass' is required."],
+      type: String,
+    },
     links: {
       demo: {
         required: false,

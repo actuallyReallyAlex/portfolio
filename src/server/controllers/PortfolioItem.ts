@@ -62,10 +62,11 @@ class PortfolioItemController {
       this.parseFile.single("file"),
       async (req: Request, res: Response): Promise<Response<any>> => {
         try {
-          const { content, links, tagline, title } = req.body;
+          const { content, iconClass, links, tagline, title } = req.body;
           const newItemData: PortfolioItem = {
             content,
             coverImage: `/uploads/${req.file.filename}`,
+            iconClass,
             links: JSON.parse(links),
             tagline,
             title,
@@ -98,6 +99,13 @@ class PortfolioItemController {
           }
 
           const updateFieldNames = Object.keys(req.body);
+
+          if (
+            req.body.iconClass &&
+            req.body.iconClass !== correspondingPortfolioItem.iconClass
+          ) {
+            correspondingPortfolioItem.iconClass = req.body.iconClass;
+          }
 
           if (
             req.body.title &&
