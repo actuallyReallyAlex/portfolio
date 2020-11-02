@@ -1,9 +1,7 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import { ThemeProvider } from "emotion-theming";
 import { ThemeProvider } from "theme-ui";
-// import theme from "@rebass/preset";
-import { dark } from "@theme-ui/presets";
+import theme from "@rebass/preset";
 
 import "fullpage.js/dist/fullpage.min.js";
 
@@ -19,7 +17,7 @@ import { PortfolioItemDocument } from "./types";
 
 export interface AppProps {}
 
-dark.fonts = {
+theme.fonts = {
   body: "'Poppins', sans-serif",
   heading: "'Nunito', sans-serif",
   monospace: "Menlo, monospace",
@@ -53,7 +51,7 @@ const App: React.FunctionComponent<AppProps> = () => {
   }, []);
 
   return (
-    <ThemeProvider theme={dark}>
+    <ThemeProvider theme={theme}>
       <Router>
         <React.Suspense fallback={<div>Loading...</div>}>
           <Switch>

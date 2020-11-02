@@ -5,6 +5,7 @@ class AssetsController {
   public router: Router = express.Router();
 
   static assetList = [
+    "alex-lee-resume.pdf",
     "android-chrome-192x192.png",
     "android-chrome-512x512.png",
     "apple-touch-icon.png",
