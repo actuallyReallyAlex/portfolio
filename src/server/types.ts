@@ -13,6 +13,7 @@ export type Controller = {
 export interface PortfolioItem {
   content: string;
   coverImage: string;
+  iconBackground: string;
   iconClass: string;
   links?: {
     demo?: string;
@@ -26,6 +27,7 @@ export interface PortfolioItem {
 export interface PortfolioItemDocument extends Document {
   content: string;
   coverImage: string;
+  iconBackground: string;
   iconClass: string;
   links?: {
     demo?: string;

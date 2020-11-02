@@ -8,6 +8,7 @@ export interface CreatePortfolioItemProps {}
 const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = () => {
   const [title, setTitle] = React.useState("");
   const [tagline, setTagline] = React.useState("");
+  const [iconBackground, setIconBackground] = React.useState("");
   const [iconClass, setIconClass] = React.useState("");
   const [demo, setDemo] = React.useState("");
   const [github, setGithub] = React.useState("");
@@ -23,6 +24,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
       const bodyData = new FormData();
       bodyData.append("file", cover);
       bodyData.append("content", content);
+      bodyData.append("iconBackground", iconBackground);
       bodyData.append("iconClass", iconClass);
       bodyData.append("links", JSON.stringify({ demo, github, npm }));
       bodyData.append("tagline", tagline);
@@ -46,6 +48,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
   };
 
   const resetForm = (e: React.FormEvent<HTMLFormElement>) => {
+    setIconBackground("");
     setIconClass("");
     setTitle("");
     setTagline("");
@@ -84,6 +87,15 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
           required
           type="text"
           value={tagline}
+        />
+
+        <Label htmlFor="iconClass">Icon Background</Label>
+        <Input
+          id="iconBackground"
+          onChange={(e) => setIconBackground(e.target.value)}
+          required
+          type="text"
+          value={iconBackground}
         />
 
         <Label htmlFor="iconClass">Icon Class</Label>

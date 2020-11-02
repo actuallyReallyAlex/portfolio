@@ -20,9 +20,8 @@ const PortfolioItemCard: React.FunctionComponent<PortfolioItemCardProps> = (
         flexDirection="row"
         justifyContent="flex-start"
         sx={{
-          border: "1px solid blue",
-          marginBottom: "10px",
-          marginTop: "10px",
+          marginBottom: "20px",
+          marginTop: "20px",
         }}
       >
         <Flex
@@ -30,8 +29,7 @@ const PortfolioItemCard: React.FunctionComponent<PortfolioItemCardProps> = (
           justifyContent="center"
           fontSize="6"
           sx={{
-            background: "linear-gradient( 135deg, #FFAA85 10%, #B3315F 100%)",
-            border: "1px solid red",
+            background: portfolioItem.iconBackground,
             borderRadius: "50%",
             color: "#ffffff",
             height: "100px",
@@ -41,7 +39,7 @@ const PortfolioItemCard: React.FunctionComponent<PortfolioItemCardProps> = (
         >
           <i className={portfolioItem.iconClass} />
         </Flex>
-        <Box sx={{ border: "1px solid green", maxWidth: "80%" }}>
+        <Box sx={{ maxWidth: "80%" }}>
           <Heading as="h3" sx={{ textTransform: "uppercase" }}>
             {portfolioItem.title}
           </Heading>
