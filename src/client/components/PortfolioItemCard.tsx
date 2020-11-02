@@ -20,8 +20,8 @@ const PortfolioItemCard: React.FunctionComponent<PortfolioItemCardProps> = (
         flexDirection="row"
         justifyContent="flex-start"
         sx={{
-          marginBottom: "20px",
-          marginTop: "20px",
+          marginBottom: "50px",
+          marginTop: "50px",
         }}
       >
         <Flex
@@ -43,7 +43,9 @@ const PortfolioItemCard: React.FunctionComponent<PortfolioItemCardProps> = (
           <Heading as="h3" sx={{ textTransform: "uppercase" }}>
             {portfolioItem.title}
           </Heading>
-          <Text>{portfolioItem.tagline}</Text>
+          <Text sx={{ marginBottom: "10px", marginTop: "10px" }}>
+            {portfolioItem.tagline}
+          </Text>
           <RouterLink to={`/portfolio/${portfolioItem._id}`}>
             View Item
           </RouterLink>

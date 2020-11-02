@@ -14,7 +14,7 @@ const Works: React.FunctionComponent<WorksProps> = (props: WorksProps) => {
   const { portfolioItems } = props;
 
   return (
-    <div className="section fp-auto-height">
+    <div id="works">
       <Flex flexDirection="column" p="50px">
         <Heading as="h2" sx={{ textTransform: "uppercase" }}>
           Works
@@ -22,8 +22,6 @@ const Works: React.FunctionComponent<WorksProps> = (props: WorksProps) => {
         <ul
           style={{
             listStyle: "none",
-            maxHeight: "75vh",
-            overflow: "scroll",
             padding: "0",
           }}
         >
