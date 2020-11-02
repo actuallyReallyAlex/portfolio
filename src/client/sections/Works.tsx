@@ -14,14 +14,24 @@ const Works: React.FunctionComponent<WorksProps> = (props: WorksProps) => {
   const { portfolioItems } = props;
 
   return (
-    <div className="section">
+    <div className="section fp-auto-height">
       <Flex flexDirection="column" p="50px">
         <Heading as="h2" sx={{ textTransform: "uppercase" }}>
           Works
         </Heading>
-        <ul>
+        <ul
+          style={{
+            listStyle: "none",
+            maxHeight: "75vh",
+            overflow: "scroll",
+            padding: "0",
+          }}
+        >
           {portfolioItems.map((portfolioItem) => (
-            <PortfolioItemCard portfolioItem={portfolioItem} />
+            <PortfolioItemCard
+              key={portfolioItem._id}
+              portfolioItem={portfolioItem}
+            />
           ))}
         </ul>
         <Footer />

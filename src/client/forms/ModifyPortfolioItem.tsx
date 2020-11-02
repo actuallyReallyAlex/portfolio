@@ -20,6 +20,8 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
   );
 
   const [title, setTitle] = React.useState("");
+  const [iconBackground, setIconBackground] = React.useState("");
+  const [iconClass, setIconClass] = React.useState("");
   const [tagline, setTagline] = React.useState("");
   const [demo, setDemo] = React.useState("");
   const [github, setGithub] = React.useState("");
@@ -51,6 +53,12 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
       const bodyData = new FormData();
       bodyData.append("id", id);
       newCoverImage && bodyData.append("file", newCoverImage);
+      iconBackground &&
+        iconBackground !== selectedPortfolioItem.iconBackground &&
+        bodyData.append("iconBackground", iconBackground);
+      iconClass &&
+        iconClass !== selectedPortfolioItem.iconClass &&
+        bodyData.append("iconClass", iconClass);
       title &&
         title !== selectedPortfolioItem.title &&
         bodyData.append("title", title);
@@ -84,6 +92,8 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
   };
 
   const resetForm = (e: React.FormEvent<HTMLFormElement>) => {
+    setIconBackground("");
+    setIconClass("");
     setTitle("");
     setTagline("");
     setDemo("");
@@ -98,6 +108,8 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
 
   React.useEffect(() => {
     if (selectedPortfolioItem) {
+      setIconBackground(selectedPortfolioItem.iconBacksetIconBackground);
+      setIconClass(selectedPortfolioItem.iconClass);
       setTitle(selectedPortfolioItem.title);
       setTagline(selectedPortfolioItem.tagline);
       setDemo(selectedPortfolioItem.links.demo);
@@ -152,6 +164,24 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
               required
               type="text"
               value={tagline}
+            />
+
+            <Label htmlFor="iconClass">Icon Background</Label>
+            <Input
+              id="iconBackground"
+              onChange={(e) => setIconBackground(e.target.value)}
+              required
+              type="text"
+              value={iconBackground}
+            />
+
+            <Label htmlFor="iconClass">Icon Class</Label>
+            <Input
+              id="iconClass"
+              onChange={(e) => setIconClass(e.target.value)}
+              required
+              type="text"
+              value={iconClass}
             />
 
             <Heading as="h3">Links</Heading>

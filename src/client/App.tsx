@@ -3,10 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ThemeProvider } from "theme-ui";
 import theme from "@rebass/preset";
 
-import "fullpage.js/dist/fullpage.min.js";
-
-import "fullpage.js/dist/fullpage.min.css";
-
 const Admin = React.lazy(() => import("./routes/Admin"));
 const Home = React.lazy(() => import("./routes/Home"));
 const PortfolioItemDetails = React.lazy(
