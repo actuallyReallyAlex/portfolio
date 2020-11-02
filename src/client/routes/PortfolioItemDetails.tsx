@@ -1,5 +1,7 @@
 import * as React from "react";
 import { useLocation } from "react-router-dom";
+import { Box, Button, Flex, Heading, Image, Link } from "rebass";
+import BackButton from "../components/BackButton";
 
 import { PortfolioItemDocument } from "../types";
 
@@ -19,62 +21,82 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
     (item) => item._id === portfolioItemId
   );
 
-  return (
-    <div>
-      <h1>Portfolio Item</h1>
-      {currentPortfolioItem && (
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  if (currentPortfolioItem) {
+    return (
+      <Flex flexDirection="column" sx={{ margin: "100px 15%" }}>
+        <BackButton />
+        <Heading as="h1" fontSize="7" sx={{ textTransform: "uppercase" }}>
+          {currentPortfolioItem.title}
+        </Heading>
         <>
-          <h2>{currentPortfolioItem.tagline}</h2>
-          <h3>Links</h3>
-          {currentPortfolioItem.links.demo && (
-            <a
-              href={currentPortfolioItem.links.demo}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Demo
-            </a>
-          )}
-          {currentPortfolioItem.links.github && (
-            <a
-              href={currentPortfolioItem.links.github}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Github
-            </a>
-          )}
-          {currentPortfolioItem.links.npm && (
-            <a
-              href={currentPortfolioItem.links.npm}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              NPM
-            </a>
-          )}
-          <img alt="Cover Image" src={currentPortfolioItem.coverImage} />
-          <ul>
-            {currentPortfolioItem.links &&
-              Object.keys(currentPortfolioItem.links).map((link, i) => (
-                <li key={`link-${i}`}>
-                  <a
-                    href={currentPortfolioItem.links[link]}
+          <Heading as="h2" fontSize="3" fontWeight="normal">
+            {currentPortfolioItem.tagline}
+          </Heading>
+          <Box
+            fontSize="5"
+            sx={{
+              margin: "0 auto",
+              marginBottom: "25px",
+              marginTop: "25px",
+              position: "relative",
+              width: "fit-content",
+            }}
+          >
+            <ul className="links">
+              {currentPortfolioItem.links.demo && (
+                <li>
+                  <Link
+                    aria-label="Demo"
+                    href={currentPortfolioItem.links.demo}
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    {link}
-                  </a>
+                    <i className="far fa-magic" />
+                  </Link>
                 </li>
-              ))}
-          </ul>
+              )}
+
+              {currentPortfolioItem.links.github && (
+                <li>
+                  <Link
+                    aria-label="GitHub"
+                    href={currentPortfolioItem.links.github}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <i className="fab fa-github" />
+                  </Link>
+                </li>
+              )}
+
+              {currentPortfolioItem.links.npm && (
+                <li>
+                  <Link
+                    aria-label="NPM"
+                    href={currentPortfolioItem.links.npm}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <i className="fab fa-npm" />
+                  </Link>
+                </li>
+              )}
+            </ul>
+          </Box>
+          <Image alt="Cover Image" src={currentPortfolioItem.coverImage} />
           <div
             dangerouslySetInnerHTML={{ __html: currentPortfolioItem.content }}
           />
         </>
-      )}
-    </div>
-  );
+      </Flex>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default PortfolioItemDetails;

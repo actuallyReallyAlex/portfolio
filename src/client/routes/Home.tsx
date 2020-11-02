@@ -10,6 +10,7 @@ export interface HomeProps {
 
 const Home: React.FunctionComponent<HomeProps> = (props: HomeProps) => {
   const { portfolioItems } = props;
+
   return <HomePage portfolioItems={portfolioItems} />;
 };
 
