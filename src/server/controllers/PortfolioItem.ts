@@ -113,8 +113,9 @@ class PortfolioItemController {
             },
             filename: function (req, file, cb) {
               console.log("------ filename ------");
-              console.log(`${uuidv4()}.${file.originalname.split(".")[1]}`);
-              cb(null, `${uuidv4()}.${file.originalname.split(".")[1]}`);
+              const filename = `${uuidv4()}.${file.originalname.split(".")[1]}`;
+              console.log({ filename });
+              cb(null, filename);
             },
           }),
         }).single("file");
@@ -124,10 +125,12 @@ class PortfolioItemController {
             // A Multer error occurred when uploading.
             console.log("A multer error occured when uploading");
             console.error(err);
+            return res.status(500).send({ error: err });
           } else if (err) {
             // An unknown error occurred when uploading.
             console.log("An unknown error occured when uploading");
             console.error(err);
+            return res.status(500).send({ error: err });
           }
 
           // Everything went fine.
@@ -142,7 +145,7 @@ class PortfolioItemController {
               tagline,
               title,
             } = req.body;
-            console.log({ body: req.body });
+            console.log({ body: JSON.stringify(req.body, null, 2) });
             const newItemData: PortfolioItem = {
               content,
               coverImage: `/uploads/${req.file.filename}`,
