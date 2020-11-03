@@ -38,6 +38,7 @@ class App {
     const whitelistDomains = [
       "http://localhost:3000",
       "http://localhost:5000",
+      "https://portfolio-alex-lee.herokuapp.com",
       undefined,
     ];
 
