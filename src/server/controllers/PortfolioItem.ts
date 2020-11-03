@@ -80,42 +80,96 @@ class PortfolioItemController {
 
     this.router.post(
       "/portfolioItem",
-      this.parseFile.single("file"),
-      async (
-        req: Request,
-        res: Response
-      ): Promise<Response<ErrorResponse | PortfolioItemDocument>> => {
+      // this.parseFile.single("file"),
+      async (req: Request, res: Response): Promise<any> => {
         console.log("callback");
-        try {
-          const {
-            content,
-            iconBackground,
-            iconClass,
-            links,
-            tagline,
-            title,
-          } = req.body;
-          console.log({ body: req.body });
-          const newItemData: PortfolioItem = {
-            content,
-            coverImage: `/uploads/${req.file.filename}`,
-            iconBackground,
-            iconClass,
-            links: JSON.parse(links),
-            tagline,
-            title,
-          };
-          console.log({ newItemData });
-          const newPortfolioItem = new PortfolioItemModel(newItemData);
-          console.log({ newPortfolioItem });
 
-          await newPortfolioItem.save();
+        const uploadTest = multer({
+          fileFilter: (
+            req: express.Request,
+            file: Express.Multer.File,
+            cb: FileFilterCallback
+          ) => {
+            console.log("parseFile");
+            console.log({ req, file, cb });
+            if (
+              !file.originalname.match(/\.(png)$/) &&
+              !file.originalname.match(/\.(jpg)$/) &&
+              !file.originalname.match(/\.(jpeg)$/)
+            ) {
+              return cb(
+                new Error(
+                  "File must be in one of the following formats: [.png, .jpg, .jpeg]."
+                )
+              );
+            }
 
-          return res.status(201).send(newPortfolioItem);
-        } catch (error) {
-          console.error(error);
-          return res.status(500).send({ error });
-        }
+            return cb(null, true);
+          },
+          limits: {
+            fileSize: 5000000,
+          },
+          storage: multer.diskStorage({
+            destination: function (req, file, cb) {
+              console.log("destination");
+              console.log({ req, file, cb });
+              console.log(path.join(__dirname, "../../uploads"));
+              cb(null, path.join(__dirname, "../../uploads"));
+            },
+            filename: function (req, file, cb) {
+              console.log("filename");
+              console.log({ req, file, cb });
+              console.log(`${uuidv4()}.${file.originalname.split(".")[1]}`);
+              cb(null, `${uuidv4()}.${file.originalname.split(".")[1]}`);
+            },
+          }),
+        }).single("file");
+
+        uploadTest(req, res, async (err: any) => {
+          if (err instanceof multer.MulterError) {
+            // A Multer error occurred when uploading.
+            console.log("A multer error occured when uploading");
+            console.error(err);
+          } else if (err) {
+            // An unknown error occurred when uploading.
+            console.log("An unknown error occured when uploading");
+            console.error(err);
+          }
+
+          // Everything went fine.
+          console.log("everything is fine");
+
+          try {
+            const {
+              content,
+              iconBackground,
+              iconClass,
+              links,
+              tagline,
+              title,
+            } = req.body;
+            console.log({ body: req.body });
+            const newItemData: PortfolioItem = {
+              content,
+              coverImage: `/uploads/${req.file.filename}`,
+              iconBackground,
+              iconClass,
+              links: JSON.parse(links),
+              tagline,
+              title,
+            };
+            console.log({ newItemData });
+            const newPortfolioItem = new PortfolioItemModel(newItemData);
+            console.log({ newPortfolioItem });
+
+            await newPortfolioItem.save();
+
+            return res.status(201).send(newPortfolioItem);
+          } catch (error) {
+            console.error(error);
+            return res.status(500).send({ error });
+          }
+        });
       }
     );
 
