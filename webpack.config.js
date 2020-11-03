@@ -6,7 +6,7 @@ const path = require("path");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
 
-const mode = process.env.NODE_ENV;
+const mode = process.env.NODE_ENV || "production";
 
 console.log("");
 console.log(`MODE - ${chalk.blue(mode)}`);
