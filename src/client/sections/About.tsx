@@ -1,12 +1,14 @@
 import * as React from "react";
 import { Box, Button, Flex, Heading, Image, Text } from "rebass";
 
-export interface AboutProps {}
-
-const About: React.FunctionComponent<AboutProps> = () => {
+const About: React.FunctionComponent<unknown> = () => {
   return (
     <div id="about">
-      <Flex alignItems="center" flexDirection="column" sx={{ margin: "100px 15%" }}>
+      <Flex
+        alignItems="center"
+        flexDirection="column"
+        sx={{ margin: ["100px 10%", "100px 15%"] }}
+      >
         <Heading as="h2" sx={{ textTransform: "uppercase" }}>
           About
         </Heading>
@@ -24,12 +26,12 @@ const About: React.FunctionComponent<AboutProps> = () => {
         />
         <Box maxWidth="75%" sx={{ textAlign: "center" }}>
           <Text fontWeight="bold" margin="10px auto">
-            Hi. I'm Alex, a Fullstack Application Developer in San Diego. I
+            Hi. I&apos;m Alex, a Fullstack Application Developer in San Diego. I
             deliver solutions to complex problems.
           </Text>
           <Text margin="10px auto">
             I create purposeful and functional applications that go beyond
-            expectations. I'm currently developing the future of the online
+            expectations. I&apos;m currently developing the future of the online
             banking industry with U.S. Bank. Outside of work, I love surfing,
             camping, and spending time with my dog Copper.
           </Text>

@@ -3,9 +3,13 @@
 const chalk = require("chalk");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
+
+const mode = process.env.NODE_ENV || "production";
 
 console.log("");
-console.log(`MODE - ${chalk.blue(process.env.NODE_ENV)}`);
+console.log(`MODE - ${chalk.blue(mode)}`);
 console.log("");
 
 const config = {
@@ -16,7 +20,6 @@ const config = {
     open: true,
     port: 5000,
     proxy: {
-      // "/": "http://localhost:3000/",
       "/admin": {
         target: "http://localhost:3000/",
         bypass: function (req, res, proxyOptions) {
@@ -42,7 +45,7 @@ const config = {
     },
     stats: "minimal",
   },
-  mode: process.env.NODE_ENV,
+  mode: mode === "analyze" ? "production" : "development",
   module: {
     rules: [
       {
@@ -54,11 +57,14 @@ const config = {
         loader: "svg-inline-loader",
       },
       {
-        test: /\.ts(x?)$/,
+        test: /\.js$/,
         enforce: "pre",
+        use: ["source-map-loader"],
+      },
+      {
+        test: /\.ts(x?)$/,
         exclude: /node_modules/,
         use: [
-          "source-map-loader",
           {
             loader: "ts-loader",
             options: {
@@ -97,5 +103,9 @@ const config = {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
 };
+
+if (process.env.NODE_ENV === "analyze") {
+  config.plugins.push(new BundleAnalyzerPlugin({ analyzerMode: "static" }));
+}
 
 module.exports = config;

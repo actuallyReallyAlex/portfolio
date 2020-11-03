@@ -14,6 +14,7 @@ const userSchema = new mongoose.Schema(
       trim: true,
       type: String,
       unique: true,
+      // eslint-disable-next-line
       validate: (value: any): boolean => {
         if (!validator.isEmail(value)) {
           throw new Error("Email is invalid.");
@@ -31,6 +32,7 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true,
       type: String,
+      // eslint-disable-next-line
       validate: (value: any): boolean => {
         // * Password should contain:
         // * 1. At least 1 uppercase letter
@@ -87,7 +89,7 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-function contentToJSON(this: any): void {
+function contentToJSON(this: UserDocument): void {
   const userObj = this.toObject();
 
   delete userObj.password;
@@ -103,6 +105,7 @@ userSchema.methods.generateAuthToken = async function (): Promise<string> {
     throw new Error("JWT_SECRET not provided!");
   }
 
+  // eslint-disable-next-line
   const user = this;
   const token = jwt.sign({ _id: user.id.toString() }, process.env.JWT_SECRET);
 
@@ -134,6 +137,7 @@ userSchema.statics.findByCredentials = async (
 };
 
 userSchema.pre("save", async function (next): Promise<void> {
+  // eslint-disable-next-line
   const user: any = this;
 
   if (user.isModified("password")) {

@@ -3,9 +3,7 @@ import { Editor } from "@tinymce/tinymce-react";
 import { Box, Button, Heading } from "rebass";
 import { Input, Label } from "@rebass/forms";
 
-export interface CreatePortfolioItemProps {}
-
-const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = () => {
+const CreatePortfolioItem: React.FunctionComponent<unknown> = () => {
   const [title, setTitle] = React.useState("");
   const [tagline, setTagline] = React.useState("");
   const [iconBackground, setIconBackground] = React.useState("");
@@ -69,13 +67,16 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
 
   return (
     <Box>
-      <Heading as="h2">Create a New Portfolio Item</Heading>
+      <Heading as="h2" sx={{ marginBottom: "25px" }}>
+        Create a New Portfolio Item
+      </Heading>
       <form onSubmit={handleNewPortfolioItemSubmit}>
         <Label htmlFor="title">Title</Label>
         <Input
           id="title"
           onChange={(e) => setTitle(e.target.value)}
           required
+          sx={{ marginBottom: "10px" }}
           type="text"
           value={title}
         />
@@ -85,6 +86,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
           id="tagline"
           onChange={(e) => setTagline(e.target.value)}
           required
+          sx={{ marginBottom: "10px" }}
           type="text"
           value={tagline}
         />
@@ -94,6 +96,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
           id="iconBackground"
           onChange={(e) => setIconBackground(e.target.value)}
           required
+          sx={{ marginBottom: "10px" }}
           type="text"
           value={iconBackground}
         />
@@ -103,44 +106,54 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
           id="iconClass"
           onChange={(e) => setIconClass(e.target.value)}
           required
+          sx={{ marginBottom: "25px" }}
           type="text"
           value={iconClass}
         />
 
-        <Heading as="h3">Links</Heading>
+        <Heading as="h3" sx={{ marginBottom: "25px" }}>
+          Links
+        </Heading>
+
         <Label htmlFor="demo">Demo</Label>
         <Input
           id="demo"
           onChange={(e) => setDemo(e.target.value)}
+          sx={{ marginBottom: "10px" }}
           type="text"
           value={demo}
         />
+
         <Label htmlFor="github">Github</Label>
         <Input
           id="github"
           onChange={(e) => setGithub(e.target.value)}
+          sx={{ marginBottom: "10px" }}
           type="text"
           value={github}
         />
+
         <Label htmlFor="npm">NPM</Label>
         <Input
           id="npm"
           onChange={(e) => setNPM(e.target.value)}
+          sx={{ marginBottom: "25px" }}
           type="text"
           value={npm}
         />
 
-        <Heading as="h3">Images</Heading>
-
-        <Label htmlFor="cover">Cover</Label>
+        <Label htmlFor="cover">Cover Image</Label>
         <Input
           accept="image/png, image/jpeg"
           id="cover"
           onChange={(e) => setCover(e.target.files[0])}
+          sx={{ marginBottom: "25px" }}
           type="file"
         />
 
-        <Label>Content</Label>
+        <Heading as="h3" sx={{ marginBottom: "25px" }}>
+          Content
+        </Heading>
         <Editor
           apiKey={process.env.TINYMCE_API_KEY}
           initialValue="<p>This is the initial content of the editor</p>"
@@ -157,13 +170,14 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
              alignleft aligncenter alignright alignjustify | \
              bullist numlist outdent indent | link image code | removeformat | help",
           }}
-          onEditorChange={(content, editor) => {
-            console.log("Content was updated:", content);
-            setContent(content);
-          }}
+          onEditorChange={(content) => setContent(content)}
         />
 
-        <Button type="submit" variant="primary">
+        <Button
+          sx={{ marginBottom: "50px", marginTop: "50px" }}
+          type="submit"
+          variant="primary"
+        >
           Create
         </Button>
       </form>

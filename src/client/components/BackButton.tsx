@@ -2,9 +2,7 @@ import * as React from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Button } from "rebass";
 
-export interface BackButtonProps {}
-
-const BackButton: React.FunctionComponent<BackButtonProps> = () => {
+const BackButton: React.FunctionComponent<unknown> = () => {
   return (
     <RouterLink to="/">
       <Button

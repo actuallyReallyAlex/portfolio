@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useLocation } from "react-router-dom";
-import { Box, Button, Flex, Heading, Image, Link } from "rebass";
+import { Box, Flex, Heading, Image, Link } from "rebass";
 import BackButton from "../components/BackButton";
 
 import { PortfolioItemDocument } from "../types";
@@ -27,9 +27,9 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
 
   if (currentPortfolioItem) {
     return (
-      <Flex flexDirection="column" sx={{ margin: "100px 15%" }}>
+      <Flex flexDirection="column" sx={{ margin: ["100px 10%", "100px 15%"] }}>
         <BackButton />
-        <Heading as="h1" fontSize="7" sx={{ textTransform: "uppercase" }}>
+        <Heading as="h1" fontSize={[6, 7]} sx={{ textTransform: "uppercase" }}>
           {currentPortfolioItem.title}
         </Heading>
         <>

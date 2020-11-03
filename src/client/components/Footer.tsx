@@ -1,8 +1,6 @@
 import * as React from "react";
 
-export interface FooterProps {}
-
-const Footer: React.FunctionComponent<FooterProps> = () => {
+const Footer: React.FunctionComponent<unknown> = () => {
   return <footer>Alex Lee | Alex Lee © 2020</footer>;
 };
 

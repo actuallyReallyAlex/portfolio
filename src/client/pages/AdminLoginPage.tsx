@@ -1,7 +1,8 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
-import { Box, Button, Flex, Heading, Text } from "rebass";
+import { Box, Button, Flex, Heading } from "rebass";
 import { Label, Input } from "@rebass/forms";
+
+import BackButton from "../components/BackButton";
 
 import { UserDocument } from "../types";
 
@@ -43,36 +44,53 @@ const AdminLoginPage: React.FunctionComponent<AdminLoginPageProps> = (
   };
 
   return (
-    <Flex alignItems="center" flexDirection="column" justifyContent="center">
-      <Box backgroundColor="secondary">
-        <Link to="/">Back</Link>
-        <Heading as="h1">Admin Login Page</Heading>
-        <Text>USER IS NOT AUTHENTICATED</Text>
-        <Box>
-          <form onSubmit={handleSubmit}>
-            <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              onChange={(e) => setEmail(e.target.value)}
-              type="text"
-              value={email}
-            />
-            <Label htmlFor="password">Password</Label>
-            <Input
-              id="password"
-              onChange={(e) => setPassword(e.target.value)}
-              type="password"
-              value={password}
-            />
-            <Button
-              disabled={!email || !password}
-              type="submit"
-              variant="primary"
-            >
-              Log in
-            </Button>
-          </form>
-        </Box>
+    <Flex
+      alignItems="center"
+      flexDirection="column"
+      id="admin-login"
+      justifyContent="center"
+    >
+      <BackButton />
+      <Heading as="h1" fontSize="7">
+        Login
+      </Heading>
+      <Box>
+        <form onSubmit={handleSubmit}>
+          <Label htmlFor="email" sx={{ marginTop: "25px" }}>
+            Email
+          </Label>
+          <Input
+            id="email"
+            onChange={(e) => setEmail(e.target.value)}
+            sx={{ marginBottom: "25px" }}
+            type="text"
+            value={email}
+          />
+          <Label htmlFor="password">Password</Label>
+          <Input
+            id="password"
+            onChange={(e) => setPassword(e.target.value)}
+            sx={{ marginBottom: "50px" }}
+            type="password"
+            value={password}
+          />
+          <Button
+            disabled={!email || !password}
+            sx={{
+              display: "flex",
+              margin: "0 auto",
+              transition: "0.25s ease-in-out",
+              ":hover": {
+                backgroundColor: "rgba(0, 119, 204, 0.8)",
+                cursor: "pointer",
+              },
+            }}
+            type="submit"
+            variant="primary"
+          >
+            Log in
+          </Button>
+        </form>
       </Box>
     </Flex>
   );

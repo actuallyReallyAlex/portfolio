@@ -1,16 +1,26 @@
-import express, { Request, Response, Router } from "express";
-import multer from "multer";
+import express, { Express, Request, Response, Router } from "express";
+import multer, { FileFilterCallback } from "multer";
 import path from "path";
 import { v4 as uuidv4 } from "uuid";
 
 import PortfolioItemModel from "../models/PortfolioItem";
-import { PortfolioItem } from "../types";
+
+import {
+  ErrorResponse,
+  PortfolioItem,
+  PortfolioItemDocument,
+  PortfolioItemModifyResponse,
+} from "../types";
 
 class PortfolioItemController {
   public router: Router = express.Router();
 
   private parseFile = multer({
-    fileFilter: (req: express.Request, file: any, cb: Function) => {
+    fileFilter: (
+      req: express.Request,
+      file: Express.Multer.File,
+      cb: FileFilterCallback
+    ) => {
       if (
         !file.originalname.match(/\.(png)$/) &&
         !file.originalname.match(/\.(jpg)$/) &&
@@ -23,7 +33,7 @@ class PortfolioItemController {
         );
       }
 
-      return cb(undefined, true);
+      return cb(null, true);
     },
     limits: {
       fileSize: 5000000,
@@ -45,7 +55,10 @@ class PortfolioItemController {
   public initializeRoutes(): void {
     this.router.get(
       "/portfolioItems",
-      async (req: Request, res: Response): Promise<Response<any>> => {
+      async (
+        req: Request,
+        res: Response
+      ): Promise<Response<ErrorResponse | PortfolioItemDocument[]>> => {
         try {
           const portfolioItemDocuments = await PortfolioItemModel.find({});
 
@@ -60,7 +73,10 @@ class PortfolioItemController {
     this.router.post(
       "/portfolioItem",
       this.parseFile.single("file"),
-      async (req: Request, res: Response): Promise<Response<any>> => {
+      async (
+        req: Request,
+        res: Response
+      ): Promise<Response<ErrorResponse | PortfolioItemDocument>> => {
         try {
           const {
             content,
@@ -91,14 +107,17 @@ class PortfolioItemController {
       }
     );
 
+    // TODO - Implement CoverImage modification
     this.router.patch(
       "/portfolioItem",
       this.parseFile.single("file"),
-      async (req: Request, res: Response): Promise<Response<any>> => {
+      async (
+        req: Request,
+        res: Response
+      ): Promise<Response<ErrorResponse | PortfolioItemModifyResponse>> => {
         try {
-          const { content, id, links, tagline, title } = req.body;
           const correspondingPortfolioItem = await PortfolioItemModel.findById(
-            id
+            req.body.id
           );
           if (!correspondingPortfolioItem) {
             return res
@@ -108,70 +127,11 @@ class PortfolioItemController {
 
           const updateFieldNames = Object.keys(req.body);
 
-          if (
-            req.body.iconBackground &&
-            req.body.iconBackground !==
-              correspondingPortfolioItem.iconBackground
-          ) {
-            correspondingPortfolioItem.iconBackground = req.body.iconBackground;
-          }
-
-          if (
-            req.body.iconClass &&
-            req.body.iconClass !== correspondingPortfolioItem.iconClass
-          ) {
-            correspondingPortfolioItem.iconClass = req.body.iconClass;
-          }
-
-          if (
-            req.body.title &&
-            req.body.title !== correspondingPortfolioItem.title
-          ) {
-            correspondingPortfolioItem.title = req.body.title;
-          }
-
-          if (
-            req.body.tagline &&
-            req.body.tagline !== correspondingPortfolioItem.tagline
-          ) {
-            correspondingPortfolioItem.tagline = req.body.tagline;
-          }
-
-          if (
-            req.body.links &&
-            req.body.links.demo &&
-            correspondingPortfolioItem.links &&
-            req.body.links.demo !== correspondingPortfolioItem.links.demo
-          ) {
-            correspondingPortfolioItem.links.demo = req.body.links.demo;
-          }
-
-          if (
-            req.body.links &&
-            req.body.links.github &&
-            correspondingPortfolioItem.links &&
-            req.body.links.github !== correspondingPortfolioItem.links.github
-          ) {
-            correspondingPortfolioItem.links.github = req.body.links.github;
-          }
-
-          if (
-            req.body.links &&
-            req.body.links.npm &&
-            correspondingPortfolioItem.links &&
-            req.body.links.npm !== correspondingPortfolioItem.links.npm
-          ) {
-            correspondingPortfolioItem.links.npm = req.body.links.npm;
-          }
-
-          // TODO - Implement CoverImage modification
-
-          if (
-            req.body.content &&
-            req.body.content !== correspondingPortfolioItem.content
-          ) {
-            correspondingPortfolioItem.content = req.body.content;
-          }
+          updateFieldNames.forEach((field) => {
+            if (req.body[field] !== correspondingPortfolioItem.get(field)) {
+              correspondingPortfolioItem.set(field, req.body[field]);
+            }
+          });
 
           await correspondingPortfolioItem.save();
 
@@ -190,7 +150,10 @@ class PortfolioItemController {
 
     this.router.delete(
       "/portfolioItem",
-      async (req: Request, res: Response): Promise<Response<any>> => {
+      async (
+        req: Request,
+        res: Response
+      ): Promise<Response<ErrorResponse | PortfolioItemModifyResponse>> => {
         try {
           const { id } = req.body;
 

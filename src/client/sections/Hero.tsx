@@ -1,9 +1,7 @@
 import * as React from "react";
 import { Box, Flex, Heading, Image, Link } from "rebass";
 
-export interface HeroProps {}
-
-const Hero: React.FunctionComponent<HeroProps> = () => {
+const Hero: React.FunctionComponent<unknown> = () => {
   return (
     <div id="hero">
       <Flex
@@ -61,7 +59,7 @@ const Hero: React.FunctionComponent<HeroProps> = () => {
             Hello, World.
           </Heading>
           <Heading as="h1" fontSize={[6, 8]} lineHeight="72px">
-            I'm Alex Lee
+            I&apos;m Alex Lee
           </Heading>
           <Heading
             as="h2"
