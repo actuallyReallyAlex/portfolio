@@ -18,7 +18,9 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react", "@typescript-eslint"],
-  rules: {},
+  rules: {
+    "@typescript-eslint/no-this-alias": 1
+  },
   settings: {
     react: {
       version: "detect",

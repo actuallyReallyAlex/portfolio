@@ -259,9 +259,7 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
              alignleft aligncenter alignright alignjustify | \
              bullist numlist outdent indent | link image code | removeformat | help",
               }}
-              onEditorChange={(content, editor) => {
-                setContent(content);
-              }}
+              onEditorChange={(content) => setContent(content)}
             />
 
             <Button

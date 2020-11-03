@@ -11,15 +11,13 @@ const PortfolioItemDetails = React.lazy(
 
 import { PortfolioItemDocument } from "./types";
 
-export interface AppProps {}
-
 theme.fonts = {
   body: "'Poppins', sans-serif",
   heading: "'Nunito', sans-serif",
   monospace: "Menlo, monospace",
 };
 
-const App: React.FunctionComponent<AppProps> = () => {
+const App: React.FunctionComponent<unknown> = () => {
   const initialPortfolioItems: PortfolioItemDocument[] = [];
   const [portfolioItems, setPortfolioItems] = React.useState(
     initialPortfolioItems
@@ -27,7 +25,7 @@ const App: React.FunctionComponent<AppProps> = () => {
 
   React.useEffect(() => {
     const getPortfolioItems = async (): Promise<
-      PortfolioItemDocument[] | { error: any }
+      PortfolioItemDocument[] | { error: Error }
     > => {
       try {
         const response = await fetch("/portfolioItems", {

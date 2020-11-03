@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useLocation } from "react-router-dom";
-import { Box, Button, Flex, Heading, Image, Link } from "rebass";
+import { Box, Flex, Heading, Image, Link } from "rebass";
 import BackButton from "../components/BackButton";
 
 import { PortfolioItemDocument } from "../types";

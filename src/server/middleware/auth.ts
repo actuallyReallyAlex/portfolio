@@ -17,6 +17,7 @@ const auth = async (
     // *Check if Cookie exists
     if (tokenFromCookie) {
       // *Verify the jwt value
+      // eslint-disable-next-line
       const decoded: any = jwt.verify(tokenFromCookie, process.env.JWT_SECRET);
       const user: UserDocument | null = await User.findOne({
         _id: decoded._id,

@@ -3,9 +3,7 @@ import { Editor } from "@tinymce/tinymce-react";
 import { Box, Button, Heading } from "rebass";
 import { Input, Label } from "@rebass/forms";
 
-export interface CreatePortfolioItemProps {}
-
-const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = () => {
+const CreatePortfolioItem: React.FunctionComponent<unknown> = () => {
   const [title, setTitle] = React.useState("");
   const [tagline, setTagline] = React.useState("");
   const [iconBackground, setIconBackground] = React.useState("");
@@ -172,10 +170,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
              alignleft aligncenter alignright alignjustify | \
              bullist numlist outdent indent | link image code | removeformat | help",
           }}
-          onEditorChange={(content, editor) => {
-            console.log("Content was updated:", content);
-            setContent(content);
-          }}
+          onEditorChange={(content) => setContent(content)}
         />
 
         <Button

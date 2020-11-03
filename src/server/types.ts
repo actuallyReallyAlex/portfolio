@@ -10,6 +10,10 @@ export type Controller = {
   router: Router;
 };
 
+export interface ErrorResponse {
+  error: string;
+}
+
 export interface PortfolioItem {
   content: string;
   coverImage: string;
@@ -40,6 +44,11 @@ export interface PortfolioItemDocument extends Document {
   updatedAt: string;
   _id: string;
   __v: number;
+}
+
+export interface PortfolioItemModifyResponse {
+  portfolioItem: PortfolioItemDocument;
+  portfolioItems: PortfolioItemDocument[]
 }
 
 export interface Token {

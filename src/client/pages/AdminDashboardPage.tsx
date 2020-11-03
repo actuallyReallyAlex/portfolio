@@ -23,29 +23,22 @@ const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
   const Action = actionComponent;
 
   React.useEffect(() => {
+    let Item;
     switch (action) {
       case "createPortfolioItem":
-        const CreatePortfolioItem = React.lazy(
-          () => import("../forms/CreatePortfolioItem")
-        );
-        setActionComponent(CreatePortfolioItem);
+        Item = React.lazy(() => import("../forms/CreatePortfolioItem"));
         break;
       case "deletePortfolioItem":
-        const DeletePortfolioItem = React.lazy(
-          () => import("../forms/DeletePortfolioItem")
-        );
-        setActionComponent(DeletePortfolioItem);
+        Item = React.lazy(() => import("../forms/DeletePortfolioItem"));
         break;
       case "modifyPortfolioItem":
-        const ModifyPortfolioItem = React.lazy(
-          () => import("../forms/ModifyPortfolioItem")
-        );
-        setActionComponent(ModifyPortfolioItem);
+        Item = React.lazy(() => import("../forms/ModifyPortfolioItem"));
         break;
       default:
         console.log("No action selected");
         break;
     }
+    setActionComponent(Item);
   }, [action]);
 
   React.useEffect(() => {

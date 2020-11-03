@@ -7,6 +7,7 @@ import auth from "../middleware/auth";
 
 import {
   AuthenticatedRequest,
+  ErrorResponse,
   Token,
   UserDocument,
   UserRequest,
@@ -71,7 +72,10 @@ class UserController {
 
     this.router.post(
       "/user/login",
-      async (req: Request, res: Response): Promise<Response<any>> => {
+      async (
+        req: Request,
+        res: Response
+      ): Promise<Response<ErrorResponse | UserDocument>> => {
         try {
           if (!req.body.email) {
             return res
@@ -119,7 +123,10 @@ class UserController {
     this.router.get(
       "/user/me",
       auth,
-      async (req: UserRequest, res: Response): Promise<Response<any>> => {
+      async (
+        req: UserRequest,
+        res: Response
+      ): Promise<Response<ErrorResponse | UserDocument>> => {
         try {
           return res.send(req.user);
         } catch (error) {
@@ -133,7 +140,10 @@ class UserController {
     this.router.post(
       "/user/logout",
       auth,
-      async (req: UserRequest, res: Response): Promise<Response<any>> => {
+      async (
+        req: UserRequest,
+        res: Response
+      ): Promise<Response<ErrorResponse>> => {
         try {
           if (!req.user || !req.user.tokens) {
             return res
@@ -148,7 +158,7 @@ class UserController {
 
           res.clearCookie("alexlee_dev");
 
-          return res.send({});
+          return res.status(404).send();
         } catch (error) {
           // eslint-disable-next-line no-console
           console.error(error);
