@@ -21,6 +21,8 @@ class PortfolioItemController {
       file: Express.Multer.File,
       cb: FileFilterCallback
     ) => {
+      console.log("parseFile");
+      console.log({ req, file, cb });
       if (
         !file.originalname.match(/\.(png)$/) &&
         !file.originalname.match(/\.(jpg)$/) &&
@@ -40,9 +42,15 @@ class PortfolioItemController {
     },
     storage: multer.diskStorage({
       destination: function (req, file, cb) {
+        console.log("destination");
+        console.log({ req, file, cb });
+        console.log(path.join(__dirname, "../../uploads"));
         cb(null, path.join(__dirname, "../../uploads"));
       },
       filename: function (req, file, cb) {
+        console.log("filename");
+        console.log({ req, file, cb });
+        console.log(`${uuidv4()}.${file.originalname.split(".")[1]}`);
         cb(null, `${uuidv4()}.${file.originalname.split(".")[1]}`);
       },
     }),
