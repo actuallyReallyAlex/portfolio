@@ -7,7 +7,7 @@ const About: React.FunctionComponent<unknown> = () => {
       <Flex
         alignItems="center"
         flexDirection="column"
-        sx={{ margin: "100px 15%" }}
+        sx={{ margin: ["100px 10%", "100px 15%"] }}
       >
         <Heading as="h2" sx={{ textTransform: "uppercase" }}>
           About

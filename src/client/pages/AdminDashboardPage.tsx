@@ -56,7 +56,7 @@ const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
     <Flex
       flexDirection="column"
       id="admin-dashboard"
-      sx={{ margin: "100px 15%" }}
+      sx={{ margin: ["100px 10%", "100px 15%"] }}
     >
       <BackButton />
       <Heading as="h1" fontSize="7" sx={{ marginBottom: "25px" }}>

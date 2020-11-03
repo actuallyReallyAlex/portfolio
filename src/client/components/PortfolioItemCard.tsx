@@ -17,7 +17,7 @@ const PortfolioItemCard: React.FunctionComponent<PortfolioItemCardProps> = (
     <li className="card__portfolio-item">
       <Flex
         alignItems="center"
-        flexDirection="row"
+        flexDirection={["column", "row"]}
         justifyContent="flex-start"
         sx={{
           marginBottom: "50px",
@@ -33,7 +33,8 @@ const PortfolioItemCard: React.FunctionComponent<PortfolioItemCardProps> = (
             borderRadius: "50%",
             color: "#ffffff",
             height: "100px",
-            marginRight: "50px",
+            marginBottom: ["25px", "0"],
+            marginRight: ["0", "50px"],
             width: "100px",
           }}
         >

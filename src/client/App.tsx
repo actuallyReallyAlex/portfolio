@@ -47,7 +47,13 @@ const App: React.FunctionComponent<unknown> = () => {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <React.Suspense fallback={<div>Loading...</div>}>
+        <React.Suspense
+          fallback={
+            <div id="spinner-container">
+              <div className="spinner" />
+            </div>
+          }
+        >
           <Switch>
             <Route exact path="/">
               <Home portfolioItems={portfolioItems} />

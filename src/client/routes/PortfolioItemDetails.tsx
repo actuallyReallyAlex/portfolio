@@ -27,9 +27,9 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
 
   if (currentPortfolioItem) {
     return (
-      <Flex flexDirection="column" sx={{ margin: "100px 15%" }}>
+      <Flex flexDirection="column" sx={{ margin: ["100px 10%", "100px 15%"] }}>
         <BackButton />
-        <Heading as="h1" fontSize="7" sx={{ textTransform: "uppercase" }}>
+        <Heading as="h1" fontSize={[6, 7]} sx={{ textTransform: "uppercase" }}>
           {currentPortfolioItem.title}
         </Heading>
         <>
