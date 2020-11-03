@@ -1,3 +1,4 @@
+import chalk from "chalk";
 import cookieParser from "cookie-parser";
 import cors, { CorsOptions } from "cors";
 import express, { Request, Response } from "express";
@@ -34,7 +35,11 @@ class App {
     this.app.use(express.json());
     this.app.use(morgan("dev"));
 
-    const whitelistDomains = ["http://localhost:5000", undefined];
+    const whitelistDomains = [
+      "http://localhost:3000",
+      "http://localhost:5000",
+      undefined,
+    ];
 
     const corsOptions: CorsOptions = {
       origin: (
@@ -91,9 +96,13 @@ class App {
 
   public listen(): void {
     this.app.listen(this.port, () => {
-      console.log(`\nMode: ${process.env.NODE_ENV}\n`);
-      console.log(`Server is listening on port: ${this.port}\n`);
-      console.log(`Visit http://localhost:${this.port}/ to see view project\n`);
+      console.log(`\nMode: ${chalk.blue(process.env.NODE_ENV)}\n`);
+      console.log(`Server is listening on port: ${chalk.blue(this.port)}\n`);
+      console.log(
+        `Visit ${chalk.blue(
+          `http://localhost:${this.port}/`
+        )} to view project\n`
+      );
     });
   }
 }

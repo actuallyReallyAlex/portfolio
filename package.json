@@ -13,6 +13,7 @@
     "clean-server": "rimraf build",
     "develop": "env-cmd start-server-and-test start-server 3000 webpack-dev-server",
     "lint": "eslint ./src",
+    "server-alone": "env-cmd node build/index.js",
     "start-server": "npm run build-server && env-cmd node build/index.js"
   },
   "dependencies": {
