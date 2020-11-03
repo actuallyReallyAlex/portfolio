@@ -1,6 +1,5 @@
-node_modules
 .env
-.cache
-public
-yarn.lock
-yarn-error.log
+build/
+dist/
+node_modules/
+uploads/
