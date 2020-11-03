@@ -3,6 +3,8 @@
 const chalk = require("chalk");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 console.log("");
 console.log(`MODE - ${chalk.blue(process.env.NODE_ENV)}`);
@@ -16,7 +18,6 @@ const config = {
     open: true,
     port: 5000,
     proxy: {
-      // "/": "http://localhost:3000/",
       "/admin": {
         target: "http://localhost:3000/",
         bypass: function (req, res, proxyOptions) {
@@ -54,11 +55,14 @@ const config = {
         loader: "svg-inline-loader",
       },
       {
-        test: /\.ts(x?)$/,
+        test: /\.js$/,
         enforce: "pre",
+        use: ["source-map-loader"],
+      },
+      {
+        test: /\.ts(x?)$/,
         exclude: /node_modules/,
         use: [
-          "source-map-loader",
           {
             loader: "ts-loader",
             options: {
@@ -92,6 +96,7 @@ const config = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src/client/index.html"),
     }),
+    new BundleAnalyzerPlugin({ analyzerMode: "static" }),
   ],
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
