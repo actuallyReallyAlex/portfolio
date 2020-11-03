@@ -48,6 +48,7 @@ footer {
 }
 
 #hero,
-#admin-login {
+#admin-login,
+#admin-dashboard {
   height: 100vh;
 }

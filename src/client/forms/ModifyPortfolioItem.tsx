@@ -108,7 +108,7 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
 
   React.useEffect(() => {
     if (selectedPortfolioItem) {
-      setIconBackground(selectedPortfolioItem.iconBacksetIconBackground);
+      setIconBackground(selectedPortfolioItem.iconBackground);
       setIconClass(selectedPortfolioItem.iconClass);
       setTitle(selectedPortfolioItem.title);
       setTagline(selectedPortfolioItem.tagline);
@@ -123,7 +123,9 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
 
   return (
     <Box>
-      <Heading as="h2">Modify an Existing Portfolio Item</Heading>
+      <Heading as="h2" sx={{ marginBottom: "25px" }}>
+        Modify an Existing Portfolio Item
+      </Heading>
       <form onSubmit={handleModifyPortfolioItemSubmit}>
         <Label htmlFor="select-portfolio-item">Select Portfolio Item</Label>
         <Select
@@ -134,6 +136,7 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
             setSelectedPortfolioItem(selection);
             setId(selection._id);
           }}
+          sx={{ marginBottom: "50px" }}
           value={selectedPortfolioItem ? selectedPortfolioItem : ""}
         >
           <option disabled value="">
@@ -153,6 +156,7 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
               id="title"
               onChange={(e) => setTitle(e.target.value)}
               required
+              sx={{ marginBottom: "10px" }}
               type="text"
               value={title}
             />
@@ -162,6 +166,7 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
               id="tagline"
               onChange={(e) => setTagline(e.target.value)}
               required
+              sx={{ marginBottom: "10px" }}
               type="text"
               value={tagline}
             />
@@ -171,6 +176,7 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
               id="iconBackground"
               onChange={(e) => setIconBackground(e.target.value)}
               required
+              sx={{ marginBottom: "10px" }}
               type="text"
               value={iconBackground}
             />
@@ -180,47 +186,63 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
               id="iconClass"
               onChange={(e) => setIconClass(e.target.value)}
               required
+              sx={{ marginBottom: "25px" }}
               type="text"
               value={iconClass}
             />
 
-            <Heading as="h3">Links</Heading>
+            <Heading as="h3" sx={{ marginBottom: "25px" }}>
+              Links
+            </Heading>
+
             <Label htmlFor="demo">Demo</Label>
             <Input
               id="demo"
               onChange={(e) => setDemo(e.target.value)}
+              sx={{ marginBottom: "10px" }}
               type="text"
               value={demo}
             />
+
             <Label htmlFor="github">Github</Label>
             <Input
               id="github"
               onChange={(e) => setGithub(e.target.value)}
+              sx={{ marginBottom: "10px" }}
               type="text"
               value={github}
             />
+
             <Label htmlFor="npm">NPM</Label>
             <Input
               id="npm"
               onChange={(e) => setNPM(e.target.value)}
+              sx={{ marginBottom: "10px" }}
               type="text"
               value={npm}
             />
 
-            <Heading as="h3">Images</Heading>
-
-            <Label>Current Cover Image</Label>
-            <Image alt="Current cover image" src={coverImage} width="300px" />
+            <Label htmlFor="current-cover-image">Current Cover Image</Label>
+            <Image
+              alt="Current cover image"
+              id="current-cover-image"
+              src={coverImage}
+              sx={{ marginBottom: "10px" }}
+              width="300px"
+            />
 
             <Label htmlFor="new-cover-image">New Cover Image</Label>
             <Input
               accept="image/png, image/jpeg"
               id="new-cover-image"
               onChange={(e) => setNewCoverImage(e.target.files[0])}
+              sx={{ marginBottom: "10px" }}
               type="file"
             />
 
-            <Label>Content</Label>
+            <Heading as="h3" sx={{ marginBottom: "25px" }}>
+              Content
+            </Heading>
             <Editor
               apiKey={process.env.TINYMCE_API_KEY}
               initialValue={selectedPortfolioItem.content}
@@ -242,7 +264,11 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
               }}
             />
 
-            <Button type="submit" variant="primary">
+            <Button
+              sx={{ marginBottom: "50px", marginTop: "50px" }}
+              type="submit"
+              variant="primary"
+            >
               Modify
             </Button>
           </Box>

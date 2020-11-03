@@ -51,7 +51,7 @@ const AdminLoginPage: React.FunctionComponent<AdminLoginPageProps> = (
       justifyContent="center"
     >
       <BackButton />
-      <Heading as="h1" fontSize="5">
+      <Heading as="h1" fontSize="7">
         Login
       </Heading>
       <Box>
@@ -62,6 +62,7 @@ const AdminLoginPage: React.FunctionComponent<AdminLoginPageProps> = (
           <Input
             id="email"
             onChange={(e) => setEmail(e.target.value)}
+            sx={{ marginBottom: "25px" }}
             type="text"
             value={email}
           />
@@ -69,7 +70,7 @@ const AdminLoginPage: React.FunctionComponent<AdminLoginPageProps> = (
           <Input
             id="password"
             onChange={(e) => setPassword(e.target.value)}
-            sx={{ marginBottom: "25px" }}
+            sx={{ marginBottom: "50px" }}
             type="password"
             value={password}
           />

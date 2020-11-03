@@ -2,7 +2,8 @@ import * as React from "react";
 
 import AdminDashboardPage from "../pages/AdminDashboardPage";
 import AdminLoginPage from "../pages/AdminLoginPage";
-import { PortfolioItem, PortfolioItemDocument } from "../types";
+
+import { PortfolioItemDocument } from "../types";
 
 export interface AdminProps {
   portfolioItems: PortfolioItemDocument[];

@@ -41,14 +41,20 @@ const DeletePortfolioItem: React.FunctionComponent<DeletePortfolioItemProps> = (
 
   return (
     <Box>
-      <Heading as="h2">Delete a Portfolio Item</Heading>
+      <Heading as="h2" sx={{ marginBottom: "25px" }}>
+        Delete a Portfolio Item
+      </Heading>
       <form onSubmit={handleDeletePortfolioItemSubmit}>
         <Label htmlFor="portfolio-item">PortfolioItem</Label>
         <Select
           id="portfolio-item"
           onChange={(e) => setId(e.target.value)}
           required
+          value={id}
         >
+          <option disabled value="">
+            - Select PortfolioItem -
+          </option>
           {portfolioItems.map((portfolioItem) => (
             <option key={portfolioItem._id} value={portfolioItem._id}>
               {portfolioItem.title}
@@ -56,7 +62,9 @@ const DeletePortfolioItem: React.FunctionComponent<DeletePortfolioItemProps> = (
           ))}
         </Select>
 
-        <Button type="submit">Delete</Button>
+        <Button sx={{ marginBottom: "50px", marginTop: "50px" }} type="submit">
+          Delete
+        </Button>
       </form>
     </Box>
   );

@@ -6,8 +6,10 @@ const path = require("path");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
 
+const mode = process.env.NODE_ENV;
+
 console.log("");
-console.log(`MODE - ${chalk.blue(process.env.NODE_ENV)}`);
+console.log(`MODE - ${chalk.blue(mode)}`);
 console.log("");
 
 const config = {
@@ -43,7 +45,7 @@ const config = {
     },
     stats: "minimal",
   },
-  mode: process.env.NODE_ENV,
+  mode: mode === "analyze" ? "production" : "development",
   module: {
     rules: [
       {
@@ -96,11 +98,14 @@ const config = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src/client/index.html"),
     }),
-    new BundleAnalyzerPlugin({ analyzerMode: "static" }),
   ],
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
 };
+
+if (process.env.NODE_ENV === "analyze") {
+  config.plugins.push(new BundleAnalyzerPlugin({ analyzerMode: "static" }));
+}
 
 module.exports = config;

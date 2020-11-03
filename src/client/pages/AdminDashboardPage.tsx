@@ -1,11 +1,8 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
-import { Flex, Heading, Text } from "rebass";
+import { Flex, Heading } from "rebass";
 import { Select } from "@rebass/forms";
 
-import CreatePortfolioItem from "../forms/CreatePortfolioItem";
-import DeletePortfolioItem from "../forms/DeletePortfolioItem";
-import ModifyPortfolioItem from "../forms/ModifyPortfolioItem";
+import BackButton from "../components/BackButton";
 
 import { PortfolioItemDocument, UserDocument } from "../types";
 
@@ -18,25 +15,68 @@ export interface AdminDashboardPageProps {
 const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
   props: AdminDashboardPageProps
 ) => {
-  const { portfolioItems, setPortfolioItems, user } = props;
+  const { portfolioItems, setPortfolioItems } = props;
 
   const [action, setAction] = React.useState("");
+  const [actionComponent, setActionComponent] = React.useState(null);
 
-  const actions = {
-    createPortfolioItem: CreatePortfolioItem,
-    deletePortfolioItem: DeletePortfolioItem,
-    modifyPortfolioItem: ModifyPortfolioItem,
-  };
+  const Action = actionComponent;
 
-  const Action = actions[action];
+  React.useEffect(() => {
+    switch (action) {
+      case "createPortfolioItem":
+        const CreatePortfolioItem = React.lazy(
+          () => import("../forms/CreatePortfolioItem")
+        );
+        setActionComponent(CreatePortfolioItem);
+        break;
+      case "deletePortfolioItem":
+        const DeletePortfolioItem = React.lazy(
+          () => import("../forms/DeletePortfolioItem")
+        );
+        setActionComponent(DeletePortfolioItem);
+        break;
+      case "modifyPortfolioItem":
+        const ModifyPortfolioItem = React.lazy(
+          () => import("../forms/ModifyPortfolioItem")
+        );
+        setActionComponent(ModifyPortfolioItem);
+        break;
+      default:
+        console.log("No action selected");
+        break;
+    }
+  }, [action]);
+
+  React.useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/assets/tinymce.min.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
-    <Flex flexDirection="column">
-      <Link to="/">Back</Link>
-      <Heading as="h1">Admin Dashboard Page</Heading>
-      <Text>USER IS AUTHENTICATED!</Text>
-      <Heading as="h2">Select Action</Heading>
-      <Select onChange={(e) => setAction(e.target.value)} value={action}>
+    <Flex
+      flexDirection="column"
+      id="admin-dashboard"
+      sx={{ margin: "100px 15%" }}
+    >
+      <BackButton />
+      <Heading as="h1" fontSize="7" sx={{ marginBottom: "25px" }}>
+        Admin Dashboard
+      </Heading>
+      <Heading as="h2" sx={{ marginBottom: "5px" }}>
+        Select Action
+      </Heading>
+      <Select
+        onChange={(e) => setAction(e.target.value)}
+        sx={{ marginBottom: "50px" }}
+        value={action}
+      >
         <option disabled value="">
           - Select Action -
         </option>
@@ -49,7 +89,7 @@ const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
         )}
       </Select>
 
-      {action && (
+      {actionComponent && (
         <Action
           portfolioItems={portfolioItems}
           setPortfolioItems={setPortfolioItems}
