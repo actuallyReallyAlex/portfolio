@@ -77,6 +77,7 @@ class PortfolioItemController {
         req: Request,
         res: Response
       ): Promise<Response<ErrorResponse | PortfolioItemDocument>> => {
+        console.log("callback");
         try {
           const {
             content,
@@ -86,6 +87,7 @@ class PortfolioItemController {
             tagline,
             title,
           } = req.body;
+          console.log({ body: req.body });
           const newItemData: PortfolioItem = {
             content,
             coverImage: `/uploads/${req.file.filename}`,
@@ -95,7 +97,9 @@ class PortfolioItemController {
             tagline,
             title,
           };
+          console.log({ newItemData });
           const newPortfolioItem = new PortfolioItemModel(newItemData);
+          console.log({ newPortfolioItem });
 
           await newPortfolioItem.save();
 
