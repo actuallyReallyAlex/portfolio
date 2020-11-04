@@ -1,7 +1,5 @@
-import express, { Express, Request, Response, Router } from "express";
+import express, { Request, Response, Router } from "express";
 import multer, { FileFilterCallback } from "multer";
-import path from "path";
-import { v4 as uuidv4 } from "uuid";
 
 import PortfolioItemModel from "../models/PortfolioItem";
 
@@ -21,7 +19,7 @@ class PortfolioItemController {
       file: Express.Multer.File,
       cb: FileFilterCallback
     ) => {
-      console.log(`------ parsefile ------`);
+      console.log("------ parseFile ------");
       if (
         !file.originalname.match(/\.(png)$/) &&
         !file.originalname.match(/\.(jpg)$/) &&
@@ -39,18 +37,7 @@ class PortfolioItemController {
     limits: {
       fileSize: 5000000,
     },
-    storage: multer.diskStorage({
-      destination: function (req, file, cb) {
-        console.log("------ destination ------");
-        console.log(path.join(__dirname, "../../uploads"));
-        cb(null, path.join(__dirname, "../../uploads"));
-      },
-      filename: function (req, file, cb) {
-        console.log("------ filename ------");
-        console.log(`${uuidv4()}.${file.originalname.split(".")[1]}`);
-        cb(null, `${uuidv4()}.${file.originalname.split(".")[1]}`);
-      },
-    }),
+    storage: multer.memoryStorage(),
   });
 
   constructor() {
@@ -77,96 +64,41 @@ class PortfolioItemController {
 
     this.router.post(
       "/portfolioItem",
-      // this.parseFile.single("file"),
-      async (req: Request, res: Response): Promise<any> => {
-        console.log("------ callback ------");
-
-        const uploadTest = multer({
-          fileFilter: (
-            req: express.Request,
-            file: Express.Multer.File,
-            cb: FileFilterCallback
-          ) => {
-            console.log("------ parseFile ------");
-            if (
-              !file.originalname.match(/\.(png)$/) &&
-              !file.originalname.match(/\.(jpg)$/) &&
-              !file.originalname.match(/\.(jpeg)$/)
-            ) {
-              return cb(
-                new Error(
-                  "File must be in one of the following formats: [.png, .jpg, .jpeg]."
-                )
-              );
-            }
-
-            return cb(null, true);
-          },
-          limits: {
-            fileSize: 5000000,
-          },
-          storage: multer.diskStorage({
-            destination: function (req, file, cb) {
-              console.log("------ destination ------");
-              console.log(path.join(__dirname, "../../uploads"));
-              cb(null, path.join(__dirname, "../../uploads"));
+      this.parseFile.single("file"),
+      async (
+        req: Request,
+        res: Response
+      ): Promise<Response<ErrorResponse | PortfolioItemDocument>> => {
+        try {
+          const {
+            content,
+            iconBackground,
+            iconClass,
+            links,
+            tagline,
+            title,
+          } = req.body;
+          const newItemData: PortfolioItem = {
+            content,
+            coverImage: {
+              base64: req.file.buffer.toString("base64"),
+              filename: req.file.originalname,
             },
-            filename: function (req, file, cb) {
-              console.log("------ filename ------");
-              const filename = `${uuidv4()}.${file.originalname.split(".")[1]}`;
-              console.log({ filename });
-              cb(null, filename);
-            },
-          }),
-        }).single("file");
+            iconBackground,
+            iconClass,
+            links: JSON.parse(links),
+            tagline,
+            title,
+          };
+          const newPortfolioItem = new PortfolioItemModel(newItemData);
 
-        uploadTest(req, res, async (err: any) => {
-          if (err instanceof multer.MulterError) {
-            // A Multer error occurred when uploading.
-            console.log("A multer error occured when uploading");
-            console.error(err);
-            return res.status(500).send({ error: err });
-          } else if (err) {
-            // An unknown error occurred when uploading.
-            console.log("An unknown error occured when uploading");
-            console.error(err);
-            return res.status(500).send({ error: err });
-          }
+          await newPortfolioItem.save();
 
-          // Everything went fine.
-          console.log("------ everything is fine ------");
-
-          try {
-            const {
-              content,
-              iconBackground,
-              iconClass,
-              links,
-              tagline,
-              title,
-            } = req.body;
-            console.log({ body: JSON.stringify(req.body, null, 2) });
-            const newItemData: PortfolioItem = {
-              content,
-              coverImage: `/uploads/${req.file.filename}`,
-              iconBackground,
-              iconClass,
-              links: JSON.parse(links),
-              tagline,
-              title,
-            };
-            console.log({ newItemData });
-            const newPortfolioItem = new PortfolioItemModel(newItemData);
-            console.log({ newPortfolioItem });
-
-            await newPortfolioItem.save();
-
-            return res.status(201).send(newPortfolioItem);
-          } catch (error) {
-            console.error(error);
-            return res.status(500).send({ error });
-          }
-        });
+          return res.status(201).send(newPortfolioItem);
+        } catch (error) {
+          console.error(error);
+          return res.status(500).send({ error });
+        }
       }
     );
 
