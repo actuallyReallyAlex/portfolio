@@ -55,7 +55,7 @@ const CreatePortfolioItem: React.FunctionComponent<unknown> = () => {
     setNPM("");
     setCover(null);
     setContent("");
-    e.currentTarget.reset();
+    e.currentTarget && e.currentTarget.reset();
   };
 
   React.useEffect(() => {

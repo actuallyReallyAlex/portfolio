@@ -1,8 +1,13 @@
 import { Document } from "mongoose";
 
+export interface MongoImage {
+  base64: string;
+  filename: string;
+}
+
 export interface PortfolioItem {
   content: string;
-  coverImage: string;
+  coverImage: MongoImage;
   iconBackground: string;
   iconClass: string;
   links?: {
@@ -16,7 +21,7 @@ export interface PortfolioItem {
 
 export interface PortfolioItemDocument extends Document {
   content: string;
-  coverImage: string;
+  coverImage: MongoImage;
   iconBackground: string;
   iconClass: string;
   links?: {

@@ -87,7 +87,10 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
               )}
             </ul>
           </Box>
-          <Image alt="Cover Image" src={currentPortfolioItem.coverImage} />
+          <Image
+            alt="Cover Image"
+            src={`data:image/png;base64,${currentPortfolioItem.coverImage.base64}`}
+          />
           <div
             dangerouslySetInnerHTML={{ __html: currentPortfolioItem.content }}
           />
