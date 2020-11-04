@@ -36,6 +36,7 @@ const About: React.FunctionComponent<unknown> = () => {
             camping, and spending time with my dog Copper.
           </Text>
           <a
+            data-cy="resume-link"
             href="/assets/alex-lee-resume.pdf"
             rel="noopener noreferrer"
             target="_blank"
