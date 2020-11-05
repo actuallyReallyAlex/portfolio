@@ -22,7 +22,7 @@ const NotFound: React.FunctionComponent<unknown> = () => {
       <Heading as="h2" fontWeight="normal" sx={{ marginBottom: "25px" }}>
         Sorry, but the page you were looking for could not be found.
       </Heading>
-      <RouterLink className="link__unstyled" to="/">
+      <RouterLink className="link__unstyled" data-cy="return-link" to="/">
         <Button
           sx={{
             alignItems: "center",

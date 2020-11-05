@@ -33,7 +33,9 @@ class App {
 
     this.app.use(cookieParser());
     this.app.use(express.json());
-    this.app.use(morgan("dev"));
+    if (process.env.NODE_ENV !== "test") {
+      this.app.use(morgan("dev"));
+    }
 
     const whitelistDomains = [
       "http://localhost:3000",
