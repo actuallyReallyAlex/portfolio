@@ -1,3 +1,7 @@
+.link__unstyled {
+  text-decoration: none;
+}
+
 .social__list {
   display: flex;
   list-style: none;
@@ -50,7 +54,8 @@ footer {
 #hero,
 #admin-login,
 #admin-dashboard,
-#spinner-container {
+#spinner-container,
+#not-found {
   height: 100vh;
 }
 

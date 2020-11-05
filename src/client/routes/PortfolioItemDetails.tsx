@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 import { Box, Flex, Heading, Image, Link } from "rebass";
 import BackButton from "../components/BackButton";
 
+const NotFound = React.lazy(() => import("../routes/NotFound"));
+
 import { PortfolioItemDocument } from "../types";
 
 export interface PortfolioItemDetailsProps {
@@ -14,16 +16,33 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
 ) => {
   const location = useLocation();
   const portfolioItemId = location.pathname.split("/portfolio/")[1];
+  const [currentPortfolioItem, setCurrentPortfolioItem] = React.useState(null);
+  const [notFound, setNotFound] = React.useState(false);
 
   const { portfolioItems } = props;
 
-  const currentPortfolioItem = portfolioItems.find(
-    (item) => item._id === portfolioItemId
-  );
-
   React.useEffect(() => {
     window.scrollTo(0, 0);
+
+    if (
+      !portfolioItemId.match(
+        /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/
+      )
+    ) {
+      setNotFound(true);
+    } else {
+      const item = portfolioItems.find((item) => item._id === portfolioItemId);
+      if (item) {
+        setCurrentPortfolioItem(item);
+      } else {
+        setNotFound(true);
+      }
+    }
   }, []);
+
+  if (notFound) {
+    return <NotFound />;
+  }
 
   if (currentPortfolioItem) {
     return (

@@ -8,6 +8,7 @@ const Home = React.lazy(() => import("./routes/Home"));
 const PortfolioItemDetails = React.lazy(
   () => import("./routes/PortfolioItemDetails")
 );
+const NotFound = React.lazy(() => import("./routes/NotFound"));
 
 import { PortfolioItemDocument } from "./types";
 
@@ -66,6 +67,9 @@ const App: React.FunctionComponent<unknown> = () => {
             </Route>
             <Route path="/portfolio/:id">
               <PortfolioItemDetails portfolioItems={portfolioItems} />
+            </Route>
+            <Route>
+              <NotFound />
             </Route>
           </Switch>
         </React.Suspense>
