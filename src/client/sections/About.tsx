@@ -24,7 +24,7 @@ const About: React.FunctionComponent<unknown> = () => {
           src="/assets/avatar-optimized.jpg"
           width={250}
         />
-        <Box maxWidth="75%" sx={{ textAlign: "center" }}>
+        <Box maxWidth="75%">
           <Text fontWeight="bold" margin="10px auto">
             Hi. I&apos;m Alex, a Fullstack Application Developer in San Diego. I
             deliver solutions to complex problems.
