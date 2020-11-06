@@ -90,7 +90,7 @@ class UserController {
           }
 
           if (!validator.isEmail(req.body.email)) {
-            return res.status(400).send({ error: "Invalid email" });
+            return res.status(400).send({ error: "Invalid email address." });
           }
 
           const matchingUser = await UserModel.findByCredentials(
@@ -200,7 +200,7 @@ class UserController {
             const newEmail = req.body.email;
 
             if (!newEmail || !validator.isEmail(newEmail)) {
-              return res.status(400).send({ error: "Invalid email" });
+              return res.status(400).send({ error: "Invalid email address." });
             }
 
             req.user.email = newEmail;

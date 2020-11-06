@@ -24,8 +24,11 @@ class AssetsController {
     "tinymce.min.js",
   ];
 
-  static webfontsList = ["fa-brands-400.woff2", "fa-regular-400.woff2"];
-
+  static webfontsList = [
+    "fa-brands-400.woff2",
+    "fa-regular-400.woff2",
+    "fa-solid-900.woff2",
+  ];
   constructor() {
     this.initializeRoutes();
   }

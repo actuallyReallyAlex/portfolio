@@ -3,8 +3,9 @@ import { Box, Button, Flex, Heading } from "rebass";
 import { Label, Input } from "@rebass/forms";
 
 import BackButton from "../components/BackButton";
+import NotificationComponent from "../components/Notification";
 
-import { UserDocument } from "../types";
+import { Notification, UserDocument } from "../types";
 
 export interface AdminLoginPageProps {
   setIsAuthenticated: (isAuthenticated: boolean) => void;
@@ -18,6 +19,13 @@ const AdminLoginPage: React.FunctionComponent<AdminLoginPageProps> = (
 
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const defaultNotification: Notification = {
+    display: false,
+    message: null,
+    title: null,
+    type: null,
+  };
+  const [notification, setNotification] = React.useState(defaultNotification);
 
   const handleSubmit = async (e) => {
     try {
@@ -32,16 +40,28 @@ const AdminLoginPage: React.FunctionComponent<AdminLoginPageProps> = (
       const data = await response.json();
 
       if (response.status !== 200) {
-        return alert(`Error! ${JSON.stringify(data, null, 2)}`);
+        return setNotification({
+          display: true,
+          message: () => <p>{data.error}</p>,
+          title: "Error",
+          type: "warning",
+        });
       }
 
       setUser(data);
       setIsAuthenticated(true);
     } catch (error) {
       console.error(error);
-      return alert(`Error! ${JSON.stringify(error, null, 2)}`);
+      return setNotification({
+        display: true,
+        message: () => <code>{error}</code>,
+        title: "Error",
+        type: "warning",
+      });
     }
   };
+
+  const disabled = !email || !password;
 
   return (
     <Flex
@@ -51,6 +71,10 @@ const AdminLoginPage: React.FunctionComponent<AdminLoginPageProps> = (
       justifyContent="center"
     >
       <BackButton />
+      <NotificationComponent
+        notification={notification}
+        setNotification={setNotification}
+      />
       <Heading as="h1" fontSize="7">
         Login
       </Heading>
@@ -75,14 +99,15 @@ const AdminLoginPage: React.FunctionComponent<AdminLoginPageProps> = (
             value={password}
           />
           <Button
-            disabled={!email || !password}
+            disabled={disabled}
             sx={{
+              backgroundColor: disabled ? "grey" : "rgba(0, 119, 204, 1)",
               display: "flex",
               margin: "0 auto",
               transition: "0.25s ease-in-out",
               ":hover": {
-                backgroundColor: "rgba(0, 119, 204, 0.8)",
-                cursor: "pointer",
+                backgroundColor: disabled ? "grey" : "rgba(0, 119, 204, 0.8)",
+                cursor: disabled ? "auto" : "pointer",
               },
             }}
             type="submit"
