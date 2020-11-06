@@ -43,7 +43,6 @@ const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
         Item = React.lazy(() => import("../forms/ModifyPortfolioItem"));
         break;
       default:
-        console.log("No action selected");
         break;
     }
     setActionComponent(Item);

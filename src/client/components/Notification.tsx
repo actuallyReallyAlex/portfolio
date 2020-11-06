@@ -25,6 +25,10 @@ const Notification: React.FunctionComponent<NotificationProps> = (
     if (opacityVal === 0 && display === true) {
       setOpacityVal(1);
     }
+
+    if (display) {
+      window.scrollTo(0, 0);
+    }
   }, [display]);
 
   const handleClose = () => {
@@ -48,7 +52,7 @@ const Notification: React.FunctionComponent<NotificationProps> = (
           height: "100vh",
           justifyContent: "center",
           opacity: opacityVal,
-          position: "absolute",
+          position: "fixed",
           top: "0",
           transition: "opacity 0.75s ease-in-out",
           width: "100vw",
