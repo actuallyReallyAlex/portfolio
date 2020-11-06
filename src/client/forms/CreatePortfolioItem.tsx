@@ -197,7 +197,18 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
         </Heading>
         <Editor
           apiKey={process.env.TINYMCE_API_KEY}
-          initialValue="<p>This is the initial content of the editor</p>"
+          initialValue="<p>[SUMMARY]</p>
+          <h2>Learning Experiences</h2>
+          <p>[SUMMARY OF LEARNING EXPERIENCE]</p>
+          <h3>What worked well?</h3>
+          <p>[WHAT WORKED WELL COPY]</p>
+          <h3>What didn't work well?</h3>
+          <p>[WHAT DIDN'T WORK WELL COPY]</p>
+          <h2>Do-Overs</h2>
+          <h3>What would I do differently?</h3>
+          <p>[WHAT WOULD I DO DIFFERENTLY COPY]</p>
+          <h2>[CHEEKY SUMMARY PHRASE/TITLE]</h2>
+          <p>[OUTRO COPY]</p>"
           init={{
             height: 500,
             menubar: true,
