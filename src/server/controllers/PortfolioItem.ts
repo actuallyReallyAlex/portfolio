@@ -19,7 +19,6 @@ class PortfolioItemController {
       file: Express.Multer.File,
       cb: FileFilterCallback
     ) => {
-      console.log("------ parseFile ------");
       if (
         !file.originalname.match(/\.(png)$/) &&
         !file.originalname.match(/\.(jpg)$/) &&
