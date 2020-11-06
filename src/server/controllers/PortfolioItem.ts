@@ -8,6 +8,7 @@ import {
   PortfolioItem,
   PortfolioItemDocument,
   PortfolioItemModifyResponse,
+  SuccessResponsePortfolioItemPOST,
 } from "../types";
 
 class PortfolioItemController {
@@ -67,7 +68,9 @@ class PortfolioItemController {
       async (
         req: Request,
         res: Response
-      ): Promise<Response<ErrorResponse | PortfolioItemDocument>> => {
+      ): Promise<
+        Response<ErrorResponse | SuccessResponsePortfolioItemPOST>
+      > => {
         try {
           const {
             content,
@@ -93,7 +96,10 @@ class PortfolioItemController {
 
           await newPortfolioItem.save();
 
-          return res.status(201).send(newPortfolioItem);
+          return res.status(201).send({
+            notificationMessage: `${newPortfolioItem.title} was created successfully!`,
+            portfolioItem: newPortfolioItem,
+          });
         } catch (error) {
           console.error(error);
           return res.status(500).send({ error });
@@ -132,6 +138,7 @@ class PortfolioItemController {
           const portfolioItems = await PortfolioItemModel.find({});
 
           return res.send({
+            notificationMessage: `${correspondingPortfolioItem.title} was modified successfully!`,
             portfolioItem: correspondingPortfolioItem,
             portfolioItems,
           });
@@ -162,6 +169,7 @@ class PortfolioItemController {
           const portfolioItems = await PortfolioItemModel.find({});
 
           return res.send({
+            notificationMessage: `${item.title} was removed successfully!`,
             portfolioItem: item,
             portfolioItems,
           });

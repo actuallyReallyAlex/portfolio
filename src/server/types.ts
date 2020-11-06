@@ -52,8 +52,14 @@ export interface PortfolioItemDocument extends Document {
 }
 
 export interface PortfolioItemModifyResponse {
+  notificationMessage: string;
   portfolioItem: PortfolioItemDocument;
   portfolioItems: PortfolioItemDocument[];
+}
+
+export interface SuccessResponsePortfolioItemPOST {
+  notificationMessage: string;
+  portfolioItem: PortfolioItemDocument;
 }
 
 export interface Token {

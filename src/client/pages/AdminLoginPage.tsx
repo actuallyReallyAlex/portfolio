@@ -54,8 +54,8 @@ const AdminLoginPage: React.FunctionComponent<AdminLoginPageProps> = (
       console.error(error);
       return setNotification({
         display: true,
-        message: () => <code>{error}</code>,
-        title: "Error",
+        message: () => <p>An error has occured. Please refresh the page, and try again.</p>,
+        title: "Technical Difficulties",
         type: "warning",
       });
     }

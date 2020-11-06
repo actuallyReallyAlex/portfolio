@@ -24,7 +24,7 @@ class UserController {
   public initializeRoutes(): void {
     this.router.post(
       "/user",
-      async (req: Request, res: Response): Promise<Response> => {
+      async (req: Request, res: Response): Promise<Response<ErrorResponse | UserDocument>> => {
         try {
           const users: UserDocument[] = await UserModel.find({});
 

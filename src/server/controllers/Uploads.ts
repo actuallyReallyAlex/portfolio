@@ -1,7 +1,9 @@
 import express, { Router, Request, Response } from "express";
+// TODO - Remove fs-extra?
 import fs from "fs-extra";
 import path from "path";
 
+// TODO - Remove
 class AssetsController {
   public router: Router = express.Router();
 

@@ -39,7 +39,7 @@ const DeletePortfolioItem: React.FunctionComponent<DeletePortfolioItemProps> = (
       }
       setNotification({
         display: true,
-        message: () => <p>The PortfolioItem was removed successfully!</p>,
+        message: () => <p>{data.notificationMessage}</p>,
         title: "Success",
         type: "success",
       });
@@ -48,8 +48,8 @@ const DeletePortfolioItem: React.FunctionComponent<DeletePortfolioItemProps> = (
       console.error(error);
       return setNotification({
         display: true,
-        message: () => <code>{JSON.stringify(error, null, 2)}</code>,
-        title: "Error",
+        message: () => <p>An error has occured. Please refresh the page, and try again.</p>,
+        title: "Technical Difficulties",
         type: "warning",
       });
     }

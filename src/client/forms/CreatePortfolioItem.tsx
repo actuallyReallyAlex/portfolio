@@ -43,7 +43,8 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
         body: bodyData,
         method: "POST",
       });
-      const data = await response.json();
+      // TODO - Fix data in each request in Client
+      const data: any = await response.json();
 
       if (response.status !== 201) {
         return setNotification({
@@ -56,7 +57,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
 
       setNotification({
         display: true,
-        message: () => <p>{title} was created successfully!</p>,
+        message: () => <p>{data.notificationMessage}</p>,
         title: "Success",
         type: "success",
       });
@@ -65,8 +66,10 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
       console.error(error);
       return setNotification({
         display: true,
-        message: () => <code>{JSON.stringify(error, null, 2)}</code>,
-        title: "Error",
+        message: () => (
+          <p>An error has occured. Please refresh the page, and try again.</p>
+        ),
+        title: "Technical Difficulties",
         type: "warning",
       });
     }
