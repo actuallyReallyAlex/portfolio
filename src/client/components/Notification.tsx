@@ -49,6 +49,7 @@ const Notification: React.FunctionComponent<NotificationProps> = (
           justifyContent: "center",
           opacity: opacityVal,
           position: "absolute",
+          top: "0",
           transition: "opacity 0.75s ease-in-out",
           width: "100vw",
           zIndex: "50",

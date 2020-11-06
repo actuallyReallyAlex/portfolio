@@ -61,47 +61,49 @@ const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
   }, []);
 
   return (
-    <Flex
-      flexDirection="column"
-      id="admin-dashboard"
-      sx={{ margin: ["100px 10%", "100px 15%"] }}
-    >
-      <BackButton />
+    <>
       <NotificationComponent
         notification={notification}
         setNotification={setNotification}
       />
-      <Heading as="h1" fontSize="7" sx={{ marginBottom: "25px" }}>
-        Admin Dashboard
-      </Heading>
-      <Heading as="h2" sx={{ marginBottom: "5px" }}>
-        Select Action
-      </Heading>
-      <Select
-        onChange={(e) => setAction(e.target.value)}
-        sx={{ marginBottom: "50px" }}
-        value={action}
+      <Flex
+        flexDirection="column"
+        id="admin-dashboard"
+        sx={{ margin: ["100px 10%", "100px 15%"] }}
       >
-        <option disabled value="">
-          - Select Action -
-        </option>
-        <option value="createPortfolioItem">Create PortfolioItem</option>
-        {portfolioItems.length > 0 && (
-          <>
-            <option value="deletePortfolioItem">Delete PortfolioItem</option>
-            <option value="modifyPortfolioItem">Modify PortfolioItem</option>
-          </>
-        )}
-      </Select>
+        <BackButton />
+        <Heading as="h1" fontSize="7" sx={{ marginBottom: "25px" }}>
+          Admin Dashboard
+        </Heading>
+        <Heading as="h2" sx={{ marginBottom: "5px" }}>
+          Select Action
+        </Heading>
+        <Select
+          onChange={(e) => setAction(e.target.value)}
+          sx={{ marginBottom: "50px" }}
+          value={action}
+        >
+          <option disabled value="">
+            - Select Action -
+          </option>
+          <option value="createPortfolioItem">Create PortfolioItem</option>
+          {portfolioItems.length > 0 && (
+            <>
+              <option value="deletePortfolioItem">Delete PortfolioItem</option>
+              <option value="modifyPortfolioItem">Modify PortfolioItem</option>
+            </>
+          )}
+        </Select>
 
-      {actionComponent && (
-        <Action
-          portfolioItems={portfolioItems}
-          setNotification={setNotification}
-          setPortfolioItems={setPortfolioItems}
-        />
-      )}
-    </Flex>
+        {actionComponent && (
+          <Action
+            portfolioItems={portfolioItems}
+            setNotification={setNotification}
+            setPortfolioItems={setPortfolioItems}
+          />
+        )}
+      </Flex>
+    </>
   );
 };
 

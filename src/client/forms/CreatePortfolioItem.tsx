@@ -88,7 +88,9 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
   React.useEffect(() => {
     setTimeout(() => {
       const element = document.querySelector(".tox-statusbar__branding");
-      element.parentNode.removeChild(element);
+      if (element) {
+        element.parentNode.removeChild(element);
+      }
     }, 1000);
   }, []);
 
