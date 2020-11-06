@@ -5,7 +5,7 @@ import { Label, Input } from "@rebass/forms";
 import BackButton from "../components/BackButton";
 import NotificationComponent from "../components/Notification";
 
-import { Notification, UserDocument } from "../types";
+import { ErrorResponse, Notification, UserDocument } from "../types";
 
 export interface AdminLoginPageProps {
   setIsAuthenticated: (isAuthenticated: boolean) => void;
@@ -37,24 +37,29 @@ const AdminLoginPage: React.FunctionComponent<AdminLoginPageProps> = (
           "Content-Type": "application/json",
         },
       });
-      const data = await response.json();
+      const data: ErrorResponse | UserDocument = await response.json();
+
+      const errorData = data as ErrorResponse;
+      const userData = data as UserDocument;
 
       if (response.status !== 200) {
         return setNotification({
           display: true,
-          message: () => <p>{data.error}</p>,
+          message: () => <p>{errorData.error}</p>,
           title: "Error",
           type: "warning",
         });
       }
 
-      setUser(data);
+      setUser(userData);
       setIsAuthenticated(true);
     } catch (error) {
       console.error(error);
       return setNotification({
         display: true,
-        message: () => <p>An error has occured. Please refresh the page, and try again.</p>,
+        message: () => (
+          <p>An error has occured. Please refresh the page, and try again.</p>
+        ),
         title: "Technical Difficulties",
         type: "warning",
       });

@@ -1,5 +1,9 @@
 import { Document } from "mongoose";
 
+export interface ErrorResponse {
+  error: string;
+}
+
 export interface MongoImage {
   base64: string;
   filename: string;
@@ -44,6 +48,17 @@ export interface PortfolioItemDocument extends Document {
   updatedAt: string;
   _id: string;
   __v: number;
+}
+
+export interface PortfolioItemModifyResponse {
+  notificationMessage: string;
+  portfolioItem: PortfolioItemDocument;
+  portfolioItems: PortfolioItemDocument[];
+}
+
+export interface SuccessResponsePortfolioItemPOST {
+  notificationMessage: string;
+  portfolioItem: PortfolioItemDocument;
 }
 
 export interface Token {

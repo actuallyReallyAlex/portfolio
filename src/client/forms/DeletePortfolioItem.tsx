@@ -2,7 +2,12 @@ import * as React from "react";
 import { Box, Button, Heading } from "rebass";
 import { Label, Select } from "@rebass/forms";
 
-import { Notification, PortfolioItemDocument } from "../types";
+import {
+  ErrorResponse,
+  Notification,
+  PortfolioItemDocument,
+  PortfolioItemModifyResponse,
+} from "../types";
 
 export interface DeletePortfolioItemProps {
   portfolioItems: PortfolioItemDocument[];
@@ -27,28 +32,35 @@ const DeletePortfolioItem: React.FunctionComponent<DeletePortfolioItemProps> = (
         headers: { "Content-Type": "application/json" },
         method: "DELETE",
       });
-      const data = await response.json();
+      const data:
+        | ErrorResponse
+        | PortfolioItemModifyResponse = await response.json();
+
+      const errorData = data as ErrorResponse;
+      const portfolioItemData = data as PortfolioItemModifyResponse;
 
       if (response.status !== 200) {
         return setNotification({
           display: true,
-          message: () => <p>{data.error}</p>,
+          message: () => <p>{errorData.error}</p>,
           title: "Error",
           type: "warning",
         });
       }
       setNotification({
         display: true,
-        message: () => <p>{data.notificationMessage}</p>,
+        message: () => <p>{portfolioItemData.notificationMessage}</p>,
         title: "Success",
         type: "success",
       });
-      setPortfolioItems(data.portfolioItems);
+      setPortfolioItems(portfolioItemData.portfolioItems);
     } catch (error) {
       console.error(error);
       return setNotification({
         display: true,
-        message: () => <p>An error has occured. Please refresh the page, and try again.</p>,
+        message: () => (
+          <p>An error has occured. Please refresh the page, and try again.</p>
+        ),
         title: "Technical Difficulties",
         type: "warning",
       });

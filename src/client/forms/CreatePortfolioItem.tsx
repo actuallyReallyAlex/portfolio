@@ -3,7 +3,12 @@ import { Editor } from "@tinymce/tinymce-react";
 import { Box, Button, Heading } from "rebass";
 import { Input, Label } from "@rebass/forms";
 
-import { Notification, PortfolioItemDocument } from "../types";
+import {
+  ErrorResponse,
+  Notification,
+  PortfolioItemDocument,
+  SuccessResponsePortfolioItemPOST,
+} from "../types";
 
 interface CreatePortfolioItemProps {
   portfolioItems: PortfolioItemDocument[];
@@ -43,13 +48,17 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
         body: bodyData,
         method: "POST",
       });
-      // TODO - Fix data in each request in Client
-      const data: any = await response.json();
+      const data:
+        | ErrorResponse
+        | SuccessResponsePortfolioItemPOST = await response.json();
+
+      const errorData = data as ErrorResponse;
+      const portfolioItemData = data as SuccessResponsePortfolioItemPOST;
 
       if (response.status !== 201) {
         return setNotification({
           display: true,
-          message: () => <p>{data.error}</p>,
+          message: () => <p>{errorData.error}</p>,
           title: "Error",
           type: "warning",
         });
@@ -57,7 +66,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
 
       setNotification({
         display: true,
-        message: () => <p>{data.notificationMessage}</p>,
+        message: () => <p>{portfolioItemData.notificationMessage}</p>,
         title: "Success",
         type: "success",
       });

@@ -3,7 +3,12 @@ import { Editor } from "@tinymce/tinymce-react";
 import { Box, Button, Heading, Image } from "rebass";
 import { Input, Label, Select } from "@rebass/forms";
 
-import { Notification, PortfolioItemDocument } from "../types";
+import {
+  ErrorResponse,
+  Notification,
+  PortfolioItemDocument,
+  PortfolioItemModifyResponse,
+} from "../types";
 
 export interface ModifyPortfolioItemProps {
   portfolioItems: PortfolioItemDocument[];
@@ -77,30 +82,37 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
         body: bodyData,
         method: "PATCH",
       });
-      const data = await response.json();
+      const data:
+        | ErrorResponse
+        | PortfolioItemModifyResponse = await response.json();
+
+      const errorData = data as ErrorResponse;
+      const portfolioItemData = data as PortfolioItemModifyResponse;
 
       if (response.status !== 200) {
         return setNotification({
           display: true,
-          message: () => <p>{data.error}</p>,
+          message: () => <p>{errorData.error}</p>,
           title: "Error",
           type: "warning",
         });
       } else {
         setNotification({
           display: true,
-          message: () => <p>{data.notificationMessage}</p>,
+          message: () => <p>{portfolioItemData.notificationMessage}</p>,
           title: "Success",
           type: "success",
         });
-        setPortfolioItems(data.portfolioItems);
+        setPortfolioItems(portfolioItemData.portfolioItems);
         resetForm(e);
       }
     } catch (error) {
       console.error(error);
       return setNotification({
         display: true,
-        message: () => <p>An error has occured. Please refresh the page, and try again.</p>,
+        message: () => (
+          <p>An error has occured. Please refresh the page, and try again.</p>
+        ),
         title: "Technical Difficulties",
         type: "warning",
       });

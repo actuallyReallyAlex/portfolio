@@ -10,7 +10,7 @@ const PortfolioItemDetails = React.lazy(
 );
 const NotFound = React.lazy(() => import("./routes/NotFound"));
 
-import { PortfolioItemDocument } from "./types";
+import { ErrorResponse, PortfolioItemDocument } from "./types";
 
 theme.fonts = {
   body: "'Poppins', sans-serif",
@@ -34,9 +34,18 @@ const App: React.FunctionComponent<unknown> = () => {
             "Content-Type": "application/json",
           },
         });
-        const data = await response.json();
+        const data:
+          | ErrorResponse
+          | PortfolioItemDocument[] = await response.json();
 
-        setPortfolioItems(data);
+        const errorData = data as ErrorResponse;
+        const portfolioItemData = data as PortfolioItemDocument[];
+
+        if (errorData) {
+          console.error(errorData);
+        } else {
+          setPortfolioItems(portfolioItemData);
+        }
       } catch (error) {
         console.error(error);
         return { error };
