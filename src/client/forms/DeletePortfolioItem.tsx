@@ -2,10 +2,11 @@ import * as React from "react";
 import { Box, Button, Heading } from "rebass";
 import { Label, Select } from "@rebass/forms";
 
-import { PortfolioItemDocument } from "../types";
+import { Notification, PortfolioItemDocument } from "../types";
 
 export interface DeletePortfolioItemProps {
   portfolioItems: PortfolioItemDocument[];
+  setNotification: (notification: Notification) => void;
   setPortfolioItems: (portfolioItems: PortfolioItemDocument[]) => void;
 }
 
@@ -14,7 +15,7 @@ const DeletePortfolioItem: React.FunctionComponent<DeletePortfolioItemProps> = (
 ) => {
   const [id, setId] = React.useState("");
 
-  const { portfolioItems, setPortfolioItems } = props;
+  const { portfolioItems, setNotification, setPortfolioItems } = props;
 
   const handleDeletePortfolioItemSubmit = async (
     e: React.FormEvent<HTMLFormElement>
@@ -29,13 +30,28 @@ const DeletePortfolioItem: React.FunctionComponent<DeletePortfolioItemProps> = (
       const data = await response.json();
 
       if (response.status !== 200) {
-        return alert(`Error! - ${JSON.stringify(data, null, 2)}`);
+        return setNotification({
+          display: true,
+          message: () => <p>{data.error}</p>,
+          title: "Error",
+          type: "warning",
+        });
       }
-      alert(`PortfolioItem - Deleted successfully!`);
+      setNotification({
+        display: true,
+        message: () => <p>The PortfolioItem was removed successfully!</p>,
+        title: "Success",
+        type: "success",
+      });
       setPortfolioItems(data.portfolioItems);
     } catch (error) {
       console.error(error);
-      alert(`Error! - ${JSON.stringify(error, null, 2)}`);
+      return setNotification({
+        display: true,
+        message: () => <code>{JSON.stringify(error, null, 2)}</code>,
+        title: "Error",
+        type: "warning",
+      });
     }
   };
 

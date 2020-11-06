@@ -3,7 +3,18 @@ import { Editor } from "@tinymce/tinymce-react";
 import { Box, Button, Heading } from "rebass";
 import { Input, Label } from "@rebass/forms";
 
-const CreatePortfolioItem: React.FunctionComponent<unknown> = () => {
+import { Notification, PortfolioItemDocument } from "../types";
+
+interface CreatePortfolioItemProps {
+  portfolioItems: PortfolioItemDocument[];
+  setNotification: (notification: Notification) => void;
+  setPortfolioItems: (portfolioItems: PortfolioItemDocument[]) => void;
+}
+
+const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
+  props: CreatePortfolioItemProps
+) => {
+  const { setNotification } = props;
   const [title, setTitle] = React.useState("");
   const [tagline, setTagline] = React.useState("");
   const [iconBackground, setIconBackground] = React.useState("");
@@ -35,13 +46,29 @@ const CreatePortfolioItem: React.FunctionComponent<unknown> = () => {
       const data = await response.json();
 
       if (response.status !== 201) {
-        return alert(`Error! - ${JSON.stringify(data, null, 2)}`);
+        return setNotification({
+          display: true,
+          message: () => <p>{data.error}</p>,
+          title: "Error",
+          type: "warning",
+        });
       }
-      alert(`PortfolioItem - ${title} - Added successfully!`);
+
+      setNotification({
+        display: true,
+        message: () => <p>{title} was created successfully!</p>,
+        title: "Success",
+        type: "success",
+      });
       resetForm(e);
     } catch (error) {
       console.error(error);
-      alert(`Error! - ${JSON.stringify(error, null, 2)}`);
+      return setNotification({
+        display: true,
+        message: () => <code>{JSON.stringify(error, null, 2)}</code>,
+        title: "Error",
+        type: "warning",
+      });
     }
   };
 

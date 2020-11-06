@@ -3,17 +3,18 @@ import { Editor } from "@tinymce/tinymce-react";
 import { Box, Button, Heading, Image } from "rebass";
 import { Input, Label, Select } from "@rebass/forms";
 
-import { PortfolioItemDocument } from "../types";
+import { Notification, PortfolioItemDocument } from "../types";
 
 export interface ModifyPortfolioItemProps {
   portfolioItems: PortfolioItemDocument[];
+  setNotification: (notification: Notification) => void;
   setPortfolioItems: (portfolioItems: PortfolioItemDocument[]) => void;
 }
 
 const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
   props: ModifyPortfolioItemProps
 ) => {
-  const { portfolioItems, setPortfolioItems } = props;
+  const { portfolioItems, setNotification, setPortfolioItems } = props;
   const [id, setId] = React.useState("");
   const [selectedPortfolioItem, setSelectedPortfolioItem] = React.useState(
     null
@@ -78,16 +79,31 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
       });
       const data = await response.json();
 
-      if (response.status === 200) {
-        alert("Success!");
+      if (response.status !== 200) {
+        return setNotification({
+          display: true,
+          message: () => <p>{data.error}</p>,
+          title: "Error",
+          type: "warning",
+        });
+      } else {
+        setNotification({
+          display: true,
+          message: () => <p>{title} was modified successfully!</p>,
+          title: "Success",
+          type: "success",
+        });
         setPortfolioItems(data.portfolioItems);
         resetForm(e);
-      } else {
-        alert("ERROR!");
       }
     } catch (error) {
       console.error(error);
-      alert(`Error! - ${JSON.stringify(error, null, 2)}`);
+      return setNotification({
+        display: true,
+        message: () => <code>{JSON.stringify(error, null, 2)}</code>,
+        title: "Error",
+        type: "warning",
+      });
     }
   };
 

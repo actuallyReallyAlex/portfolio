@@ -3,8 +3,9 @@ import { Flex, Heading } from "rebass";
 import { Select } from "@rebass/forms";
 
 import BackButton from "../components/BackButton";
+import NotificationComponent from "../components/Notification";
 
-import { PortfolioItemDocument, UserDocument } from "../types";
+import { Notification, PortfolioItemDocument, UserDocument } from "../types";
 
 export interface AdminDashboardPageProps {
   portfolioItems: PortfolioItemDocument[];
@@ -15,6 +16,13 @@ export interface AdminDashboardPageProps {
 const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
   props: AdminDashboardPageProps
 ) => {
+  const defaultNotification: Notification = {
+    display: false,
+    message: null,
+    title: null,
+    type: null,
+  };
+  const [notification, setNotification] = React.useState(defaultNotification);
   const { portfolioItems, setPortfolioItems } = props;
 
   const [action, setAction] = React.useState("");
@@ -59,6 +67,10 @@ const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
       sx={{ margin: ["100px 10%", "100px 15%"] }}
     >
       <BackButton />
+      <NotificationComponent
+        notification={notification}
+        setNotification={setNotification}
+      />
       <Heading as="h1" fontSize="7" sx={{ marginBottom: "25px" }}>
         Admin Dashboard
       </Heading>
@@ -85,6 +97,7 @@ const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
       {actionComponent && (
         <Action
           portfolioItems={portfolioItems}
+          setNotification={setNotification}
           setPortfolioItems={setPortfolioItems}
         />
       )}
