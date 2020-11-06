@@ -16,9 +16,17 @@ const Notification: React.FunctionComponent<NotificationProps> = (
   const { display, message, title, type } = notification;
 
   const Message = message;
-  const iconClasses = {
-    success: "far fa-check-circle",
-    warning: "fas fa-exclamation-triangle",
+  const iconSettings = {
+    success: {
+      backgroundColor: "#feeaea",
+      className: "far fa-check-circle",
+      color: "green",
+    },
+    warning: {
+      backgroundColor: "#feeaea",
+      className: "fas fa-exclamation-triangle",
+      color: "red",
+    },
   };
 
   React.useEffect(() => {
@@ -82,9 +90,9 @@ const Notification: React.FunctionComponent<NotificationProps> = (
           <Box
             sx={{
               alignItems: "center",
-              backgroundColor: "#feeaea",
+              backgroundColor: iconSettings[type].backgroundColor,
               borderRadius: "50%",
-              color: "red",
+              color: iconSettings[type].color,
               display: "flex",
               fontSize: "2",
               height: "38px",
@@ -95,7 +103,7 @@ const Notification: React.FunctionComponent<NotificationProps> = (
               width: "38px",
             }}
           >
-            <i className={iconClasses[type]} />
+            <i className={iconSettings[type].className} />
           </Box>
           <div>
             <Heading as="h2" fontSize="3">
