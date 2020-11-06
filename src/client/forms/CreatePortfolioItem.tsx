@@ -3,7 +3,18 @@ import { Editor } from "@tinymce/tinymce-react";
 import { Box, Button, Heading } from "rebass";
 import { Input, Label } from "@rebass/forms";
 
-const CreatePortfolioItem: React.FunctionComponent<unknown> = () => {
+import { Notification, PortfolioItemDocument } from "../types";
+
+interface CreatePortfolioItemProps {
+  portfolioItems: PortfolioItemDocument[];
+  setNotification: (notification: Notification) => void;
+  setPortfolioItems: (portfolioItems: PortfolioItemDocument[]) => void;
+}
+
+const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
+  props: CreatePortfolioItemProps
+) => {
+  const { setNotification } = props;
   const [title, setTitle] = React.useState("");
   const [tagline, setTagline] = React.useState("");
   const [iconBackground, setIconBackground] = React.useState("");
@@ -32,16 +43,35 @@ const CreatePortfolioItem: React.FunctionComponent<unknown> = () => {
         body: bodyData,
         method: "POST",
       });
-      const data = await response.json();
+      // TODO - Fix data in each request in Client
+      const data: any = await response.json();
 
       if (response.status !== 201) {
-        return alert(`Error! - ${JSON.stringify(data, null, 2)}`);
+        return setNotification({
+          display: true,
+          message: () => <p>{data.error}</p>,
+          title: "Error",
+          type: "warning",
+        });
       }
-      alert(`PortfolioItem - ${title} - Added successfully!`);
+
+      setNotification({
+        display: true,
+        message: () => <p>{data.notificationMessage}</p>,
+        title: "Success",
+        type: "success",
+      });
       resetForm(e);
     } catch (error) {
       console.error(error);
-      alert(`Error! - ${JSON.stringify(error, null, 2)}`);
+      return setNotification({
+        display: true,
+        message: () => (
+          <p>An error has occured. Please refresh the page, and try again.</p>
+        ),
+        title: "Technical Difficulties",
+        type: "warning",
+      });
     }
   };
 
@@ -61,7 +91,9 @@ const CreatePortfolioItem: React.FunctionComponent<unknown> = () => {
   React.useEffect(() => {
     setTimeout(() => {
       const element = document.querySelector(".tox-statusbar__branding");
-      element.parentNode.removeChild(element);
+      if (element) {
+        element.parentNode.removeChild(element);
+      }
     }, 1000);
   }, []);
 

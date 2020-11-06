@@ -5,6 +5,15 @@ export interface MongoImage {
   filename: string;
 }
 
+export interface Notification {
+  display: boolean;
+  message: () => JSX.Element | null;
+  title: string | null;
+  type: NotificationType | null;
+}
+
+export type NotificationType = "success" | "warning";
+
 export interface PortfolioItem {
   content: string;
   coverImage: MongoImage;
