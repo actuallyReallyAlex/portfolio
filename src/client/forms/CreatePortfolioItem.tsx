@@ -20,6 +20,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
   props: CreatePortfolioItemProps
 ) => {
   const { setNotification } = props;
+  const [formSubmitted, setFormSubmitted] = React.useState(false);
   const [title, setTitle] = React.useState("");
   const [tagline, setTagline] = React.useState("");
   const [iconBackground, setIconBackground] = React.useState("");
@@ -64,12 +65,14 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
         });
       }
 
+      setFormSubmitted(true);
       setNotification({
         display: true,
         message: () => <p>{portfolioItemData.notificationMessage}</p>,
         title: "Success",
         type: "success",
       });
+      window.localStorage.removeItem("unsavedContent");
       resetForm(e);
     } catch (error) {
       console.error(error);
@@ -94,10 +97,19 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
     setNPM("");
     setCover(null);
     setContent("");
+    window.localStorage.removeItem("unsavedContent");
     e.currentTarget && e.currentTarget.reset();
   };
 
   React.useEffect(() => {
+    const unsavedContent = window.localStorage.getItem("unsavedContent");
+
+    console.log(unsavedContent);
+
+    if (unsavedContent) {
+      setContent(unsavedContent);
+    }
+
     setTimeout(() => {
       const element = document.querySelector(".tox-statusbar__branding");
       if (element) {
@@ -197,7 +209,9 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
         </Heading>
         <Editor
           apiKey={process.env.TINYMCE_API_KEY}
-          initialValue="<p>[SUMMARY]</p>
+          initialValue={
+            content ||
+            `<p>[SUMMARY]</p>
           <h2>Learning Experiences</h2>
           <p>[SUMMARY OF LEARNING EXPERIENCE]</p>
           <h3>What worked well?</h3>
@@ -208,7 +222,8 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
           <h3>What would I do differently?</h3>
           <p>[WHAT WOULD I DO DIFFERENTLY COPY]</p>
           <h2>[CHEEKY SUMMARY PHRASE/TITLE]</h2>
-          <p>[OUTRO COPY]</p>"
+          <p>[OUTRO COPY]</p>`
+          }
           init={{
             height: 500,
             menubar: true,
@@ -222,7 +237,10 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
              alignleft aligncenter alignright alignjustify | \
              bullist numlist outdent indent | link image code | removeformat | help",
           }}
-          onEditorChange={(content) => setContent(content)}
+          onEditorChange={(content) => {
+            window.localStorage.setItem("unsavedContent", content);
+            setContent(content);
+          }}
         />
 
         <Button
