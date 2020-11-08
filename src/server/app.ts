@@ -42,6 +42,7 @@ class App {
       "http://localhost:5000",
       "https://portfolio-alex-lee.herokuapp.com",
       "https://www.alexlee.dev",
+      "https://alexlee.dev",
       undefined,
     ];
 
