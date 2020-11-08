@@ -20,7 +20,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
   props: CreatePortfolioItemProps
 ) => {
   const { setNotification } = props;
-  const [formSubmitted, setFormSubmitted] = React.useState(false);
+  const [, setFormSubmitted] = React.useState(false);
   const [title, setTitle] = React.useState("");
   const [tagline, setTagline] = React.useState("");
   const [iconBackground, setIconBackground] = React.useState("");
