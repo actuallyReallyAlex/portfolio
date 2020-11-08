@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "description": "Alex Lee's portfolio.",
-  "version": "5.1.1",
+  "version": "5.2.0",
   "author": "Alex Lee (www.alexlee.dev)",
   "license": "GPL-3.0-or-later",
   "scripts": {
@@ -11,11 +11,15 @@
     "build-server": "npm run clean-server && tsc && copyfiles -f src/server/assets/* build/assets --error --verbose && copyfiles -f src/server/assets/webfonts/* build/assets/webfonts --error --verbose",
     "clean-client": "rimraf dist",
     "clean-server": "rimraf build",
+    "cypress-open": "cypress open",
+    "cypress-run": "cypress run",
     "develop": "env-cmd start-server-and-test start-server 3000 webpack-dev-server",
     "lint": "eslint ./src",
     "server-alone": "env-cmd node build/index.js",
     "start-server": "npm run build-server && env-cmd node build/index.js",
-    "start": "node build/index.js"
+    "start": "node build/index.js",
+    "test": "start-server-and-test test-server http://localhost:3000 cypress-run",
+    "test-server": "env-cmd node build/index.js"
   },
   "dependencies": {
     "@rebass/forms": "^4.0.6",
@@ -27,7 +31,6 @@
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "fs-extra": "^9.0.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.11",
     "morgan": "^1.10.0",
@@ -48,7 +51,6 @@
     "@types/cookie-parser": "^1.4.2",
     "@types/cors": "^2.8.8",
     "@types/express": "^4.17.8",
-    "@types/fs-extra": "^9.0.3",
     "@types/jsonwebtoken": "^8.5.0",
     "@types/mongoose": "^5.7.37",
     "@types/morgan": "^1.9.2",
@@ -64,6 +66,7 @@
     "@typescript-eslint/parser": "^4.6.1",
     "copyfiles": "^2.4.0",
     "css-loader": "^5.0.0",
+    "cypress": "^5.5.0",
     "env-cmd": "^10.1.0",
     "eslint": "^7.12.1",
     "eslint-plugin-react": "^7.21.5",

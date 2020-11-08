@@ -3,7 +3,24 @@ import { Editor } from "@tinymce/tinymce-react";
 import { Box, Button, Heading } from "rebass";
 import { Input, Label } from "@rebass/forms";
 
-const CreatePortfolioItem: React.FunctionComponent<unknown> = () => {
+import {
+  ErrorResponse,
+  Notification,
+  PortfolioItemDocument,
+  SuccessResponsePortfolioItemPOST,
+} from "../types";
+
+interface CreatePortfolioItemProps {
+  portfolioItems: PortfolioItemDocument[];
+  setNotification: (notification: Notification) => void;
+  setPortfolioItems: (portfolioItems: PortfolioItemDocument[]) => void;
+}
+
+const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
+  props: CreatePortfolioItemProps
+) => {
+  const { setNotification } = props;
+  const [formSubmitted, setFormSubmitted] = React.useState(false);
   const [title, setTitle] = React.useState("");
   const [tagline, setTagline] = React.useState("");
   const [iconBackground, setIconBackground] = React.useState("");
@@ -32,16 +49,41 @@ const CreatePortfolioItem: React.FunctionComponent<unknown> = () => {
         body: bodyData,
         method: "POST",
       });
-      const data = await response.json();
+      const data:
+        | ErrorResponse
+        | SuccessResponsePortfolioItemPOST = await response.json();
+
+      const errorData = data as ErrorResponse;
+      const portfolioItemData = data as SuccessResponsePortfolioItemPOST;
 
       if (response.status !== 201) {
-        return alert(`Error! - ${JSON.stringify(data, null, 2)}`);
+        return setNotification({
+          display: true,
+          message: () => <p>{errorData.error}</p>,
+          title: "Error",
+          type: "warning",
+        });
       }
-      alert(`PortfolioItem - ${title} - Added successfully!`);
+
+      setFormSubmitted(true);
+      setNotification({
+        display: true,
+        message: () => <p>{portfolioItemData.notificationMessage}</p>,
+        title: "Success",
+        type: "success",
+      });
+      window.localStorage.removeItem("unsavedContent");
       resetForm(e);
     } catch (error) {
       console.error(error);
-      alert(`Error! - ${JSON.stringify(error, null, 2)}`);
+      return setNotification({
+        display: true,
+        message: () => (
+          <p>An error has occured. Please refresh the page, and try again.</p>
+        ),
+        title: "Technical Difficulties",
+        type: "warning",
+      });
     }
   };
 
@@ -55,13 +97,24 @@ const CreatePortfolioItem: React.FunctionComponent<unknown> = () => {
     setNPM("");
     setCover(null);
     setContent("");
+    window.localStorage.removeItem("unsavedContent");
     e.currentTarget && e.currentTarget.reset();
   };
 
   React.useEffect(() => {
+    const unsavedContent = window.localStorage.getItem("unsavedContent");
+
+    console.log(unsavedContent);
+
+    if (unsavedContent) {
+      setContent(unsavedContent);
+    }
+
     setTimeout(() => {
       const element = document.querySelector(".tox-statusbar__branding");
-      element.parentNode.removeChild(element);
+      if (element) {
+        element.parentNode.removeChild(element);
+      }
     }, 1000);
   }, []);
 
@@ -156,7 +209,21 @@ const CreatePortfolioItem: React.FunctionComponent<unknown> = () => {
         </Heading>
         <Editor
           apiKey={process.env.TINYMCE_API_KEY}
-          initialValue="<p>This is the initial content of the editor</p>"
+          initialValue={
+            content ||
+            `<p>[SUMMARY]</p>
+          <h2>Learning Experiences</h2>
+          <p>[SUMMARY OF LEARNING EXPERIENCE]</p>
+          <h3>What worked well?</h3>
+          <p>[WHAT WORKED WELL COPY]</p>
+          <h3>What didn't work well?</h3>
+          <p>[WHAT DIDN'T WORK WELL COPY]</p>
+          <h2>Do-Overs</h2>
+          <h3>What would I do differently?</h3>
+          <p>[WHAT WOULD I DO DIFFERENTLY COPY]</p>
+          <h2>[CHEEKY SUMMARY PHRASE/TITLE]</h2>
+          <p>[OUTRO COPY]</p>`
+          }
           init={{
             height: 500,
             menubar: true,
@@ -170,7 +237,10 @@ const CreatePortfolioItem: React.FunctionComponent<unknown> = () => {
              alignleft aligncenter alignright alignjustify | \
              bullist numlist outdent indent | link image code | removeformat | help",
           }}
-          onEditorChange={(content) => setContent(content)}
+          onEditorChange={(content) => {
+            window.localStorage.setItem("unsavedContent", content);
+            setContent(content);
+          }}
         />
 
         <Button

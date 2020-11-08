@@ -2,10 +2,16 @@ import * as React from "react";
 import { Box, Button, Heading } from "rebass";
 import { Label, Select } from "@rebass/forms";
 
-import { PortfolioItemDocument } from "../types";
+import {
+  ErrorResponse,
+  Notification,
+  PortfolioItemDocument,
+  PortfolioItemModifyResponse,
+} from "../types";
 
 export interface DeletePortfolioItemProps {
   portfolioItems: PortfolioItemDocument[];
+  setNotification: (notification: Notification) => void;
   setPortfolioItems: (portfolioItems: PortfolioItemDocument[]) => void;
 }
 
@@ -14,7 +20,7 @@ const DeletePortfolioItem: React.FunctionComponent<DeletePortfolioItemProps> = (
 ) => {
   const [id, setId] = React.useState("");
 
-  const { portfolioItems, setPortfolioItems } = props;
+  const { portfolioItems, setNotification, setPortfolioItems } = props;
 
   const handleDeletePortfolioItemSubmit = async (
     e: React.FormEvent<HTMLFormElement>
@@ -26,16 +32,38 @@ const DeletePortfolioItem: React.FunctionComponent<DeletePortfolioItemProps> = (
         headers: { "Content-Type": "application/json" },
         method: "DELETE",
       });
-      const data = await response.json();
+      const data:
+        | ErrorResponse
+        | PortfolioItemModifyResponse = await response.json();
+
+      const errorData = data as ErrorResponse;
+      const portfolioItemData = data as PortfolioItemModifyResponse;
 
       if (response.status !== 200) {
-        return alert(`Error! - ${JSON.stringify(data, null, 2)}`);
+        return setNotification({
+          display: true,
+          message: () => <p>{errorData.error}</p>,
+          title: "Error",
+          type: "warning",
+        });
       }
-      alert(`PortfolioItem - Deleted successfully!`);
-      setPortfolioItems(data.portfolioItems);
+      setNotification({
+        display: true,
+        message: () => <p>{portfolioItemData.notificationMessage}</p>,
+        title: "Success",
+        type: "success",
+      });
+      setPortfolioItems(portfolioItemData.portfolioItems);
     } catch (error) {
       console.error(error);
-      alert(`Error! - ${JSON.stringify(error, null, 2)}`);
+      return setNotification({
+        display: true,
+        message: () => (
+          <p>An error has occured. Please refresh the page, and try again.</p>
+        ),
+        title: "Technical Difficulties",
+        type: "warning",
+      });
     }
   };
 

@@ -3,17 +3,23 @@ import { Editor } from "@tinymce/tinymce-react";
 import { Box, Button, Heading, Image } from "rebass";
 import { Input, Label, Select } from "@rebass/forms";
 
-import { PortfolioItemDocument } from "../types";
+import {
+  ErrorResponse,
+  Notification,
+  PortfolioItemDocument,
+  PortfolioItemModifyResponse,
+} from "../types";
 
 export interface ModifyPortfolioItemProps {
   portfolioItems: PortfolioItemDocument[];
+  setNotification: (notification: Notification) => void;
   setPortfolioItems: (portfolioItems: PortfolioItemDocument[]) => void;
 }
 
 const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
   props: ModifyPortfolioItemProps
 ) => {
-  const { portfolioItems, setPortfolioItems } = props;
+  const { portfolioItems, setNotification, setPortfolioItems } = props;
   const [id, setId] = React.useState("");
   const [selectedPortfolioItem, setSelectedPortfolioItem] = React.useState(
     null
@@ -76,18 +82,40 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
         body: bodyData,
         method: "PATCH",
       });
-      const data = await response.json();
+      const data:
+        | ErrorResponse
+        | PortfolioItemModifyResponse = await response.json();
 
-      if (response.status === 200) {
-        alert("Success!");
-        setPortfolioItems(data.portfolioItems);
-        resetForm(e);
+      const errorData = data as ErrorResponse;
+      const portfolioItemData = data as PortfolioItemModifyResponse;
+
+      if (response.status !== 200) {
+        return setNotification({
+          display: true,
+          message: () => <p>{errorData.error}</p>,
+          title: "Error",
+          type: "warning",
+        });
       } else {
-        alert("ERROR!");
+        setNotification({
+          display: true,
+          message: () => <p>{portfolioItemData.notificationMessage}</p>,
+          title: "Success",
+          type: "success",
+        });
+        setPortfolioItems(portfolioItemData.portfolioItems);
+        resetForm(e);
       }
     } catch (error) {
       console.error(error);
-      alert(`Error! - ${JSON.stringify(error, null, 2)}`);
+      return setNotification({
+        display: true,
+        message: () => (
+          <p>An error has occured. Please refresh the page, and try again.</p>
+        ),
+        title: "Technical Difficulties",
+        type: "warning",
+      });
     }
   };
 

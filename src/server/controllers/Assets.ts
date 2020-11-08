@@ -5,6 +5,7 @@ class AssetsController {
   public router: Router = express.Router();
 
   static assetList = [
+    "404.svg",
     "alex-lee-resume.pdf",
     "android-chrome-192x192.png",
     "android-chrome-512x512.png",
@@ -23,8 +24,11 @@ class AssetsController {
     "tinymce.min.js",
   ];
 
-  static webfontsList = ["fa-brands-400.woff2", "fa-regular-400.woff2"];
-
+  static webfontsList = [
+    "fa-brands-400.woff2",
+    "fa-regular-400.woff2",
+    "fa-solid-900.woff2",
+  ];
   constructor() {
     this.initializeRoutes();
   }
