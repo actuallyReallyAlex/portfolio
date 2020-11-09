@@ -103,6 +103,7 @@ const AdminLoginPage: React.FunctionComponent<AdminLoginPageProps> = (
           />
           <Button
             disabled={disabled}
+            id="log-in"
             sx={{
               backgroundColor: disabled ? "grey" : "rgba(0, 119, 204, 1)",
               display: "flex",

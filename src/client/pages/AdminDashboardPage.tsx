@@ -78,6 +78,7 @@ const AdminDashboardPage: React.FunctionComponent<AdminDashboardPageProps> = (
           Select Action
         </Heading>
         <Select
+          id="action-select"
           onChange={(e) => setAction(e.target.value)}
           sx={{ marginBottom: "50px" }}
           value={action}

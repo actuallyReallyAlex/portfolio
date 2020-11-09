@@ -80,6 +80,11 @@ class PortfolioItemController {
             tagline,
             title,
           } = req.body;
+
+          if (!content || !iconBackground || !iconClass || !tagline || !title) {
+            return res.status(400).send({ error: "Form incomplete!" });
+          }
+          
           const newItemData: PortfolioItem = {
             content,
             coverImage: {

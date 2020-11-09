@@ -289,7 +289,13 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
             />
 
             <Button
-              sx={{ marginBottom: "50px", marginTop: "50px" }}
+              sx={{
+                marginBottom: "50px",
+                marginTop: "50px",
+                ":hover": {
+                  cursor: "pointer",
+                },
+              }}
               type="submit"
               variant="primary"
             >
