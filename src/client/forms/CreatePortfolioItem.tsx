@@ -102,8 +102,6 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
   React.useEffect(() => {
     const unsavedContent = window.localStorage.getItem("unsavedContent");
 
-    console.log(unsavedContent);
-
     if (unsavedContent) {
       setContent(unsavedContent);
     }
@@ -115,6 +113,9 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
       }
     }, 1000);
   }, []);
+
+  const formDisabled =
+    !content || !cover || !iconBackground || !iconClass || !tagline;
 
   return (
     <Box>
@@ -242,7 +243,17 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
         />
 
         <Button
-          sx={{ marginBottom: "50px", marginTop: "50px" }}
+          disabled={formDisabled}
+          sx={{
+            backgroundColor: formDisabled ? "grey" : "rgba(0, 119, 204, 1)",
+            marginBottom: "50px",
+            marginTop: "50px",
+            transition: "0.25s ease-in-out",
+            ":hover": {
+              backgroundColor: formDisabled ? "grey" : "rgba(0, 119, 204, 0.8)",
+              cursor: formDisabled ? "auto" : "pointer",
+            },
+          }}
           type="submit"
           variant="primary"
         >
