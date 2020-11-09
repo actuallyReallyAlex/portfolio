@@ -8,6 +8,7 @@ import {
   PortfolioItemDocument,
   PortfolioItemModifyResponse,
 } from "../types";
+import { isError } from "../util";
 
 export interface DeletePortfolioItemProps {
   portfolioItems: PortfolioItemDocument[];
@@ -36,24 +37,22 @@ const DeletePortfolioItem: React.FunctionComponent<DeletePortfolioItemProps> = (
         | ErrorResponse
         | PortfolioItemModifyResponse = await response.json();
 
-      const errorData = data as ErrorResponse;
-      const portfolioItemData = data as PortfolioItemModifyResponse;
-
-      if (response.status !== 200) {
+      if (isError(data)) {
         return setNotification({
           display: true,
-          message: () => <p>{errorData.error}</p>,
+          message: () => <p>{data.error}</p>,
           title: "Error",
           type: "warning",
         });
+      } else {
+        setNotification({
+          display: true,
+          message: () => <p>{data.notificationMessage}</p>,
+          title: "Success",
+          type: "success",
+        });
+        setPortfolioItems(data.portfolioItems);
       }
-      setNotification({
-        display: true,
-        message: () => <p>{portfolioItemData.notificationMessage}</p>,
-        title: "Success",
-        type: "success",
-      });
-      setPortfolioItems(portfolioItemData.portfolioItems);
     } catch (error) {
       console.error(error);
       return setNotification({

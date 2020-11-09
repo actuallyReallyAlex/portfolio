@@ -1,5 +1,6 @@
 import express, { Request, Response, Router } from "express";
 import multer, { FileFilterCallback } from "multer";
+import validator from "validator";
 
 import PortfolioItemModel from "../models/PortfolioItem";
 
@@ -80,6 +81,11 @@ class PortfolioItemController {
             tagline,
             title,
           } = req.body;
+
+          if (!content || !iconBackground || !iconClass || !tagline || !title) {
+            return res.status(400).send({ error: "Form incomplete!" });
+          }
+
           const newItemData: PortfolioItem = {
             content,
             coverImage: {
@@ -158,7 +164,17 @@ class PortfolioItemController {
         try {
           const { id } = req.body;
 
-          const item = await PortfolioItemModel.findOneAndDelete({ _id: id });
+          if (
+            !id.match(
+              /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/
+            )
+          ) {
+            return res.status(400).send({ error: "Incorrect id format." });
+          }
+
+          const item = await PortfolioItemModel.findOneAndDelete({
+            _id: validator.ltrim(id),
+          });
 
           if (!item) {
             return res

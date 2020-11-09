@@ -9,6 +9,7 @@ import {
   PortfolioItemDocument,
   SuccessResponsePortfolioItemPOST,
 } from "../types";
+import { isError } from "../util";
 
 interface CreatePortfolioItemProps {
   portfolioItems: PortfolioItemDocument[];
@@ -53,27 +54,24 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
         | ErrorResponse
         | SuccessResponsePortfolioItemPOST = await response.json();
 
-      const errorData = data as ErrorResponse;
-      const portfolioItemData = data as SuccessResponsePortfolioItemPOST;
-
-      if (response.status !== 201) {
+      if (isError(data)) {
         return setNotification({
           display: true,
-          message: () => <p>{errorData.error}</p>,
+          message: () => <p>{data.error}</p>,
           title: "Error",
           type: "warning",
         });
+      } else {
+        setFormSubmitted(true);
+        setNotification({
+          display: true,
+          message: () => <p>{data.notificationMessage}</p>,
+          title: "Success",
+          type: "success",
+        });
+        window.localStorage.removeItem("unsavedContent");
+        resetForm(e);
       }
-
-      setFormSubmitted(true);
-      setNotification({
-        display: true,
-        message: () => <p>{portfolioItemData.notificationMessage}</p>,
-        title: "Success",
-        type: "success",
-      });
-      window.localStorage.removeItem("unsavedContent");
-      resetForm(e);
     } catch (error) {
       console.error(error);
       return setNotification({
@@ -104,8 +102,6 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
   React.useEffect(() => {
     const unsavedContent = window.localStorage.getItem("unsavedContent");
 
-    console.log(unsavedContent);
-
     if (unsavedContent) {
       setContent(unsavedContent);
     }
@@ -117,6 +113,9 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
       }
     }, 1000);
   }, []);
+
+  const formDisabled =
+    !content || !cover || !iconBackground || !iconClass || !tagline;
 
   return (
     <Box>
@@ -209,6 +208,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
         </Heading>
         <Editor
           apiKey={process.env.TINYMCE_API_KEY}
+          id="content-editor"
           initialValue={
             content ||
             `<p>[SUMMARY]</p>
@@ -244,7 +244,18 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
         />
 
         <Button
-          sx={{ marginBottom: "50px", marginTop: "50px" }}
+          data-cy="submit-button"
+          disabled={formDisabled}
+          sx={{
+            backgroundColor: formDisabled ? "grey" : "rgba(0, 119, 204, 1)",
+            marginBottom: "50px",
+            marginTop: "50px",
+            transition: "0.25s ease-in-out",
+            ":hover": {
+              backgroundColor: formDisabled ? "grey" : "rgba(0, 119, 204, 0.8)",
+              cursor: formDisabled ? "auto" : "pointer",
+            },
+          }}
           type="submit"
           variant="primary"
         >

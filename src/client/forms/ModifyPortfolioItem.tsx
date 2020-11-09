@@ -9,6 +9,7 @@ import {
   PortfolioItemDocument,
   PortfolioItemModifyResponse,
 } from "../types";
+import { isError } from "../util";
 
 export interface ModifyPortfolioItemProps {
   portfolioItems: PortfolioItemDocument[];
@@ -86,24 +87,21 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
         | ErrorResponse
         | PortfolioItemModifyResponse = await response.json();
 
-      const errorData = data as ErrorResponse;
-      const portfolioItemData = data as PortfolioItemModifyResponse;
-
-      if (response.status !== 200) {
+      if (isError(data)) {
         return setNotification({
           display: true,
-          message: () => <p>{errorData.error}</p>,
+          message: () => <p>{data.error}</p>,
           title: "Error",
           type: "warning",
         });
       } else {
         setNotification({
           display: true,
-          message: () => <p>{portfolioItemData.notificationMessage}</p>,
+          message: () => <p>{data.notificationMessage}</p>,
           title: "Success",
           type: "success",
         });
-        setPortfolioItems(portfolioItemData.portfolioItems);
+        setPortfolioItems(data.portfolioItems);
         resetForm(e);
       }
     } catch (error) {
@@ -291,7 +289,13 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
             />
 
             <Button
-              sx={{ marginBottom: "50px", marginTop: "50px" }}
+              sx={{
+                marginBottom: "50px",
+                marginTop: "50px",
+                ":hover": {
+                  cursor: "pointer",
+                },
+              }}
               type="submit"
               variant="primary"
             >
