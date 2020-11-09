@@ -9,6 +9,7 @@ import {
   PortfolioItemDocument,
   SuccessResponsePortfolioItemPOST,
 } from "../types";
+import { isError } from "../util";
 
 interface CreatePortfolioItemProps {
   portfolioItems: PortfolioItemDocument[];
@@ -53,27 +54,24 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
         | ErrorResponse
         | SuccessResponsePortfolioItemPOST = await response.json();
 
-      const errorData = data as ErrorResponse;
-      const portfolioItemData = data as SuccessResponsePortfolioItemPOST;
-
-      if (response.status !== 201) {
+      if (isError(data)) {
         return setNotification({
           display: true,
-          message: () => <p>{errorData.error}</p>,
+          message: () => <p>{data.error}</p>,
           title: "Error",
           type: "warning",
         });
+      } else {
+        setFormSubmitted(true);
+        setNotification({
+          display: true,
+          message: () => <p>{data.notificationMessage}</p>,
+          title: "Success",
+          type: "success",
+        });
+        window.localStorage.removeItem("unsavedContent");
+        resetForm(e);
       }
-
-      setFormSubmitted(true);
-      setNotification({
-        display: true,
-        message: () => <p>{portfolioItemData.notificationMessage}</p>,
-        title: "Success",
-        type: "success",
-      });
-      window.localStorage.removeItem("unsavedContent");
-      resetForm(e);
     } catch (error) {
       console.error(error);
       return setNotification({

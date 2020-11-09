@@ -6,6 +6,7 @@ import BackButton from "../components/BackButton";
 import NotificationComponent from "../components/Notification";
 
 import { ErrorResponse, Notification, UserDocument } from "../types";
+import { isError } from "../util";
 
 export interface AdminLoginPageProps {
   setIsAuthenticated: (isAuthenticated: boolean) => void;
@@ -39,20 +40,17 @@ const AdminLoginPage: React.FunctionComponent<AdminLoginPageProps> = (
       });
       const data: ErrorResponse | UserDocument = await response.json();
 
-      const errorData = data as ErrorResponse;
-      const userData = data as UserDocument;
-
-      if (response.status !== 200) {
+      if (isError(data)) {
         return setNotification({
           display: true,
-          message: () => <p>{errorData.error}</p>,
+          message: () => <p>{data.error}</p>,
           title: "Error",
           type: "warning",
         });
+      } else {
+        setUser(data);
+        setIsAuthenticated(true);
       }
-
-      setUser(userData);
-      setIsAuthenticated(true);
     } catch (error) {
       console.error(error);
       return setNotification({
