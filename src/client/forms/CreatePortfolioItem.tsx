@@ -208,6 +208,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
         </Heading>
         <Editor
           apiKey={process.env.TINYMCE_API_KEY}
+          id="content-editor"
           initialValue={
             content ||
             `<p>[SUMMARY]</p>
@@ -243,6 +244,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
         />
 
         <Button
+          data-cy="submit-button"
           disabled={formDisabled}
           sx={{
             backgroundColor: formDisabled ? "grey" : "rgba(0, 119, 204, 1)",
