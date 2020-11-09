@@ -5,15 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.3.0] - _Unreleased_
+## [5.3.0] - 2020-11-09
 
 ### Added
 
+- Rate Limiting - [427](https://github.com/alexlee-dev/portfolio/issues/427)
+
 ### Changed
+
+- Domain whitelist
+- Sanitize Delete - [428](https://github.com/alexlee-dev/portfolio/issues/428)
+- Updated dependencies
 
 ### Removed
 
 ### Fixed
+
+- Data as issue - [440](https://github.com/alexlee-dev/portfolio/issues/440)
+- Submit form without coverImage - [430](https://github.com/alexlee-dev/portfolio/issues/430)
 
 ## [5.2.1] - 2020-11-07
 
