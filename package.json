@@ -43,7 +43,6 @@
     "svg-inline-loader": "^0.8.2",
     "theme-ui": "^0.3.3",
     "tinymce": "^5.5.1",
-    "uuid": "^8.3.1",
     "validator": "^13.1.17"
   },
   "devDependencies": {
@@ -62,7 +61,6 @@
     "@types/react-router-dom": "^5.1.6",
     "@types/rebass": "^4.0.7",
     "@types/rebass__forms": "^4.0.4",
-    "@types/uuid": "^8.3.0",
     "@types/validator": "^13.1.0",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
