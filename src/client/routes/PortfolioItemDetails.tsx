@@ -24,11 +24,7 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
   React.useEffect(() => {
     window.scrollTo(0, 0);
 
-    if (
-      !portfolioItemId.match(
-        /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/
-      )
-    ) {
+    if (!portfolioItemId.match(/^[a-f\d]{24}$/i)) {
       setNotFound(true);
     } else {
       const item = portfolioItems.find((item) => item._id === portfolioItemId);
