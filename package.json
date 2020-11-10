@@ -28,6 +28,7 @@
     "@tinymce/tinymce-react": "^3.8.1",
     "bcryptjs": "^2.4.3",
     "chalk": "^4.1.0",
+    "compression": "^1.7.4",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -48,6 +49,7 @@
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/chalk": "^2.2.0",
+    "@types/compression": "^1.7.0",
     "@types/cookie-parser": "^1.4.2",
     "@types/cors": "^2.8.8",
     "@types/express": "^4.17.8",
