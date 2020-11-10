@@ -35,7 +35,9 @@ class App {
 
     this.app.use(cookieParser());
     this.app.use(express.json());
-    this.app.use(rateLimiter);
+    if (process.env.NODE_ENV !== "development") {
+      this.app.use(rateLimiter);
+    }
     if (process.env.NODE_ENV !== "test") {
       this.app.use(morgan("dev"));
     }
