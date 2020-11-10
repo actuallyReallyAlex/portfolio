@@ -5,10 +5,14 @@ import BackButton from "../components/BackButton";
 
 const NotFound = React.lazy(() => import("../routes/NotFound"));
 
+import getPortfolioItems from "../data/getPortfolioItems";
+
+import { isError } from "../util";
 import { PortfolioItemDocument } from "../types";
 
 export interface PortfolioItemDetailsProps {
   portfolioItems: PortfolioItemDocument[];
+  setPortfolioItems: (portfolioItems: PortfolioItemDocument[]) => void;
 }
 
 const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> = (
@@ -19,20 +23,43 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
   const [currentPortfolioItem, setCurrentPortfolioItem] = React.useState(null);
   const [notFound, setNotFound] = React.useState(false);
 
-  const { portfolioItems } = props;
+  const { portfolioItems, setPortfolioItems } = props;
 
   React.useEffect(() => {
+    const checkData = async () => {
+      try {
+        let item: PortfolioItemDocument = null;
+
+        if (portfolioItems.length === 0) {
+          // * Fetch portfolioItems
+          const data = await getPortfolioItems();
+
+          if (isError(data)) {
+            console.error(data);
+          } else {
+            setPortfolioItems(data);
+            item = data.find((item) => item._id === portfolioItemId);
+          }
+        } else {
+          item = portfolioItems.find((item) => item._id === portfolioItemId);
+        }
+
+        if (item) {
+          setCurrentPortfolioItem(item);
+        } else {
+          setNotFound(true);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
     window.scrollTo(0, 0);
 
+    // * Catch any weird path that isn't an ObjectID
     if (!portfolioItemId.match(/^[a-f\d]{24}$/i)) {
-      setNotFound(true);
+      return setNotFound(true);
     } else {
-      const item = portfolioItems.find((item) => item._id === portfolioItemId);
-      if (item) {
-        setCurrentPortfolioItem(item);
-      } else {
-        setNotFound(true);
-      }
+      checkData();
     }
   }, []);
 
