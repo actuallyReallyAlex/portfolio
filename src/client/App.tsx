@@ -12,6 +12,7 @@ const NotFound = React.lazy(() => import("./routes/NotFound"));
 
 import { ErrorResponse, PortfolioItemDocument } from "./types";
 import { isError } from "./util";
+import getPortfolioItems from "./data/getPortfolioItems";
 
 theme.fonts = {
   body: "'Poppins', sans-serif",
@@ -26,30 +27,17 @@ const App: React.FunctionComponent<unknown> = () => {
   );
 
   React.useEffect(() => {
-    const getPortfolioItems = async (): Promise<
-      PortfolioItemDocument[] | { error: Error }
-    > => {
-      try {
-        const response = await fetch("/portfolioItems", {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        const data:
-          | ErrorResponse
-          | PortfolioItemDocument[] = await response.json();
+    const getData = async () => {
+      const data = await getPortfolioItems();
 
-        if (isError(data)) {
-          console.error(data);
-        } else {
-          setPortfolioItems(data);
-        }
-      } catch (error) {
-        console.error(error);
-        return { error };
+      if (isError(data)) {
+        console.error(data);
+      } else {
+        setPortfolioItems(data);
       }
     };
-    getPortfolioItems();
+
+    getData();
   }, []);
 
   return (
@@ -73,7 +61,10 @@ const App: React.FunctionComponent<unknown> = () => {
               />
             </Route>
             <Route path="/portfolio/:id">
-              <PortfolioItemDetails portfolioItems={portfolioItems} />
+              <PortfolioItemDetails
+                portfolioItems={portfolioItems}
+                setPortfolioItems={setPortfolioItems}
+              />
             </Route>
             <Route>
               <NotFound />
