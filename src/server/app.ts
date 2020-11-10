@@ -1,5 +1,6 @@
 import chalk from "chalk";
 import cookieParser from "cookie-parser";
+import compression from "compression";
 import cors, { CorsOptions } from "cors";
 import express, { Request, Response } from "express";
 import mongoose from "mongoose";
@@ -35,6 +36,7 @@ class App {
 
     this.app.use(cookieParser());
     this.app.use(express.json());
+    this.app.use(compression());
     if (process.env.NODE_ENV !== "development") {
       this.app.use(rateLimiter);
     }
