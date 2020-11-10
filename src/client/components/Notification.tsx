@@ -18,7 +18,7 @@ const Notification: React.FunctionComponent<NotificationProps> = (
   const Message = message;
   const iconSettings = {
     success: {
-      backgroundColor: "#feeaea",
+      backgroundColor: "#c9ffc6",
       className: "far fa-check-circle",
       color: "green",
     },
