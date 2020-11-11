@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
+const webpack = require("webpack");
 
 const mode = process.env.NODE_ENV || "production";
 
@@ -17,6 +18,8 @@ const config = {
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
+    historyApiFallback: true,
+    hot: true,
     open: true,
     port: 5000,
     proxy: {
@@ -54,7 +57,8 @@ const config = {
       },
       {
         test: /\.svg$/,
-        loader: "svg-inline-loader",
+        // loader: "svg-inline-loader",
+        type: "asset/inline",
       },
       {
         test: /\.js$/,
@@ -77,7 +81,7 @@ const config = {
     ],
   },
   optimization: {
-    moduleIds: "hashed",
+    moduleIds: "deterministic",
     runtimeChunk: "single",
     splitChunks: {
       chunks: "all",
@@ -98,6 +102,12 @@ const config = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src/client/index.html"),
     }),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify(mode),
+      "process.env.TINYMCE_API_KEY": JSON.stringify(
+        process.env.TINYMCE_API_KEY
+      ),
+    }),
   ],
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
@@ -106,6 +116,10 @@ const config = {
 
 if (process.env.NODE_ENV === "analyze") {
   config.plugins.push(new BundleAnalyzerPlugin({ analyzerMode: "static" }));
+}
+
+if (process.env.NODE_ENV === "development") {
+  config.plugins.push(new webpack.HotModuleReplacementPlugin());
 }
 
 module.exports = config;
