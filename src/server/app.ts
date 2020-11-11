@@ -37,7 +37,7 @@ class App {
     this.app.use(cookieParser());
     this.app.use(express.json());
     this.app.use(compression());
-    if (process.env.NODE_ENV !== "development") {
+    if (process.env.NODE_ENV === "production") {
       this.app.use(rateLimiter);
     }
     if (process.env.NODE_ENV !== "test") {
