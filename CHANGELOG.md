@@ -26,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Broken PortfolioItemDetails - [460](https://github.com/alexlee-dev/portfolio/issues/460)
-- Success Notitfication Colors - [459](https://github.com/alexlee-dev/portfolio/issues/459)
+- Success Notification Colors - [459](https://github.com/alexlee-dev/portfolio/issues/459)
 
 ## [5.3.0] - 2020-11-09
 
