@@ -1,5 +1,6 @@
 import chalk from "chalk";
 import cookieParser from "cookie-parser";
+import compression from "compression";
 import cors, { CorsOptions } from "cors";
 import express, { Request, Response } from "express";
 import mongoose from "mongoose";
@@ -35,7 +36,10 @@ class App {
 
     this.app.use(cookieParser());
     this.app.use(express.json());
-    this.app.use(rateLimiter);
+    this.app.use(compression());
+    if (process.env.NODE_ENV === "production") {
+      this.app.use(rateLimiter);
+    }
     if (process.env.NODE_ENV !== "test") {
       this.app.use(morgan("dev"));
     }

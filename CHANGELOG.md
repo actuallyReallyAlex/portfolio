@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.4.0] - 2020-11-11
+
+### Added
+
+- Preload requests - [451](https://github.com/alexlee-dev/portfolio/issues/451)
+- Robots.txt - [454](https://github.com/alexlee-dev/portfolio/issues/454)
+- Server Compression - [450](https://github.com/alexlee-dev/portfolio/issues/450)
+
+### Changed
+
+- Only ratelimit in `production` - [461](https://github.com/alexlee-dev/portfolio/issues/461)
+- Resize Avatar image - [452](https://github.com/alexlee-dev/portfolio/issues/452)
+- Updated `webpack` - [455](https://github.com/alexlee-dev/portfolio/issues/455)
+
+### Removed
+
+- `uuid`
+
+### Fixed
+
+- Broken PortfolioItemDetails - [460](https://github.com/alexlee-dev/portfolio/issues/460)
+- Success Notification Colors - [459](https://github.com/alexlee-dev/portfolio/issues/459)
+
 ## [5.3.0] - 2020-11-09
 
 ### Added
