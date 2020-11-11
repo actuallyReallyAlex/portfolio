@@ -34,9 +34,11 @@ This project is a portfolio to showcase the work of Alex Lee.
 - [@tinymce/tinymce-react](https://www.npmjs.com/package/@tinymce/tinymce-react) - Official TinyMCE React component.
 - [bcryptjs](https://github.com/dcodeIO/bcrypt.js) - Optimized bcrypt in plain JavaScript with zero dependencies.
 - [chalk](https://github.com/chalk/chalk) - Terminal string styling done right.
+- [compression](https://github.com/expressjs/compression) - Node.js compression middleware.
 - [cookie-parser](https://github.com/expressjs/cookie-parser) - Parse HTTP request cookies.
 - [cors](https://github.com/expressjs/cors) - Node.js CORS middleware.
 - [express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for node.
+- [express-rate-limit](https://github.com/nfriedly/express-rate-limit) - Basic rate-limiting middleware for express.
 - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) - JsonWebToken implementation for node.js.
 - [mongoose](https://mongoosejs.com/) - MongoDB object modeling designed to work in an asynchronous environment.
 - [morgan](https://github.com/expressjs/morgan) - HTTP request logger middleware for node.js.
@@ -48,7 +50,6 @@ This project is a portfolio to showcase the work of Alex Lee.
 - [svg-inline-loadeer](https://github.com/webpack-contrib/svg-inline-loader) - Inline SVG loader with cleaning-up functionality.
 - [theme-ui](https://github.com/system-ui/theme-ui) - Build consistent, themeable React apps based on constraint-based design principles.
 - [tinymce](https://github.com/tinymce/tinymce-dist) - Official TinyMCE repository for production usage in package managers.
-- [uuid](https://github.com/uuidjs/uuid) - Generate RFC-compliant UUIDs in JavaScript.
 - [validator](https://github.com/validatorjs/validator.js) - String validation.
 
 ### DevDependencies
@@ -56,6 +57,7 @@ This project is a portfolio to showcase the work of Alex Lee.
 - [copyfiles](https://github.com/calvinmetcalf/copyfiles) - Copy files on the command line.
 - [css-loader](https://github.com/webpack-contrib/css-loader) - CSS Loader.
 - [cypress](https://www.cypress.io/) - Fast, easy and reliable testing for anything that runs in a browser.
+- [cypress-file-upload](https://github.com/abramenal/cypress-file-upload) - File upload testing made easy.
 - [env-cmd](https://github.com/toddbluhm/env-cmd) - Setting the environment from a file.
 - [eslint](https://eslint.org/) - Find and fix problems in your JavaScript code.
 - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) - React specific linting rules for ESLint.
