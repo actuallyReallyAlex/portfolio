@@ -42,6 +42,7 @@ const config = {
       },
       "/portfolioItem": "http://localhost:3000/",
       "/portfolioItems": "http://localhost:3000/",
+      "/robots.txt": "http://localhost:3000/",
       "/uploads": "http://localhost:3000/",
       "/user": "http://localhost:3000/",
       "/webfonts": "http://localhost:3000/",

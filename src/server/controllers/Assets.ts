@@ -19,7 +19,6 @@ class AssetsController {
     "mstile-150x150.png",
     "palm-triangles-50.svg",
     "palm.jpg",
-    "robots.txt",
     "safari-pinned-tab.svg",
     "site.webmanifest",
     "tinymce.min.js",
