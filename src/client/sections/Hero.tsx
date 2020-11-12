@@ -41,7 +41,7 @@ const Hero: React.FunctionComponent<unknown> = () => {
             },
           }}
           maxHeight="100vh"
-          src="/assets/palm.jpg"
+          src="/assets/palm.webp"
           width="100%"
         />
         <Box

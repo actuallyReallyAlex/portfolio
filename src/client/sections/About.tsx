@@ -21,7 +21,7 @@ const About: React.FunctionComponent<unknown> = () => {
             objectPosition: "center center",
           }}
           height={250}
-          src="/assets/avatar-250.jpg"
+          src="/assets/avatar-250.webp"
           width={250}
         />
         <Box maxWidth="75%">
