@@ -1,12 +1,13 @@
+import chalk from "chalk";
 import express, { Request, Response, Router } from "express";
 import multer, { FileFilterCallback } from "multer";
 import validator from "validator";
 
+import CoverImageModel from "../models/CoverImage";
 import PortfolioItemModel from "../models/PortfolioItem";
 
 import {
   ErrorResponse,
-  PortfolioItem,
   PortfolioItemDocument,
   PortfolioItemModifyResponse,
   SuccessResponsePortfolioItemPOST,
@@ -86,23 +87,27 @@ class PortfolioItemController {
             return res.status(400).send({ error: "Form incomplete!" });
           }
 
-          const newItemData: PortfolioItem = {
+          const newPortfolioItem = new PortfolioItemModel({
             content,
-            coverImage: {
-              base64: req.file.buffer.toString("base64"),
-              filename: req.file.originalname,
-            },
             iconBackground,
             iconClass,
             links: JSON.parse(links),
             tagline,
             title,
-          };
-          const newPortfolioItem = new PortfolioItemModel(newItemData);
+          });
 
           await newPortfolioItem.save();
 
+          const newCoverImage = new CoverImageModel({
+            base64: req.file.buffer.toString("base64"),
+            filename: req.file.originalname,
+            portfolioItemId: newPortfolioItem.id,
+          });
+
+          await newCoverImage.save();
+
           return res.status(201).send({
+            coverImage: newCoverImage,
             notificationMessage: `${newPortfolioItem.title} was created successfully!`,
             portfolioItem: newPortfolioItem,
           });

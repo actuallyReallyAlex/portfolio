@@ -32,6 +32,7 @@ const config = {
         },
       },
       "/assets": "http://localhost:3000/",
+      "/coverImage": "http://localhost:3000/",
       "/portfolio": {
         target: "http://localhost:3000/",
         bypass: function (req, res, proxyOptions) {

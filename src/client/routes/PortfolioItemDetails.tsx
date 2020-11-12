@@ -8,7 +8,11 @@ const NotFound = React.lazy(() => import("../routes/NotFound"));
 import getPortfolioItems from "../data/getPortfolioItems";
 
 import { isError } from "../util";
-import { PortfolioItemDocument } from "../types";
+import {
+  CoverImageDocument,
+  ErrorResponse,
+  PortfolioItemDocument,
+} from "../types";
 
 export interface PortfolioItemDetailsProps {
   portfolioItems: PortfolioItemDocument[];
@@ -22,6 +26,7 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
   const portfolioItemId = location.pathname.split("/portfolio/")[1];
   const [currentPortfolioItem, setCurrentPortfolioItem] = React.useState(null);
   const [notFound, setNotFound] = React.useState(false);
+  const [coverImage, setCoverImage] = React.useState(null);
 
   const { portfolioItems, setPortfolioItems } = props;
 
@@ -46,6 +51,21 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
 
         if (item) {
           setCurrentPortfolioItem(item);
+          // * Get CoverImage Data
+          console.log({ id: item._id });
+          const response = await fetch(`/coverImage?id=${item._id}`, {
+            method: "GET",
+          });
+          const data:
+            | ErrorResponse
+            | CoverImageDocument = await response.json();
+
+          if (isError(data)) {
+            return alert(data.error);
+          } else {
+            console.log(data);
+            setCoverImage(data);
+          }
         } else {
           setNotFound(true);
         }
@@ -67,7 +87,7 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
     return <NotFound />;
   }
 
-  if (currentPortfolioItem) {
+  if (currentPortfolioItem && coverImage) {
     return (
       <Flex flexDirection="column" sx={{ margin: ["100px 10%", "100px 15%"] }}>
         <BackButton />
@@ -131,7 +151,7 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
           </Box>
           <Image
             alt="Cover Image"
-            src={`data:image/png;base64,${currentPortfolioItem.coverImage.base64}`}
+            src={`data:image/png;base64,${coverImage.base64}`}
           />
           <div
             dangerouslySetInnerHTML={{ __html: currentPortfolioItem.content }}
