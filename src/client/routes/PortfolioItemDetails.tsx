@@ -52,7 +52,6 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
         if (item) {
           setCurrentPortfolioItem(item);
           // * Get CoverImage Data
-          console.log({ id: item._id });
           const response = await fetch(`/coverImage?id=${item._id}`, {
             method: "GET",
           });
@@ -63,7 +62,6 @@ const PortfolioItemDetails: React.FunctionComponent<PortfolioItemDetailsProps> =
           if (isError(data)) {
             return alert(data.error);
           } else {
-            console.log(data);
             setCoverImage(data);
           }
         } else {
