@@ -19,7 +19,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = (
     <div id="home">
       <Hero />
       <About />
-      <Works portfolioItems={portfolioItems} />
+      {portfolioItems.length > 0 && <Works portfolioItems={portfolioItems} />}
     </div>
   );
 };
