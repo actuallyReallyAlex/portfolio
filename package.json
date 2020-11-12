@@ -18,7 +18,7 @@
     "server-alone": "env-cmd node build/index.js",
     "start-server": "npm run build-server && env-cmd node build/index.js",
     "start": "node build/index.js",
-    "test": "start-server-and-test test-server http://localhost:3000 cypress-open",
+    "test": "start-server-and-test test-server http://localhost:3000 cypress-run",
     "test-server": "env-cmd node build/index.js"
   },
   "dependencies": {
