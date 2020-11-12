@@ -47,7 +47,6 @@ This project is a portfolio to showcase the work of Alex Lee.
 - [react-dom](https://www.npmjs.com/package/react-dom) - A declarative, efficient, and flexible JavaScript library for building user interfaces.
 - [react-router-dom](https://reactrouter.com/) - Declarative routing for React.
 - [rebass](https://github.com/rebassjs/rebass) - ⚛️ React primitive UI components built with styled-system.
-- [svg-inline-loadeer](https://github.com/webpack-contrib/svg-inline-loader) - Inline SVG loader with cleaning-up functionality.
 - [theme-ui](https://github.com/system-ui/theme-ui) - Build consistent, themeable React apps based on constraint-based design principles.
 - [tinymce](https://github.com/tinymce/tinymce-dist) - Official TinyMCE repository for production usage in package managers.
 - [validator](https://github.com/validatorjs/validator.js) - String validation.
