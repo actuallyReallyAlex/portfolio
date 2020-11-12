@@ -116,6 +116,7 @@ const config = {
 };
 
 if (process.env.NODE_ENV === "analyze") {
+  console.log("lol")
   config.plugins.push(new BundleAnalyzerPlugin({ analyzerMode: "static" }));
 }
 

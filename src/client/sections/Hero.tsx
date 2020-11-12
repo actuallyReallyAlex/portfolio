@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Box, Flex, Heading, Image, Link } from "rebass";
 
+const logo = require("../assets/fa/linkedin.svg") as string;
+
 const Hero: React.FunctionComponent<unknown> = () => {
   return (
     <div id="hero">
@@ -107,7 +109,7 @@ const Hero: React.FunctionComponent<unknown> = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <i className="fab fa-linkedin" />
+                  <Image height="50px" width="50px" src={logo} />
                 </Link>
               </li>
             </ul>
