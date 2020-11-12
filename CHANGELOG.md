@@ -5,15 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.5.0] - _Unreleased_
+## [5.5.0] - 2020-11-12
 
 ### Added
 
 ### Changed
 
+- CoverImage separated from PortfolioItem - [453](https://github.com/alexlee-dev/portfolio/issues/453)
+- Self Host Fonts - [474](https://github.com/alexlee-dev/portfolio/issues/474)
+- Serve Images in `WebP` - [472](https://github.com/alexlee-dev/portfolio/issues/472)
+
 ### Removed
 
 ### Fixed
+
+- Manifest Assets - [475](https://github.com/alexlee-dev/portfolio/issues/475)
+- Robots.txt - [476](https://github.com/alexlee-dev/portfolio/issues/476)
 
 ## [5.4.0] - 2020-11-11
 
