@@ -2,6 +2,7 @@ import App from "./app";
 
 import AdminController from "./controllers/Admin";
 import AssetsController from "./controllers/Assets";
+import CoverImageController from "./controllers/CoverImage";
 import PortfolioItemController from "./controllers/PortfolioItem";
 import UserController from "./controllers/User";
 
@@ -14,6 +15,7 @@ const main = async (): Promise<void> => {
     const controllers: Controller[] = [
       new AdminController(),
       new AssetsController(),
+      new CoverImageController(),
       new PortfolioItemController(),
       new UserController(),
     ];

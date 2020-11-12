@@ -57,7 +57,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
       if (isError(data)) {
         return setNotification({
           display: true,
-          message: () => <p>{data.error}</p>,
+          message: () => <p>{JSON.stringify(data.error, null, 2)}</p>,
           title: "Error",
           type: "warning",
         });
