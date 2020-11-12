@@ -32,6 +32,7 @@ const config = {
         },
       },
       "/assets": "http://localhost:3000/",
+      "/coverImage": "http://localhost:3000/",
       "/portfolio": {
         target: "http://localhost:3000/",
         bypass: function (req, res, proxyOptions) {
@@ -42,6 +43,7 @@ const config = {
       },
       "/portfolioItem": "http://localhost:3000/",
       "/portfolioItems": "http://localhost:3000/",
+      "/robots.txt": "http://localhost:3000/",
       "/uploads": "http://localhost:3000/",
       "/user": "http://localhost:3000/",
       "/webfonts": "http://localhost:3000/",
@@ -57,8 +59,11 @@ const config = {
       },
       {
         test: /\.svg$/,
-        // loader: "svg-inline-loader",
         type: "asset/inline",
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
       },
       {
         test: /\.js$/,

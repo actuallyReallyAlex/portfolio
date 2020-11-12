@@ -77,6 +77,10 @@ class App {
 
     this.app.use(express.static(path.join(__dirname, "../dist")));
 
+    this.app.get("/robots.txt", (req: Request, res: Response) =>
+      res.sendFile(path.join(__dirname, `/assets/robots.txt`))
+    );
+
     // TODO - Fix this. This is dumb and should be better.
     this.app.get("*", (req: Request, res: Response) => {
       try {

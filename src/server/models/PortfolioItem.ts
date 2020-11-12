@@ -8,16 +8,6 @@ const portfolioItemSchema = new mongoose.Schema(
       required: [true, "Field 'content' is required."],
       type: String,
     },
-    coverImage: {
-      base64: {
-        required: [true, "Field 'coverImage.base64' is required."],
-        type: String,
-      },
-      filename: {
-        required: [true, "Field 'coverImage.filename' is required."],
-        type: String,
-      },
-    },
     iconBackground: {
       required: [true, "Field 'iconBackground' is required."],
       type: String,

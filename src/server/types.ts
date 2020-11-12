@@ -10,6 +10,18 @@ export type Controller = {
   router: Router;
 };
 
+export interface CoverImageDeleteResponse {
+  notificationMessage: string;
+  coverImage: CoverImageDocument;
+  coverImages: CoverImageDocument[];
+}
+
+export interface CoverImageDocument extends Document {
+  base64: string;
+  filename: string;
+  portfolioItemId: string;
+}
+
 export interface ErrorResponse {
   error: string;
 }
@@ -21,7 +33,6 @@ export interface MongoImage {
 
 export interface PortfolioItem {
   content: string;
-  coverImage: MongoImage;
   iconBackground: string;
   iconClass: string;
   links?: {
@@ -35,7 +46,6 @@ export interface PortfolioItem {
 
 export interface PortfolioItemDocument extends Document {
   content: string;
-  coverImage: MongoImage;
   iconBackground: string;
   iconClass: string;
   links?: {
@@ -57,7 +67,13 @@ export interface PortfolioItemModifyResponse {
   portfolioItems: PortfolioItemDocument[];
 }
 
+export interface SuccessResponseCoverImagePOST {
+  notificationMessage: string;
+  coverImage: CoverImageDocument;
+}
+
 export interface SuccessResponsePortfolioItemPOST {
+  coverImage: CoverImageDocument;
   notificationMessage: string;
   portfolioItem: PortfolioItemDocument;
 }
