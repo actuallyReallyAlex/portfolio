@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context("Delete Portfolio Item", () => {
+context("Modify Portfolio Item", () => {
   beforeEach(() => {
     cy.visit("/admin");
     cy.get("h1").should("have.text", "Login");
@@ -66,7 +66,18 @@ context("Delete Portfolio Item", () => {
     );
   };
 
-  it("Should allow for deletion of a PortfolioItem", () => {
+  it("Should allow for modification of a PortfolioItem", () => {
+    cy.visit("/admin");
+    cy.get("#action-select").select("Modify PortfolioItem");
+    cy.get("#portfolio-item").select("New Test Item");
+
+    cy.get("#tagline").clear();
+    cy.get("#tagline").type("This is a new tagline!");
+
+    cy.get('button[type="submit"]').click();
+    cy.get('[data-cy="notification-title"]').should("have.text", "Success");
+
+    // * Cleanup
     cy.visit("/admin");
     cy.get("#action-select").select("Delete PortfolioItem");
     cy.get("#portfolio-item").select("New Test Item");
