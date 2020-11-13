@@ -23,11 +23,12 @@ class CoverImageController {
       if (
         !file.originalname.match(/\.(png)$/) &&
         !file.originalname.match(/\.(jpg)$/) &&
-        !file.originalname.match(/\.(jpeg)$/)
+        !file.originalname.match(/\.(jpeg)$/) &&
+        !file.originalname.match(/\.(webp)$/)
       ) {
         return cb(
           new Error(
-            "File must be in one of the following formats: [.png, .jpg, .jpeg]."
+            "File must be in one of the following formats: [.png, .jpg, .jpeg, .webp]."
           )
         );
       }
