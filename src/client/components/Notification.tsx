@@ -106,7 +106,7 @@ const Notification: React.FunctionComponent<NotificationProps> = (
             <i className={iconSettings[type].className} />
           </Box>
           <div>
-            <Heading as="h2" fontSize="3">
+            <Heading as="h2" data-cy="notification-title" fontSize="3">
               {title}
             </Heading>
             <Message />

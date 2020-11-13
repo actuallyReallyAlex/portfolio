@@ -127,7 +127,7 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
     setNPM("");
     setNewCoverImage(null);
     setContent("");
-    if (e.currentTarget.reset) {
+    if (e.currentTarget && e.currentTarget.reset) {
       e.currentTarget.reset();
     }
   };
@@ -155,6 +155,7 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
       <form onSubmit={handleModifyPortfolioItemSubmit}>
         <Label htmlFor="select-portfolio-item">Select Portfolio Item</Label>
         <Select
+          id="portfolio-item"
           onChange={(e) => {
             const selection = portfolioItems.find(
               (portfolioItem) => portfolioItem._id === e.target.value
@@ -162,6 +163,7 @@ const ModifyPortfolioItem: React.FunctionComponent<ModifyPortfolioItemProps> = (
             setSelectedPortfolioItem(selection);
             setId(selection._id);
           }}
+          required
           sx={{ marginBottom: "50px" }}
           value={selectedPortfolioItem ? selectedPortfolioItem : ""}
         >
