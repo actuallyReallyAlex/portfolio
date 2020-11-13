@@ -196,7 +196,7 @@ const CreatePortfolioItem: React.FunctionComponent<CreatePortfolioItemProps> = (
 
         <Label htmlFor="cover">Cover Image</Label>
         <Input
-          accept="image/png, image/jpeg"
+          accept="image/png, image/jpeg, image/webp, image/gif, image/svg+xml"
           id="cover"
           onChange={(e) => setCover(e.target.files[0])}
           sx={{ marginBottom: "25px" }}
