@@ -56,6 +56,7 @@ const Notification: React.FunctionComponent<NotificationProps> = (
       <Box
         id="notification-container"
         sx={{
+          backdropFilter: "blur(4px)",
           backgroundColor: "rgba(0,0,0,0.32)",
           height: "100vh",
           justifyContent: "center",
