@@ -41,7 +41,7 @@
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "rebass": "^4.0.7",
-    "theme-ui": "^0.3.3",
+    "theme-ui": "^0.3.4",
     "tinymce": "^5.5.1",
     "validator": "^13.1.17"
   },
