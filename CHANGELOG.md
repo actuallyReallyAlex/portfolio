@@ -5,11 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.6.0] - _Unreleased_
+## [5.6.0] - 2020-12-04
 
 ### Added
 
+- Support for WebP images- [487](https://github.com/alexlee-dev/portfolio/issues/487)
+- Admin Tests - [489](https://github.com/alexlee-dev/portfolio/issues/489)
+- Blur Overlay on Notifications - [486](https://github.com/alexlee-dev/portfolio/issues/486)
+
 ### Changed
+
+- About Section copy - [516](https://github.com/alexlee-dev/portfolio/issues/516)
+- Resume - [521](https://github.com/alexlee-dev/portfolio/issues/521)
 
 ### Removed
 
