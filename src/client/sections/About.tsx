@@ -36,7 +36,7 @@ const About: React.FunctionComponent<unknown> = () => {
           </Text>
           <a
             data-cy="resume-link"
-            href="/assets/alex-lee-resume.pdf"
+            href="/assets/Resume - Alex Lee.pdf"
             rel="noopener noreferrer"
             target="_blank"
           >
