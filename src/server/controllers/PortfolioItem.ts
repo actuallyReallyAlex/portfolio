@@ -25,11 +25,12 @@ class PortfolioItemController {
       if (
         !file.originalname.match(/\.(png)$/) &&
         !file.originalname.match(/\.(jpg)$/) &&
-        !file.originalname.match(/\.(jpeg)$/)
+        !file.originalname.match(/\.(jpeg)$/) &&
+        !file.originalname.match(/\.(webp)$/)
       ) {
         return cb(
           new Error(
-            "File must be in one of the following formats: [.png, .jpg, .jpeg]."
+            "File must be in one of the following formats: [.png, .jpg, .jpeg, .webp]."
           )
         );
       }
@@ -169,22 +170,29 @@ class PortfolioItemController {
         try {
           const { id } = req.body;
 
-          if (
-            !id.match(
-              /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/
-            )
-          ) {
+          if (!id.match(/^[a-f\d]{24}$/i)) {
             return res.status(400).send({ error: "Incorrect id format." });
           }
 
           const item = await PortfolioItemModel.findOneAndDelete({
-            _id: validator.ltrim(id),
+            _id: validator.trim(id),
           });
 
           if (!item) {
             return res
               .status(404)
               .send({ error: "No corresponding PortfolioItem found!" });
+          }
+
+          // * Delete CoverImage
+          const coverImage = await CoverImageModel.findOneAndDelete({
+            portfolioItemId: validator.trim(id),
+          });
+
+          if (!coverImage) {
+            return res
+              .status(500)
+              .send({ error: "Could not delete corresponding CoverImage!" });
           }
 
           const portfolioItems = await PortfolioItemModel.find({});

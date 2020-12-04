@@ -6,7 +6,6 @@ class AssetsController {
 
   static assetList = [
     "404.svg",
-    "alex-lee-resume.pdf",
     "android-chrome-192x192.png",
     "android-chrome-512x512.png",
     "apple-touch-icon.png",
@@ -21,6 +20,7 @@ class AssetsController {
     "palm-triangles-50.svg",
     "palm.jpg",
     "palm.webp",
+    "Resume - Alex Lee.pdf",
     "safari-pinned-tab.svg",
     "site.webmanifest",
     "tinymce.min.js",

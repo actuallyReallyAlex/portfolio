@@ -56,6 +56,7 @@ const Notification: React.FunctionComponent<NotificationProps> = (
       <Box
         id="notification-container"
         sx={{
+          backdropFilter: "blur(4px)",
           backgroundColor: "rgba(0,0,0,0.32)",
           height: "100vh",
           justifyContent: "center",
@@ -106,7 +107,7 @@ const Notification: React.FunctionComponent<NotificationProps> = (
             <i className={iconSettings[type].className} />
           </Box>
           <div>
-            <Heading as="h2" fontSize="3">
+            <Heading as="h2" data-cy="notification-title" fontSize="3">
               {title}
             </Heading>
             <Message />
