@@ -26,14 +26,13 @@ const About: React.FunctionComponent<unknown> = () => {
         />
         <Box maxWidth="75%">
           <Text fontWeight="bold" margin="10px auto">
-            Hi. I&apos;m Alex, a Fullstack Application Developer in San Diego. I
-            deliver solutions to complex problems.
+            Hi. I&apos;m Alex, a Senior Software Engineer creating purposeful
+            and functional applications that go beyond expectations.
           </Text>
           <Text margin="10px auto">
-            I create purposeful and functional applications that go beyond
-            expectations. I&apos;m currently developing the future of the online
-            banking industry with U.S. Bank. Outside of work, I love surfing,
-            camping, and spending time with my dog Copper.
+            I&apos;ve restructured company-wide testing strategies and I currently
+            instruct training sessions on front end specializations and
+            techniques.
           </Text>
           <a
             data-cy="resume-link"
