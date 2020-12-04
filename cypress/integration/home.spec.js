@@ -55,7 +55,7 @@ context("Home Page", () => {
 
     // * Resume
     cy.get('[data-cy="resume-link"]').then(($element) => {
-      expect($element.attr("href")).to.equal("/assets/Resume - Alex Lee.pdf");
+      expect($element.attr("href")).to.equal("/assets/resume-alex-lee.pdf");
     });
   });
 });

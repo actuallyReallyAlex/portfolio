@@ -20,7 +20,7 @@ class AssetsController {
     "palm-triangles-50.svg",
     "palm.jpg",
     "palm.webp",
-    "Resume - Alex Lee.pdf",
+    "resume-alex-lee.pdf",
     "safari-pinned-tab.svg",
     "site.webmanifest",
     "tinymce.min.js",
