@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "description": "Alex Lee's portfolio.",
-  "version": "5.6.0",
+  "version": "5.6.1",
   "author": "Alex Lee (www.alexlee.dev)",
   "license": "GPL-3.0-or-later",
   "scripts": {
