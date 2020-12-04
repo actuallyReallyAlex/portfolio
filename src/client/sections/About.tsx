@@ -30,13 +30,13 @@ const About: React.FunctionComponent<unknown> = () => {
             and functional applications that go beyond expectations.
           </Text>
           <Text margin="10px auto">
-            I&apos;ve restructured company-wide testing strategies and I currently
-            instruct training sessions on front end specializations and
-            techniques.
+            I&apos;ve restructured company-wide testing strategies and I
+            currently instruct training sessions on front end specializations
+            and techniques.
           </Text>
           <a
             data-cy="resume-link"
-            href="/assets/Resume - Alex Lee.pdf"
+            href="/assets/resume-alex-lee.pdf"
             rel="noopener noreferrer"
             target="_blank"
           >
