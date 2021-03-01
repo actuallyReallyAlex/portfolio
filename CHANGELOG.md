@@ -11,14 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Footer Content
-- Adjusted Tests
+- Footer content
+- Adjusted tests
 
 ### Removed
 
 ### Fixed
 
 - Outdated dependencies
+- Linter errors
 
 ## [5.6.1] - 2020-12-04
 
