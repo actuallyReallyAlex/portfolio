@@ -79,7 +79,7 @@ export interface SuccessResponsePortfolioItemPOST {
 }
 
 export interface Token {
-  _id: string;
+  _id?: string;
   token: string;
 }
 
@@ -87,9 +87,9 @@ export interface UserDocument extends Document {
   _id: string;
   email: string;
   generateAuthToken(): Promise<string>;
-  password: string;
+  password?: string;
   name: string;
-  tokens: Token[];
+  tokens?: Token[];
 }
 
 export interface UserModel extends Model<UserDocument> {
