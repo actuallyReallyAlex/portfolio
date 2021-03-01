@@ -5,7 +5,7 @@ import validator from "validator";
 
 import { UserDocument, UserModel } from "../types";
 
-const userSchema = new mongoose.Schema(
+const userSchema: mongoose.Schema<UserDocument> = new mongoose.Schema(
   {
     // * Email, Password, etc
     email: {
@@ -89,8 +89,8 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-function contentToJSON(this: UserDocument): void {
-  const userObj = this.toObject();
+function contentToJSON(this: any): UserDocument {
+  const userObj: UserDocument = this.toObject();
 
   delete userObj.password;
   delete userObj.tokens;
@@ -109,7 +109,12 @@ userSchema.methods.generateAuthToken = async function (): Promise<string> {
   const user = this;
   const token = jwt.sign({ _id: user.id.toString() }, process.env.JWT_SECRET);
 
-  user.tokens = user.tokens.concat({ token });
+  // eslint-disable-next-line
+  if (!user.tokens) {
+    user.tokens = [{ token }];
+  } else {
+    user.tokens = user.tokens.concat({ token });
+  }
 
   await user.save();
 
@@ -125,6 +130,10 @@ userSchema.statics.findByCredentials = async (
 
   if (!user) {
     return null;
+  }
+
+  if (!user.password) {
+    throw new Error("Error in User");
   }
 
   const isMatch = await bcrypt.compare(password, user.password);

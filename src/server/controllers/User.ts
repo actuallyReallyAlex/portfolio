@@ -24,7 +24,10 @@ class UserController {
   public initializeRoutes(): void {
     this.router.post(
       "/user",
-      async (req: Request, res: Response): Promise<Response<ErrorResponse | UserDocument>> => {
+      async (
+        req: Request,
+        res: Response
+      ): Promise<Response<ErrorResponse | UserDocument>> => {
         try {
           const users: UserDocument[] = await UserModel.find({});
 
@@ -210,6 +213,10 @@ class UserController {
           }
 
           const { currentPassword, newPassword } = req.body;
+
+          if (!req.user.password) {
+            return res.status(401).send({ error: "Invalid credentials" });
+          }
 
           // * Check if currrentPassword matches password in DB
           const isMatch = await bcrypt.compare(

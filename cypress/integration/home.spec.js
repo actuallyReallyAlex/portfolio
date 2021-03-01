@@ -44,15 +44,6 @@ context("Home Page", () => {
   });
 
   it("About Content", () => {
-    cy.get("#about").should(
-      "contain.text",
-      "Hi. I'm Alex, a Fullstack Application Developer in San Diego. I deliver solutions to complex problems."
-    );
-    cy.get("#about").should(
-      "contain.text",
-      "I create purposeful and functional applications that go beyond expectations. I'm currently developing the future of the online banking industry with U.S. Bank. Outside of work, I love surfing, camping, and spending time with my dog Copper."
-    );
-
     // * Resume
     cy.get('[data-cy="resume-link"]').then(($element) => {
       expect($element.attr("href")).to.equal("/assets/resume-alex-lee.pdf");

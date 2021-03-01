@@ -10,7 +10,7 @@ const PortfolioItemDetails = React.lazy(
 );
 const NotFound = React.lazy(() => import("./routes/NotFound"));
 
-import { ErrorResponse, PortfolioItemDocument } from "./types";
+import { PortfolioItemDocument } from "./types";
 import { isError } from "./util";
 import getPortfolioItems from "./data/getPortfolioItems";
 

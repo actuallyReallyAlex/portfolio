@@ -1,4 +1,3 @@
-import chalk from "chalk";
 import express, { Request, Response, Router } from "express";
 import multer, { FileFilterCallback } from "multer";
 import validator from "validator";
