@@ -25,7 +25,7 @@
     "@rebass/forms": "^4.0.6",
     "@rebass/preset": "^4.0.5",
     "@theme-ui/presets": "^0.3.0",
-    "@tinymce/tinymce-react": "^3.8.1",
+    "@tinymce/tinymce-react": "^3.12.1",
     "bcryptjs": "^2.4.3",
     "chalk": "^4.1.0",
     "compression": "^1.7.4",
