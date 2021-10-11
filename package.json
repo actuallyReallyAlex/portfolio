@@ -67,7 +67,7 @@
     "@typescript-eslint/parser": "^4.14.1",
     "@webpack-cli/serve": "^1.4.0",
     "copyfiles": "^2.4.1",
-    "css-loader": "^5.0.1",
+    "css-loader": "^6.4.0",
     "cypress": "^6.5.0",
     "cypress-file-upload": "^5.0.2",
     "env-cmd": "^10.1.0",
