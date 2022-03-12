@@ -4,7 +4,11 @@
   "version": "6.0.0",
   "author": "Alex Lee (www.alexlee.dev)",
   "license": "GPL-3.0-or-later",
-  "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node build/index.js"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  }
 }
