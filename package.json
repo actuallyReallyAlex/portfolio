@@ -6,12 +6,13 @@
   "license": "GPL-3.0-or-later",
   "private": true,
   "scripts": {
-    "build-client": "webpack",
-    "start": "node build/index.js"
+    "build": "webpack",
+    "develop": "serve dist"
   },
   "devDependencies": {
     "@types/react": "^17.0.40",
     "@types/react-dom": "^17.0.13",
+    "serve": "^13.0.2",
     "ts-loader": "^9.2.8",
     "typescript": "^4.6.2",
     "webpack": "^5.70.0",
