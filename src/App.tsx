@@ -5,6 +5,7 @@ import LinkedInIcon from "svg-react-loader?name=LinkedInIcon!./icons/linkedin.sv
 import Header from "./components/Header";
 import Bio from "./components/Bio";
 import ThemeToggle from "./components/ThemeToggle";
+import Projects from "./components/Projects";
 
 export const App = () => {
   return (
@@ -14,18 +15,27 @@ export const App = () => {
         <Bio />
         <section>
           <main>
-            <a href="https://github.com/alexlee-dev/" id="github" target="_blank">
+            <a
+              href="https://github.com/alexlee-dev/"
+              id="github"
+              target="_blank"
+            >
               <GitHubIcon />
             </a>
             <a href="mailto:actuallyreallyalex@gmail.com" id="email">
               <EmailIcon />
             </a>
-            <a href="https://www.linkedin.com/in/alexlee-dev/" id="linked-in" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/alexlee-dev/"
+              id="linked-in"
+              target="_blank"
+            >
               <LinkedInIcon />
             </a>
           </main>
         </section>
       </article>
+      <Projects />
       <ThemeToggle />
     </>
   );

@@ -130,7 +130,6 @@ const createParticles = () => {
   // Material
   const particlesMaterial = new THREE.PointsMaterial({
     color: window.particleColor,
-    sizeAttenuation: true,
     size: 0.03,
   });
 

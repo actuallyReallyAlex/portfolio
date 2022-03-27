@@ -32,6 +32,7 @@ header {
   margin-top: 56px;
   padding: 24px 70px 16px 70px;
   position: sticky;
+  top: 0;
 }
 
 header div {
@@ -68,11 +69,12 @@ nav ul {
 }
 
 article {
-  padding: 110px 70px 0px 70px;
+  height: 75vh;
+  padding: 25vh 70px 0px 70px;
 }
 
 main h1 {
-  font-size: 40px;
+  font-size: 3.5vw;
   font-weight: 300;
   margin: 0 auto;
   padding: 16px 0 16px 0;
@@ -97,9 +99,10 @@ article section main {
   /* width: 68%; */
 }
 
-/* svg {
-  stroke: var(--secondary-color);
-} */
+svg {
+  height: 3vw;
+  width: 3vw;
+}
 
 #github svg {
   stroke: #e91e63;
@@ -122,7 +125,49 @@ article section main {
   color: var(--primary-color);
   cursor: pointer;
   font-family: "IBM Plex Sans", sans-serif;
+  padding: 0;
   position: fixed;
   right: 70px;
   top: 90%;
+}
+
+#projects {
+  padding: 0 70px;
+}
+
+#project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project {
+  margin-bottom: 4vw;
+  width: fit-content;
+}
+
+.project a h2 {
+  color: var(--primary-color);
+  font-size: 5.5vw;
+  line-height: 1.25;
+  margin: 0;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.project a {
+  text-decoration: none;
+}
+
+.project-description {
+  color: var(--secondary-color);
+  position: absolute;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+}
+
+.project:hover .project-description {
+  opacity: 1;
+  transform: translateY(0);
 }
