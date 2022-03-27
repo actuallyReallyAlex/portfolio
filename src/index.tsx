@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { App } from "./App";
+import css from "./style.css";
 
-const App = () => {
-  return <span>Hello, World</span>;
-};
+console.log({ css });
 
 const container = document.getElementById("root");
 

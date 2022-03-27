@@ -1,0 +1,121 @@
+.light {
+  --background-color: #ffffff;
+  --primary-color: #000000;
+  --secondary-color: #5f5f5f;
+  --tertiary-color: #848484;
+}
+
+.dark {
+  --background-color: #141414;
+  --primary-color: #ffffff;
+  --secondary-color: #a5a5a5;
+  --tertiary-color: #787878;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--primary-color);
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 0;
+  transition: 0.5s;
+}
+
+header {
+  font-size: 14px;
+  margin-top: 56px;
+  padding: 24px 70px 16px 70px;
+  position: sticky;
+}
+
+header div {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+header main a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+nav ul {
+  column-gap: 48px;
+  display: grid;
+  grid-auto-flow: column;
+  margin: 0;
+}
+
+.nav-item {
+  align-items: center;
+  display: flex;
+  padding: 0 4px 0 4px;
+}
+
+.nav-item a {
+  color: var(--tertiary-color);
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  color: var(--secondary-color);
+}
+
+article {
+  padding: 110px 70px 0px 70px;
+}
+
+main h1 {
+  font-size: 40px;
+  font-weight: 300;
+  margin: 0 auto;
+  padding: 16px 0 16px 0;
+  width: 68%;
+}
+
+main h1 bold {
+  font-weight: 500;
+}
+
+article section {
+  padding: 80px 0 80px 0;
+}
+
+article section main {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  row-gap: 56px;
+  width: 25%;
+  /* width: 68%; */
+}
+
+/* svg {
+  stroke: var(--secondary-color);
+} */
+
+#github svg {
+  stroke: #e91e63;
+  stroke-width: 1.5px;
+}
+
+#email svg {
+  stroke: #4caf50;
+  stroke-width: 1.5px;
+}
+
+#linked-in svg {
+  stroke: #2196f3;
+  stroke-width: 1.5px;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-family: "IBM Plex Sans", sans-serif;
+  position: fixed;
+  right: 70px;
+  top: 90%;
+}
