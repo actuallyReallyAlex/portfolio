@@ -1,4 +1,3 @@
-// TODO - Favicon
 // TODO - Responsive Styling
 // TODO - Different font
 // TODO - Styled Components
