@@ -5,7 +5,7 @@ export const Bio = () => {
     <main>
       <h1>
         Hey! I'm <b>Alex Lee</b>, a <b>Software Engineer</b> currently based in{" "}
-        <b>California</b>.
+        <b>San Diego, California</b>.
       </h1>
     </main>
   );

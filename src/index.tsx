@@ -1,5 +1,4 @@
 // TODO - Responsive Styling
-// TODO - Different font
 // TODO - Styled Components
 // TODO - Better semantic HTML
 // TODO - Unit or E2E Testing
