@@ -27,6 +27,7 @@ body {
   z-index: -1;
 }
 
+/* Header */
 header {
   font-size: 14px;
   margin-top: 56px;
@@ -41,9 +42,13 @@ header div {
   justify-content: space-between;
 }
 
-header main a {
+#home-button {
+  background: none;
+  border: none;
   color: var(--secondary-color);
-  text-decoration: none;
+  cursor: pointer;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 14px;
 }
 
 nav ul {
@@ -61,10 +66,21 @@ nav ul {
 
 .nav-item a {
   color: var(--tertiary-color);
+  font-size: 14px;
   text-decoration: none;
 }
 
-.nav-item a:hover {
+.nav-item button {
+  background: none;
+  border: none;
+  color: var(--tertiary-color);
+  cursor: pointer;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 14px;
+}
+
+.nav-item a:hover,
+.nav-item button:hover {
   color: var(--secondary-color);
 }
 
