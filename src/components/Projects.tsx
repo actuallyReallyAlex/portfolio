@@ -1,4 +1,5 @@
 import React from "react";
+import Project from "./Project";
 
 const projects = [
   {
@@ -35,12 +36,12 @@ export const Projects = () => {
     <section id="projects">
       <ul id="project-list">
         {projects.map(({ description, name, url }, i) => (
-          <li className="project" key={`project-${i}`}>
-            <a href={url} rel="noopener noreferrer" target="_blank">
-              <h2>{name}</h2>
-            </a>
-            <span className="project-description">{description}</span>
-          </li>
+          <Project
+            description={description}
+            key={`project-${i}`}
+            name={name}
+            url={url}
+          />
         ))}
       </ul>
     </section>

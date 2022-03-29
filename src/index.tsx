@@ -2,7 +2,6 @@
 // TODO - Styled Components
 // TODO - Better semantic HTML
 // TODO - Unit or E2E Testing
-// TODO - Project link hover effect
 // TODO - Project demo websites
 // TODO - Project groups(?)
 import React from "react";

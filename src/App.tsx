@@ -15,6 +15,7 @@ export const App = () => {
         <Bio />
         <section>
           <main>
+            {/* TODO - Hover effects */}
             <a
               href="https://github.com/alexlee-dev/"
               id="github"
